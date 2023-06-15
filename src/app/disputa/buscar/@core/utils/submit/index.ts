@@ -28,7 +28,7 @@ const Submit = () => {
       )}`;
     } 
 
-    const url = `/${Routes.gameList}?${queryParams}`;
+    const url = `${Routes.disputaBuscar}?${queryParams}`;
     router.push(url);
   };
 
