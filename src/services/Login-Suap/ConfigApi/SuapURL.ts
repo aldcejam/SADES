@@ -1,0 +1,1 @@
+export const SUAP_URL = "https://suap.ifrn.edu.br"

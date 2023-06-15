@@ -1,0 +1,23 @@
+@import "@splidejs/react-splide/css";
+@import '@splidejs/react-splide/css/skyblue';
+@import '@splidejs/react-splide/css/sea-green';
+@import '@splidejs/react-splide/css/core';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  user-select: none;
+  box-sizing: border-box;
+  
+}
+
