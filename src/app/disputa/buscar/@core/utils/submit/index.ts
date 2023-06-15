@@ -28,7 +28,7 @@ const Submit = () => {
       )}`;
     } 
 
-    const url = `/${Routes.gameList}?${queryParams}`;
+    const url = `${Routes.gameList}?${queryParams}`;
     router.push(url);
   };
 

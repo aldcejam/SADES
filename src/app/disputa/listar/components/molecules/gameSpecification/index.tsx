@@ -1,5 +1,5 @@
 import { StyledGameSpecification } from "./styled"
-import { GameProps } from "../../../../../../use/FetchGames/GameProps"
+import { GameProps } from "../../../@core/api/query/GameProps"
 import GameSituation from "src/components/atoms/gameSituation"
 
 type GameSpecificationProps = {

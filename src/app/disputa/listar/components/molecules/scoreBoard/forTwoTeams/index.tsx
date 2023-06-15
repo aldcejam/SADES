@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { StyleForTwoTeams } from "./styled"
-import { ScoreboardGameProps } from "src/use/FetchGames/GameProps";
+import { ScoreboardGameProps } from "src/app/disputa/listar/@core/api/query/GameProps";
 import CloseIcon from '@mui/icons-material/Close';
 
 const ForTwoTeams = ({ placar }: ScoreboardGameProps) => {

@@ -1,5 +1,5 @@
 import GameCard from "../../template/gameCard"
-import { GameProps } from "../../../../../../use/FetchGames/GameProps" 
+import { GameProps } from "../../../@core/api/query/GameProps" 
 import { StyledGameListByWeekDay } from "./styled"
 
 type GameListByWeekDayProps = {

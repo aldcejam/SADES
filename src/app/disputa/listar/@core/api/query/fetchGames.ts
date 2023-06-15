@@ -1,4 +1,4 @@
-import { GameProps } from "../../../../../../use/FetchGames/GameProps" 
+import { GameProps } from "./GameProps" 
 
 type typegames = GameProps[]
 export const games:typegames = [

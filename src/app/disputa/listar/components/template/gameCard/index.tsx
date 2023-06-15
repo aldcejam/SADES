@@ -2,7 +2,7 @@ import CurverBorderButton from "../../../../../../../public/Polygon/CurverBorder
 import GameSpecification from "../../molecules/gameSpecification"
 import TeamVersus from "../../organisms/teamVersus"
 import { StyledGameCard } from "./styled"
-import { GameProps } from "../../../../../../use/FetchGames/GameProps"
+import { GameProps } from "../../../@core/api/query/GameProps"
 
 type GameCardProps = {
     game: GameProps

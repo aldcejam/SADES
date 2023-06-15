@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ScoreboardGameProps } from "src/use/FetchGames/GameProps";
+import { ScoreboardGameProps } from "src/app/disputa/listar/@core/api/query/GameProps";
 import { StyleForMoreThanTwoTeams } from "./styled"
 import CloseIcon from '@mui/icons-material/Close';
 

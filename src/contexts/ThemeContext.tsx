@@ -1,6 +1,6 @@
 
 import { ThemeProvider as ThemeProviderMaterialUI } from '@mui/material/styles'
-import { DarkTheme, LightTheme } from "../../themes"
+import { DarkTheme, LightTheme } from "../themes"
 import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from "react";
 
 

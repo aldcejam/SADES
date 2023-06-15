@@ -1,6 +1,6 @@
 import ForMoreThanTwoTeams from "../../molecules/scoreBoard/forMoreThanTwoTeams"
 import ForTwoTeams from "../../molecules/scoreBoard/forTwoTeams"
-import { ScoreboardGameProps } from "../../../../../../use/FetchGames/GameProps"
+import { ScoreboardGameProps } from "../../../@core/api/query/GameProps"
 
 const TeamVersus = ({ placar }:ScoreboardGameProps ) => {
     return (
