@@ -6,7 +6,7 @@ import IllustrationPublicacoesSobreSemadec from "public/illustrationsForCard/Ill
 import IllustrationRecordesDestaEdicao from "public/illustrationsForCard/IllustrationRecordesDeTodosOsAnos"  
 import { StyledHomePageCards } from "./styled"
 import HomePageCard from '../../molecules/HomePageCards';
-import { Routes } from "Routes"
+import { Routes } from "../../../../../../Routes"
 
 
 const HomePageCards = () => {
@@ -15,7 +15,7 @@ const HomePageCards = () => {
             <div className="grid-top">
                 <HomePageCard link='/' title='equipes por curso' illustration={<IllustrationCourse />} />
                 <HomePageCard link='/' title='jogos esportivos' illustration={<IllustrationJogosEsportivos />} />
-                <HomePageCard link={`${Routes.disputaBuscar}?curso=informatica`} title='jogos do seu curso' illustration={<IllustrationJogosDoSeuCurso />} />
+                <HomePageCard link={`${Routes.findGame}?curso=informatica`} title='jogos do seu curso' illustration={<IllustrationJogosDoSeuCurso />} />
             </div>
             <div className="grid-left">
                 <HomePageCard link='/' title='recordes desta edição' illustration={<IllustrationEdicoesDaSemadec />} />
