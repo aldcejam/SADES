@@ -12,9 +12,10 @@ import { InitCommunicationPageFind } from './@core/connection/initCommunication'
 import { UpdateSportsProps } from 'src/components/organisms/selectDataBySport';
 import PageTitle from 'src/components/atoms/pageTitle';
 import { StyledFindGame } from './styled';
-import { PageFindStatesConsumers } from './@core/connection/consumers'; 
+import { PageFindStatesConsumers } from './@core/connection/consumers';
 import { PageFindStatesModifiers } from './@core/connection/modifiers';
- 
+import { ModalSelectCategoriesStatesConsumer } from 'src/@core-components/modalSelectCategories/connection/consumer';
+
 const Find = () => {
 
     const searchParams = useSearchParams()
@@ -24,9 +25,8 @@ const Find = () => {
     const ToggleModal = () => {
         setIsModalOpen(!isModalOpen)
     }
-    console.log(isModalOpen)
 
-    const { UpdateGenderCategory, UpdateSportCategory, Submit } = InitCommunicationPageFind()
+    const { UpdateGenderCategory, UpdateSportCategory, Submit } = InitCommunicationPageFind() 
     const { listSport } = PageFindStatesConsumers()
     const { UpdateSport } = PageFindStatesModifiers()
 
@@ -34,7 +34,7 @@ const Find = () => {
         UpdateGenderCategory,
         UpdateSportCategory
     })
-
+    
     const UpdateSports = ({ sportName, sportUUID, genderCategories, sportCategories }: UpdateSportsProps) => {
         UpdateSelectedSportData({
             sportName, sportUUID, genderCategories, sportCategories

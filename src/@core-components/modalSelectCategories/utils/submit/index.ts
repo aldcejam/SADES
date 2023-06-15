@@ -1,3 +1,4 @@
+"use client"
 import { toast } from "react-toastify";
 import { ManageSelectedCategories } from "../../application/selectedCategories/ManageSelectedCategories";
 import { ManageSelectedSportData } from "../../application/selectedSportData/ManageSelectedSportData";
@@ -13,6 +14,7 @@ const Submit = (SubmitRedirect: () => void) => {
       SubmitRedirect();
     } catch (error: any) {
       toast.error(error.message.toString());
+      console.error(error.message.toString());
     }
   };
 };
