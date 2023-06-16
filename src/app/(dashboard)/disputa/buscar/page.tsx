@@ -15,7 +15,7 @@ import { StyledFindGame } from './styled';
 import { PageFindStatesConsumers } from './@core/connection/consumers';
 import { PageFindStatesModifiers } from './@core/connection/modifiers'; 
 
-const Find = () => {
+export default function Page() {
 
     const searchParams = useSearchParams()
     const course = searchParams.get('curso')
@@ -66,5 +66,4 @@ const Find = () => {
         </>
     )
 }
-
-export default Find
+ 

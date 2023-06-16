@@ -10,7 +10,7 @@ import ModalToConfigGame from "./components/template/modalToConfigGame"
 import ChooseDispute from "./components/template/chooseDispute"
 import { DisputaRegistrar_Logic } from "./page_logic"
  
-const Registrar = () => {
+export default function Page() {
 
     const {
         UpdateSports,
@@ -46,5 +46,4 @@ const Registrar = () => {
         </>
     )
 }
-
-export default Registrar
+ 

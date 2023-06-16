@@ -4,7 +4,7 @@ import GameList from "./components/template/gameList";
 import { StyledDisputaListar } from "./styled"; 
 import PageTitle from "src/components/atoms/pageTitle";
 
-const List = () => {
+export default function Page() {
   const searchParams = useSearchParams();
   const sportSelected = searchParams.get("sportSelected");
   const genderCategory = searchParams.get("genderCategory");
@@ -31,5 +31,4 @@ const List = () => {
     </>
   );
 };
-
-export default List;
+ 
