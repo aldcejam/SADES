@@ -13,8 +13,7 @@ import { UpdateSportsProps } from 'src/components/organisms/selectDataBySport';
 import PageTitle from 'src/components/atoms/pageTitle';
 import { StyledFindGame } from './styled';
 import { PageFindStatesConsumers } from './@core/connection/consumers';
-import { PageFindStatesModifiers } from './@core/connection/modifiers';
-import { ModalSelectCategoriesStatesConsumer } from 'src/@core-components/modalSelectCategories/connection/consumer';
+import { PageFindStatesModifiers } from './@core/connection/modifiers'; 
 
 const Find = () => {
 

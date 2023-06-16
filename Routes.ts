@@ -12,6 +12,6 @@ export const Routes:RoutesProps = {
     login: "/login",
     findGame: "/disputa/buscar",
     gameList: "/disputa/listar",    
-    registerGame: "/game/register",
-    profile: "/profile"
+    registerGame: "/disputa/registrar",
+    profile: "/perfil"
 }

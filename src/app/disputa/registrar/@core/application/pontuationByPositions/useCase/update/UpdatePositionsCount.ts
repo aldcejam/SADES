@@ -1,7 +1,7 @@
 import {
   DataForGameRegistrationStates,
   SetPontuationByPositions,
-} from "src/@core-pages/disputa/registrar/entities/DataForGameRegistration";
+} from "../../../../entities/DataForGameRegistration";
 import { useAppDispatch, useAppSelector } from "@redux-config/hook";
 
 const UpdatePositionsCount = () => {

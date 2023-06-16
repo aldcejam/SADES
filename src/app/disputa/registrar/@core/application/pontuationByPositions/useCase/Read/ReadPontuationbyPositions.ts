@@ -1,4 +1,4 @@
-import { DataForGameRegistrationStates } from "src/@core-pages/disputa/registrar/entities/DataForGameRegistration";
+import { DataForGameRegistrationStates } from "../../../../entities/DataForGameRegistration";
 import { useAppSelector } from "@redux-config/hook";
 
 const ReadPontuationbyPositions = () => {
