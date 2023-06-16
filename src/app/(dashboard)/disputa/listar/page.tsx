@@ -1,3 +1,4 @@
+"use client"
 import { useSearchParams } from "next/navigation";
 import ContentPage from 'src/app/(dashboard)/layout-style/ContentPage';
 import GameList from "./components/template/gameList";

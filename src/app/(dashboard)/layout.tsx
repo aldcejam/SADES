@@ -1,3 +1,4 @@
+import React from 'react';
 import ContainerGlobal from './layout-style/ContainerGlobal';
 import ContainerPage from './layout-style/ContainerPage';
 

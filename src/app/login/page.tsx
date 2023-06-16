@@ -1,3 +1,4 @@
+import React from 'react';
 import AuthenticationModel from "./components/template/authenticationModel"
 import LoginPresentation from "./components/template/displayDecorationLogin"
 import { StyledLogin, ContainerLogin } from "./styled"
