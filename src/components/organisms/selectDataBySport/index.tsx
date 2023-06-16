@@ -1,6 +1,6 @@
 import { StyledSelectDataBySport } from "./styled"
 import HoverSportButton from "src/components/atoms/hoverSportButton"
-import { SelectedSportDataProps } from "src/@core-components/modalSelectCategories/entities/IDataToSelectCategories"
+import { SelectedSportDataProps } from "src/components/templates/modals/modalSelectCategories/@core/entities/IDataToSelectCategories"
 import { GenderOptionsProps } from "src/defaultTypes/GendersProps"
 
 export type UpdateSportsProps = {

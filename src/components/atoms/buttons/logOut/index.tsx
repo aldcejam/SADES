@@ -1,3 +1,4 @@
+"use client"
 import { StyledButtonLogOut } from "./styled"
 import { useSession, signOut } from "next-auth/react";
 import { SuapClient } from "src/services/Login-Suap/SuapClient/SuapClient";

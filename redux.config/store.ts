@@ -1,7 +1,7 @@
 import { configureStore,ThunkAction,Action } from '@reduxjs/toolkit'
-import DataToSelectCategories from 'src/@core-components/modalSelectCategories/entities/DataToSelectCategories';
-import DataForFindGame from 'src/app/disputa/buscar/@core/entities/DataForFindGame';
-import DataForGameRegistration from 'src/app/disputa/registrar/@core/entities/DataForGameRegistration';
+import DataToSelectCategories from 'src/components/templates/modals/modalSelectCategories/@core/entities/DataToSelectCategories';
+import DataForFindGame from 'src/app/(dashboard)/disputa/buscar/@core/entities/DataForFindGame';
+import DataForGameRegistration from 'src/app/(dashboard)/disputa/registrar/@core/entities/DataForGameRegistration';
  
 export const Store = configureStore({
   reducer: {

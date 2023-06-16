@@ -1,4 +1,4 @@
-import { ModalSelectCategoriesStatesConsumer } from "src/@core-components/modalSelectCategories/connection/consumer"
+import { ModalSelectCategoriesStatesConsumer } from "src/components/templates/modals/modalSelectCategories/@core/connection/consumer"
 import ButtonSelectSport from "src/components/atoms/buttons/selectSport"
 import { StyledSportCategories } from "./styled"
 

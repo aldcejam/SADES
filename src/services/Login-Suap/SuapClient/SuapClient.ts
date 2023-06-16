@@ -25,7 +25,7 @@ export const SuapClient = () => {
   const Login = () => {
     window.location.href = GetLoginURL({ clientID, redirectURL });
   };
-  const Logout = ()=>LogoutSuap({ token })
+  const Logout = () => LogoutSuap({ token })
 
   const userData = SaveUserData({ token });
 

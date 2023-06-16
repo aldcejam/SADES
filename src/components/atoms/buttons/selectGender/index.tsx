@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { ModalSelectCategoriesStatesConsumer } from 'src/@core-components/modalSelectCategories/connection/consumer'; 
-import { ModalSelectCategoriesStatesModifiers } from 'src/@core-components/modalSelectCategories/connection/modifiers';
+import { ModalSelectCategoriesStatesConsumer } from 'src/components/templates/modals/modalSelectCategories/@core/connection/consumer';
+import { ModalSelectCategoriesStatesModifiers } from 'src/components/templates/modals/modalSelectCategories/@core/connection/modifiers';
 import { GenderOptionsProps } from 'src/defaultTypes/GendersProps';
 import IllustrationByGender from '../../illustrationByGender';
 import { StyledButtonSelectGender } from './styled';
