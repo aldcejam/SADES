@@ -10,9 +10,7 @@ const ButtonRedirectPerfil = () => {
                 alt="imagem do perfil"
                 src={'/profile-image.jpg'} 
                 fill 
-                sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                33vw"
+                sizes="40px"
                 />
             </div>
             <div className="mask">
