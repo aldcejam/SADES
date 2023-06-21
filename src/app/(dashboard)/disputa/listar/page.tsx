@@ -1,9 +1,9 @@
 "use client"
 import { useSearchParams } from "next/navigation";
-import ContentPage from 'src/app/(dashboard)/layout-style/ContentPage';
+import ContentPage from 'app/(dashboard)/layout-style/ContentPage';
 import GameList from "./components/template/gameList";
 import { StyledDisputaListar } from "./styled"; 
-import PageTitle from "src/components/atoms/pageTitle";
+import PageTitle from "components/atoms/pageTitle";
 
 export default function Page() {
   const searchParams = useSearchParams();

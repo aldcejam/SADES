@@ -1,5 +1,5 @@
-import { ModalSelectCategoriesStatesConsumer } from 'src/components/templates/modals/modalSelectCategories/@core/connection/consumer';
-import { ModalSelectCategoriesStatesModifiers } from 'src/components/templates/modals/modalSelectCategories/@core/connection/modifiers';
+import { ModalSelectCategoriesStatesConsumer } from 'components/templates/modals/modalSelectCategories/@core/connection/consumer';
+import { ModalSelectCategoriesStatesModifiers } from 'components/templates/modals/modalSelectCategories/@core/connection/modifiers';
 import { memo } from 'react';
 import { StyledButtonSelectSport } from './styled';
 

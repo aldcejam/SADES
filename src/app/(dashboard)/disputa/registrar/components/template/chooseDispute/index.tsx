@@ -1,4 +1,4 @@
-import SubmitButton from "src/components/atoms/submit"
+import SubmitButton from "components/atoms/submit"
 import AvailableSports, { UpdateSportsProps } from "../../organisms/availableSports"
 import { StyledChooseDispute } from "./styled"
 import AvailableCourses from "../../organisms/availableCourses" 

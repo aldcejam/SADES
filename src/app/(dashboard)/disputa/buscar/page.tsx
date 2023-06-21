@@ -2,15 +2,15 @@
 import { useSearchParams } from 'next/navigation';
 import { useState } from "react";
 
-import ContentPage from 'src/app/(dashboard)/layout-style/ContentPage';
+import ContentPage from 'app/(dashboard)/layout-style/ContentPage';
 
-import ModalSelectCategories from "src/components/templates/modals/modalSelectCategories";
+import ModalSelectCategories from "components/templates/modals/modalSelectCategories";
 import ListSports from './components/template/listSports';
 
-import { InitCommunicationModalSelectCategories } from 'src/components/templates/modals/modalSelectCategories/@core/connection/initCommunication';
+import { InitCommunicationModalSelectCategories } from 'components/templates/modals/modalSelectCategories/@core/connection/initCommunication';
 import { InitCommunicationPageFind } from './@core/connection/initCommunication';
-import { UpdateSportsProps } from 'src/components/organisms/selectDataBySport';
-import PageTitle from 'src/components/atoms/pageTitle';
+import { UpdateSportsProps } from 'components/organisms/selectDataBySport';
+import PageTitle from 'components/atoms/pageTitle';
 import { StyledFindGame } from './styled';
 import { PageFindStatesConsumers } from './@core/connection/consumers';
 import { PageFindStatesModifiers } from './@core/connection/modifiers'; 

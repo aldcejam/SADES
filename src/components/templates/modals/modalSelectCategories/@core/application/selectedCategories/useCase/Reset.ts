@@ -1,5 +1,5 @@
 import { useAppDispatch } from "@redux-config/hook";
-import { SetSelectedCategories } from "src/components/templates/modals/modalSelectCategories/@core/entities/DataToSelectCategories";
+import { SetSelectedCategories } from "components/templates/modals/modalSelectCategories/@core/entities/DataToSelectCategories";
 
 const ResetSelectedCatories = () => {
   const dispatch = useAppDispatch();

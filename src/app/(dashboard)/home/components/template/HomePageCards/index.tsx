@@ -6,7 +6,7 @@ import IllustrationPublicacoesSobreSemadec from "public/illustrationsForCard/Ill
 import IllustrationRecordesDestaEdicao from "public/illustrationsForCard/IllustrationRecordesDeTodosOsAnos"  
 import { StyledHomePageCards } from "./styled"
 import HomePageCard from '../../molecules/HomePageCards';
-import { Routes } from "Routes"
+import { Routes } from "@base-project/Routes"
 
 
 const HomePageCards = () => {

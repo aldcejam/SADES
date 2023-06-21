@@ -1,5 +1,5 @@
 "use client"
-import { SuapClient } from "src/services/Login-Suap/SuapClient/SuapClient"
+import { SuapClient } from "services/Login-Suap/SuapClient/SuapClient"
 import { StyledButtonLoginSuap } from "./styled"
 
 const ButtonLoginSuap = () => {

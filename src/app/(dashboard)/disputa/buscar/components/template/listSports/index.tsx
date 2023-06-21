@@ -1,5 +1,5 @@
 import Title from "../../atoms/title";
-import SelectDataBySport, { UpdateSportsProps } from "src/components/organisms/selectDataBySport";
+import SelectDataBySport, { UpdateSportsProps } from "components/organisms/selectDataBySport";
 import { memo } from "react";
 import { StyledListSports } from "./styled"; 
 

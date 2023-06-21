@@ -1,4 +1,4 @@
-import { GenderOptionsProps } from "src/defaultTypes/GendersProps";
+import { GenderOptionsProps } from "defaultTypes/GendersProps";
 type QuerySportsProps = {
     sportUUID: string;
     sportName: string;

@@ -5,10 +5,10 @@ import LogoCourses from "../../molecules/ModalToConfigGame/logoCourses";
 import SituationGame from "../../organisms/ModalToConfigGame/situationGame";
 import CloseIcon from '@mui/icons-material/Close';
 import GameDate from "../../organisms/ModalToConfigGame/gameDate";
-import SubmitButton from "src/components/atoms/submit";
-import ModalTemplate from "src/components/templates/modals/modalTemplate";
+import SubmitButton from "components/atoms/submit";
+import ModalTemplate from "components/templates/modals/modalTemplate";
 import { PageRegisterStatesConsumers } from "../../../@core/connection/consumers";
-import { GenderOptionsProps } from "src/defaultTypes/GendersProps";
+import { GenderOptionsProps } from "defaultTypes/GendersProps";
 
 
 type ModalToConfigGameProps = {

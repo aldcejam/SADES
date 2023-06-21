@@ -1,5 +1,5 @@
-import { ModalSelectCategoriesStatesConsumer } from "src/components/templates/modals/modalSelectCategories/@core/connection/consumer"
-import ButtonSelectSport from "src/components/atoms/buttons/selectSport"
+import { ModalSelectCategoriesStatesConsumer } from "components/templates/modals/modalSelectCategories/@core/connection/consumer"
+import ButtonSelectSport from "components/atoms/buttons/selectSport"
 import { StyledSportCategories } from "./styled"
 
 const SportCategories = () => {

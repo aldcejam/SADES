@@ -1,7 +1,7 @@
-import { ModalSelectCategoriesStatesConsumer } from "src/components/templates/modals/modalSelectCategories/@core/connection/consumer"
-import ButtonSelectGender from "src/components/atoms/buttons/selectGender"
+import { ModalSelectCategoriesStatesConsumer } from "components/templates/modals/modalSelectCategories/@core/connection/consumer"
+import ButtonSelectGender from "components/atoms/buttons/selectGender"
 import { StyledGenderOptions } from "./styled"
-import { GenderOptionsProps } from "src/defaultTypes/GendersProps"
+import { GenderOptionsProps } from "defaultTypes/GendersProps"
 
 
 const GenderOptions = () => {

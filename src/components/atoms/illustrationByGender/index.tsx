@@ -1,4 +1,4 @@
-import { GenderOptionsProps } from "src/defaultTypes/GendersProps";
+import { GenderOptionsProps } from "defaultTypes/GendersProps";
 import IllustrationFamale from "public/Illustration-gender/Famele";
 import IllustrationMale from "public/Illustration-gender/Male";
 import IllustrationMixed from "public/Illustration-gender/Mixed";

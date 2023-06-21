@@ -1,5 +1,5 @@
-import ButtonLoginGoogle from "src/components/atoms/buttons/login/google"
-import ButtonLoginSuap from "src/components/atoms/buttons/login/suap"
+import ButtonLoginGoogle from "components/atoms/buttons/login/google"
+import ButtonLoginSuap from "components/atoms/buttons/login/suap"
 import { StyledOptionsLogin } from "./styled"
 
 const OptionsLogin = () => {

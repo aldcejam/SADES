@@ -1,9 +1,9 @@
-import { useSidebarStateContext } from "src/contexts/SidebarStateContext";
+import { useSidebarStateContext } from "contexts/SidebarStateContext";
 import { StyledNavegation } from "./styled"
-import { Routes } from "../../../../../Routes";
-import RedirectOptionSidebar from "src/components/atoms/sidebar/redirectOptionSidebar";
+import { Routes } from "@base-project/Routes";
+import RedirectOptionSidebar from "components/atoms/sidebar/redirectOptionSidebar";
 import { AiOutlineHome, AiOutlineLogin } from "react-icons/ai";
-import ButtonRedirectProfile from "src/components/atoms/sidebar/buttonRedirectProfile";
+import ButtonRedirectProfile from "components/atoms/sidebar/buttonRedirectProfile";
 
 const Navegation = () => { 
     const { CloseSidebar, sidebarState } = useSidebarStateContext()

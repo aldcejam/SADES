@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { InitCommunicationPageRegister } from "./@core/connection/initCommunication"
-import { InitCommunicationModalSelectCategories } from "src/components/templates/modals/modalSelectCategories/@core/connection/initCommunication"
+import { InitCommunicationModalSelectCategories } from "components/templates/modals/modalSelectCategories/@core/connection/initCommunication"
 import { PageRegisterStatesModifiers } from "./@core/connection/modifiers"
 import { UpdateSportsProps } from "./components/organisms/availableSports"
 import VerifyIfCoursesAndSportsSelectedCorrectly from "./@core/utils/verifications/VerifyIfCoursesAndSportsSelectedCorrectly"

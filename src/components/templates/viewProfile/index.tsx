@@ -1,6 +1,6 @@
 import { memo } from "react"
 import DimontPolygon from "public/Polygon/DimontPolygon"
-import Content from "src/components/organisms/viewProfile/content"
+import Content from "components/organisms/viewProfile/content"
 import { StyledViewProfile } from "./styled"
 
 type TypesViewProfileComponent = {

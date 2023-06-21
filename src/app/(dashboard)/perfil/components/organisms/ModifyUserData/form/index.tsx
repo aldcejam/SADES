@@ -1,7 +1,7 @@
 "use client"
 import { SubmitHandler, useForm } from "react-hook-form";
-import SubmitButton from "src/components/atoms/submit";
-import InputUpload from "src/components/atoms/inputUpload"
+import SubmitButton from "components/atoms/submit";
+import InputUpload from "components/atoms/inputUpload"
 import ModifyBio from "../../../molecules/ModifyUserData/modifyBio";
 import ModifyCourse from "../../../molecules/ModifyUserData/modifyCourse";
 import ModifyIdentity from "../../../molecules/ModifyUserData/modifyIdentity";

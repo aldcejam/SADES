@@ -1,7 +1,7 @@
-import Identity from "src/components/molecules/ViewProfile/identityData"
-import ProfilePic from "src/components/atoms/profilePic"
-import Secondarydata from "src/components/molecules/ViewProfile/secondarydata"
-import SocialMidias from "src/components/molecules/ViewProfile/socialMidias"
+import Identity from "components/molecules/ViewProfile/identityData"
+import ProfilePic from "components/atoms/profilePic"
+import Secondarydata from "components/molecules/ViewProfile/secondarydata"
+import SocialMidias from "components/molecules/ViewProfile/socialMidias"
 import { StyledContent } from "./styled"
 
 const Content = () => {

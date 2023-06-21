@@ -1,6 +1,6 @@
 import { StyledGameSpecification } from "./styled"
 import { GameProps } from "../../../@core/api/query/GameProps"
-import GameSituation from "src/components/atoms/gameSituation"
+import GameSituation from "components/atoms/gameSituation"
 
 type GameSpecificationProps = {
     game: GameProps

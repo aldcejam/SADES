@@ -2,7 +2,7 @@
 import { StylesButtonDarkMode } from "./styled"
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { useThemeContext } from "src/contexts/ThemeContext";
+import { useThemeContext } from "contexts/ThemeContext";
 import { motion } from "framer-motion";
 
 const ButtonDarkMode = () => {

@@ -1,6 +1,6 @@
 "use client"
 import { PageRegisterStatesConsumers } from "../../../@core/connection/consumers"
-import { GenderOptionsProps } from "src/defaultTypes/GendersProps"
+import { GenderOptionsProps } from "defaultTypes/GendersProps"
 import SelectSportButton from "../../atoms/selectSportButton"
 
 import { StyledAvailableSports } from "./styled"

@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import { ManageCategories } from "../../application/categories/ManageCategories";
 import { Verifications } from "./Verifications";
-import { Routes } from "Routes";
+import { Routes } from "@base-project/Routes";
 import { ManageSport } from "../../application/sport/ManageSport";
 
 const Submit = () => {

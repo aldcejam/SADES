@@ -1,4 +1,4 @@
-import { GenderOptionsProps } from "src/defaultTypes/GendersProps";
+import { GenderOptionsProps } from "defaultTypes/GendersProps";
 import { useAppDispatch, useAppSelector } from "@redux-config/hook"
 import {
   DataForFindGameStates,

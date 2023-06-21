@@ -1,10 +1,10 @@
 "use client"
-import PageTitle from "src/components/atoms/pageTitle"
-import ContentPage from "src/app/(dashboard)/layout-style/ContentPage"
+import PageTitle from "components/atoms/pageTitle"
+import ContentPage from "app/(dashboard)/layout-style/ContentPage"
 
 import { StyledDisputaRegistrar } from "./styled"
 
-import ModalSelectCategories from "src/components/templates/modals/modalSelectCategories"
+import ModalSelectCategories from "components/templates/modals/modalSelectCategories"
 import ModalToConfigGame from "./components/template/modalToConfigGame"
 
 import ChooseDispute from "./components/template/chooseDispute"

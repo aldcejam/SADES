@@ -11,7 +11,8 @@ export const StyledSettingsButtons = styled("div")`
   z-index: 1;
   
   ${(props) => props.theme.breakpoints.down("sm")} {
-    margin-top: -50px;
+    margin-top: 21px;
+    margin-right: 15px;
         
   }
 `;

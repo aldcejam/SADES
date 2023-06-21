@@ -1,5 +1,5 @@
 "use client"
-import { useSidebarStateContext } from "src/contexts/SidebarStateContext"
+import { useSidebarStateContext } from "contexts/SidebarStateContext"
 import StyledMenuBurguer from "./styled"
 
 const MenuBurguer = () => {

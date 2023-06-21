@@ -1,7 +1,7 @@
 "use client"
-import { useSidebarStateContext } from "src/contexts/SidebarStateContext";
-import MenuBurguer from "src/components/atoms/menuBurguer";
-import Navegation from "src/components/organisms/sidebar/navegation";
+import { useSidebarStateContext } from "contexts/SidebarStateContext";
+import MenuBurguer from "components/atoms/menuBurguer";
+import Navegation from "components/organisms/sidebar/navegation";
 import { StyledSidebar } from "./styled";
 
 

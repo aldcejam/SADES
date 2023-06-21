@@ -6,7 +6,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ModalTemplate from '../modalTemplate';
 import SportCategories from '../../../organisms/modalSelectCaregories/sportCategories';
 import GenderOptions from '../../../organisms/modalSelectCaregories/genderOptions';
-import SubmitButton from 'src/components/atoms/submit';
+import SubmitButton from 'components/atoms/submit';
 import { ModalSelectCategoriesStatesConsumer } from './@core/connection/consumer';
 import { memo } from 'react';
 

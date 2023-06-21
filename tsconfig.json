@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "baseUrl": "./src",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -13,10 +14,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
+    "incremental": true, 
     "paths": {  
-      "@redux-config/*": ["./redux.config/*"]
+      "@redux-config/*": ["../redux.config/*"],
+      "@base-project*": ["../*"],
+      "public/*": ["../public/*"]
     },
     "plugins": [
       {

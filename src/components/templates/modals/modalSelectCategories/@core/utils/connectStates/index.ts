@@ -1,4 +1,4 @@
-import { GenderOptionsProps } from "src/defaultTypes/GendersProps";
+import { GenderOptionsProps } from "defaultTypes/GendersProps";
 import { useEffect } from "react";
 import { ManageSelectedCategories } from "../../application/selectedCategories/ManageSelectedCategories";
 

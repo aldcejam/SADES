@@ -1,4 +1,4 @@
-import PageTitle from 'src/components/atoms/pageTitle';
+import PageTitle from 'components/atoms/pageTitle';
 import ContentPage from '../layout-style/ContentPage';
 import HomePageCards from './components/template/HomePageCards';
 
