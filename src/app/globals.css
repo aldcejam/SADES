@@ -1,7 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "@splidejs/react-splide/css";
 @import '@splidejs/react-splide/css/skyblue';
 @import '@splidejs/react-splide/css/sea-green';
 @import '@splidejs/react-splide/css/core';
+
+
+:root {
+  --title: #0e0e0e;
+  --sub-title: #151515;
+  --text: #161616;
+  /* =====  */
+  --info: #00D1FF;
+  --sucess: #53ED62;
+  --warning: #ff1e00;
+
+  --background: #dbdbdb;
+  --background-gradient: linear-gradient(135deg, #00D1FF 0%, #53ED62 100%);
+  --inverted-theme: #1b1b1b;
+
+  --gray-100: hsl(0, 0%, 55%);
+  --gray-200: hsl(0, 0%, 60%);
+  --gray-300: hsl(0, 0%, 65%);
+  --gray-400: hsl(0, 0%, 70%);
+  --gray-500: hsl(0, 0%, 75%);
+  --gray-600: hsl(0, 0%, 80%);
+  --gray-700: hsl(0, 0%, 85%);
+  --gray-800: hsl(0, 0%, 90%);
+  --gray-900: hsl(0, 0%, 95%);
+}
+
+.dark-mode:root {
+  --gray-100: hsl(0, 0%, 45%);
+  --gray-200: hsl(0, 0%, 40%);
+  --gray-300: hsl(0, 0%, 35%);
+  --gray-400: hsl(0, 0%, 30%);
+  --gray-500: hsl(0, 0%, 25%);
+  --gray-600: hsl(0, 0%, 20%);
+  --gray-700: hsl(0, 0%, 15%);
+  --gray-800: hsl(0, 0%, 10%);
+  --gray-900: hsl(0, 0%, 5%);
+}
 
 html,
 body {
@@ -18,6 +58,17 @@ a {
 * {
   user-select: none;
   box-sizing: border-box;
-  
+
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray_600 rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray_900;
+}
