@@ -1,10 +1,16 @@
 "use client"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify"
+import { GetInitialTheme } from 'themes/GetInitialTheme'; 
 
-export const ClientComponents = () => {
+interface BodyClientSideProps {
+    children?: React.ReactNode
+}
+
+export const BodyClientSide = ({ children }: BodyClientSideProps) => { 
+
     return (
-        <>
+        <body className={GetInitialTheme() === "light" ? "light" : "dark"}>
             <ToastContainer
                 position="top-right"
                 autoClose={2000}
@@ -16,7 +22,8 @@ export const ClientComponents = () => {
                 draggable
                 pauseOnHover
                 theme="colored"
-            /> 
-        </>
+            />
+            {children}
+        </body>
     )
 }

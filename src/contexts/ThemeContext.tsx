@@ -1,51 +1,56 @@
-
+"use client"
 import { ThemeProvider as ThemeProviderMaterialUI } from '@mui/material/styles'
 import { DarkTheme, LightTheme } from "../themes"
 import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from "react";
-
+import Cookies from 'js-cookie';
+import { GetInitialTheme } from 'themes/GetInitialTheme';
 
 interface ChildrenProps {
     children: ReactNode;
 }
 interface IThemeContext {
-    themeName: 'light' | 'dark'
-    themeModifier: (theme: any) => void
+    theme: string
+    ToggleTheme: () => void
     mainColor: string,
     secondaryColor: string
 }
+
+
+
 const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
-
 export const ThemeContextProvider = ({ children }: ChildrenProps) => {
-    const [themeName, setThemeName] = useState<'light' | 'dark'>('dark')
-    const [mainColor, SetMainColor] = useState<string>('#c43a3a')
-    const [secondaryColor, setSecondaryColor] = useState<string>('#f07e14')
+    const [theme, setTheme] = useState<string>(GetInitialTheme())
+    const mainColor = '#c43a3a'
+    const secondaryColor = '#f07e14'
     /* #5B6ABD */
     /* #2e84c1 */
     /* #e25252 */
 
-    const themeModifier = (theme: any) => {
-        setThemeName(theme)
+    const ToggleTheme = () => {
+        setTheme(theme == 'light' ? 'dark' : 'light')
+        Cookies.set('ThemeSemadec', theme == 'light' ? 'dark' : 'light')
     }
-
-    const theme = useMemo(() => {
-        if (themeName === 'light') {
+    
+    const themeMUI = () => {
+        const root = window.document.body
+        if (theme === 'light') {
+            root.classList.remove('dark')
+            root.classList.add('light')
             return LightTheme(mainColor, secondaryColor)
         } else {
+            root.classList.remove('light')
+            root.classList.add('dark')
             return DarkTheme(mainColor, secondaryColor)
-        }
+        } 
+    }
 
-    }, [themeName, mainColor])
 
-    useEffect(() => {
-        const isThemeExist = localStorage.getItem('@ThemeSemadec')
-        const defaultTheme = isThemeExist ? isThemeExist : 'light';
-        themeModifier(defaultTheme)
-    }, [])
+
 
     return (
-        <ThemeContext.Provider value={{ themeName, themeModifier, mainColor, secondaryColor }}>
-            <ThemeProviderMaterialUI theme={theme}>
+        <ThemeContext.Provider value={{ theme, ToggleTheme, mainColor, secondaryColor }}>
+            <ThemeProviderMaterialUI theme={themeMUI}>
                 {children}
             </ThemeProviderMaterialUI>
         </ThemeContext.Provider>

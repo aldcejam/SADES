@@ -1,11 +1,11 @@
 import React from 'react';
 import { Providers } from './providers';
-import "./globals.css"; 
+import "./globals.css";
 import DefaultBackground from 'public/Default-background';
 
 import { Modal } from 'components/templates/modals/modalTemplate/modal';
-import { ClientComponents } from './ClientComponents';
-import { Rajdhani } from '@next/font/google' 
+import { BodyClientSide } from './BodyClientSide';
+import { Rajdhani } from '@next/font/google'
 
 const rajdhani = Rajdhani({
     subsets: ['latin'],
@@ -18,18 +18,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html className={rajdhani.className}>
+        <html className={`${rajdhani.className}`}>
             <head>
                 <title>SADES</title>
             </head>
-            <body>
+            <BodyClientSide>
                 <Providers>
                     <DefaultBackground />
                     <Modal children={<div id="modal-portal" />} />
-                    <ClientComponents />
                     {children}
                 </Providers>
-            </body>
+            </BodyClientSide>
         </html >
     );
 }

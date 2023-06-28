@@ -1,4 +1,4 @@
-import { StyledPageTitle } from "./styled";
+import styled from "./styled.module.scss"
 
 type TypesPageTitle = {
     title: string
@@ -7,14 +7,14 @@ type TypesPageTitle = {
 const PageTitle = ({ title }: TypesPageTitle) => {
     const dividerTitle = title.split("-")
     return (
-        <StyledPageTitle>
+        <h1 className={styled["page-title"]}>
             {dividerTitle[1] ?
                 <span>
                     {dividerTitle[0]}
-                    <span className="subtitle">{"-" + dividerTitle[1]}</span>
+                    <span className={styled["subtitle"]}>{"-" + dividerTitle[1]}</span>
                 </span>
                 : <span>{dividerTitle[0]}</span>}
-        </StyledPageTitle>
+        </h1>
     )
 }
 

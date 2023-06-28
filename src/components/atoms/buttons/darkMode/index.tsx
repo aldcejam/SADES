@@ -7,13 +7,8 @@ import { motion } from "framer-motion";
 
 const ButtonDarkMode = () => {
 
-    const { themeName, themeModifier } = useThemeContext()
-
-    const ToggleTheme = () => {
-        themeModifier(themeName == 'light' ? 'dark' : 'light')
-        localStorage.setItem('@ThemeSemadec', themeName == 'light' ? 'dark' : 'light')
-
-    }
+    const { theme, ToggleTheme } = useThemeContext()
+ 
 
     const spring = {
         type: "spring",
@@ -22,9 +17,9 @@ const ButtonDarkMode = () => {
     };
 
     return (
-        <StylesButtonDarkMode themeselected={themeName} onClick={() => ToggleTheme()}>
+        <StylesButtonDarkMode themeselected={theme} onClick={() => ToggleTheme()}>
             <motion.div className="handle" layout transition={spring} >
-                {themeName == "light" ?
+                {theme == "light" ?
                     <LightModeIcon className="icon" />
                     :
                     <DarkModeOutlinedIcon className="icon" />

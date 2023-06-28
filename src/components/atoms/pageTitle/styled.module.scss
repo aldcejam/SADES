@@ -1,0 +1,13 @@
+.page-title{
+    @apply relative inline-block mt-0 mb-2;
+    @apply text-title text-[1.8rem] font-bold capitalize;
+    @apply overflow-x-hidden;
+
+    @screen sm{
+        @apply mt-[10px];
+    }
+
+    .subtitle{
+        @apply text-lg ;
+    }
+}
