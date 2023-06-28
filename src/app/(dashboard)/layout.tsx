@@ -1,9 +1,7 @@
 import React from 'react';
-import ContainerGlobal from './layout-style/ContainerGlobal';
-import ContainerPage from './layout-style/ContainerPage';
-
+import styled from './layout.module.scss'; 
 import Sidebar from 'components/templates/sidebar';
-import SettingsButtons from 'components/molecules/settingsButtons'; 
+import SettingsButtons from 'components/molecules/settingsButtons';
 
 export default function RootLayout({
   children,
@@ -11,12 +9,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ContainerGlobal>
+    <div className={styled["container-global"]}>
       <Sidebar />
       <SettingsButtons />
-      <ContainerPage>
+      <div className={styled["container-page"]}>
         {children}
-      </ContainerPage>
-    </ContainerGlobal>
+      </div>
+    </div>
   );
 }

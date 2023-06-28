@@ -2,7 +2,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useState } from "react";
 
-import ContentPage from 'app/(dashboard)/layout-style/ContentPage';
+import styled from "app/(dashboard)/layout.module.scss"
 
 import ModalSelectCategories from "components/templates/modals/modalSelectCategories";
 import ListSports from './components/template/listSports';
@@ -13,7 +13,7 @@ import { UpdateSportsProps } from 'components/organisms/selectDataBySport';
 import PageTitle from 'components/atoms/pageTitle';
 import { StyledFindGame } from './styled';
 import { PageFindStatesConsumers } from './@core/connection/consumers';
-import { PageFindStatesModifiers } from './@core/connection/modifiers'; 
+import { PageFindStatesModifiers } from './@core/connection/modifiers';
 
 export default function Page() {
 
@@ -25,7 +25,7 @@ export default function Page() {
         setIsModalOpen(!isModalOpen)
     }
 
-    const { UpdateGenderCategory, UpdateSportCategory, Submit } = InitCommunicationPageFind() 
+    const { UpdateGenderCategory, UpdateSportCategory, Submit } = InitCommunicationPageFind()
     const { listSport } = PageFindStatesConsumers()
     const { UpdateSport } = PageFindStatesModifiers()
 
@@ -33,7 +33,7 @@ export default function Page() {
         UpdateGenderCategory,
         UpdateSportCategory
     })
-    
+
     const UpdateSports = ({ sportName, sportUUID, genderCategories, sportCategories }: UpdateSportsProps) => {
         UpdateSelectedSportData({
             sportName, sportUUID, genderCategories, sportCategories
@@ -45,7 +45,10 @@ export default function Page() {
     return (
         <>
             <PageTitle title='Pesquisar por jogo' />
-            <ContentPage className='with-boxshadow-in-bg'>
+            <section
+                className={styled["content-page"]}
+                data-boxshadow_in_bg="true"
+            >
                 <StyledFindGame className="box-page">
                     <div className="background" />
                     <div className='content'>
@@ -62,8 +65,7 @@ export default function Page() {
                         />
                     </div>
                 </StyledFindGame>
-            </ContentPage>
+            </section>
         </>
     )
 }
- 

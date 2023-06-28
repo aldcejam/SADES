@@ -1,14 +1,14 @@
 import PageTitle from 'components/atoms/pageTitle';
-import ContentPage from '../layout-style/ContentPage';
+import styled from '../layout.module.scss';
 import HomePageCards from './components/template/HomePageCards';
 
 export default function Page() {
   return (
     <> 
       <PageTitle title='Pesquisar por jogo' />
-      <ContentPage>
+      <section className={styled["content-page"]}>
         <HomePageCards />
-      </ContentPage>
+      </section>
     </>
   );
 }

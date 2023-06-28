@@ -1,6 +1,6 @@
 "use client"
 import PageTitle from "components/atoms/pageTitle"
-import ContentPage from "app/(dashboard)/layout-style/ContentPage"
+import styled from "app/(dashboard)/layout.module.scss"
 
 import { StyledDisputaRegistrar } from "./styled"
 
@@ -9,7 +9,7 @@ import ModalToConfigGame from "./components/template/modalToConfigGame"
 
 import ChooseDispute from "./components/template/chooseDispute"
 import { DisputaRegistrar_Logic } from "./page_logic"
- 
+
 export default function Page() {
 
     const {
@@ -18,13 +18,16 @@ export default function Page() {
         modalToConfigGame,
         ToggleModalSelectCategories,
         ToggleModalToConfigGame
-    } = DisputaRegistrar_Logic() 
+    } = DisputaRegistrar_Logic()
 
     return (
         <>
             <PageTitle title='Registrar disputa' />
-            <ContentPage  className='with-boxshadow-in-bg'>
-                <StyledDisputaRegistrar className="box-page">
+            <section
+                className={styled["content-page"]}
+                data-boxshadow_in_bg="true"
+            >
+                <StyledDisputaRegistrar className={styled["box-page"]}>
                     <div className="style-background" />
                     <div className="container">
                         <ChooseDispute
@@ -42,8 +45,7 @@ export default function Page() {
                         />
                     </div>
                 </StyledDisputaRegistrar>
-            </ContentPage>
+            </section>
         </>
     )
 }
- 
