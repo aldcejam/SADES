@@ -5,15 +5,14 @@ export const StyledPageTitle = styled('h1')`
     position: relative;
     display: inline-block;
     font-size: 1.8rem;
-    margin-top: 13px;
-    margin-bottom: 10px;  
+    margin-top: 11px;
+    margin-bottom: 5px; 
     color: ${(props) => props.theme.palette.text.primary};
     text-transform: capitalize;
     overflow-x: hidden;
-    
+    font-weight: bolder;
     ${(props) => props.theme.breakpoints.down('sm')} {
       margin-top: 0px;
-
     }
     .subtitle{
       font-size: 1.1rem;

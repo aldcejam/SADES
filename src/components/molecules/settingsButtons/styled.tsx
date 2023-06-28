@@ -7,7 +7,7 @@ export const StyledSettingsButtons = styled("div")`
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: 12px;
+  margin-top: 15px;
   z-index: 1;
   
   ${(props) => props.theme.breakpoints.down("sm")} {

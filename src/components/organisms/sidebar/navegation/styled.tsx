@@ -8,7 +8,7 @@ export const StyledNavegation = styled("nav")`
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    bottom: 0;
+    bottom: 15px;
     gap: 10px;
     padding: 0;
     left: 10px;
