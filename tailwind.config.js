@@ -40,7 +40,7 @@ module.exports = {
         xl: "1536px",
       },
       borderRadius: {
-        default: "0.625rem",
+        default: "5px",
       }
     },
   },
