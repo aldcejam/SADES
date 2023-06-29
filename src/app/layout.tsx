@@ -1,10 +1,11 @@
+"use client"
 import React from 'react';
 import { Providers } from './providers';
 import "./globals.css";
 import DefaultBackground from 'public/Default-background';
 
 import { Modal } from 'components/templates/modals/modalTemplate/modal';
-import { BodyClientSide } from './BodyClientSide';
+import { ClientSide } from './ClientSide';
 import { Rajdhani } from '@next/font/google'
 
 const rajdhani = Rajdhani({
@@ -22,13 +23,14 @@ export default function RootLayout({
             <head>
                 <title>SADES</title>
             </head>
-            <BodyClientSide>
+            <body>
                 <Providers>
-                    <DefaultBackground />
-                    <Modal children={<div id="modal-portal" />} />
-                    {children}
+                    <ClientSide/>
+                        <DefaultBackground />
+                        <Modal children={<div id="modal-portal" />} />
+                        {children}
                 </Providers>
-            </BodyClientSide>
+            </body>
         </html >
     );
 }

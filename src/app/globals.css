@@ -7,7 +7,7 @@
 @import '@splidejs/react-splide/css/core';
 
 
-body.light {
+div#theme.light {
   --title: #0e0e0e;
   --sub-title: #151515;
   --text: #161616;
@@ -29,7 +29,7 @@ body.light {
   --gray-800: hsl(0, 0%, 90%);
   --gray-900: hsl(0, 0%, 95%);
 }
-body.dark {
+div#theme.dark {
   --title: #FBFBFB;
   --sub-title: #D7D7D7;
   --text: #F0F0F0;

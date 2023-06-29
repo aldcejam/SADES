@@ -1,9 +1,8 @@
 "use client"
 import { ThemeProvider as ThemeProviderMaterialUI } from '@mui/material/styles'
 import { DarkTheme, LightTheme } from "../themes"
-import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from "react";
-import Cookies from 'js-cookie';
-import { GetInitialTheme } from 'themes/GetInitialTheme';
+import { createContext, ReactNode, useContext, useEffect, useMemo, useRef, useState } from "react";
+
 
 interface ChildrenProps {
     children: ReactNode;
@@ -15,44 +14,71 @@ interface IThemeContext {
     secondaryColor: string
 }
 
+export const GetInitialTheme = () => {
+    if (typeof window !== 'undefined') {
+        const storedPrefs = localStorage.getItem('@ThemeSemadec');
+        if (typeof storedPrefs === 'string') {
+            return storedPrefs;
+        }
+
+        const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
+        if (userMedia.matches) {
+            return 'dark';
+        }
+    }
+
+    return 'light';
+};
 
 
 const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 export const ThemeContextProvider = ({ children }: ChildrenProps) => {
-    const [theme, setTheme] = useState<string>(GetInitialTheme())
+    const [theme, setTheme] = useState<string>(GetInitialTheme)
     const mainColor = '#c43a3a'
     const secondaryColor = '#f07e14'
     /* #5B6ABD */
     /* #2e84c1 */
     /* #e25252 */
 
+    const root = useRef<HTMLDivElement>(null)
+    window.document.body.classList.add('light') 
+
     const ToggleTheme = () => {
         setTheme(theme == 'light' ? 'dark' : 'light')
-        Cookies.set('ThemeSemadec', theme == 'light' ? 'dark' : 'light')
-    }
-    
-    const themeMUI = () => {
-        const root = window.document.body
-        if (theme === 'light') {
-            root.classList.remove('dark')
-            root.classList.add('light')
-            return LightTheme(mainColor, secondaryColor)
-        } else {
-            root.classList.remove('light')
-            root.classList.add('dark')
-            return DarkTheme(mainColor, secondaryColor)
-        } 
+        localStorage.setItem('@ThemeSemadec', theme == 'light' ? 'dark' : 'light')
+
+        const element = root.current
+        if (element) {
+            if (theme == 'light') {
+                element.classList.remove('dark')
+                element.classList.add('light')
+            }
+            else {
+                element.classList.add('dark')
+                element.classList.remove('light')
+            }
+        }
+
     }
 
+    const themeMUI = useMemo(() => {
+        if (theme === 'light') {
+            return LightTheme(mainColor, secondaryColor)
+        } else {
+            return DarkTheme(mainColor, secondaryColor)
+        }
+    },[theme])
 
 
 
     return (
         <ThemeContext.Provider value={{ theme, ToggleTheme, mainColor, secondaryColor }}>
-            <ThemeProviderMaterialUI theme={themeMUI}>
-                {children}
-            </ThemeProviderMaterialUI>
+            <div id="theme" className={theme} ref={root}>
+                <ThemeProviderMaterialUI theme={themeMUI}>
+                    {children}
+                </ThemeProviderMaterialUI>
+            </div>
         </ThemeContext.Provider>
     )
 
