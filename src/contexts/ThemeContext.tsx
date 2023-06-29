@@ -42,7 +42,9 @@ export const ThemeContextProvider = ({ children }: ChildrenProps) => {
     /* #e25252 */
 
     const root = useRef<HTMLDivElement>(null)
-    window.document.body.classList.add('light') 
+    if (typeof window !== 'undefined') {
+        window.document.body.classList.add('light');
+    }
 
     const ToggleTheme = () => {
         setTheme(theme == 'light' ? 'dark' : 'light')
@@ -68,7 +70,7 @@ export const ThemeContextProvider = ({ children }: ChildrenProps) => {
         } else {
             return DarkTheme(mainColor, secondaryColor)
         }
-    },[theme])
+    }, [theme])
 
 
 
