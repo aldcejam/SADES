@@ -1,73 +1,9 @@
-"use client"
-import { styled } from "@mui/material/styles";
-
-
+import "./styled.scss";
 
 const IllustrationPublicacoesSobreSemadec = () => {
-
-  const StyledIllustrationPublicacoesSobreSemadec = styled("div")`
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    
-    svg {
-      .assign-color{ 
-        fill: ${(props) => props.theme.palette.primary.main};
-      }
-      .cls-1 {
-        fill: #263238;
-      }
-      .cls-2 {
-        fill: #f7a9a0;
-      }
-      .cls-3 {
-      }
-      .cls-4 {
-        fill: #37474f;
-      }
-      .cls-5 {
-        opacity: 0.1;
-      }
-      .cls-5,
-      .cls-6 {
-        isolation: isolate;
-      }
-      .cls-6 {
-        opacity: 0.2;
-      }
-      .cls-7 {
-        fill: #455a64;
-      }
-      .cls-8 {
-        fill: #ebebeb;
-      }
-      .cls-9 {
-        fill: #ff9abb;
-      }
-      .cls-10,
-      .cls-14 {
-        fill: #fff;
-      }
-      .cls-11 {
-        fill: #dbdbdb;
-      }
-      .cls-12 {
-        fill: #c7c7c7;
-      }
-      .cls-13 {
-        fill: #a6a6a6;
-      }
-      .cls-14 {
-        fill-rule: evenodd;
-      }
-      .cls-15 {
-        fill: #ad6359;
-      }
-    }
-  `;
+ 
   return (
-    <StyledIllustrationPublicacoesSobreSemadec className="illustration-publicacoes-sobre-semadec">
+    <div className="illustration-publicacoes-sobre-semadec">
         <svg viewBox="0 0 428.5 387.11">
           <g id="Camada_2" data-name="Camada 2">
             <g id="Camada_1-2" data-name="Camada 1">
@@ -1320,7 +1256,7 @@ const IllustrationPublicacoesSobreSemadec = () => {
             </g>
           </g>
         </svg>
-    </StyledIllustrationPublicacoesSobreSemadec>
+    </div>
   );
 };
 

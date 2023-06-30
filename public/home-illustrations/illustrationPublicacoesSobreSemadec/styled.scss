@@ -1,0 +1,74 @@
+.illustration-publicacoes-sobre-semadec {
+    @apply absolute z-10;
+    @apply w-full h-full;
+
+    svg {
+        .assign-color {
+            @apply fill-primary;
+        }
+
+        .cls-1 {
+            fill: #263238;
+        }
+
+        .cls-2 {
+            fill: #f7a9a0;
+        }
+
+        .cls-3 {}
+
+        .cls-4 {
+            fill: #37474f;
+        }
+
+        .cls-5 {
+            opacity: 0.1;
+        }
+
+        .cls-5,
+        .cls-6 {
+            isolation: isolate;
+        }
+
+        .cls-6 {
+            opacity: 0.2;
+        }
+
+        .cls-7 {
+            fill: #455a64;
+        }
+
+        .cls-8 {
+            fill: #ebebeb;
+        }
+
+        .cls-9 {
+            fill: #ff9abb;
+        }
+
+        .cls-10,
+        .cls-14 {
+            fill: #fff;
+        }
+
+        .cls-11 {
+            fill: #dbdbdb;
+        }
+
+        .cls-12 {
+            fill: #c7c7c7;
+        }
+
+        .cls-13 {
+            fill: #a6a6a6;
+        }
+
+        .cls-14 {
+            fill-rule: evenodd;
+        }
+
+        .cls-15 {
+            fill: #ad6359;
+        }
+    }
+}
