@@ -1,12 +1,12 @@
-import IllustrationCourse from "public/illustrationsForCard/IllustrationCourse"
-import IllustrationEdicoesDaSemadec from "public/illustrationsForCard/IllustrationEdicoesDaSemadec"
-import IllustrationJogosDoSeuCurso from "public/illustrationsForCard/IllustrationJogosDoSeuCurso"
-import IllustrationJogosEsportivos from "public/illustrationsForCard/IllustrationJogosEsportivos"
-import IllustrationPublicacoesSobreSemadec from "public/illustrationsForCard/IllustrationPublicacoesSobreSemadec"
-import IllustrationRecordesDestaEdicao from "public/illustrationsForCard/IllustrationRecordesDeTodosOsAnos"  
+import IllustrationEdicoesDaSemadec from "public/home-illustrations/illustrationEdicoesDaSemadec"
+import IllustrationJogosDoSeuCurso from "public/home-illustrations/illustrationJogosDoSeuCurso"
+import IllustrationJogosEsportivos from "public/home-illustrations/illustrationJogosEsportivos"
+import IllustrationPublicacoesSobreSemadec from "public/home-illustrations/illustrationPublicacoesSobreSemadec"
+import IllustrationRecordesDestaEdicao from "public/home-illustrations/illustrationRecordesDeTodosOsAnos"  
 import { StyledHomePageCards } from "./styled"
 import HomePageCard from '../../molecules/HomePageCards';
 import { Routes } from "@base-project/Routes"
+import IllustrationCourse from "public/home-illustrations/illustrationCourse"
 
 
 const HomePageCards = () => {

@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import "./globals.css";
 import DefaultBackground from 'public/Default-background';
 
@@ -15,7 +15,7 @@ const rajdhani = Rajdhani({
 
 export const GetInitialTheme = () => {
     const themePrefs = cookies().get('ThemeSemadec');
-     if (themePrefs) {
+    if (themePrefs) {
         return themePrefs.value;
     }
 
@@ -33,12 +33,12 @@ export default function RootLayout({
                 <title>SADES</title>
             </head>
             <body>
-                <ThemeContextProvider initialTheme={GetInitialTheme()}> 
-                        <ClientSide> 
-                            <DefaultBackground />
-                            <Modal children={<div id="modal-portal" />} />
-                            {children}
-                        </ClientSide> 
+                <ThemeContextProvider initialTheme={GetInitialTheme()}>
+                    <ClientSide>
+                        <DefaultBackground />
+                        <Modal children={<div id="modal-portal" />} />
+                        {children}
+                    </ClientSide>
                 </ThemeContextProvider>
             </body>
         </html >
