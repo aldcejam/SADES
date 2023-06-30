@@ -2,7 +2,6 @@
 import { useSearchParams } from "next/navigation";
 import styled from "app/(dashboard)/layout.module.scss"
 import GameList from "./components/template/gameList";
-import { StyledDisputaListar } from "./styled";
 import PageTitle from "components/atoms/pageTitle";
 
 export default function Page() {
@@ -24,12 +23,12 @@ export default function Page() {
         className={styled["content-page"]}
         data-boxshadow_in_bg="true"
       >
-        <StyledDisputaListar className={styled["box-page"]}>
+        <div className={styled["box-page"]}>
           <h2>{genderCategory}</h2>
           {ListWeekday.map((day) => (
             <GameList key={day} day={day} />
           ))}
-        </StyledDisputaListar>
+        </div>
       </section >
     </>
   );
