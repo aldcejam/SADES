@@ -1,7 +1,8 @@
 "use client"
 import { ThemeProvider as ThemeProviderMaterialUI } from '@mui/material/styles'
 import { DarkTheme, LightTheme } from "../themes"
-import { createContext, ReactNode, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, ReactNode, useContext, useMemo, useRef, useState } from "react";
+import Cookies from 'js-cookie';
 
 
 interface ChildrenProps {
@@ -15,7 +16,7 @@ interface IThemeContext {
 }
 
 export const GetInitialTheme = () => {
-    const storedPrefs = localStorage.getItem('@ThemeSemadec');
+    const storedPrefs = Cookies.get('ThemeSemadec');
     if (typeof storedPrefs === 'string') {
         return storedPrefs;
     }
@@ -43,7 +44,7 @@ export const ThemeContextProvider = ({ children }: ChildrenProps) => {
 
     const ToggleTheme = () => {
         setTheme(theme == 'light' ? 'dark' : 'light')
-        localStorage.setItem('@ThemeSemadec', theme == 'light' ? 'dark' : 'light')
+        Cookies.set('ThemeSemadec', theme == 'light' ? 'dark' : 'light')
 
         const element = root.current
         if (element) {

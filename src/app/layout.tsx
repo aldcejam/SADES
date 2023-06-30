@@ -12,23 +12,7 @@ import Cookies from 'js-cookie';
 const rajdhani = Rajdhani({
     subsets: ['latin'],
     weight: ["300", "400", "500", "600", "700"],
-});
-
-const GetInitialTheme = () => {
-    if (typeof window !== 'undefined') {
-        const storedPrefs = Cookies.get('ThemeSemadec');
-        if (typeof storedPrefs === 'string') {
-            return storedPrefs;
-        }
-
-        const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
-        if (userMedia.matches) {
-            return 'dark';
-        }
-    }
-
-    return 'light';
-};
+}); 
 
 export default function RootLayout({
     children,
