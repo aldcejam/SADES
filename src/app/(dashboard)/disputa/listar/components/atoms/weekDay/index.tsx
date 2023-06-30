@@ -1,4 +1,4 @@
-import { StyledWeekDay } from "./styled"
+import styled from "./styled.module.scss"
 
 type WeekDayProps = {
     date: string
@@ -25,9 +25,9 @@ const WeekDay:any = ({date}: WeekDayProps)=>{
     }
 
     return(
-        <StyledWeekDay>
+        <div className={styled["week-day"]}>
             {translateWeekDays(date)}
-        </StyledWeekDay>
+        </div>
     )
 }
 
