@@ -1,60 +1,8 @@
-"use client"
-import { styled } from "@mui/material/styles";
-
+import "./styled.scss"
 
 const IllustrationEdicoesDaSemadec = () => {
-
-  const StyledIllustrationEdicoesDaSemadec = styled("div")`
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    
-    svg {
-      .assign-color{
-        fill: ${(props) => props.theme.palette.primary.main};
-      }
-      .cls-1 {
-        fill: #263238;
-      }
-      .cls-2 {
-        fill: #c7c7c7;
-      }
-      .cls-3 {
-        fill: #dbdbdb;
-      }
-      .cls-4 {
-        fill: #37474f;
-      }
-      .cls-6 {
-        fill: #fff;
-      }
-      .cls-7 {
-        fill: #455a64;
-      }
-      .cls-8 {
-        fill: #ebebeb;
-      }
-      .cls-9 {
-        fill: #a6a6a6;
-      }
-      .cls-10 {
-        fill: #dd6a57;
-      }
-      .cls-11 {
-        fill: #d3766a;
-      }
-      .cls-12 {
-        opacity: 0.1;
-        isolation: isolate;
-      }
-      .cls-13 {
-        fill: #ff9cbd;
-      }
-    }
-  `;
   return (
-    <StyledIllustrationEdicoesDaSemadec className="illustration-edicoes-da-semadec">
+    <div className="illustration-edicoes-da-semadec">
       <svg viewBox="0 0 648.56 344.75">
         <g id="Camada_2" data-name="Camada 2">
           <g id="Camada_1-2" data-name="Camada 1">
@@ -827,7 +775,7 @@ const IllustrationEdicoesDaSemadec = () => {
           </g>
         </g>
       </svg>
-    </StyledIllustrationEdicoesDaSemadec>
+    </div>
   );
 };
 
