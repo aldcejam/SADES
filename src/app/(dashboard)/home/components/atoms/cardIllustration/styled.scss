@@ -1,64 +1,48 @@
+ 
 .illustration-course {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
+    @apply flex content-center justify-center;
     svg {
-        width: 70%;
-        max-width: 350px;
-        min-width: 280px;
+        @apply w-[70%] max-w-[350px] min-w-[280px]; 
     }
 }
 
 /* ================================ */
 .illustration-jogos-esportivos {
-    display: flex;
-    align-content: center;
-    justify-content: end;
+    @apply flex content-center justify-end;
 }
 
 /* ================================ */
 .illustration-jogos-do-seu-curso {
-    display: flex;
-    align-content: center;
-    justify-content: end;
+    @apply flex content-center justify-end; 
 
     svg {
-        margin-right: 10%;
+        @apply mr-[10%];
     }
 }
 
 /* ================================ */
 .illustration-edicoes-da-semadec {
-    display: flex;
-    align-items: flex-end;
-    justify-content: right;
+    @apply flex content-center justify-end;
 
     svg {
-        max-width: 250px;
+        @apply max-w-[250px];
     }
 }
 
 /* ================================ */
 .illustration-publicacoes-sobre-semadec {
-    display: flex;
-    align-items: flex-end;
-    justify-content: right;
+    @apply flex items-end justify-end;  
 
     svg {
-        width: 75%;
-        max-width: 180px;
+        @apply w-[75%] max-w-[180px];
     }
 }
 
 /* ================================ */
 .illustration-recordes-desta-edicao {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    @apply flex items-end justify-center; 
 
     svg {
-        width: 70%;
-        max-width: 170px;
+        @apply w-[70%] max-w-[170px];
     }
 }

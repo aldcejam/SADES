@@ -28,7 +28,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html className={`${rajdhani.className}`}>
+        <html lang='pt-br' className={`${rajdhani.className}`}>
             <head>
                 <title>SADES</title>
             </head>
