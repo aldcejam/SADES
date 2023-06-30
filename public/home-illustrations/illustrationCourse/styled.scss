@@ -1,0 +1,61 @@
+.illustration-course {
+    @apply absolute z-10; 
+    @apply w-full h-full;
+
+    svg {
+        .assign-color {
+            @apply fill-primary;
+        }
+
+        .cls-1 {
+            fill: #263238;
+        }
+
+        .cls-10,
+        .cls-11,
+        .cls-2,
+        .cls-3,
+        .cls-4,
+        .cls-6,
+        .cls-8,
+        .cls-9 {
+            stroke: #263238;
+        }
+
+        .cls-2 {
+            stroke-width: 1.08px;
+        }
+
+        .cls-3,
+        .cls-9 {
+            fill: #fff;
+        }
+
+        .cls-3,
+        .cls-4,
+        .cls-5,
+        .cls-6,
+        .cls-7 {
+            stroke-miterlimit: 10;
+        }
+
+        .cls-10,
+        .cls-5,
+        .cls-6,
+        .cls-7,
+        .cls-8 {
+            fill: none;
+        }
+
+        .cls-5,
+        .cls-7 {
+            stroke: #fff;
+        }
+
+        .cls-5,
+        .cls-7,
+        .cls-8 {
+            stroke-width: 0.5px;
+        }
+    }
+}
