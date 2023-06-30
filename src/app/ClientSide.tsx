@@ -1,15 +1,16 @@
 "use client"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify"
+import { Providers } from './providers';
 
 interface BodyClientSideProps {
     children?: React.ReactNode
 }
 
-export const ClientSide = ({ children }: BodyClientSideProps) => { 
+export const ClientSide = ({ children }: BodyClientSideProps) => {
 
     return (
-        <>
+        <Providers>
             <ToastContainer
                 position="top-right"
                 autoClose={2000}
@@ -23,6 +24,6 @@ export const ClientSide = ({ children }: BodyClientSideProps) => {
                 theme="colored"
             />
             {children}
-        </>
+        </Providers>
     )
 }

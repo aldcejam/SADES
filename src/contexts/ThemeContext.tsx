@@ -4,37 +4,25 @@ import { DarkTheme, LightTheme } from "../themes"
 import { createContext, ReactNode, useContext, useMemo, useRef, useState } from "react";
 import Cookies from 'js-cookie';
 
-
-interface ChildrenProps {
-    children: ReactNode;
-}
 interface IThemeContext {
     theme: string
     ToggleTheme: () => void
     mainColor: string,
     secondaryColor: string
 }
-
-export const GetInitialTheme = () => {
-    const storedPrefs = Cookies.get('ThemeSemadec');
-    if (typeof storedPrefs === 'string') {
-        return storedPrefs;
-    }
-    return 'light';
-};
-
+ 
 
 const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
-export const ThemeContextProvider = ({ children }: ChildrenProps) => {
-    const [theme, setTheme] = useState<string>(GetInitialTheme)
+export const ThemeContextProvider = ({ initialTheme, children }: { initialTheme: string, children: ReactNode }) => {
+    const [theme, setTheme] = useState<string>(initialTheme)
     const mainColor = '#c43a3a'
     const secondaryColor = '#f07e14'
     /* #5B6ABD */
     /* #2e84c1 */
     /* #e25252 */
 
-    const root = useRef<HTMLDivElement>(null) 
+    const root = useRef<HTMLDivElement>(null)
 
     const ToggleTheme = () => {
         setTheme(theme == 'light' ? 'dark' : 'light')
