@@ -1,4 +1,4 @@
-import { StyledGameSpecification } from "./styled"
+import styled from "./styled.module.scss"
 import { GameProps } from "../../../@core/api/query/GameProps"
 import GameSituation from "components/atoms/gameSituation"
 
@@ -24,12 +24,12 @@ const GameSpecification = ({ game }: GameSpecificationProps) => {
     }
 
     return (
-        <StyledGameSpecification>
-            <div className="teams-competing">
+        <div className={styled["game-specification"]}>
+            <div className={styled["teams-competing"]}>
                 {game.placar.map((team, index, array) => {
                     return (
-                        <div key={team.course} className="teams-competing__confront">
-                            <p className="confront--team">
+                        <div key={team.course} className={styled["teams-competing__confront"]}>
+                            <p className={styled["confront--team"]}>
                                 {team.course}
                             </p>
                             {
@@ -41,11 +41,11 @@ const GameSpecification = ({ game }: GameSpecificationProps) => {
             </div>
             <GameSituation situation={game.specification.situation} />
             <time
-                className="game-date"
+                className={styled["game-date"]}
                 dateTime={game.specification.date.toString()}>
                 {date}
             </time>
-        </StyledGameSpecification>
+        </div>
     )
 }
 

@@ -1,0 +1,44 @@
+.game-specification {
+    @apply grid;
+    @apply absolute right-[10px] bottom-0 py-[10px] px-[15px]; 
+    @apply text-title uppercase text-right; 
+
+    .teams-competing {
+        @apply flex gap-1 items-center justify-end;
+        @apply font-bold;
+
+        &__confront {
+            @apply flex gap-1 items-baseline; 
+
+            p  {
+                @apply text-xs m-0; 
+            }
+
+            .confront--icon-versus {
+                @apply relative;
+                @apply w-2 h-2;
+
+                &::before,
+                &::after {
+                    content: "";
+                    @apply absolute inset-x-0 m-auto; 
+                    @apply w-[1px] h-full;  
+                    @apply bg-secondary;
+                    @apply rounded-full; 
+                }
+
+                &::after {
+                    transform: rotate(45deg);
+                }
+
+                &::before {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .game-date {
+        @apply font-semibold text-xs; 
+    }
+}
