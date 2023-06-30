@@ -1,46 +1,15 @@
 "use client"
-import { useSearchParams } from 'next/navigation';
-import { useState } from "react";
+import './styled.scss';
+import styled from "app/(dashboard)/layout.module.scss";
 
-import styled from "app/(dashboard)/layout.module.scss"
-
+import PageTitle from 'components/atoms/pageTitle';
 import ModalSelectCategories from "components/templates/modals/modalSelectCategories";
 import ListSports from './components/template/listSports';
-
-import { InitCommunicationModalSelectCategories } from 'components/templates/modals/modalSelectCategories/@core/connection/initCommunication';
-import { InitCommunicationPageFind } from './@core/connection/initCommunication';
-import { UpdateSportsProps } from 'components/organisms/selectDataBySport';
-import PageTitle from 'components/atoms/pageTitle';
-import { StyledFindGame } from './styled';
-import { PageFindStatesConsumers } from './@core/connection/consumers';
-import { PageFindStatesModifiers } from './@core/connection/modifiers';
-
+import { DisputaBuscar_Logic } from "./page_logic";
+  
 export default function Page() {
 
-    const searchParams = useSearchParams()
-    const course = searchParams.get('curso')
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const ToggleModal = () => {
-        setIsModalOpen(!isModalOpen)
-    }
-
-    const { UpdateGenderCategory, UpdateSportCategory, Submit } = InitCommunicationPageFind()
-    const { listSport } = PageFindStatesConsumers()
-    const { UpdateSport } = PageFindStatesModifiers()
-
-    const { UpdateSelectedSportData } = InitCommunicationModalSelectCategories({
-        UpdateGenderCategory,
-        UpdateSportCategory
-    })
-
-    const UpdateSports = ({ sportName, sportUUID, genderCategories, sportCategories }: UpdateSportsProps) => {
-        UpdateSelectedSportData({
-            sportName, sportUUID, genderCategories, sportCategories
-        })
-        UpdateSport({ sportName, uuid: sportUUID })
-    }
-
+    const { Submit, ToggleModal, UpdateSports, course, isModalOpen, listSport } = DisputaBuscar_Logic()
 
     return (
         <>
@@ -49,7 +18,7 @@ export default function Page() {
                 className={styled["content-page"]}
                 data-boxshadow_in_bg="true"
             >
-                <StyledFindGame className="box-page">
+                <div className={`page-disputa-buscar  box-page`}>
                     <div className="background" />
                     <div className='content'>
                         <ListSports
@@ -64,7 +33,7 @@ export default function Page() {
                             SubmitModal={Submit}
                         />
                     </div>
-                </StyledFindGame>
+                </div>
             </section>
         </>
     )
