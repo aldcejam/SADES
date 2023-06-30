@@ -1,0 +1,12 @@
+.title {
+    @apply text-center;
+
+    h2 {
+        @apply m-0
+    }
+
+    h3 {
+        @apply text-subtitle opacity-[80%] text-xs tracking-[-0.3px] font-normal;
+        @apply mt-1 mx-0 mb-12;
+    }
+}
