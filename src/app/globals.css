@@ -9,7 +9,7 @@
 
 div#theme.light {
   --title: #0e0e0e;
-  --sub-title: #151515;
+  --subtitle: #151515;
   --text: #161616;
   /* =====  */
   --info: #00D1FF;
@@ -31,7 +31,7 @@ div#theme.light {
 }
 div#theme.dark {
   --title: #FBFBFB;
-  --sub-title: #D7D7D7;
+  --subtitle: #D7D7D7;
   --text: #F0F0F0;
   /* =====  */
   --info: #00D1FF;

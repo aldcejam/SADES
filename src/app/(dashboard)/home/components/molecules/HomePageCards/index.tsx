@@ -1,6 +1,6 @@
 import Link from "next/link"
-import CardIllustration from "../../atoms/cardIllustration"
-import { StyledHomePageCard } from "./styled"
+import CardIllustration from "../../atoms/cardIllustration" 
+import styled from "./styled.module.scss"
 
 type TypesHomePageCard = {
     illustration: any
@@ -12,15 +12,15 @@ type TypesHomePageCard = {
 
 const HomePageCard = ({ illustration, title, link }: TypesHomePageCard) => {
     return (
-        <StyledHomePageCard className="card">
+        <div className={`${styled["home-page-cards"]} card`}>
             <Link href={link}>
                 <CardIllustration illustration={illustration} />
-                <div className="title">
+                <div className={styled.title}>
                     <h2>{title}</h2>
                     <h3>clique para entrar</h3>
                 </div>
             </Link>
-        </StyledHomePageCard>
+        </div>
     )
 }
 

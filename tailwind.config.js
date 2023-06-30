@@ -19,6 +19,7 @@ module.exports = {
         inverted_theme: "var(--inverted-theme)",
 
         title: "var(--title)",
+        subtitle: "var(--subtitle)",
         text: "var(--text)",
         info: "var(--info)",
 
