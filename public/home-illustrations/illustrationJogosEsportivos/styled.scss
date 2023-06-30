@@ -1,0 +1,45 @@
+.illustration-jogos-esportivos {
+    @apply absolute z-10;
+    @apply w-full h-full;
+    svg {
+        .assign-color {
+            @apply fill-primary; 
+        }
+
+        .cls-2 {
+            opacity: 0.2;
+        }
+
+        .cls-2,
+        .cls-4,
+        .cls-8 {
+            isolation: isolate;
+        }
+
+        .cls-3,
+        .cls-4,
+        .cls-8 {
+            fill: #fff;
+        }
+
+        .cls-4 {
+            opacity: 0.6;
+        }
+
+        .cls-5 {
+            fill: #263238;
+        }
+
+        .cls-6 {
+            fill: #a02724;
+        }
+
+        .cls-7 {
+            fill: #b55b52;
+        }
+
+        .cls-8 {
+            opacity: 0.7;
+        }
+    }
+}
