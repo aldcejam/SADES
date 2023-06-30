@@ -1,13 +1,13 @@
-import { StyledCardIllustration } from "./styled"
+import "./styled.scss" 
 
 type CardIllustrationProps = {
     illustration: any
 }
 const CardIllustration = ({ illustration }: CardIllustrationProps) => {
     return (
-        <StyledCardIllustration>
+        <div>
             {illustration}
-        </StyledCardIllustration>
+        </div>
     )
 }
 
