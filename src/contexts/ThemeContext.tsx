@@ -15,16 +15,14 @@ interface IThemeContext {
 }
 
 export const GetInitialTheme = () => {
-    if (typeof window !== 'undefined') {
-        const storedPrefs = localStorage.getItem('@ThemeSemadec');
-        if (typeof storedPrefs === 'string') {
-            return storedPrefs;
-        }
+    const storedPrefs = localStorage.getItem('@ThemeSemadec');
+    if (typeof storedPrefs === 'string') {
+        return storedPrefs;
+    }
 
-        const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
-        if (userMedia.matches) {
-            return 'dark';
-        }
+    const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
+    if (userMedia.matches) {
+        return 'dark';
     }
 
     return 'light';
@@ -41,10 +39,7 @@ export const ThemeContextProvider = ({ children }: ChildrenProps) => {
     /* #2e84c1 */
     /* #e25252 */
 
-    const root = useRef<HTMLDivElement>(null)
-    if (typeof window !== 'undefined') {
-        window.document.body.classList.add('light');
-    }
+    const root = useRef<HTMLDivElement>(null) 
 
     const ToggleTheme = () => {
         setTheme(theme == 'light' ? 'dark' : 'light')
