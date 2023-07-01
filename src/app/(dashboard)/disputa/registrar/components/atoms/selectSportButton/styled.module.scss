@@ -1,0 +1,15 @@
+.select-sport-button {
+    background-color: rgb(var(--absolute-theme), 0.23);
+    @apply text-title text-base capitalize;
+    @apply rounded-default border-2 border-solid border-primary border-opacity-60;
+    @apply py-[10px] px-5;
+    @apply cursor-pointer transition-all duration-300 ease-linear;
+
+    &:hover {
+        background-color: rgb(var(--absolute-theme), 0.7);
+    }
+
+    &[data-is-button-selected="true"] {
+        @apply bg-background border-2 border-primary;
+    }
+}
