@@ -1,0 +1,11 @@
+.game-list-by-week-day { 
+    @apply relative grid grid-cols-1 auto-rows-[140px] gap-5;
+
+    @screen sm {
+        @apply grid-cols-2;
+
+    } 
+    @screen md {
+        @apply grid-cols-3;
+    }
+}

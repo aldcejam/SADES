@@ -1,0 +1,33 @@
+.for-more-than-two-teams {
+    @apply relative z-10;
+    @apply flex gap-[5px];
+    @apply overflow-x-auto overflow-y-hidden; 
+
+    ::-webkit-scrollbar {
+        @apply w-3;
+    }
+
+    &::-webkit-scrollbar-track {
+        @apply rounded-[10px]; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @apply bg-inverted_theme;
+        @apply rounded-[20px] border-[5px] border-solid border-background;
+    } 
+
+    .team {
+        @apply flex items-baseline gap-[5px] pb-[6px];	
+        
+        &__logo {
+            @apply relative top-[6px];
+            @apply w-[46px] h-[46px]; 
+        }
+    }
+
+    .icon-versus {
+        @apply relative -bottom-1;
+        @apply w-5 h-5;
+        @apply text-inverted_theme; 
+    }
+}

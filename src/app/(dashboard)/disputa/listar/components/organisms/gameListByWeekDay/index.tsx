@@ -1,16 +1,14 @@
 import GameCard from "../../template/gameCard"
 import { GameProps } from "../../../@core/api/query/GameProps" 
-import { StyledGameListByWeekDay } from "./styled"
+import styled from "./styled.module.scss"
 
 type GameListByWeekDayProps = {
     day: string
     games: GameProps[]
 }
 const GameListByWeekDay = ({ games, day }: GameListByWeekDayProps) => {
-
-
     return (
-        <StyledGameListByWeekDay>
+        <div className={styled["game-list-by-week-day"]}>
             {
                 games.map((game) => {
                     return (
@@ -22,7 +20,7 @@ const GameListByWeekDay = ({ games, day }: GameListByWeekDayProps) => {
                     )
                 })
             }
-        </StyledGameListByWeekDay>
+        </div>
     )
 }
 
