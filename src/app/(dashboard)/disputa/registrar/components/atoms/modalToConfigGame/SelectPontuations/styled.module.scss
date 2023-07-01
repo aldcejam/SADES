@@ -1,0 +1,42 @@
+.select-pontuations {
+    @apply w-full;
+
+    .container-select {
+        @apply relative;
+
+        .icon {
+            @apply absolute -z-10 right-[10px] inset-y-0;
+            @apply rotate-90;
+            @apply text-inverted_theme text-2xl;
+        }
+  
+        .select:focus {
+            outline: none;
+        }
+
+        .select {
+            @apply w-full h-[50px];
+            @apply rounded-default border-2 border-solid border-inverted_theme;
+            @apply bg-transparent py-0 px-[10px];
+            @apply text-title text-xl font-medium;
+            @apply cursor-pointer transition-all duration-300;
+
+            &:hover {
+                @apply border-2 border-solid border-primary;
+            }
+
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            option{
+                @apply bg-background
+            }
+        }
+    }
+
+    .title {
+        @apply mt-[15px] mb-[26px];
+        @apply text-title text-2xl font-medium;
+    }
+}
