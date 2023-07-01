@@ -1,25 +1,24 @@
 import CurverBorderButton from "public/Polygon/CurverBorder"
 import GameSpecification from "../../molecules/gameSpecification"
 import TeamVersus from "../../organisms/teamVersus"
-import { StyledGameCard } from "./styled"
+import styled from "./styled.module.scss"
+import "./styled.scss"
 import { GameProps } from "../../../@core/api/query/GameProps"
 
 type GameCardProps = {
     game: GameProps
 }
-const GameCard = ({ game }: GameCardProps) => {
-
-
+const GameCard = ({ game }: GameCardProps) => { 
     return (
-        <StyledGameCard>
+        <div className={styled["game-card"]}>
             <CurverBorderButton />
-            <div className="game-score">
-                <span className="team-versus">
+            <div className={styled["game-score"]}>
+                <span className={styled["team-versus"]}>
                     <TeamVersus placar={game.placar} />
                 </span>
                 <GameSpecification game={game} />
             </div>
-        </StyledGameCard>
+        </div>
     )
 }
 export default GameCard

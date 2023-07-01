@@ -1,0 +1,12 @@
+.game-card {
+    @apply relative w-full h-full;
+    @apply bg-background overflow-hidden;
+    box-shadow: 5px 10px 23px theme("colors.secondary" / 30%),
+        inset 5px 5px 23px rgba(var(--inverted-theme), 0.15);
+    @apply rounded-[15px] border-[1px] border-solid border-primary border-opacity-70;
+
+
+    .game-score {
+        @apply py-[10px] px-[15px];
+    }
+}
