@@ -8,30 +8,31 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx,scss}",
   ],
   darkMode: 'class',
+
   theme: {
     extend: {
       colors: {
         primary: "#c43a3a",
         secondary: "#f07e14",
 
-        background: "var(--background)",
-        background_gradient: "var(--background-gradient)",
-        inverted_theme: "var(--inverted-theme)",
+        background: "rgb(var(--background))",
+        background_gradient: "rgb(var(--background-gradient))",
+        inverted_theme: "rgb(var(--inverted-theme))",
 
-        title: "var(--title)",
-        subtitle: "var(--subtitle)",
-        text: "var(--text)",
-        info: "var(--info)",
+        title: "rgb(var(--title))",
+        subtitle: "rgb(var(--subtitle))",
+        text: "rgb(var(--text))",
+        info: "rgb(var(--info))",
 
-        gray_100: "var(--gray-100)",
-        gray_200: "var(--gray-200)",
-        gray_300: "var(--gray-300)",
-        gray_400: "var(--gray-400)",
-        gray_500: "var(--gray-500)",
-        gray_600: "var(--gray-600)",
-        gray_700: "var(--gray-700)",
-        gray_800: "var(--gray-800)",
-        gray_900: "var(--gray-900)",
+        gray_100: "rgb(var(--gray-100))",
+        gray_200: "rgb(var(--gray-200))",
+        gray_300: "rgb(var(--gray-300))",
+        gray_400: "rgb(var(--gray-400))",
+        gray_500: "rgb(var(--gray-500))",
+        gray_600: "rgb(var(--gray-600))",
+        gray_700: "rgb(var(--gray-700))",
+        gray_800: "rgb(var(--gray-800))",
+        gray_900: "rgb(var(--gray-900))",
       },
       screens: {
         xs: "450px",
