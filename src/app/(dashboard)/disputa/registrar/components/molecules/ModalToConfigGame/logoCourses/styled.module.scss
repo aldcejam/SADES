@@ -1,0 +1,19 @@
+.logo-courses {
+    @apply relative w-full;
+    @apply flex justify-center gap-5;
+    grid-area: cards;
+
+    .card {
+        @apply cursor-help;
+
+        .image {
+            @apply relative w-20 h-20;
+
+        }
+
+        h2 {
+            @apply m-[2px] text-title font-semibold text-xs uppercase text-center;
+
+        }
+    }
+}

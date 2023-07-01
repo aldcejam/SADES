@@ -1,0 +1,24 @@
+.pontuation {
+    @apply mt-[10px] flex flex-wrap justify-start gap-x-[25px] gap-y-0;
+
+    div {
+        @apply flex gap-[10px] items-baseline;
+
+        p {
+            @apply text-xl text-title font-semibold;
+        }
+
+        input {
+            @apply bg-background transition-all duration-300;
+            @apply rounded-default border-2 border-solid border-inverted_theme;
+            @apply text-subtitle text-[1.6rem];
+            @apply w-[70px] py-[7px] pr-[10px] pl-[6px];
+
+            :focus {
+                outline: none;
+                @apply border-solid border-2 border-primary;
+                @apply text-title;
+            }
+        }
+    }
+}

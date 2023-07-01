@@ -1,20 +1,16 @@
 "use client"
-import { PageRegisterStatesModifiers } from "../../../../@core/connection/modifiers"
-import { PageRegisterStatesConsumers } from "../../../../@core/connection/consumers"
-import { StyledPontuation } from "./styled"
+import { PageRegisterStatesModifiers } from "app/(dashboard)/disputa/registrar/@core/connection/modifiers"
+import { PageRegisterStatesConsumers } from "app/(dashboard)/disputa/registrar/@core/connection/consumers"
+import styled from "./styled.module.scss"
 
-const Pontuation = () => {
-
-
+const Pontuation = () => { 
     const {ManagePontuationbyPositions} = PageRegisterStatesModifiers()
     const {pontuationbyPositions} = PageRegisterStatesConsumers()
      
     const UpdatePontuationbyPositions = ManagePontuationbyPositions.UpdatePontuationbyPositions
-
-
-
+ 
     return (
-        <StyledPontuation>
+        <div className={styled["pontuation"]}>
             {
                 pontuationbyPositions.map((pontuation, position) => {
                     return (
@@ -32,7 +28,7 @@ const Pontuation = () => {
                         </div>
                     )
                 })}
-        </StyledPontuation>
+        </div>
     )
 }
 
