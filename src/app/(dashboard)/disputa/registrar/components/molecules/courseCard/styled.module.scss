@@ -1,0 +1,26 @@
+.course-card {
+    @apply text-center uppercase;
+    @apply cursor-pointer transition-all duration-300;
+
+    .container-logo {
+        @apply shadow-1 rounded-default transition-all duration-500;
+        @apply p-[10px];
+        @apply w-[90px] w-[90px];
+
+        &[data-card-Selected="true"] {
+            @apply bg-background duration-300;
+            box-shadow: 0px 3px 10px 2px theme("colors.secondary");
+        }
+    }
+
+    .logo {
+        @apply relative w-[70px] h-[70px];
+    }
+
+    p {
+        @apply text-title m-[10px];
+
+    }
+
+
+}

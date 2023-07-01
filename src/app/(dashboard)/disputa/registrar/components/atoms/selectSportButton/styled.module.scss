@@ -10,6 +10,6 @@
     }
 
     &[data-is-button-selected="true"] {
-        @apply bg-background border-2 border-primary;
+        @apply bg-background border-2 border-secondary;
     }
 }
