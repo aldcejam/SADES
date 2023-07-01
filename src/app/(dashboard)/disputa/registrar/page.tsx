@@ -2,7 +2,7 @@
 import PageTitle from "components/atoms/pageTitle"
 import styled from "app/(dashboard)/layout.module.scss"
 
-import { StyledDisputaRegistrar } from "./styled"
+import styledPage from "./styled.module.scss"
 
 import ModalSelectCategories from "components/templates/modals/modalSelectCategories"
 import ModalToConfigGame from "./components/template/modalToConfigGame"
@@ -27,9 +27,8 @@ export default function Page() {
                 className={styled["content-page"]}
                 data-boxshadow_in_bg="true"
             >
-                <StyledDisputaRegistrar className={styled["box-page"]}>
-                    <div className="style-background" />
-                    <div className="container">
+                <div className={`${styled["box-page"]} ${styledPage["page-diputa-registrar"]}`}>
+                    <div className={styledPage["container"]}>
                         <ChooseDispute
                             UpdateSelectedSportData={UpdateSports}
                             Submit={() => ToggleModalSelectCategories()}
@@ -44,7 +43,7 @@ export default function Page() {
                             ToggleModal={ToggleModalToConfigGame}
                         />
                     </div>
-                </StyledDisputaRegistrar>
+                </div>
             </section>
         </>
     )
