@@ -18,6 +18,7 @@ div#theme.light {
 
   --background: 219, 219, 219;
   --inverted-theme: 27, 27, 27;
+  --absolute-theme: 255, 255, 255;
 
   --gray-100: 140, 140, 140;
   --gray-200: 153, 153, 153;
@@ -40,7 +41,8 @@ div#theme.dark {
   --warning: 255, 30, 0;
 
   --background: 33, 31, 31;
-  --inverted-theme: 245, 245, 245;
+  --inverted-theme: 245, 245, 245; 
+  --absolute-theme: 0, 0, 0;
 
   --gray-100: 115, 115, 115;
   --gray-200: 102, 102, 102;

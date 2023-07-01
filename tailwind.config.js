@@ -18,6 +18,7 @@ module.exports = {
         background: "rgb(var(--background))",
         background_gradient: "rgb(var(--background-gradient))",
         inverted_theme: "rgb(var(--inverted-theme))",
+        absolute_theme: "rgb(var(--absolute-theme))",
 
         title: "rgb(var(--title))",
         subtitle: "rgb(var(--subtitle))",
