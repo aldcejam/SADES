@@ -44,6 +44,10 @@ module.exports = {
       },
       borderRadius: {
         default: "5px",
+      },
+      boxShadow: {
+        1: "var(--shadow-1)",
+        2: "var(--shadow-2)",
       }
     },
   },
