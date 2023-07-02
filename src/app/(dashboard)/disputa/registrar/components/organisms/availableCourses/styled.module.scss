@@ -1,0 +1,14 @@
+.available-teams{
+    @apply text-title text-center;
+
+    h2{
+        @apply font-semibold;
+    }
+    .box-teams{
+        @apply flex justify-center gap-5 flex-wrap py-0 px-5;
+    }
+    h3{
+        @apply font-light text-xs;
+        @apply m-0 mt-[5px];
+    }
+}

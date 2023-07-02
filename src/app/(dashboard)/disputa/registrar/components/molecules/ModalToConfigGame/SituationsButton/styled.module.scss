@@ -1,0 +1,42 @@
+.situations-button {
+    @apply w-[min(100%,230px)] py-[7px] px-[10px];
+    @apply cursor-pointer transition-all duration-300;
+    @apply rounded-default border-solid border-2 border-inverted_theme;
+    background-color: rgb(var(--background), 78);
+
+    &:hover {
+        @apply  border-secondary border-2;
+
+    }
+
+
+    &[data-is-active=true] {
+        @apply transition-all duration-300;
+        background: linear-gradient(135deg, theme("colors.primary") 0%, theme("colors.secondary") 100%);
+        
+    }
+
+    .content {
+        @apply flex items-baseline;
+        @apply text-base capitalize;
+
+        p {
+            @apply m-0 font-semibold text-text text-left capitalize;
+        }
+
+
+        .ball {
+            @apply w-[14px] h-[14px] rounded-[50%] mr-[7px];
+
+            &[data-ball-situation="pre-cadastrado"] {
+                @apply bg-info;
+            }
+
+            &[data-ball-situation="em andamento"] {
+                @apply bg-success;
+            }
+        }
+
+    }
+
+}

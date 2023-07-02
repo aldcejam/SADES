@@ -13,7 +13,7 @@ div#theme.light {
   --text: 22, 22, 22;
   /* =====  */
   --info: 0, 208, 255;
-  --sucess: 83, 237, 98;
+  --success: 83, 237, 98;
   --warning: 255, 30, 0;
 
   --background: 219, 219, 219;
@@ -40,7 +40,7 @@ div#theme.dark {
   --text: 240, 240, 240;
   /* =====  */
   --info: 0, 209, 255;
-  --sucess: 83, 237, 98;
+  --success: 83, 237, 98;
   --warning: 255, 30, 0;
 
   --background: 33, 31, 31;

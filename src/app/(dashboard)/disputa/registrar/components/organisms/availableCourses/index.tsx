@@ -2,7 +2,7 @@
 import { PageRegisterStatesConsumers } from "../../../@core/connection/consumers"
 import { PageRegisterStatesModifiers } from "../../../@core/connection/modifiers"
 import CourseCard from "../../molecules/courseCard"
-import { StyledAvailableTeams } from "./styled"
+import styled from "./styled.module.scss"
 
 const AvailableCourses = () => {
 
@@ -32,9 +32,9 @@ const AvailableCourses = () => {
 
 
     return (
-        <StyledAvailableTeams>
+        <div className={styled["available-teams"]}>
             <h2>Times disponíveis</h2>
-            <div className="box-teams">
+            <div className={styled["box-teams"]}>
                 {courses.map((course) => {
                     return (
                         <span
@@ -50,7 +50,7 @@ const AvailableCourses = () => {
                     )
                 })}
             </div>
-        </StyledAvailableTeams>
+        </div>
     )
 }
 

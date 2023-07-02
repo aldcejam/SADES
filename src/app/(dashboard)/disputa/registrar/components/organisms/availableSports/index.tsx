@@ -3,7 +3,7 @@ import { PageRegisterStatesConsumers } from "../../../@core/connection/consumers
 import { GenderOptionsProps } from "defaultTypes/GendersProps"
 import SelectSportButton from "../../atoms/selectSportButton"
 
-import { StyledAvailableSports } from "./styled"
+import styled from "./styled.module.scss"
 
 export type UpdateSportsProps = {
     sportName: string,
@@ -21,9 +21,9 @@ const AvailableSports = ({ UpdateSport }: AvailableSportsProps) => {
     const { dataFetch, sportSelected } = PageRegisterStatesConsumers()
     const { sports } = dataFetch
     return (
-        <StyledAvailableSports>
-            <h2 className="title">Escolha o esporte</h2>
-            <div className="box-sports">
+        <div>
+            <h2 className={styled["title"]}>Escolha o esporte</h2>
+            <div className={styled["box-sports"]}>
                 {sports.map((sport) => {
                     return (
                         <span
@@ -45,7 +45,7 @@ const AvailableSports = ({ UpdateSport }: AvailableSportsProps) => {
                 })
                 }
             </div>
-        </StyledAvailableSports>
+        </div>
     )
 }
 

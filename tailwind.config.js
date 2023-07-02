@@ -24,6 +24,7 @@ module.exports = {
         subtitle: "rgb(var(--subtitle))",
         text: "rgb(var(--text))",
         info: "rgb(var(--info))",
+        success: "rgb(var(--success))",
 
         gray_100: "rgb(var(--gray-100))",
         gray_200: "rgb(var(--gray-200))",

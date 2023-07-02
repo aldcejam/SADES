@@ -1,0 +1,9 @@
+.MuiOutlinedInput-root {
+    & fieldset {
+        @apply rounded-default border-solid border-2 border-inverted_theme; 
+    }
+    
+    &.Mui-focused fieldset {
+        @apply border-solid border-2 border-primary;  
+    }
+}

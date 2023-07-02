@@ -1,5 +1,4 @@
-"use client"
-import { StyledSituationsButton } from "./styled"
+import styled from "./styled.module.scss"
 
 type SituationsButtonProps = {
     Submit: () => void
@@ -8,17 +7,20 @@ type SituationsButtonProps = {
 }
 const SituationsButton = ({ Submit, value, isSelected }: SituationsButtonProps) => {
     return (
-        <StyledSituationsButton
+        <div
+            className={styled["situations-button"]}
             onClick={() => Submit()}
             data-is-active={isSelected}>
-            <div className="content">
-                <div className={`ball ${value == "pre-cadastrado" ? "blue-ball-illustration" : "blue-green-illustration"}`}
+            <div className={styled["content"]}>
+                <div
+                    className={styled["ball"]}
+                    data-ball-situation={value}
                 />
                 <p>
                     {value}
                 </p>
             </div>
-        </StyledSituationsButton>
+        </div>
     )
 }
 
