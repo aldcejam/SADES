@@ -3,7 +3,7 @@ import { ModalSelectCategoriesStatesConsumer } from 'components/templates/modals
 import { ModalSelectCategoriesStatesModifiers } from 'components/templates/modals/modalSelectCategories/@core/connection/modifiers';
 import { GenderOptionsProps } from 'defaultTypes/GendersProps';
 import IllustrationByGender from '../../illustrationByGender';
-import { StyledButtonSelectGender } from './styled';
+import styled from './styled.module.scss';
 
 
 type ButtonSelectGenderProps = {
@@ -26,15 +26,16 @@ const ButtonSelectGender = ({ gender }: ButtonSelectGenderProps) => {
     }
 
     return (
-        <StyledButtonSelectGender
+        <div
+            className={styled["button-select-gender"]}
             data-is-selected={gender == selectedCategoriesStates.genderCategory}
             onClick={() => selectedCategoriesModifiers.UpdateGenderSelected(gender)}
         >
-            <div className="illustration">
+            <div className={styled["illustration"]}>
                 <IllustrationByGender gender={gender}/>
             </div>
             <p>{TranslateGenderToPortuguese(gender)}</p>
-        </StyledButtonSelectGender>
+        </div>
     )
 }
 export default memo(ButtonSelectGender) 

@@ -1,8 +1,8 @@
 "use client"
-import { StyledButtonLogOut } from "./styled"
+import styled from "./styled.module.scss"
 import { useSession, signOut } from "next-auth/react";
 import { SuapClient } from "services/Login-Suap/SuapClient/SuapClient";
-import LogOutIcon from "../../../../../public/Icons/LogOut"
+import LogOutIcon from "public/Icons/LogOut"
 
 const ButtonLogOut = () => {
 
@@ -20,12 +20,12 @@ const ButtonLogOut = () => {
 
 
     return (
-        <StyledButtonLogOut className="button-log-out" onClick={() => HanddleLogOut()}>
-            <div className="icon">
+        <div className={`${styled["button-log-out"]} button-log-out`} onClick={() => HanddleLogOut()}>
+            <div className={styled["icon"]}>
                 <LogOutIcon />
             </div>
             <p>sair</p>
-        </StyledButtonLogOut>
+        </div>
     )
 }
 

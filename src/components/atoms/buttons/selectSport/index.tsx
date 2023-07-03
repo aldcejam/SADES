@@ -1,7 +1,7 @@
 import { ModalSelectCategoriesStatesConsumer } from 'components/templates/modals/modalSelectCategories/@core/connection/consumer';
 import { ModalSelectCategoriesStatesModifiers } from 'components/templates/modals/modalSelectCategories/@core/connection/modifiers';
 import { memo } from 'react';
-import { StyledButtonSelectSport } from './styled';
+import styled from './styled.module.scss';
 
 
 type ButtonSelectSportProps = {
@@ -13,12 +13,12 @@ const ButtonSelectSport = ({ category }: ButtonSelectSportProps) => {
     const { selectedCategoriesStates } = ModalSelectCategoriesStatesConsumer()
 
     return (
-        <StyledButtonSelectSport 
+        <div className={styled["button-select-sport"]}
             data-is-selected={category == selectedCategoriesStates.sportCategory}
-            onClick={() => { selectedCategoriesModifiers.UpdateSportSelected(category) }}
+            onClick={() => { selectedCategoriesModifiers.UpdateSportSelected(category)}}
             >
             <p>{category}</p>
-        </StyledButtonSelectSport>
+        </div>
     )
 }
 export default memo(ButtonSelectSport) 

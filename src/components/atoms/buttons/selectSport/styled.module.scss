@@ -1,0 +1,16 @@
+.button-select-sport {
+    @apply rounded-default border-solid border border-primary;
+    @apply py-[7px] px-[12px];
+    background-color: rgb(var(--absolute-theme), 0.592);
+    @apply transition-all duration-300 cursor-pointer;
+    
+    &[data-is-selected="true"] {
+        @apply transition-all duration-300;
+        background: linear-gradient(135deg, theme("colors.primary") 0%, theme("colors.secondary") 100%);
+        @apply border-secondary;
+    }
+
+    p {
+        @apply m-0 text-title text-lg capitalize font-medium; 
+    }
+}

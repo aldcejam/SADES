@@ -1,0 +1,12 @@
+.button-log-out {
+    @apply flex gap-[15px];
+
+    .icon {
+        @apply w-[22px] h-[22px];
+    }
+
+    p {
+        @apply text-title font-bold text-lg;
+        @apply mt-[3px] mb-0;
+    }
+}
