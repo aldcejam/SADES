@@ -1,12 +1,7 @@
 .button-dark-mode {
-    position: relative;
-    z-index: 10;
-    width: 60px;
-    height: 28px;
-    display: flex;
-    @apply bg-background;
-    display: flex;
-    @apply flex;
+    @apply relative z-10;
+    @apply w-14 h-7;
+    @apply flex bg-background;
 
     @apply rounded-[50px] border border-solid;
     border-color: rgb(var(--inverted-theme), 0.4);
@@ -19,24 +14,17 @@
         @apply justify-start;
     }
 
-    padding: 2px;
-    cursor: pointer;
-    box-sizing: content-box;
+    @apply p-0.5 cursor-pointer box-content;
 
     .handle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 27px;
-        height: 27px;
+        @apply flex justify-center items-center;
+        @apply w-7 h-7;
         background: linear-gradient(135deg, theme("colors.primary") 0%, theme("colors.secondary") 100%);
-        /* background: ${props.theme.palette.background.default}; */
-        border-radius: 40px;
-        @apply border border-solid;
+        @apply rounded-full border border-solid;
         border-color: rgb(var(--inverted-theme), 0.4);
 
         .icon {
-            @apply text-text text-base;
+            @apply text-absolute_theme text-base;
         }
     }
 }
