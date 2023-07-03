@@ -1,19 +1,19 @@
 "use client"
 import { SuapClient } from "services/Login-Suap/SuapClient/SuapClient"
-import { StyledButtonLoginSuap } from "./styled"
+import styled from "./styled.module.scss"
 
 const ButtonLoginSuap = () => {
 
     const NewSuapClient = SuapClient()
 
     return (
-        <StyledButtonLoginSuap>
+        <div className={styled["button-login-suap"]}>
             <a
                 onClick={() => NewSuapClient.Login()}
             >
-                <p className="icon">suap</p>
+                <p className={styled["icon"]}>suap</p>
             </a>
-        </StyledButtonLoginSuap>
+        </div>
     )
 }
 
