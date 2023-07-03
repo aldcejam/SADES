@@ -5,17 +5,17 @@ import { createContext, ReactNode, useContext, useMemo, useRef, useState } from 
 import Cookies from 'js-cookie';
 
 interface IThemeContext {
-    theme: string
+    theme: "dark" | "light"
     ToggleTheme: () => void
     mainColor: string,
     secondaryColor: string
 }
- 
+
 
 const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
-export const ThemeContextProvider = ({ initialTheme, children }: { initialTheme: string, children: ReactNode }) => {
-    const [theme, setTheme] = useState<string>(initialTheme)
+export const ThemeContextProvider = ({ initialTheme, children }: { initialTheme: "dark" | "light", children: ReactNode }) => {
+    const [theme, setTheme] = useState<"dark" | "light">(initialTheme)
     const mainColor = '#c43a3a'
     const secondaryColor = '#f07e14'
     /* #5B6ABD */

@@ -17,7 +17,7 @@
     "incremental": true, 
     "paths": {  
       "@redux-config/*": ["../redux.config/*"],
-      "@base-project*": ["../*"],
+      "@base-project/*": ["../*"],
       "public/*": ["../public/*"]
     },
     "plugins": [

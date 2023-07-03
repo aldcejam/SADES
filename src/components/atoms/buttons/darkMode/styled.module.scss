@@ -1,0 +1,42 @@
+.button-dark-mode {
+    position: relative;
+    z-index: 10;
+    width: 60px;
+    height: 28px;
+    display: flex;
+    @apply bg-background;
+    display: flex;
+    @apply flex;
+
+    @apply rounded-[50px] border border-solid;
+    border-color: rgb(var(--inverted-theme), 0.4);
+
+    &[data-theme-selected="light"] {
+        @apply justify-end;
+    }
+
+    &[data-theme-selected="dark"] {
+        @apply justify-start;
+    }
+
+    padding: 2px;
+    cursor: pointer;
+    box-sizing: content-box;
+
+    .handle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 27px;
+        height: 27px;
+        background: linear-gradient(135deg, theme("colors.primary") 0%, theme("colors.secondary") 100%);
+        /* background: ${props.theme.palette.background.default}; */
+        border-radius: 40px;
+        @apply border border-solid;
+        border-color: rgb(var(--inverted-theme), 0.4);
+
+        .icon {
+            @apply text-text text-base;
+        }
+    }
+}

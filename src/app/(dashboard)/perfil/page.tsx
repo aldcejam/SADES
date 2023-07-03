@@ -1,8 +1,8 @@
 import PageTitle from 'components/atoms/pageTitle'
-import styled from '../layout.module.scss'
-import { StyledPerfil } from './styled'
+import styled from '../layout.module.scss' 
 import { ViewProfile } from 'components/templates/viewProfile'
 import UserOperations from './components/organisms/userOperations'
+import styledPage from './styled.module.scss'
 
 export default function Page() {
 
@@ -10,10 +10,10 @@ export default function Page() {
         <>
             <PageTitle title='Perfil'/>
             <section className={styled["content-page"]}>
-                <StyledPerfil>
+                <div className={styledPage['page-perfil']}>
                     <ViewProfile screen='profileUser' />
                     <UserOperations />
-                </StyledPerfil>
+                </div>
             </section>
         </>
     )

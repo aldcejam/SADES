@@ -1,5 +1,5 @@
 "use client"
-import { StylesButtonDarkMode } from "./styled"
+import styled from "./styled.module.scss"
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useThemeContext } from "contexts/ThemeContext";
@@ -9,7 +9,6 @@ const ButtonDarkMode = () => {
 
     const { theme, ToggleTheme } = useThemeContext()
  
-
     const spring = {
         type: "spring",
         stiffness: 700,
@@ -17,15 +16,18 @@ const ButtonDarkMode = () => {
     };
 
     return (
-        <StylesButtonDarkMode themeselected={theme} onClick={() => ToggleTheme()}>
-            <motion.div className="handle" layout transition={spring} >
+        <div
+            className={styled["button-dark-mode"]}
+            data-theme-selected={theme}
+            onClick={() => ToggleTheme()}>
+            <motion.div className={styled["handle"]} layout transition={spring} >
                 {theme == "light" ?
-                    <LightModeIcon className="icon" />
+                    <LightModeIcon className={styled["icon"]} />
                     :
-                    <DarkModeOutlinedIcon className="icon" />
+                    <DarkModeOutlinedIcon className={styled["icon"]} />
                 }
             </motion.div>
-        </StylesButtonDarkMode>
+        </div>
     )
 
 }
