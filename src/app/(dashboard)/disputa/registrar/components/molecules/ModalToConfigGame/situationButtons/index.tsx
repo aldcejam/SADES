@@ -1,11 +1,11 @@
 import styled from "./styled.module.scss"
 
-type SituationsButtonProps = {
+type SituationButtonsProps = {
     Submit: () => void
     value: "pre-cadastrado" | "em andamento"
     isSelected: boolean
 }
-const SituationsButton = ({ Submit, value, isSelected }: SituationsButtonProps) => {
+const SituationButtons = ({ Submit, value, isSelected }: SituationButtonsProps) => {
     return (
         <div
             className={styled["situations-button"]}
@@ -24,4 +24,4 @@ const SituationsButton = ({ Submit, value, isSelected }: SituationsButtonProps) 
     )
 }
 
-export default SituationsButton
+export default SituationButtons
