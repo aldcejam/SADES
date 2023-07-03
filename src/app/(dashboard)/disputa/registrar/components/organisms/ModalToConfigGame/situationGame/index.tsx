@@ -1,7 +1,7 @@
 "use client"
 import { PageRegisterStatesModifiers } from '../../../../@core/connection/modifiers';
 import { PageRegisterStatesConsumers } from '../../../../@core/connection/consumers';
-import SituationsButton from '../../../molecules/ModalToConfigGame/situationsButton';
+import SituationsButton from 'app/(dashboard)/disputa/registrar/components/molecules/ModalToConfigGame/situationsButton';
 import styled from "./styled.module.scss"
 
 const SituationGame = () => {

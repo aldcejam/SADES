@@ -6,7 +6,8 @@ import ModifyBio from "../../../molecules/ModifyUserData/modifyBio";
 import ModifyCourse from "../../../molecules/ModifyUserData/modifyCourse";
 import ModifyIdentity from "../../../molecules/ModifyUserData/modifyIdentity";
 import ModifySocialMidias from "../../../molecules/ModifyUserData/modifySocialMidias";
-import { StyledForm } from "./styled";
+import "./styled.scss"
+import styled from "./styled.module.scss";
 
 type FormProps = {
     title: string
@@ -31,28 +32,28 @@ const Form = ({ title }: FormProps) => {
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
     return (
-        <StyledForm onSubmit={handleSubmit(onSubmit)}>
-            <h2 className="title">{title}</h2>
-            <div className="identity">
+        <div className={styled["form"]} onSubmit={handleSubmit(onSubmit)}>
+            <h2 className={styled["title"]}>{title}</h2>
+            <div className={styled["identity"]}>
                 <ModifyIdentity errors={errors} register={register} />
             </div>
-            <div className="social-midias">
+            <div className={styled["social-midias"]}>
                 <ModifySocialMidias errors={errors} register={register} />
             </div>
             {/* <div className="course">
                 <ModifyCourse course={courses} errors={errors} register={register} />
             </div> */}
-            <div className="upload-image">
+            <div className={styled["upload-image"]}>
                 <InputUpload />
             </div>
-            <div className="bio">
+            <div className={styled["bio"]}>
                 <ModifyBio errors={errors} register={register} />
             </div>
             <SubmitButton
                 value="Salvar"
                 type="submit"
             />
-        </StyledForm>
+        </div>
     )
 }
 

@@ -1,0 +1,17 @@
+.submit-button {
+    grid-area: submit;
+    @apply flex justify-center mt-[20px];
+
+    input[type="submit"] {
+        grid-area: submit;
+        @apply py-[10px] px-[30px];
+        @apply font-bold transition-all duration-300 blur-[10];
+        background-color: rgb(var(--inverted_theme), 35);
+        @apply rounded-default border-2 border-solid border-secondary;
+
+        &:hover {
+            background: ("colors.primary" / 76%);
+            @apply cursor-pointer; 
+        }
+    }
+}

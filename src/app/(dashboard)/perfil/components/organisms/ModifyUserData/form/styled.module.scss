@@ -1,0 +1,49 @@
+.form { 
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 15px;
+    grid-template:
+        "title title"
+        "identity social-midias"
+        "identity social-midias"
+        "course course"
+        "upload-image upload-image"
+        "bio-message bio-message"
+        "submit submit"
+        / 1fr 1.5fr;
+    padding: 0px 10% 30px;
+    margin-top: 70px;
+    height: fit-content;
+    max-width: 600px;
+
+
+    .title {
+        grid-area: title;
+        font-size: 1.3rem;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .identity {
+        grid-area: identity;
+    }
+
+    .social-midias {
+        grid-area: social-midias;
+    }
+
+    .course {
+        grid-area: course;
+    }
+
+    .upload-image {
+        grid-area: upload-image;
+    }
+
+    .bio {
+        grid-area: bio-message;
+    }
+
+    
+}
