@@ -1,0 +1,26 @@
+.modify-identity {
+    display: grid;
+    gap: 10px;
+
+    .input-material-ui {
+        width: 100%;
+        transition: 0.3s all;
+
+        input {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            @apply rounded-default;
+        }
+
+        .MuiOutlinedInput-root {
+            & fieldset {
+                @apply rounded-default border-2 border-solid border-primary;
+            }
+
+            &.Mui-focused fieldset {
+                @apply border-2 border-solid border-inverted_theme;
+            }
+        }
+    }
+}

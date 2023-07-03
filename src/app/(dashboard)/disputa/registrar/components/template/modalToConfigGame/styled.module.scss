@@ -1,0 +1,74 @@
+.modal-to-config-game {
+    @apply absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2;
+    @apply w-[clamp(200px,96vw,700px)] min-h-[95vh] max-h-[95vh] overflow-y-auto; 
+    @apply backdrop:blur-[50px] pt-[10px] px-[30px] pb-[30px]; 
+    background-color: rgb(var(--background), 0.9);
+    @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-l-primary border-t-primary;
+
+    .close-icon {
+        @apply absolute top-[10px] right-[10px];
+        @apply text-title hover:text-subtitle text-3xl;
+        @apply cursor-pointer transition-all ease-linear duration-200;  
+    }
+
+
+    h2 {  
+        @apply pt-[10px] px-0 pb-5;
+        @apply text-title text-center font-semibold text-[clamp(1.4em,3vw,2.3rem)] uppercase;  
+    }
+
+    .container {
+        @apply grid gap-y-5 gap-x-[25px];   
+        grid-template: "teams teams"
+            "game-date game-date"
+            "situation situation"
+            "positions positions"
+            "create-game-button create-game-button"
+            / 1fr 1fr;
+
+        @screen sm {
+            grid-template:
+                "teams teams"
+                "game-date situation"
+                "game-date situation"
+                "positions positions"
+                "create-game-button create-game-button"
+                / 1fr 1fr;
+                @apply gap-x-[50px]; 
+
+        }
+
+
+        @screen xs {
+            grid-template:
+                "teams teams"
+                "game-date situation"
+                "game-date situation"
+                "positions positions"
+                "create-game-button create-game-button"
+                / 1fr 1fr;
+                @apply gap-x-[25px];
+        } 
+
+        .teams {
+            grid-area: teams;
+            margin-bottom: 25px;
+        }
+
+        .situation {
+            grid-area: situation;
+        }
+
+        .game-date {
+            grid-area: game-date;
+        }
+
+        .create-game-button {
+            grid-area: create-game-button;
+        }
+    }
+
+    .pontuations {
+        grid-area: positions;
+    }
+}

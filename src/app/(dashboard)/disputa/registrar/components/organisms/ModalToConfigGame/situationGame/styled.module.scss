@@ -1,0 +1,11 @@
+.situation-game { 
+    @apply flex flex-wrap;
+
+    .buttons {
+        @apply flex flex-wrap gap-[10px]; 
+    }
+
+    .title {
+        @apply text-title text-2xl font-medium mt-[15px] mb-[26px];
+    }
+}

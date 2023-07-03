@@ -1,6 +1,6 @@
 import SubmitButton from "components/atoms/submit"
 import AvailableSports, { UpdateSportsProps } from "../../organisms/availableSports"
-import { StyledChooseDispute } from "./styled"
+import styled from "./styled.module.scss"
 import AvailableCourses from "../../organisms/availableCourses" 
  
 type ChooseDisputeProps = {
@@ -9,13 +9,13 @@ type ChooseDisputeProps = {
 }
 const ChooseDispute = ({UpdateSelectedSportData,Submit}: ChooseDisputeProps) => {
     return (
-        <StyledChooseDispute>
+        <div className={styled["choose-dispute"]}>
             <AvailableCourses />
             <AvailableSports UpdateSport={UpdateSelectedSportData} />
             <SubmitButton
                 Submit={() => Submit()}
                 value="Selecionar categorias" />
-        </StyledChooseDispute>
+        </div>
     )
 }
 

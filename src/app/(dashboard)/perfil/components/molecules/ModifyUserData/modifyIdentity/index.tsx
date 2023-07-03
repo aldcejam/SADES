@@ -1,6 +1,5 @@
-"use client"
 import { TextField } from "@mui/material"
-import { StyledModifyIdentity } from "./styled"
+import "./styled.scss"
 
 type InputTextProps = {
     register: any,
@@ -9,7 +8,7 @@ type InputTextProps = {
 
 const ModifyIdentity = ({errors,register}:InputTextProps) => {
     return (
-        <StyledModifyIdentity>
+        <div className="modify-identity">
             <TextField
                 {...register("name", { required: false, minLength: 4 })}
                 label="Nome"
@@ -23,7 +22,7 @@ const ModifyIdentity = ({errors,register}:InputTextProps) => {
                 className="input-material-ui"
                 type={"number"}
             />
-        </StyledModifyIdentity>
+        </div>
     )
 }
 export default ModifyIdentity

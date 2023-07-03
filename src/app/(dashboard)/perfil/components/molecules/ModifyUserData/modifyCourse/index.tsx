@@ -1,6 +1,6 @@
 "use client"
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { StyledModifyCourse } from "./styled"
+import "./styled.scss"
 
 type ModifyCourseProps = {
     errors: any,
@@ -9,7 +9,7 @@ type ModifyCourseProps = {
 }
 const ModifyCourse = ({course, errors, register}:ModifyCourseProps) => {
     return (
-        <StyledModifyCourse>
+        <div>
             <FormControl className="input-material-ui">
                 <InputLabel id="demo-simple-select-helper-label">Curso</InputLabel>
                 <Select
@@ -23,7 +23,7 @@ const ModifyCourse = ({course, errors, register}:ModifyCourseProps) => {
                     })}
                 </Select>
             </FormControl>
-        </StyledModifyCourse>
+        </div>
     )
 }
 

@@ -25,6 +25,7 @@ module.exports = {
         text: "rgb(var(--text))",
         info: "rgb(var(--info))",
         success: "rgb(var(--success))",
+        warning: "rgb(var(--warning))",
 
         gray_100: "rgb(var(--gray-100))",
         gray_200: "rgb(var(--gray-200))",

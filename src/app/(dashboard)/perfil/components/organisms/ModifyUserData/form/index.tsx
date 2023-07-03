@@ -39,9 +39,9 @@ const Form = ({ title }: FormProps) => {
             <div className="social-midias">
                 <ModifySocialMidias errors={errors} register={register} />
             </div>
-            <div className="course">
-                {/* <ModifyCourse course={courses} errors={errors} register={register} /> */}
-            </div>
+            {/* <div className="course">
+                <ModifyCourse course={courses} errors={errors} register={register} />
+            </div> */}
             <div className="upload-image">
                 <InputUpload />
             </div>

@@ -2,7 +2,7 @@
 import { PageRegisterStatesModifiers } from '../../../../@core/connection/modifiers';
 import { PageRegisterStatesConsumers } from '../../../../@core/connection/consumers';
 import SituationsButton from '../../../molecules/ModalToConfigGame/situationsButton';
-import { StyledSituationGame } from "./styled"
+import styled from "./styled.module.scss"
 
 const SituationGame = () => {
 
@@ -13,10 +13,10 @@ const SituationGame = () => {
 
 
     return (
-        <StyledSituationGame>
-            <p className="title">Situação do jogo:</p>
+        <div className={styled["situation-game"]}>
+            <p className={styled["title"]}>Situação do jogo:</p>
             <span
-                className="buttons"
+                className={styled["buttons"]}
             >
                 {situations.map((situation) => {
                     return (
@@ -30,7 +30,7 @@ const SituationGame = () => {
                 })}
             </span>
 
-        </StyledSituationGame>
+        </div>
     )
 }
 

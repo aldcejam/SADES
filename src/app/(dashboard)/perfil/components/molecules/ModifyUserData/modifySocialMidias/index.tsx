@@ -1,6 +1,5 @@
-"use client"
 import { TextField } from "@mui/material"
-import { StyledModifySocialMidias } from "./styled"
+import "./styled.scss"
 
 type ModifySocialMidiasProps = {
     errors: any
@@ -9,7 +8,7 @@ type ModifySocialMidiasProps = {
 
 const ModifySocialMidias = ({ errors, register }: ModifySocialMidiasProps) => {
     return (
-        <StyledModifySocialMidias>
+        <div className="modify-social-midias">
             <TextField
                 {...register("instagram", { required: false, minLength: 3 })}
                 label="Instagram"
@@ -22,7 +21,7 @@ const ModifySocialMidias = ({ errors, register }: ModifySocialMidiasProps) => {
                 error={errors.twitter ? true : false}
                 className="input-material-ui"
             />
-        </StyledModifySocialMidias>
+        </div>
     )
 }
 

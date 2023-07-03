@@ -1,4 +1,4 @@
-import { StyledModifyBio } from "./styled"
+import styled from "./styled.module.scss"
  
 type ModifyBioProps = {
     errors: any
@@ -6,13 +6,13 @@ type ModifyBioProps = {
 }
 const ModifyBio = ({errors, register}:ModifyBioProps) => {
     return (
-        <StyledModifyBio>
+        <div className={styled["modify-bio"]}>
             <textarea
                 placeholder="mensagem da bio"
                 {...register("bio", { required: false, minLength: 8 })}
-                className={`${errors.bio ? "input-error" : ""}`}
+                className={`${errors.bio ? styled["input-error"] : ""}`}
             />
-        </StyledModifyBio>
+        </div>
     )
 }
 

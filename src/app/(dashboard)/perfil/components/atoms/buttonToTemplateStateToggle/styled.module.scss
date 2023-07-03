@@ -1,0 +1,37 @@
+.button-to-template-state-toggle {
+    @apply absolute inset-y-0 m-auto;
+    @apply flex gap-[5px] items-center justify-start;
+    @apply bg-transparent border-0 cursor-pointer rounded-default;
+
+    &[data-isOpen="true"] {
+        @apply left-[10px] top-[15px] bottom-[inherit];
+        @apply top-[25px] flex-row-reverse;
+
+        .title {
+            @apply text-base;
+        }
+
+        .small-button {
+            @apply scale-[0.7];
+
+            .angle-button-icon {
+                transform: rotate(180deg) !important;
+            }
+        }
+    }
+
+    .title {
+        @apply text-title text-center text-xs font-bold m-0;
+    }
+
+    .small-button {
+        @apply w-[22px] h-[22px] bg-primary; 
+        @apply rounded-default border border-solid border-inverted_theme;
+
+        .angle-button-icon {
+            fill: white !important;
+            @apply -mt-0.5 -ml-0.5;
+            @apply rotate-[90deg] transition-all duration-300;
+        }
+    }
+}

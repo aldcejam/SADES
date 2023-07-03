@@ -1,0 +1,20 @@
+.modify-bio { 
+    grid-area: bio-message;
+
+    textarea {
+        @apply w-full h-[90px];
+        @apply resize-none bg-transparent transition-all duration-300;
+        @apply pt-[10px] pr-0 pb-0 pl-[10px] ; 
+        @apply rounded-default border-2 border-solid border-primary;
+        @apply text-title text-base ;   
+
+        &.input-error {
+            @apply border-2 border-solid border-warning;
+            @apply text-warning;
+        }
+
+        &:focus {
+            @apply outline-[0] border-2 border-solid border-inverted_theme;
+        }
+    }
+}

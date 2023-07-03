@@ -1,6 +1,6 @@
 "use client"
-import { StyledModalToConfigGame } from "./styled"
 import PontuationByPosition from "../../organisms/ModalToConfigGame/pontuationByPosition";
+import styled from "./styled.module.scss"
 import LogoCourses from "../../molecules/ModalToConfigGame/logoCourses";
 import SituationGame from "../../organisms/ModalToConfigGame/situationGame";
 import CloseIcon from '@mui/icons-material/Close';
@@ -38,30 +38,30 @@ const ModalToConfigGame = ({ ToggleModal, modalIsOpen }: ModalToConfigGameProps)
         <ModalTemplate
             modalIsOpen={modalIsOpen}
         >
-            <StyledModalToConfigGame>
-                <CloseIcon onClick={() => ToggleModal()} className='close-icon' />
+            <div className={styled["modal-to-config-game"]}>
+                <CloseIcon onClick={() => ToggleModal()} className={styled['close-icon']} />
                 <h2>{title}</h2>
-                <div className="container">
-                    <article className="teams">
+                <div className={styled["container"]}>
+                    <article className={styled["teams"]}>
                         <LogoCourses />
                     </article>
-                    <div className="situation">
+                    <div className={styled["situation"]}>
                         <SituationGame
                         />
                     </div>
-                    <div className="game-date">
+                    <div className={styled["game-date"]}>
                         <GameDate />
                     </div>
-                    <div className="pontuations">
+                    <div className={styled["pontuations"]}>
                         <PontuationByPosition />
                     </div>
-                    <div className="create-game-button">
+                    <div className={styled["create-game-button"]}>
                         <SubmitButton
                             Submit={function ala() { }}
                             value="Cria Disputa" />
                     </div>
                 </div>
-            </StyledModalToConfigGame>
+            </div>
         </ModalTemplate>
     )
 }
