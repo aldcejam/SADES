@@ -1,0 +1,20 @@
+.hover-sport-button {
+    @apply relative;
+    @apply w-[clamp(120px,20vw,250px)];
+    @apply py-[10px] px-0;
+    @apply text-lg capitalize;
+    @apply cursor-pointer transition-all duration-300;
+    @apply rounded-default border border-solid;
+    border-color: rgb(var(--inverted-theme), 0.227);
+    background-color: rgb(var(--absolute-theme), 0.2);
+    
+    
+    &:hover {
+        @apply scale-105;
+        background-color: rgb(var(--absolute-theme), 0.5);
+    }
+
+    p {
+        @apply text-text text-center;
+    }
+}

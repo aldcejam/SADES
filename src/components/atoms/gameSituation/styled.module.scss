@@ -1,0 +1,13 @@
+.game-situation {
+    @apply flex items-center justify-end gap-1;
+
+    p {
+        @apply text-xs m-0;
+    }
+
+    .circle {
+        @apply w-[10px] h-[10px];
+        @apply rounded-full border border-solid border-white;
+        @apply bg-success;
+    }
+}

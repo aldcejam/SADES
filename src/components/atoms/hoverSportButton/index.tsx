@@ -1,15 +1,15 @@
-import { StyedHoverSportButton } from "./styled"
+import styled from "./styled.module.scss"
 
 type HoverSportButtonProps = {
     nameButton: string
 }
 const HoverSportButton = ({ nameButton }: HoverSportButtonProps) => {
     return (
-        <StyedHoverSportButton>
-            <span>
+        <div className={styled["hover-sport-button"]}>
+            <p>
                 {nameButton}
-            </span>
-        </StyedHoverSportButton>
+            </p>
+        </div>
     )
 }
 
