@@ -1,11 +1,10 @@
-"use client"
-import Image from "next/image";
-import {useState } from "react";
+"use client" 
+import { useState } from "react";
 import { useDropzone } from "react-dropzone";
-import { uniqueId } from "lodash";
-import {StyledInputUpload,ThumbsContainer} from "./styled";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { uniqueId } from "lodash"; 
+import styled from "./styled.module.scss" 
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Thumb } from "./thumb";
 
 const InputUpload = () => {
     const [files, setFiles] = useState([]);
@@ -45,60 +44,27 @@ const InputUpload = () => {
         if (isDragAccept) {
             return <p>Solte o arquivo</p>;
         } else if (isDragReject) {
-            return <p>Este arquivo não pode</p>;
+            return <p>arquivo não permitido</p>;
         } else {
             return <p>Arraste a imagem ou clique para enviar</p>;
         }
     };
 
     return (
-        <StyledInputUpload
-            dragaccept={isDragAccept.toString()}
-            dragreject={isDragReject.toString()}
+        <div className={styled["input-upload"]}
+            data-dragaccept={isDragAccept.toString()} 
+            data-dragreject={isDragReject.toString()} 
         >
-            <div {...getRootProps({ className: "dropzone" })}>
+            <div {...getRootProps({ className: styled["dropzone"] })}>
                 <input name="profilePic" {...getInputProps()} />
 
-                <div className="label">
-                        <ChevronRightIcon className="icon"/>
+                <div className={styled["label"]}>
+                        <ChevronRightIcon className={styled["icon"]}/>
                     {RederizeUserMovimentSituation()}
                 </div>
             </div>
-            <ThumbsContainer>
-                {
-                    files.map((file) => (
-                        <div className="data-image-upload" key={file.id}>
-                            <div className="data-image-upload__thumb">
-                                <Image alt="icon" fill
-                                    src={file.preview}
-                                    onLoad={() => {
-                                        URL.revokeObjectURL(file.preview);
-                                    }}
-                                />
-                            </div>
-                            <div className="data-image-upload__informations">
-                                <div>
-                                    <p>{file.size} MB</p>
-                                    <div className="informations__clear-data-image" onClick={() => CleanFiles()}>
-                                        Remover Imagem
-                                    </div>
-                                </div>
-                                <div className="informations__upload-progress">
-                                    <CircularProgressbar
-                                        styles={{
-                                            root: { width: 40 },
-                                            path: { stroke: "#3ef153" },
-                                        }}
-                                        strokeWidth={10}
-                                        value={file.progress}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                }
-            </ThumbsContainer>
-        </StyledInputUpload>
+            <Thumb files={files} CleanFiles={CleanFiles}/>
+        </div>
     );
 };
 

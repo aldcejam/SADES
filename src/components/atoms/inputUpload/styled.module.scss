@@ -1,0 +1,53 @@
+.input-upload {
+    @apply flex items-center w-full;
+    @apply py-[3px] px-5;
+    @apply rounded-default border-2 border-solid border-primary;
+    outline: none;
+    @apply transition-[border] duration-300 ease-in-out cursor-pointer;
+    background: theme("colors.primary" / 20%);
+
+    &:hover {
+        @apply border-primary;
+        background-color: theme("colors.primary" / 45%);
+    }
+
+    .dropzone {
+        @apply w-full h-full;
+    }
+
+    .label {
+        @apply flex flex-wrap items-center gap-x-[10px] justify-center;
+        @apply text-title;
+
+        p {
+            @apply m-0 text-center ;
+
+        } 
+        .icon {
+            @apply text-5xl -rotate-90;
+
+        }
+    }
+
+    &[data-dragaccept=true] {
+        @apply border-success;
+
+        p,
+        .icon {
+            @apply text-success;
+        }
+    }
+
+    &[data-dragreject=true] {
+        @apply border-warning;
+
+        p,
+        .icon {
+            @apply text-warning;
+        }
+    }
+
+
+
+
+}

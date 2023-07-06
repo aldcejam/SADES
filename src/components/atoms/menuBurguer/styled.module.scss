@@ -1,0 +1,48 @@
+.menu-burguer {
+    @apply fixed left-4 top-5;
+    @apply w-[30px] h-[30px] z-10;
+    @apply cursor-pointer transition-all duration-300;
+
+    @screen sm {
+        @apply absolute left-[10px] top-4;
+    }
+
+    .line {
+        @apply absolute inset-y-0 m-auto;
+        @apply w-[30px] h-[3px] rounded-full;
+        @apply bg-primary transition-all duration-500;
+
+        &::before,
+        &::after {
+            content: "";
+            @apply bg-primary transition-all duration-500;
+            @apply absolute;
+            @apply w-full h-[3px] rounded-full;
+        }
+
+        &::before {
+            @apply -top-[7px];
+        } 
+        &::after {
+            @apply top-[7px];
+        }
+    }
+
+
+    &[data-menu-state=true] {
+        @media (max-width: theme('screens.sm')) {
+            @apply -ml-1;
+        }
+
+        .line {
+            @apply rotate-45;
+
+            &::before {
+                @apply top-0; 
+            } 
+            &::after {
+                @apply top-0 -rotate-90;
+            }
+        }
+    }
+}

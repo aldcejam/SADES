@@ -1,0 +1,35 @@
+.thumb {
+    @apply flex flex-row flex-wrap mt-5;
+
+    .data-image-upload {
+        @apply w-full flex items-start justify-center gap-3;
+        @apply text-title;
+
+        &__thumb {
+            @apply relative flex w-[70px] h-[70px];
+            @apply overflow-hidden rounded-default border border-solid border-[#eaeaea];  
+        }
+
+        &__informations {
+            @apply flex items-center gap-10;
+            @apply pb-10;
+
+            p {
+                @apply mt-0 mb-[7px];
+            }
+
+            .informations__clear-data-image {
+                @apply border-2 border-solid;
+                border-color: rgb(var(--inverted-theme), 0.2);
+                @apply py-0.5 px-1; 
+                @apply text-center transition-all duration-300; 
+                background-color: rgb(var(--inverted-theme), 0.125); 
+
+                &:hover {
+                    background-color: rgb(var(--inverted-theme), 0.063);
+                    @apply border-primary;
+                }
+            }
+        }
+    }
+}

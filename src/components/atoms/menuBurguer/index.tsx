@@ -1,20 +1,18 @@
 "use client"
 import { useSidebarStateContext } from "contexts/SidebarStateContext"
-import StyledMenuBurguer from "./styled"
+import styled from "./styled.module.scss"
 
 const MenuBurguer = () => {
     const { sidebarState, ToggleStateSidebar } = useSidebarStateContext()
-    
+
     return (
-        <StyledMenuBurguer 
-        menuisactive={sidebarState.toString()} 
-        onClick={() => ToggleStateSidebar()}
+        <div className={styled["menu-burguer"]}
+            data-menu-state={sidebarState.toString()}
+            onClick={() => ToggleStateSidebar()}
         >
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-        </StyledMenuBurguer>
-        
+            <div className={styled["line"]}></div>
+        </div>
+
     )
 }
 
