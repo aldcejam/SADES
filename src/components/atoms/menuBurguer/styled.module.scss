@@ -22,12 +22,12 @@
 
         &::before {
             @apply -top-[7px];
-        } 
+        }
+
         &::after {
             @apply top-[7px];
         }
     }
-
 
     &[data-menu-state=true] {
         @media (max-width: theme('screens.sm')) {
@@ -38,8 +38,9 @@
             @apply rotate-45;
 
             &::before {
-                @apply top-0; 
-            } 
+                @apply top-0;
+            }
+
             &::after {
                 @apply top-0 -rotate-90;
             }
