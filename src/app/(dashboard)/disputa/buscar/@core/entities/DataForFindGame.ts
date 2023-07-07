@@ -4,12 +4,12 @@ import { RootState } from "@redux-config/store";
 import {
   IDataForFindGame,
   CategoriesProps,
-  SportProps
+  SportSelectedProps
 } from "./IDataForFindGame";
 
 const initialState: IDataForFindGame = {
   categories: {} as CategoriesProps,
-  sport: {} as SportProps
+  sportSelected: {} as SportSelectedProps
 }
 
 export const DataForFindGameSlice = createSlice({
@@ -19,13 +19,13 @@ export const DataForFindGameSlice = createSlice({
     SetCategories: (state, action: PayloadAction<CategoriesProps>) => {
       state.categories = action.payload;
     },
-    SetSport: (state, action: PayloadAction<SportProps>) => {
-      state.sport = action.payload;
+    SetSportSelected: (state, action: PayloadAction<SportSelectedProps>) => {
+      state.sportSelected = action.payload;
     }
   }
 });
 
-export const { SetCategories,SetSport } = DataForFindGameSlice.actions;
+export const { SetCategories, SetSportSelected } = DataForFindGameSlice.actions;
 
 export const DataForFindGameStates = (state: RootState) =>
   state.DataForFindGame;

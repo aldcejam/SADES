@@ -1,16 +1,20 @@
+import { GenderOptionsProps } from "defaultTypes/GendersProps";
+
 type CategoriesProps = {
   sportCategory?: string;
   genderCategory?: GenderOptionsProps;
 };
 
-type SportProps = {
+type SportSelectedProps = {
+  sportUUID: string;
   sportName: string;
-  uuid: string;
+  sportCategories?: string[];
+  genderCategories?: GenderOptionsProps[];
 }
 
 interface IDataForFindGame {
-  sport: sportProps
+  sportSelected: SportSelectedProps
   categories: CategoriesProps;
 }
 
-export { IDataForFindGame, CategoriesProps, SportProps };
+export { IDataForFindGame, CategoriesProps, SportSelectedProps };

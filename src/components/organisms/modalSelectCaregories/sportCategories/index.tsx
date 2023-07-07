@@ -1,18 +1,22 @@
-import { ModalSelectCategoriesStatesConsumer } from "components/templates/modals/modalSelectCategories/@core/connection/consumer"
 import ButtonSelectSport from "components/atoms/buttons/selectSport"
 import { StyledSportCategories } from "./styled"
 
-const SportCategories = () => {
+type SportCategoriesProps = {
+    sportCategories: string[]
+    updateSportCategorySelected: (category: string) => void
+    sportCategorySelected: string | undefined
+}
 
-    const { selectedSportData } = ModalSelectCategoriesStatesConsumer()
-
+const SportCategories = ({ sportCategories, sportCategorySelected, updateSportCategorySelected }: SportCategoriesProps) => {
     return (
         <StyledSportCategories>
-            {selectedSportData?.sportCategories?.map((category) => {
+            {sportCategories.map((category) => {
                 return (
                     <ButtonSelectSport
                         key={category}
                         category={category}
+                        sportCategorySelected={sportCategorySelected}
+                        updateSportCategorySelected={updateSportCategorySelected}
                     />
                 )
             })}

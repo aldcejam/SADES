@@ -1,17 +1,22 @@
-import { ModalSelectCategoriesStatesConsumer } from "components/templates/modals/modalSelectCategories/@core/connection/consumer"
 import ButtonSelectGender from "components/atoms/buttons/selectGender"
 import { StyledGenderOptions } from "./styled"
-import { GenderOptionsProps } from "defaultTypes/GendersProps"
+import { GenderOptionsProps as GenderOptionsInterface } from "defaultTypes/GendersProps"
 
+type GenderOptionsProps = {
+    genderCategories: GenderOptionsInterface[]
+    genderCategorySelected: string | undefined
+    updateGenderCategorySelected: (genderCategory: any) => void
+}
 
-const GenderOptions = () => {
-    const { selectedSportData } = ModalSelectCategoriesStatesConsumer()
+const GenderOptions = ({ genderCategories, genderCategorySelected, updateGenderCategorySelected }: GenderOptionsProps) => {
 
     return (
         <StyledGenderOptions >
-            {selectedSportData?.genderCategories?.map((gender: GenderOptionsProps) => {
+            {genderCategories?.map((gender: GenderOptionsInterface) => {
                 return (
                     <ButtonSelectGender
+                        genderCategorySelected={genderCategorySelected}
+                        updateGenderCategorySelected={updateGenderCategorySelected}
                         key={gender}
                         gender={gender}
                     />

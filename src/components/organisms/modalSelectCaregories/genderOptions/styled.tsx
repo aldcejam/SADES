@@ -6,7 +6,7 @@ export const StyledGenderOptions = styled("div")`
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin: 0 auto 20px;
+    margin: auto ;
     max-width: 300px;
     span.selected{
         background-color: #fff;    

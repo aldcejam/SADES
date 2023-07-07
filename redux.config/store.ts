@@ -1,12 +1,10 @@
-import { configureStore,ThunkAction,Action } from '@reduxjs/toolkit'
-import DataToSelectCategories from 'components/templates/modals/modalSelectCategories/@core/entities/DataToSelectCategories';
+import { configureStore,ThunkAction,Action } from '@reduxjs/toolkit' 
 import DataForFindGame from 'app/(dashboard)/disputa/buscar/@core/entities/DataForFindGame';
 import DataForGameRegistration from 'app/(dashboard)/disputa/registrar/@core/entities/DataForGameRegistration';
  
 export const Store = configureStore({
   reducer: {
-    DataForGameRegistration: DataForGameRegistration,
-    DataToSelectCategories: DataToSelectCategories,
+    DataForGameRegistration: DataForGameRegistration, 
     DataForFindGame: DataForFindGame,
   },
 });

@@ -3,13 +3,20 @@ import './styled.scss';
 import styled from "app/(dashboard)/layout.module.scss";
 
 import PageTitle from 'components/atoms/pageTitle';
-import ModalSelectCategories from "components/templates/modals/modalSelectCategories";
 import ListSports from './components/template/listSports';
 import { DisputaBuscar_Logic } from "./page_logic";
-  
+import { ModalSelectCategories } from "components/templates/modals/modalSelectCategories"
+import { DataForFindGameStates } from './@core/entities/DataForFindGame';
+import { useAppSelector } from '@redux-config/hook';
+
 export default function Page() {
 
-    const { Submit, ToggleModal, UpdateSports, course, isModalOpen, listSport } = DisputaBuscar_Logic()
+    const {
+        ToggleModal, isModalOpen, course,
+        listSport, genderCategorySelected, sportCategorySelected,
+        sportSelected, Submit
+
+    } = DisputaBuscar_Logic()
 
     return (
         <>
@@ -23,15 +30,36 @@ export default function Page() {
                     <div className='content'>
                         <ListSports
                             ToggleModal={ToggleModal}
-                            course={course ? course : "não há curso selecionado no seu perfil"}
-                            UpdateSport={UpdateSports}
+                            course={course ? course : "não há equipe selecionado"}
+                            UpdateSportSelected={sportSelected.Update}
                             listSports={listSport}
                         />
-                        <ModalSelectCategories
-                            isModalOpen={isModalOpen}
+                        <ModalSelectCategories.Root
                             ToggleModal={ToggleModal}
-                            SubmitModal={Submit}
-                        />
+                            isModalOpen={isModalOpen}
+                            sportName={sportSelected.value.sportName}
+                        >
+                            {
+                                sportSelected.value.sportCategories ?
+                                    <ModalSelectCategories.SportCategories
+                                        sportCategories={sportSelected.value.sportCategories}
+                                        sportCategorySelected={sportCategorySelected.value}
+                                        updateSportCategorySelected={sportCategorySelected.Update}
+                                    /> : null
+                            }
+                            {
+                                sportSelected.value.genderCategories ?
+                                    <ModalSelectCategories.GenderOptions
+                                        genderCategorySelected={genderCategorySelected.value}
+                                        updateGenderCategorySelected={genderCategorySelected.Update}
+                                        genderCategories={sportSelected.value.genderCategories}
+                                    /> : null
+                            }
+                            <ModalSelectCategories.SubmitButton
+                                value='Prosseguir'
+                                Submit={Submit()}
+                            />
+                        </ModalSelectCategories.Root>
                     </div>
                 </div>
             </section>

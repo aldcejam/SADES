@@ -1,22 +1,21 @@
 import { ManageCourses } from "../../application/courses/ManageCourses"
 import { ManageDate } from "../../application/date/ManageDate"
-import { ManageGenderCategory } from "../../application/genderCategory/ManageGenderCategory"
 import { ManagePontuationbyPositions } from "../../application/pontuationByPositions/ManagePontuationbyPositions"
 import { ManageSituation } from "../../application/situation/ManageSituation"
-import { ManageSport } from "../../application/sport/ManageSport"
-import { ManageSportCategory } from "../../application/sportCategory/ManageSportCategory"
+import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected"
+import { ManageCategories } from "../../application/categories/ManageCategories"
 
 const PageRegisterStatesModifiers = () => {
-    const { UpdateSport } = ManageSport()
+    const { UpdateSportSelected } = ManageSportSelected()
     const { AddCourse, RemoveCourse } = ManageCourses()
     const { UpdateDate } = ManageDate()
-    const { UpdateGenderCategory } = ManageGenderCategory()
-    const { UpdateSportCategory } = ManageSportCategory()
+    const { UpdateGenderCategory } = ManageCategories()
+    const { UpdateSportCategory } = ManageCategories()
     const { UpdatePontuationbyPositions, UpdatePositionsCount } = ManagePontuationbyPositions()
-    const { UpdateSituation } = ManageSituation() 
+    const { UpdateSituation } = ManageSituation()
 
     return {
-        UpdateSport: UpdateSport,
+        UpdateSport: UpdateSportSelected,
         ManageCourses: {
             AddCourse: AddCourse,
             RemoveCourse: RemoveCourse

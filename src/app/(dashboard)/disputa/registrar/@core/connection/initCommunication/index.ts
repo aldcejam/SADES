@@ -1,13 +1,26 @@
-import { ManageGenderCategory } from "../../application/genderCategory/ManageGenderCategory"
-import { ManageSportCategory } from "../../application/sportCategory/ManageSportCategory"
+import { ManageCategories } from "../../application/categories/ManageCategories"
+import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected"
+import { VerifyIfCategoriesSelected } from "../../utils/verifications/VerifyIfCategoriesSelected"
 
 const InitCommunicationPageRegister = () => {
-    const { UpdateSportCategory } = ManageSportCategory()
-    const { UpdateGenderCategory } = ManageGenderCategory()
+    const { categories, UpdateGenderCategory, UpdateSportCategory } = ManageCategories();
+    const { sportSelected, UpdateSportSelected } = ManageSportSelected()
+
 
     return {
-        UpdateSportCategory: UpdateSportCategory,
-        UpdateGenderCategory: UpdateGenderCategory,
+        sportSelected: {
+            value: sportSelected,
+            Update: UpdateSportSelected
+        },
+        sportCategorySelected: {
+            value: categories.sportCategory,
+            Update: UpdateSportCategory
+        },
+        genderCategorySelected: {
+            value: categories.genderCategory,
+            Update: UpdateGenderCategory
+        },
+        VerifyIfCategoriesSelected
     }
 }
 

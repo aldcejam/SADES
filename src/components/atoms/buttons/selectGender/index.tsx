@@ -1,18 +1,15 @@
-import { memo } from 'react';
-import { ModalSelectCategoriesStatesConsumer } from 'components/templates/modals/modalSelectCategories/@core/connection/consumer';
-import { ModalSelectCategoriesStatesModifiers } from 'components/templates/modals/modalSelectCategories/@core/connection/modifiers';
+import { memo } from 'react'; 
 import { GenderOptionsProps } from 'defaultTypes/GendersProps';
 import IllustrationByGender from '../../illustrationByGender';
 import styled from './styled.module.scss';
 
 
 type ButtonSelectGenderProps = {
-    gender: GenderOptionsProps
+    gender: GenderOptionsProps,
+    genderCategorySelected: string | undefined
+    updateGenderCategorySelected: (genderCategory: any) => void
 }
-const ButtonSelectGender = ({ gender }: ButtonSelectGenderProps) => {
-
-    const { selectedCategoriesModifiers } = ModalSelectCategoriesStatesModifiers()
-    const { selectedCategoriesStates } = ModalSelectCategoriesStatesConsumer()
+const ButtonSelectGender = ({ gender, genderCategorySelected, updateGenderCategorySelected }: ButtonSelectGenderProps) => {
 
     function TranslateGenderToPortuguese(gender: string) {
         switch (gender) {
@@ -28,11 +25,11 @@ const ButtonSelectGender = ({ gender }: ButtonSelectGenderProps) => {
     return (
         <div
             className={styled["button-select-gender"]}
-            data-is-selected={gender == selectedCategoriesStates.genderCategory}
-            onClick={() => selectedCategoriesModifiers.UpdateGenderSelected(gender)}
+            data-is-selected={gender == genderCategorySelected}
+            onClick={() => updateGenderCategorySelected(gender)}
         >
             <div className={styled["illustration"]}>
-                <IllustrationByGender gender={gender}/>
+                <IllustrationByGender gender={gender} />
             </div>
             <p>{TranslateGenderToPortuguese(gender)}</p>
         </div>

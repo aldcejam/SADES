@@ -1,0 +1,30 @@
+.modal-select-categories{
+    @apply fixed z-[1000] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply flex flex-col gap-6; 
+    @apply w-[clamp(200px,100%,400px)] max-h-[95vh]; 
+    @apply p-[30px];
+    @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary; 
+    @apply overflow-x-hidden backdrop:blur-[1000px];
+    background-color: rgb(var(--background), 0.886);   
+    
+    .close-icon{
+        @apply absolute top-[10px] right-[10px];
+        @apply cursor-pointer text-title text-3xl transition-all duration-200;
+
+        &:hover{
+            @apply text-subtitle;
+        }
+    }
+
+    .titles{
+        @apply text-center;
+        h4{
+            @apply m-0;
+            @apply text-sm text-title uppercase;
+        }
+        h5{
+            @apply mt-[5px] mx-0 mb-[10px];
+            @apply text-subtitle font-medium text-xs;
+        }
+    }
+}

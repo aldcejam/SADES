@@ -1,22 +1,18 @@
-import { ModalSelectCategoriesStatesConsumer } from 'components/templates/modals/modalSelectCategories/@core/connection/consumer';
-import { ModalSelectCategoriesStatesModifiers } from 'components/templates/modals/modalSelectCategories/@core/connection/modifiers';
 import { memo } from 'react';
 import styled from './styled.module.scss';
 
 
 type ButtonSelectSportProps = {
     category: string
+    updateSportCategorySelected: (category: string) => void
+    sportCategorySelected: string | undefined
 }
-const ButtonSelectSport = ({ category }: ButtonSelectSportProps) => {
-
-    const { selectedCategoriesModifiers } = ModalSelectCategoriesStatesModifiers()
-    const { selectedCategoriesStates } = ModalSelectCategoriesStatesConsumer()
-
+const ButtonSelectSport = ({ category, sportCategorySelected, updateSportCategorySelected }: ButtonSelectSportProps) => {
     return (
         <div className={styled["button-select-sport"]}
-            data-is-selected={category == selectedCategoriesStates.sportCategory}
-            onClick={() => { selectedCategoriesModifiers.UpdateSportSelected(category)}}
-            >
+            data-is-selected={category == sportCategorySelected}
+            onClick={() => { updateSportCategorySelected(category) }}
+        >
             <p>{category}</p>
         </div>
     )

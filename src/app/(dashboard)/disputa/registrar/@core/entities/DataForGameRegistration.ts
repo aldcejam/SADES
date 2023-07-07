@@ -4,10 +4,9 @@ import { RootState } from "@redux-config/store"
 
 import {
   IDataForGameRegistration,
-  GenderCategoryProps,
+  CategoriesProps,
   DateProps,
   PontuationByPositionsProps,
-  SportCategoryProps,
   SituationsProps,
   CoursesSelectedProps,
   SportSelectedProps,
@@ -16,8 +15,7 @@ import {
 const initialState: IDataForGameRegistration = {
   coursesSelected: [] as CoursesSelectedProps[],
   sportSelected: {} as SportSelectedProps,
-  genderCategory: "" as GenderCategoryProps,
-  sportCategory: "",
+  categories: {} as CategoriesProps,
   date: dayjs('2023-08-18T21:11:54').toString(),
   pontuationbyPositions: [30, 20, 10],
   situation: "em andamento",
@@ -33,11 +31,8 @@ export const DataForGameRegistrationSlice = createSlice({
     SetSportSelected: (state, action: PayloadAction<SportSelectedProps>) => {
       state.sportSelected = action.payload;
     },
-    SetCategoryGender: (state, action: PayloadAction<GenderCategoryProps>) => {
-      state.genderCategory = action.payload;
-    },
-    SetSportCategory: (state, action: PayloadAction<SportCategoryProps>) => {
-      state.sportCategory = action.payload;
+    SetCategories: (state, action: PayloadAction<CategoriesProps>) => {
+      state.categories = action.payload;
     },
     SetDate: (state, action: PayloadAction<DateProps>) => {
       state.date = action.payload;
@@ -57,8 +52,7 @@ export const DataForGameRegistrationSlice = createSlice({
 export const {
   SetCoursesSelected,
   SetSportSelected,
-  SetCategoryGender,
-  SetSportCategory,
+  SetCategories,
   SetDate,
   SetPontuationByPositions,
   SetSituation,

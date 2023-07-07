@@ -1,11 +1,10 @@
-import { CategoriesProps, SportSelectedProps } from "../../entities/IDataForFindGame";
+import { CategoriesProps, SportSelectedProps } from "../../entities/IDataForGameRegistration"
 
 type VerificationsProps = {
   sportSelected: SportSelectedProps
-  categories: CategoriesProps
-
+  categories: CategoriesProps;
 }
-const Verifications = ({ categories, sportSelected }: VerificationsProps) => {
+const VerifyIfCategoriesSelected = ({ categories, sportSelected }: VerificationsProps) => {
   if (!categories.sportCategory && sportSelected.sportCategories) {
     throw new Error("Categoria esportiva não selecionada");
   }
@@ -15,4 +14,4 @@ const Verifications = ({ categories, sportSelected }: VerificationsProps) => {
   return true;
 };
 
-export { Verifications };
+export { VerifyIfCategoriesSelected };

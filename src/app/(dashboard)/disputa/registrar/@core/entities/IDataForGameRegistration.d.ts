@@ -7,18 +7,21 @@ export type SportSelectedProps = {
   sportName: string
   minNumberOfCourses: number;
   maxNumberOfCourses: number;
+  sportCategories?: string[];
+  genderCategories?: GenderOptionsProps[];
 };
 export type PontuationByPositionsProps = Array<number>;
 export type SituationsProps = "em andamento" | "pre-cadastrado";
 export type DateProps = string | null;
-export type SportCategoryProps = string;
-export type GenderCategoryProps = GenderOptionsProps;
+export type CategoriesProps = {
+  sportCategory?: string;
+  genderCategory?: GenderOptionsProps;
+};
 
 type IDataForGameRegistration = {
+  categories: CategoriesProps;
   coursesSelected: Array<CoursesSelectedProps>;
   sportSelected: SportSelectedProps;
-  sportCategory: SportCategoryProps;
-  genderCategory: GenderCategoryProps;
   date: DateProps;
   pontuationbyPositions: PontuationByPositionsProps;
   situation: SituationsProps;

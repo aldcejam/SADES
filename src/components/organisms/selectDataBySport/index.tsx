@@ -1,25 +1,23 @@
 import { StyledSelectDataBySport } from "./styled"
 import HoverSportButton from "components/atoms/hoverSportButton"
-import { SelectedSportDataProps } from "components/templates/modals/modalSelectCategories/@core/entities/IDataToSelectCategories"
+import { SportSelectedProps } from "app/(dashboard)/disputa/buscar/@core/entities/IDataForFindGame"
 import { GenderOptionsProps } from "defaultTypes/GendersProps"
-
-export type UpdateSportsProps = {
-    sportName: string,
-    sportUUID: string,
-    genderCategories?: GenderOptionsProps[]
-    sportCategories?: string[]
-}
 
 type SelectDataBySportProps = {
     ToggleModal: () => void
     listSports: Array<any | { sportName: string }>
-    UpdateSport: ({ genderCategories, sportCategories, sportName, sportUUID }: UpdateSportsProps) => void
+    UpdateSportSelected: ({ genderCategories, sportCategories, sportName, sportUUID }: SportSelectedProps) => void
 }
 
-const SelectDataBySport = ({ ToggleModal, listSports, UpdateSport }: SelectDataBySportProps) => {
+const SelectDataBySport = ({ ToggleModal, listSports, UpdateSportSelected }: SelectDataBySportProps) => {
 
-    const handleButtonSport = (sportData: SelectedSportDataProps) => {
-        UpdateSport({
+    const handleButtonSport = (sportData: {
+        sportUUID: string;
+        sportName: string;
+        sportCategories?: string[];
+        genderCategories?: GenderOptionsProps[];
+    }) => {
+        UpdateSportSelected({
             genderCategories: sportData.genderCategories,
             sportCategories: sportData.sportCategories,
             sportName: sportData.sportName,

@@ -2,18 +2,19 @@ import { useRouter } from "next/navigation";
 import { ManageCategories } from "../../application/categories/ManageCategories";
 import { Verifications } from "./Verifications";
 import { Routes } from "@base-project/Routes";
-import { ManageSport } from "../../application/sport/ManageSport";
+import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected";
+import { toast } from "react-toastify";
 
 const Submit = () => {
   const { categories } = ManageCategories();
-  const { sport } = ManageSport();
+  const { sportSelected } = ManageSportSelected();
 
-  const router = useRouter(); 
-  
+  const router = useRouter();
+
   const HandleSubmit = () => {
     let queryParams = ``;
     queryParams += `sportSelected=${encodeURIComponent(
-      sport.sportName
+      sportSelected.sportName
     )}&`;
 
     if (categories.sportCategory) {
@@ -26,7 +27,7 @@ const Submit = () => {
       queryParams += `genderCategory=${encodeURIComponent(
         categories.genderCategory
       )}`;
-    } 
+    }
 
     const url = `${Routes.gameList}?${queryParams}`;
     router.push(url);
@@ -34,12 +35,15 @@ const Submit = () => {
 
   return () => {
     try {
+      Verifications({
+        categories,
+        sportSelected,
+      });
       HandleSubmit();
-      Verifications(categories);
     } catch (error: any) {
-      console.error(error.message);
+      toast.error(error.message.toString());
     }
-  };
+  }
 };
 
 export { Submit };
