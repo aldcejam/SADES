@@ -1,4 +1,4 @@
-import { StyledSubmitButton } from "./styled"
+import styled from "./styled.module.scss"
 
 type SubmitButtonProps = {
     value: string
@@ -10,7 +10,7 @@ type SubmitButtonProps = {
 const SubmitButton = ({ value, Submit, type }: SubmitButtonProps) => {
 
     return (
-        <StyledSubmitButton className="submit-button">
+        <div className={`${styled["submit-button"]} submit-button`}>
             <div>
                 <button
                     type={type}
@@ -18,7 +18,7 @@ const SubmitButton = ({ value, Submit, type }: SubmitButtonProps) => {
                 >{value}
                 </button>
             </div>
-        </StyledSubmitButton>
+        </div>
     )
 }
 

@@ -1,13 +1,13 @@
 import ButtonDarkMode from "components/atoms/buttons/darkMode"
 import SettingButton from "components/atoms/setting"
-import { StyledSettingsButtons } from "./styled"
+import styled from "./styled.module.scss"
 
 const SettingsButtons = () => {
     return (
-        <StyledSettingsButtons>
+        <div className={styled["settings-buttons"]}>
             <SettingButton/>
             <ButtonDarkMode/>
-        </StyledSettingsButtons>
+        </div>
     )
 
 }

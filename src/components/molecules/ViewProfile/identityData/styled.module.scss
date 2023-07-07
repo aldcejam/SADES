@@ -1,0 +1,19 @@
+.identity {
+    @apply text-center;
+
+    h2 {
+        @apply text-title font-bold text-xl capitalize my-[10px];
+    }
+
+    h3 {
+        @apply text-subtitle text-base font-semibold mt-[10px] opacity-90; 
+    }
+
+    h4 {
+        @apply text-subtitle text-base font-medium capitalize my-[2px] opacity-90;
+    }
+    
+    p {
+        @apply text-text opacity-80;  
+    }
+}

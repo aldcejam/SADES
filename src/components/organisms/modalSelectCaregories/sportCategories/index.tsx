@@ -1,5 +1,5 @@
 import ButtonSelectSport from "components/atoms/buttons/selectSport"
-import { StyledSportCategories } from "./styled"
+import styled from "./styled.module.scss"
 
 type SportCategoriesProps = {
     sportCategories: string[]
@@ -9,7 +9,7 @@ type SportCategoriesProps = {
 
 const SportCategories = ({ sportCategories, sportCategorySelected, updateSportCategorySelected }: SportCategoriesProps) => {
     return (
-        <StyledSportCategories>
+        <div className={styled["sport-categories"]}>
             {sportCategories.map((category) => {
                 return (
                     <ButtonSelectSport
@@ -20,7 +20,7 @@ const SportCategories = ({ sportCategories, sportCategorySelected, updateSportCa
                     />
                 )
             })}
-        </StyledSportCategories>
+        </div>
     )
 }
 

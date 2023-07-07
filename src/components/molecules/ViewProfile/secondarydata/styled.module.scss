@@ -1,0 +1,42 @@
+.secondary-data {
+    @apply relative w-full p-0 mt-[10px]; 
+
+    .menu {
+        @apply w-full;
+
+        .title-more-informations {
+            @apply text-lg m-0;
+        }
+
+        ul {
+            @apply flex flex-col;
+            background: rgb(var(--background), 0.651);
+            @apply rounded-default border border-solid;
+            border-color: rgb(var(--absolute-theme), 0.1);
+
+            li {
+                @apply block text-subtitle font-bold;
+            }
+
+            &,
+            li {
+                @apply list-none m-0 p-[10px]; 
+            }
+        }
+
+        button {
+            @apply flex items-center gap-[5px];
+            @apply w-full pt-[15px] px-[10px] pb-[12px] mb-[10px];
+            background-color: rgb(var(--background), 0.651); 
+            @apply text-title text-lg font-bold text-left;
+            @apply rounded-default border border-solid;
+            border-color: rgb(var(--absolute-theme), 0.1);
+            @apply cursor-pointer;
+        }
+
+        .angle-bottom-icon {
+            @apply w-[80%];
+        }
+
+    }
+}

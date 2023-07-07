@@ -1,4 +1,4 @@
-import { StyledIdentity } from "./styled"
+import styled from "./styled.module.scss"
 
 type IdentityProps = {
     name: string,
@@ -6,22 +6,22 @@ type IdentityProps = {
     course: string,
     bio: string
 }
-const Identity = ({ bio,course, matriculation, name }: IdentityProps) => {
+const Identity = ({ bio, course, matriculation, name }: IdentityProps) => {
     return (
-        <StyledIdentity>
-            <h2 className="main-data--name">
+        <div className={styled["identity"]}>
+            <h2>
                 {name}
             </h2>
-            <h3 className="main-data--matriculation">
+            <h3>
                 {matriculation}
             </h3>
-            <h4 className='main-data--course'>{course}</h4>
-            <p className="main-data--bio">
+            <h4>{course}</h4>
+            <p>
                 <i>
                     {bio}
                 </i>
             </p>
-        </StyledIdentity>
+        </div>
     )
 
 }

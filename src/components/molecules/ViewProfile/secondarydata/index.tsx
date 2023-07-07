@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
-import { StyledSecondarydata } from "./styled"
-import { motion } from "framer-motion"; 
+import styled from "./styled.module.scss"
+import { motion } from "framer-motion";
 import AngleButtonIcon from "public/Icons/AngleButton";
 
 type SecondarydataProps = {
@@ -15,11 +15,11 @@ const Secondarydata = ({ academicEmail, personalEmail }: SecondarydataProps) => 
         settemplateMoreInformationsIsOpen(!templateMoreInformationsIsOpen)
     }
     return (
-        <StyledSecondarydata>
+        <div className={styled["secondary-data"]}>
             <motion.nav
                 initial={false}
                 animate={templateMoreInformationsIsOpen ? "open" : "closed"}
-                className="menu"
+                className={styled["menu"]}
             >
                 <motion.button
                     whileTap={{ scale: 0.97 }}
@@ -33,9 +33,9 @@ const Secondarydata = ({ academicEmail, personalEmail }: SecondarydataProps) => 
                         transition={{ duration: 0.2 }}
                         style={{ originY: 0.55 }}
                     >
-                        <AngleButtonIcon/>
+                        <AngleButtonIcon />
                     </motion.div>
-                    <p className="title-more-informations">
+                    <p className={styled["title-more-informations"]}>
                         Menu
                     </p>
                 </motion.button>
@@ -69,7 +69,7 @@ const Secondarydata = ({ academicEmail, personalEmail }: SecondarydataProps) => 
 
                 </motion.ul>
             </motion.nav>
-        </StyledSecondarydata>
+        </div>
     )
 }
 

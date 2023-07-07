@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { RedirectIconsSidebarStyled } from "./styled"
+import styled from "./styled.module.scss"
 
 type RedirectIconProps = {
     icon: any
@@ -12,12 +12,12 @@ type RedirectIconProps = {
 const RedirectOptionSidebar = ({ href, icon, text, title, onclick }: RedirectIconProps) => {
     return (
         <Link href={href ? href : "/"} onClick={onclick}>
-            <RedirectIconsSidebarStyled title={title}>
-                <span className="icon">
+            <div className={styled["redirect-option-sidebar"]} title={title}>
+                <span className={styled["icon"]}>
                     {icon}
                 </span>
-                <p className="text">{text}</p>
-            </RedirectIconsSidebarStyled>
+                <p>{text}</p>
+            </div>
         </Link>
     )
 }

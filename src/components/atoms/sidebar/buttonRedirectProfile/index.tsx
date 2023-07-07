@@ -1,15 +1,15 @@
 import Link from "next/link"
 import { Routes } from "../../../../../Routes"
 import ButtonRedirectPerfil from "../../buttons/redirectPerfil"
-import { StyledButtonRedirectProfile } from "./styled"
+import styled from "./styled.module.scss"
 
 const ButtonRedirectProfile = () => {
     return (
         <Link href={Routes.profile} >
-            <StyledButtonRedirectProfile>
+            <div className={styled["button-redirect-profile"]}>
                 <ButtonRedirectPerfil />
                 <p>Perfil</p>
-            </StyledButtonRedirectProfile>
+            </div>
         </Link>
     )
 }

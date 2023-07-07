@@ -1,11 +1,11 @@
-import { StyledSettingButton } from './styled';
+import styled from './styled.module.scss';
 import { BsFillGearFill } from 'react-icons/bs';
 
 const SettingButton = () => {
     return (
-        <StyledSettingButton>
-            <BsFillGearFill/>
-        </StyledSettingButton>
+        <div className={styled["setting"]}>
+            <BsFillGearFill />
+        </div>
     )
 
 }

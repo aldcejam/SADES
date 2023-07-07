@@ -1,0 +1,17 @@
+.redirect-option-sidebar{
+  @apply relative;
+  @apply flex gap-[15px];
+  @apply w-[200px] h-[25px] cursor-pointer;
+  
+  .icon {
+    @apply flex items-center;
+    
+   svg { 
+     @apply text-primary text-[1.7rem]; 
+    }
+  }
+  
+  p {
+    @apply text-title text-lg font-bold my-1; 
+  }
+}

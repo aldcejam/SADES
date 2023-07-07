@@ -1,0 +1,18 @@
+.social-midias {
+    @apply flex justify-between flex-wrap gap-5;
+    @apply w-full mt-[25px];
+
+    .social-midias--twitter,
+    .social-midias--instagram {
+        @apply flex items-center gap-[10px];
+    }
+
+    .twitter--icon,
+    .instagram--icon {
+        @apply relative w-[24px] h-[24px];
+    }
+
+    p {
+        @apply text-text text-lg m-0;
+    }
+}

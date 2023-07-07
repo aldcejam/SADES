@@ -1,5 +1,5 @@
 import ButtonSelectGender from "components/atoms/buttons/selectGender"
-import { StyledGenderOptions } from "./styled"
+import styled from "./styled.module.scss"
 import { GenderOptionsProps as GenderOptionsInterface } from "defaultTypes/GendersProps"
 
 type GenderOptionsProps = {
@@ -9,9 +9,8 @@ type GenderOptionsProps = {
 }
 
 const GenderOptions = ({ genderCategories, genderCategorySelected, updateGenderCategorySelected }: GenderOptionsProps) => {
-
     return (
-        <StyledGenderOptions >
+        <div className={styled["gender-options"]}>
             {genderCategories?.map((gender: GenderOptionsInterface) => {
                 return (
                     <ButtonSelectGender
@@ -22,7 +21,7 @@ const GenderOptions = ({ genderCategories, genderCategorySelected, updateGenderC
                     />
                 )
             })}
-        </StyledGenderOptions>
+        </div>
     )
 }
 

@@ -1,0 +1,8 @@
+.gender-options {
+    @apply flex justify-center flex-wrap gap-5;
+    @apply m-auto max-w-[300px];
+
+    span.selected {
+        @apply bg-white;
+    }
+}

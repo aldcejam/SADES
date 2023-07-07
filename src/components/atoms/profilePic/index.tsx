@@ -1,13 +1,13 @@
 import Image from "next/image"
-import { StyleProfilePic } from "./styled"
+import styled from "./styled.module.scss"
 
 const ProfilePic = () => {
     return (
-        <StyleProfilePic className="profile-pic-size">
+        <div className={`${styled["profile-pic"]} profile-pic-size`}>
             <div>
                 <Image alt="imagem do usuario" src={'/profile-image.jpg'} fill={true} />
             </div>
-        </StyleProfilePic>
+        </div>
     )
 }
 

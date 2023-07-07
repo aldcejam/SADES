@@ -1,24 +1,24 @@
 import InstagramIcon from "public/Icons/social-midias/InstagramIcon"
 import TwitterIcon from "public/Icons/social-midias/TwitterIcon"
-import { StyledSocialMidias } from "./styled"
-
+import styled from "./styled.module.scss" 
 
 type SocialMidiasProps = {
     instagram: string,
     twitter: string,
 }
+
 const SocialMidias = ({ instagram, twitter }: SocialMidiasProps) => {
     return (
-        <StyledSocialMidias>
-            <div className="social-midias--twitter">
+        <div className={styled["social-midias"]}>
+            <div className={styled["social-midias--twitter"]}>
                 <TwitterIcon />
                 <p>{twitter}</p>
             </div>
-            <div className="social-midias--instagram">
-                <InstagramIcon/>
+            <div className={styled["social-midias--instagram"]}>
+                <InstagramIcon />
                 <p>{instagram}</p>
             </div>
-        </StyledSocialMidias>
+        </div>
     )
 }
 

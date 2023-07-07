@@ -1,0 +1,9 @@
+.settings-buttons {
+    @apply absolute z-10 right-0;
+    @apply flex items-center gap-[15px];
+    @apply mt-[18px] mr-[15px];
+    
+    @screen sm { 
+        @apply mt-[15px] mr-0;
+    }
+}
