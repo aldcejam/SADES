@@ -1,0 +1,37 @@
+.navegation {
+    ul.container {
+        @apply absolute bottom-[15px] left-[10px];
+        @apply flex items-center flex-wrap gap-[10px];
+        @apply w-full p-0; 
+
+        .icons-redirects-top {
+            @apply relative -top-[38vh];
+        }
+
+        .outLoginIcon {
+            @apply transition-all duration-300 rotate-180;
+        }
+
+        .divider {
+            @apply relative w-full h-0.5;
+
+            &::before {
+                content: "";
+                @apply absolute top-0 h-full m-auto;
+                @apply transition-all duration-500 delay-100;
+                @apply bg-primary rounded-full; 
+            }
+
+            &[data-sidebar-state=false]{
+                &::before {
+                    @apply w-[30px];
+                }   
+            }
+            &[data-sidebar-state=true]{
+                &::before {
+                    @apply w-[calc(100%-20px)];
+                }
+            } 
+        }
+    }
+}

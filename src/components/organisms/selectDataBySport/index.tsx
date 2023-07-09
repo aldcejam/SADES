@@ -1,4 +1,4 @@
-import { StyledSelectDataBySport } from "./styled"
+import styled from "./styled.module.scss"
 import HoverSportButton from "components/atoms/hoverSportButton"
 import { SportSelectedProps } from "app/(dashboard)/disputa/buscar/@core/entities/IDataForFindGame"
 import { GenderOptionsProps } from "defaultTypes/GendersProps"
@@ -28,8 +28,8 @@ const SelectDataBySport = ({ ToggleModal, listSports, UpdateSportSelected }: Sel
     }
 
     return (
-        <StyledSelectDataBySport>
-            <ul className="sports">
+        <div className={styled["select-data-by-sport"]}>
+            <ul className={styled["sports"]}>
                 {listSports.map((sport) => {
                     return (
                         <li
@@ -41,7 +41,7 @@ const SelectDataBySport = ({ ToggleModal, listSports, UpdateSportSelected }: Sel
                     )
                 })}
             </ul>
-        </StyledSelectDataBySport >
+        </div >
     )
 }
 

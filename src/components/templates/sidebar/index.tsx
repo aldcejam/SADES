@@ -2,17 +2,19 @@
 import { useSidebarStateContext } from "contexts/SidebarStateContext";
 import MenuBurguer from "components/atoms/menuBurguer";
 import Navegation from "components/organisms/sidebar/navegation";
-import { StyledSidebar } from "./styled";
+import styled from "./styled.module.scss";
 
 
 const Sidebar = () => {
     const { sidebarState } = useSidebarStateContext()
 
     return (
-        <StyledSidebar menuisactive={sidebarState.toString()}>
+        <div className={styled["sidebar"]} 
+            data-sidebar-state={sidebarState.toString()}
+        >
             <MenuBurguer/>
             <Navegation />
-        </StyledSidebar>
+        </div>
     )
 }
 

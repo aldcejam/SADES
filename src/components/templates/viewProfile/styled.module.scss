@@ -1,0 +1,22 @@
+.view-profile {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    @apply rounded-default border-t-2 border-solid border-primary;
+    overflow-y: hidden;
+    box-shadow: inset -7px 7px 14px 0px theme("colors.primary" / 63%);
+
+    /* Decoration */
+    &::before {
+        content: "";
+        @apply absolute z-10;
+        @apply w-full h-full;
+        background-color: rgb(var(--absolute-theme), 0.33);
+        @apply backdrop:blur-[15px] rounded-default;
+
+    } 
+}

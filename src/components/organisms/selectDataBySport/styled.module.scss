@@ -1,0 +1,15 @@
+.select-data-by-sport {
+    @apply flex justify-center gap-[10px];
+
+    @screen xs {
+        @apply gap-5;
+    }
+
+    ul {
+        @apply list-none m-0 p-0;
+    }
+
+    .sports {
+        @apply grid grid-cols-2 gap-[10px];
+    }
+}

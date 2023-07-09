@@ -1,8 +1,9 @@
-import Identity from "components/molecules/ViewProfile/identityData"
 import ProfilePic from "components/atoms/profilePic"
+import Identity from "components/molecules/ViewProfile/identityData"
 import Secondarydata from "components/molecules/ViewProfile/secondarydata"
 import SocialMidias from "components/molecules/ViewProfile/socialMidias"
-import { StyledContent } from "./styled"
+import styled from "./styled.module.scss"
+import "./styled.scss"
 
 const Content = () => {
     const userDataBase = {
@@ -16,8 +17,8 @@ const Content = () => {
         course: "Informática"
     }
     return (
-        <StyledContent>
-            <div className="content__profile-pic">
+        <div className={styled["content"]}>
+            <div className={styled["content__profile-pic"]}>
                 <ProfilePic />
             </div>
             <Identity
@@ -30,12 +31,12 @@ const Content = () => {
                 instagram={userDataBase.instagram}
                 twitter={userDataBase.twitter}
             />
-            <div className="content--divider-line" />
+            <div className={styled["content--divider-line"]} />
             <Secondarydata
                 academicEmail={userDataBase.academicEmail}
                 personalEmail={userDataBase.personalcEmail}
             />
-        </StyledContent>
+        </div>
     )
 }
 

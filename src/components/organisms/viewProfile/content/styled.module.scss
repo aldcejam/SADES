@@ -1,0 +1,14 @@
+.content {
+    @apply relative z-20;
+    @apply inline justify-items-center;
+    @apply w-[70%] py-10 px-0;
+
+    .content__profile-pic {
+        @apply flex justify-center mb-5;
+    }
+
+    .content--divider-line {
+        @apply w-full h-[1px];
+        @apply bg-absolute_theme mt-[10px];
+    }
+}
