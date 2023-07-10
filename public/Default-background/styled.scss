@@ -1,0 +1,26 @@
+.container-background-page {
+    @apply fixed; 
+    @apply w-[100vw] h-[100vh];
+}
+
+.background-page {
+    @apply absolute top-0 overflow-hidden;
+    @apply w-[100vw] h-[100vh];
+    @apply bg-background;
+
+    &::before {
+        content: '';
+        @apply absolute z-50;
+        @apply w-full h-full;
+        backdrop-filter: blur(3px); 
+    }
+    
+    &.login-page {
+        &::before {
+            @media (max-width: theme("screens.md")) {
+                @apply backdrop:blur-[0px];
+            }
+        }
+
+    }
+}

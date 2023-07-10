@@ -1,0 +1,8 @@
+.bottom-left {
+    @apply absolute w-[400px] z-10 -bottom-[140px] -left-[60px];
+
+    .cls-1 {
+        @apply fill-background;
+        filter: drop-shadow(3px 3px 4px rgba(var(--inverted-theme), 0.5));
+    }
+}

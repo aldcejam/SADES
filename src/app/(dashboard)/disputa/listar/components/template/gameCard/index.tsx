@@ -1,4 +1,4 @@
-import CurverBorderButton from "public/Polygon/CurverBorder"
+import CurverBorderButton from "@base-project/public/Polygon/CurverBorder"
 import GameSpecification from "../../molecules/gameSpecification"
 import TeamVersus from "../../organisms/teamVersus"
 import styled from "./styled.module.scss"

@@ -1,0 +1,17 @@
+.top-right {
+    @apply absolute z-10 -top-[140px] -right-[60px];
+    @apply w-[clamp(500px,50vw,600px)];
+
+    .cls-1 {
+        fill: none;
+    }
+
+    .cls-2 {
+        clip-path: url(#clip-path);
+    }
+
+    .cls-3 {
+        @apply fill-background;
+        filter: drop-shadow(3px 3px 4px rgba(var(--inverted-theme), 0.5));
+    }
+}

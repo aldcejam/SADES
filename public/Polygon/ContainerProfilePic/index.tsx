@@ -1,21 +1,8 @@
-"use client"
-import { styled } from "@mui/material";
-import { useThemeContext } from "../../src/contexts/ThemeContext";
+import "./styled.scss";
 
-const StyledButtonRedirectProfile = styled("div")`
-  width: 100%;
-  .cls-1 {
-    fill: none;
-    stroke-miterlimit: 10;
-    stroke-width: 25px;
-    stroke: url(#Gradiente_sem_nome_169);
-  }
-`;
 const ContainerProfilePic = () => {
-
-  const { mainColor, secondaryColor } = useThemeContext();
   return (
-    <StyledButtonRedirectProfile>
+    <div className="container-profile-pic">
       <svg viewBox="0 0 457 517.26">
         <defs>
           <linearGradient
@@ -26,8 +13,8 @@ const ContainerProfilePic = () => {
             y2="436.09"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color={mainColor} />
-            <stop offset="1" stop-color={secondaryColor} />
+            <stop offset="0" style={{ stopColor: "var(--primary)" }} />
+            <stop offset="1" style={{ stopColor: "var(--secondary)" }} />
           </linearGradient>
         </defs>
         <g id="Camada_2" data-name="Camada 2">
@@ -41,7 +28,7 @@ const ContainerProfilePic = () => {
           </g>
         </g>
       </svg>
-    </StyledButtonRedirectProfile>
+    </div>
   );
 };
 

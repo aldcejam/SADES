@@ -1,7 +1,7 @@
 import { GenderOptionsProps } from "defaultTypes/GendersProps";
-import IllustrationFamale from "public/Illustration-gender/Famele";
-import IllustrationMale from "public/Illustration-gender/Male";
-import IllustrationMixed from "public/Illustration-gender/Mixed";
+import IllustrationFamale from "@base-project/public/Illustration-gender/famale";
+import IllustrationMale from "@base-project/public/Illustration-gender/male";
+import IllustrationMixed from "@base-project/public/Illustration-gender/mixed";
 
 const IllustrationByGender = ({ gender }: { gender: GenderOptionsProps })=>{
     switch (gender) {

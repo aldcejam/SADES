@@ -1,5 +1,5 @@
 import Image from "next/image"
-import ContainerProfilePic from "public/Polygon/ContainerProfilePic"
+import ContainerProfilePic from "@base-project/public/Polygon/ContainerProfilePic"
 import styled from "./styled.module.scss"
 
 const ButtonRedirectPerfil = () => {

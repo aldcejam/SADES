@@ -1,32 +1,8 @@
-"use client"
-import { styled } from "@mui/material";
+import "./styled.scss" 
 
-export const BottomRight = () => {
-    const Style = styled("div")`
-    position: absolute;
-    bottom: -220px;
-    right: -120px;
-    width: clamp(700px,70vw, 800px);
-    z-index: 3;
-    .cls-1 {
-      fill: ${({ theme }) => theme.palette.primary.main}a1;
-    }
-    .cls-2 {
-      fill: ${({ theme }) => theme.palette.background.paper};
-      filter: ${(props) =>
-            props.theme.palette.mode === "dark"
-                ? "drop-shadow( 3px 3px 4px rgba(0, 0, 0, .7))"
-                : "drop-shadow( 3px 3px 4px #808080ad)"};
-    }
-    .cls-3 {
-        stroke-miterlimit: 10;
-        stroke: #686868;
-        stroke-width: 0.4px;
-        fill: none;
-    }
-  `;
+export const BottomRight = () => { 
     return (
-        <Style>
+        <div className="bottom-right">
             <svg viewBox="0 0 736.31 401.38">
                 <g id="Camada_2" data-name="Camada 2">
                     <g id="BACKGROUND">
@@ -249,6 +225,6 @@ export const BottomRight = () => {
                     </g>
                 </g>
             </svg>
-        </Style>
+        </div>
     );
 };

@@ -1,80 +1,8 @@
-"use client"
-import { styled } from "@mui/material";
+import "./styled.scss"
 
 export const TopLeft = () => {
-    const Style = styled("div")`
-    position: absolute;
-    top: -220px;
-    left: -120px;
-    width: clamp(700px,70vw, 800px);
-    z-index: 3;
-    .cls-1 {
-      fill: ${({ theme }) => theme.palette.primary.main}a1;
-    }
-    .cls-2 {
-        fill: ${({ theme }) => theme.palette.background.paper};
-        filter: ${(props) =>
-            props.theme.palette.mode === "dark"
-                ? "drop-shadow( 3px 3px 4px rgba(0, 0, 0, .7))"
-                : "drop-shadow( 3px 3px 4px #808080ad)"};
-    }
-    .cls-3,
-    .cls-4, 
-    .cls-5,
-    .cls-6,
-    .cls-7,
-    .cls-8, 
-    .cls-9,
-    .cls-10,
-    .cls-11,
-    .cls-12,
-    .cls-13,
-    .cls-14,
-    .cls-15,
-    .cls-16,
-    .cls-17,
-    .cls-18,
-    .cls-19,
-    .cls-20,
-    .cls-21,
-    .cls-22,
-    .cls-23,
-    .cls-24,
-    .cls-25,
-    .cls-26,
-    .cls-27,
-    .cls-28,
-    .cls-29,
-    .cls-30,
-    .cls-31,
-    .cls-32,
-    .cls-33,
-    .cls-34,
-    .cls-35,
-    .cls-36,
-    .cls-37,
-    .cls-38,
-    .cls-39 ,
-    .cls-40,
-    .cls-41,
-    .cls-42,
-    .cls-43,
-    .cls-44,
-    .cls-45,
-    .cls-46,
-    .cls-47,
-    .cls-48,
-    .cls-49
-    {
-        stroke-miterlimit: 10;
-        stroke: #686868;
-        stroke-width: 0.4px;
-        fill: none;
-    }
-    
-  `;
     return (
-        <Style>
+        <div className="top-left">
             <svg viewBox="0 0 674.51 369.49">
                 <defs></defs>
                 <g id="Camada_2" data-name="Camada 2">
@@ -278,6 +206,6 @@ export const TopLeft = () => {
                     </g>
                 </g>
             </svg>
-        </Style>
+        </div>
     );
 };

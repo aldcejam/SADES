@@ -2,7 +2,7 @@
 import { useState } from "react"
 import styled from "./styled.module.scss"
 import { motion } from "framer-motion";
-import AngleButtonIcon from "public/Icons/AngleButton";
+import { FaAngleDown } from "react-icons/fa"
 
 type SecondarydataProps = {
     academicEmail: string,
@@ -33,10 +33,10 @@ const Secondarydata = ({ academicEmail, personalEmail }: SecondarydataProps) => 
                         transition={{ duration: 0.2 }}
                         style={{ originY: 0.55 }}
                     >
-                        <AngleButtonIcon />
+                        <FaAngleDown className={styled["icon"]}/>
                     </motion.div>
                     <p className={styled["title-more-informations"]}>
-                        Menu
+                        E-mails
                     </p>
                 </motion.button>
                 <motion.ul

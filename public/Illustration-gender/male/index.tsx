@@ -1,80 +1,8 @@
-"use client"
-import { styled } from "@mui/material/styles";
+import "./styled.scss"
 
 const IllustrationMale = () => {
-  const Style = styled("div")`
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    bottom: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    .assign-color {
-      fill: ${(props) => props.theme.palette.primary.main};
-    }
-    .cls-10,
-    .cls-14,
-    .cls-16,
-    .cls-2,
-    .cls-3,
-    .cls-9 {
-      isolation: isolate;
-    }
-    .cls-2 {
-      opacity: 0.15;
-    }
-    .cls-3 {
-      fill: #fff;
-    }
-    .cls-10,
-    .cls-3 {
-      opacity: 0.3;
-    }
-    .cls-4 {
-      fill: #fafafa;
-    }
-    .cls-5 {
-      fill: #37474f;
-    }
-    .cls-6 {
-      fill: #f28f8f;
-    }
-    .cls-7 {
-      fill: #455a64;
-    }
-    .cls-8 {
-      fill: #263238;
-    }
-    .cls-9 {
-      opacity: 0.4;
-    }
-    .cls-11 {
-      fill: #ebebeb;
-    }
-    .cls-12 {
-      fill: #b16668;
-    }
-    .cls-13 {
-      fill: #ffa8a7;
-    }
-    .cls-14 {
-      opacity: 0.25;
-    }
-    .cls-15 {
-      fill: #9a4a4d;
-    }
-    .cls-16 {
-      opacity: 0.1;
-    }
-    .cls-17 {
-      fill: #f5f5f5;
-    }
-  `;
   return (
-    <Style>
+    <div className="illustration-male">
       <svg className="illustration-male" viewBox="0 0 477.98 419.53">
         <g id="Camada_2" data-name="Camada 2">
           <g id="Camada_1-2" data-name="Camada 1">
@@ -860,7 +788,7 @@ const IllustrationMale = () => {
           </g>
         </g>
       </svg>
-    </Style>
+    </div>
   );
 };
 

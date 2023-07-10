@@ -1,66 +1,8 @@
-"use client"
-import { styled } from "@mui/material/styles";
+import "./styled.scss"
 
-const IllustrationFamale = () => {
-  const Style = styled("div")`
-    position: absolute;
-    z-index: 10;
-    width: 94%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 2px;
-
-    .assign-color {
-      fill: ${(props) => props.theme.palette.primary.main};
-    }
-    .cls-1 {
-      fill: #925658;
-    }
-    .cls-2 {
-      fill: #37474f;
-    }
-    .cls-4 {
-      opacity: 0.4;
-    }
-    .cls-4,
-    .cls-5,
-    .cls-9 {
-      isolation: isolate;
-    }
-    .cls-5 {
-      opacity: 0.15;
-    }
-    .cls-6 {
-      fill: #e0e0e0;
-    }
-    .cls-7 {
-      fill: #263238;
-    }
-    .cls-8 {
-      fill: #455a64;
-    }
-    .cls-9 {
-      opacity: 0.1;
-    }
-    .cls-10 {
-      opacity: 0.5;
-    }
-    .cls-11 {
-      fill: #9a4a4d;
-    }
-    .cls-12 {
-      fill: #ffa8a7;
-    }
-    .cls-13 {
-      fill: #f28f8f;
-    }
-    .cls-14 {
-      fill: #f5f5f5;
-    }
-  `;
+const IllustrationFamale = () => { 
   return (
-    <Style>
+    <div className="illustration-famele">
       <svg className="illustration-famale" viewBox="0 0 349.62 386.09">
         <g id="Camada_2" data-name="Camada 2">
           <g id="Camada_1-2" data-name="Camada 1">
@@ -637,7 +579,7 @@ const IllustrationFamale = () => {
           </g>
         </g>
       </svg>
-    </Style>
+    </div>
   );
 };
 

@@ -1,0 +1,14 @@
+.modify-user-data {
+    @apply relative overflow-hidden;
+    @apply flex justify-center max-h-10;
+    @apply rounded-default border-2 border-solid border-primary; 
+    background-color: rgb(var(--absolute-theme), 0.1);  
+    box-shadow: inset -40px -40px 81px rgb(var(--inverted-theme), 0.07);
+    backdrop-filter: blur(40px);
+    transition: 0.3s;
+
+
+    &[data-isOpen="true"] {
+        @apply relative min-w-full max-h-full;
+    }
+}

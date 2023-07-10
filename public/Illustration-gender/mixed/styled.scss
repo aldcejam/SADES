@@ -1,0 +1,40 @@
+.illustration-mixed{
+    @apply absolute z-10 bottom-0 w-full;
+    @apply flex items-center justify-center;
+
+
+    .assign-color {
+        @apply fill-primary;
+    }
+
+    .cls-1 {
+      fill: #263238;
+    }
+    .cls-3 {
+      fill: #ffbe9d;
+    }
+    .cls-4 {
+      fill: #eb996e;
+    }
+    .cls-5 {
+      opacity: 0.3;
+    }
+    .cls-6 {
+      fill: #fafafa;
+    }
+    .cls-7 {
+      fill: #455a64;
+    }
+    .cls-8 {
+      fill: #b78876;
+    }
+    .cls-9 {
+      fill: #7c5142;
+    }
+    .cls-10 {
+      opacity: 0.6;
+    }
+    .cls-11 {
+      fill: #fff;
+    }
+}

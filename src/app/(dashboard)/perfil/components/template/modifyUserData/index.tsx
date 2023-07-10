@@ -2,7 +2,8 @@
 import { useState } from "react";
 import ButtonToTemplateStateToggle from "../../atoms/buttonToTemplateStateToggle";
 import Form from "../../organisms/ModifyUserData/form";
-import { StyledModifyUserData } from "./styled";
+import styled from "./styled.module.scss";
+import { motion } from "framer-motion";
 
 const ModifyUserData = () => {
     const [isOpenComponentPersonaData, setIsOpenComponentPersonaData] = useState(false)
@@ -11,8 +12,8 @@ const ModifyUserData = () => {
     }
  
     return (
-        <StyledModifyUserData
-            className={`is-open-component-${isOpenComponentPersonaData.toString()}`}
+        <motion.div
+            className={styled["modify-user-data"]}
             layout
             data-isOpen={isOpenComponentPersonaData}
         >
@@ -22,7 +23,7 @@ const ModifyUserData = () => {
                 ToggleState={ToggleComponentPersonaData} 
                 />
             <Form title="Modifique suas informações"/>
-        </StyledModifyUserData >
+        </motion.div >
     );
 };
 

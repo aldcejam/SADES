@@ -1,8 +1,7 @@
 "use client"
-import { useThemeContext } from "../../src/contexts/ThemeContext";
+import { useThemeContext } from "../../../src/contexts/ThemeContext";
 
 const CurverBorder = () => {
-    const { mainColor, secondaryColor } = useThemeContext();
     return (
         <svg className="curver-border-polygon" width="199" height="149" viewBox="0 0 199 169" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_556_473)">
@@ -20,8 +19,8 @@ const CurverBorder = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_556_473" result="shape" />
                 </filter>
                 <linearGradient id="paint0_linear_556_473" x1="0" y1="13" x2="155.074" y2="185.968" gradientUnits="userSpaceOnUse">
-                    <stop stop-color={mainColor} />
-                    <stop offset="1" stop-color={secondaryColor} />
+                    <stop style={{ stopColor: "var(--primary)" }} />
+                    <stop offset="1" style={{ stopColor: "var(--secondary)" }} />
                 </linearGradient>
             </defs>
         </svg>

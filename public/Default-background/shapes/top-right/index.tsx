@@ -1,26 +1,8 @@
-"use client"
-import { styled } from "@mui/material";
+import "./styled.scss"
 
-export const TopRight = () => {
-    const Style = styled("div")`
-    position: absolute;
-    width: clamp(500px, 50vw, 600px);
-    z-index: 1;
-    top: -140px;
-    right: -60px;
-    .cls-1{fill:none;}
-    .cls-2{clip-path:url(#clip-path);}
-    .cls-3{
-      fill: ${({ theme }) => theme.palette.background.paper};
-      filter: ${(props) =>
-            props.theme.palette.mode === "dark"
-                ? "drop-shadow( 3px 3px 4px rgba(0, 0, 0, .7))"
-                : "drop-shadow( 3px 3px 4px #808080ad)"};
-
-    }
-  `;
+export const TopRight = () => { 
     return (
-        <Style>
+        <div className="top-right">
             <svg viewBox="0 0 418.06 225.81">
                 <g id="Camada_2" data-name="Camada 2">
                     <g id="BACKGROUND">
@@ -34,6 +16,6 @@ export const TopRight = () => {
                     </g>
                 </g>
             </svg>
-        </Style>
+        </div>
     );
 };

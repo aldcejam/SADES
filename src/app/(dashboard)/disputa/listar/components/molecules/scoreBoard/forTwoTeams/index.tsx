@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { StyleForTwoTeams } from "./styled"
+import styled from "./styled.module.scss"
 import { ScoreboardGameProps } from "../../../../@core/api/query/GameProps";
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -9,7 +9,7 @@ const ForTwoTeams = ({ placar }: ScoreboardGameProps) => {
         const firstTeam = 0
         if (currentTeam == firstTeam) {
             return (
-                <CloseIcon className="icon-versus"/>
+                <CloseIcon className={styled["icon-versus"]}/>
             )
 
         }else{
@@ -18,15 +18,15 @@ const ForTwoTeams = ({ placar }: ScoreboardGameProps) => {
     }
 
     return (
-        <StyleForTwoTeams>
+        <div className={styled["for-two-teams"]}>
             {
                 placar.map((team, index) => {
                     return (
-                        <div key={team.course} className="team">
-                            <div className="team__logo">
-                                <Image alt={`logo do curso ${team.course}`} src={team.logo} layout="fill" />
+                        <div key={team.course} className={styled["team"]}>
+                            <div className={styled["team__logo"]}>
+                                <Image alt={`logo do curso ${team.course}`} src={team.logo} fill/>
                             </div>
-                            <div className="team__score">
+                            <div className={styled["team__score"]}>
                                 {team.score}
                             </div>
                             {applyIconVersus(index)}
@@ -34,7 +34,7 @@ const ForTwoTeams = ({ placar }: ScoreboardGameProps) => {
                     )
                 })
             }
-        </StyleForTwoTeams>
+        </div>
     )
 }
 

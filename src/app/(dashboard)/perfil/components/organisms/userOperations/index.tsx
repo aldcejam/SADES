@@ -1,13 +1,12 @@
-import ModifyUserData from "../../template/modifyUserData"
-import UserResponsibilities from "../../template/userResponsibilities"
-import { StyledUserOperations } from "./styled"
+import ModifyUserData from "../../template/modifyUserData" 
+import styled from "./styled.module.scss"
 
 const UserOperations = () => {
     return (
-        <StyledUserOperations>
+        <div className={styled["user-operations"]}>
             <ModifyUserData />
             <ModifyUserData />
-        </StyledUserOperations>
+        </div>
     )
 }
 

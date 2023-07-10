@@ -1,5 +1,5 @@
 import { memo } from "react"
-import DimontPolygon from "public/Polygon/DimontPolygon"
+import DimontPolygon from "@base-project/public/Polygon/DimontPolygon"
 import Content from "components/organisms/viewProfile/content"
 import styled from "./styled.module.scss"
 import "./styled.scss"

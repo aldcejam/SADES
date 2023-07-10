@@ -4,15 +4,14 @@
 
     .social-midias--twitter,
     .social-midias--instagram {
-        @apply flex items-center gap-[10px];
+        @apply flex items-baseline gap-[10px];
     }
 
-    .twitter--icon,
-    .instagram--icon {
-        @apply relative w-[24px] h-[24px];
+    .icon {
+        @apply text-3xl text-text stroke-primary stroke-2;
     }
 
     p {
-        @apply text-text text-lg m-0;
+        @apply text-text text-lg -m-1;
     }
 }

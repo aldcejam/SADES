@@ -1,0 +1,33 @@
+.date-illustration {
+    @apply absolute z-10;
+    @apply flex items-center;
+    @apply w-full max-w-[350px];
+
+    svg {
+        @apply w-full; 
+    }
+
+    .assign-color {
+        @apply fill-primary;
+    }
+
+    .cls-1 {
+        fill: #ffb8b8;
+    }
+
+    .cls-2 {
+        fill: #3f3d56;
+    }
+
+    .cls-3 {
+        fill: #2f2e41;
+    }
+
+    .cls-5 {
+        fill: #e6e6e6;
+    }
+
+    .cls-6 {
+        fill: #fff;
+    }
+}

@@ -1,6 +1,6 @@
 .home-page-cards {
     @apply w-full h-fit;
-    @apply grid row-[0px] gap-5 content-center;
+    @apply grid row-[0px] gap-3 content-center;
     grid-template:
         "gridTop gridTop" auto
         "gridLeft gridRight" auto
@@ -15,7 +15,7 @@
 
     /* ===== cards grid ===== */
     &__grid-top {
-        @apply grid gap-5;
+        @apply grid gap-3;
         grid-area: gridTop;
         grid-template:
             "item1 item1 item1" 300px
@@ -44,7 +44,7 @@
     }
 
     &__grid-left {
-        @apply grid gap-5 grid-rows-[repeat(2,185px)];
+        @apply grid gap-3 grid-rows-[repeat(2,185px)];
         grid-area: gridLeft;
 
         .card:nth-of-type(4) {
@@ -57,7 +57,7 @@
     }
 
     &__grid-right {
-        @apply grid gap-5 grid-rows-[220px,150px];
+        @apply grid gap-3 grid-rows-[220px,150px];
         grid-area: gridRight;
     }
 

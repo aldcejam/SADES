@@ -1,0 +1,20 @@
+.bottom-right {
+    @apply absolute -bottom-[220px] -right-[120px] z-20;
+    @apply w-[clamp(700px,70vw,800px)];
+
+    .cls-1 {
+        fill: theme("colors.primary" / 63%);
+    }
+
+    .cls-2 {
+        @apply fill-background;
+        filter: drop-shadow(3px 3px 4px rgba(var(--inverted-theme), 0.5));
+    }
+
+    .cls-3 {
+        stroke-miterlimit: 10;
+        stroke: #686868;
+        stroke-width: 0.4px;
+        fill: none;
+    }
+}

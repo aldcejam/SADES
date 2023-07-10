@@ -8,6 +8,8 @@
 
 
 div#theme.light {
+  --primary: theme("colors.primary");
+  --secondary: theme("colors.secondary");
   --title: 14, 14, 14;
   --subtitle: 21, 21, 21;
   --text: 22, 22, 22;
@@ -35,6 +37,8 @@ div#theme.light {
 }
 
 div#theme.dark {
+  --primary: theme("colors.primary");
+  --secondary: theme("colors.secondary");
   --title: 251, 251, 251;
   --subtitle: 215, 215, 215;
   --text: 240, 240, 240;

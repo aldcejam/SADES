@@ -41,23 +41,10 @@ export const ThemeContextProvider = ({ initialTheme, children }: { initialTheme:
         }
 
     }
-
-    const themeMUI = useMemo(() => {
-        if (theme === 'light') {
-            return LightTheme(mainColor, secondaryColor)
-        } else {
-            return DarkTheme(mainColor, secondaryColor)
-        }
-    }, [theme])
-
-
-
     return (
         <ThemeContext.Provider value={{ theme, ToggleTheme, mainColor, secondaryColor }}>
             <div id="theme" className={theme} ref={root}>
-                <ThemeProviderMaterialUI theme={themeMUI}>
-                    {children}
-                </ThemeProviderMaterialUI>
+                {children}
             </div>
         </ThemeContext.Provider>
     )

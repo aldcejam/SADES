@@ -1,54 +1,8 @@
-"use client"
-import { styled } from "@mui/material/styles";
+import "./styled.scss" 
 
-const IllustrationMixed = () => {
-  const Style = styled("div")`
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    .assign-color {
-      fill: ${(props) => props.theme.palette.primary.main};
-    }
-
-    .cls-1 {
-      fill: #263238;
-    }
-    .cls-3 {
-      fill: #ffbe9d;
-    }
-    .cls-4 {
-      fill: #eb996e;
-    }
-    .cls-5 {
-      opacity: 0.3;
-    }
-    .cls-6 {
-      fill: #fafafa;
-    }
-    .cls-7 {
-      fill: #455a64;
-    }
-    .cls-8 {
-      fill: #b78876;
-    }
-    .cls-9 {
-      fill: #7c5142;
-    }
-    .cls-10 {
-      opacity: 0.6;
-    }
-    .cls-11 {
-      fill: #fff;
-    }
-  `;
+const IllustrationMixed = () => { 
   return (
-    <Style>
+    <div className="illustration-mixed">
       <svg className="illustration-mixed" viewBox="0 0 446.81 316.21">
         <g id="Camada_2" data-name="Camada 2">
           <g id="Camada_1-2" data-name="Camada 1">
@@ -604,7 +558,7 @@ const IllustrationMixed = () => {
           </g>
         </g>
       </svg>
-    </Style>
+    </div>
   );
 };
 

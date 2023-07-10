@@ -1,39 +1,10 @@
 "use client"
-import { styled } from "@mui/material";
+import "./styled.scss"
 
 export const DateIllustration = () => {
-    const Style = styled("div")`
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    max-width: 350px;
-    display: flex;
-    align-items: center;
-    svg{
-        width: 100%;
-    }
-    .assign-color {
-      fill: ${(props) => props.theme.palette.primary.main};
-    }
-    .cls-1 {
-      fill: #ffb8b8;
-    }
-    .cls-2 {
-      fill: #3f3d56;
-    }
-    .cls-3 {
-      fill: #2f2e41;
-    }
-    .cls-5 {
-      fill: #e6e6e6;
-    }
-    .cls-6 {
-      fill: #fff;
-    }
-  `;
 
     return (
-        <Style className="container-illustration">
+        <div className="container-illustration">
             <svg viewBox="0 0 866.33 605.74">
                 <g id="Camada_2" data-name="Camada 2">
                     <g id="Camada_1-2" data-name="Camada 1">
@@ -214,7 +185,7 @@ export const DateIllustration = () => {
                     </g>
                 </g>
             </svg>
-        </Style>
+        </div>
 
     );
 };

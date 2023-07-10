@@ -1,6 +1,6 @@
-import InstagramIcon from "public/Icons/social-midias/InstagramIcon"
-import TwitterIcon from "public/Icons/social-midias/TwitterIcon"
-import styled from "./styled.module.scss" 
+import styled from "./styled.module.scss"
+import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai"
+
 
 type SocialMidiasProps = {
     instagram: string,
@@ -11,11 +11,11 @@ const SocialMidias = ({ instagram, twitter }: SocialMidiasProps) => {
     return (
         <div className={styled["social-midias"]}>
             <div className={styled["social-midias--twitter"]}>
-                <TwitterIcon />
+                <AiOutlineTwitter className={styled["icon"]} />
                 <p>{twitter}</p>
             </div>
             <div className={styled["social-midias--instagram"]}>
-                <InstagramIcon />
+                <AiFillInstagram className={styled["icon"]} />
                 <p>{instagram}</p>
             </div>
         </div>
