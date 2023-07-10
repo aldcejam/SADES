@@ -1,15 +1,15 @@
-import { StyledTitles } from "./styled"
+import styled from "./styled.module.scss"
 
 const Titles = () => {
     return (
-        <StyledTitles>
+        <div className={styled["titles"]}>
             <h1>
                 SADES
             </h1>
             <h2 >
                 Informe suas credenciais
             </h2>
-        </StyledTitles>
+        </div>
     )
 }
 

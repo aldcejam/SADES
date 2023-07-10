@@ -2,7 +2,7 @@
 import styled from "./styled.module.scss"
 import { useSession, signOut } from "next-auth/react";
 import { SuapClient } from "services/Login-Suap/SuapClient/SuapClient";
-import LogOutIcon from "public/Icons/LogOut"
+import { BiLogOutCircle } from "react-icons/bi";
 
 const ButtonLogOut = () => {
 
@@ -22,7 +22,7 @@ const ButtonLogOut = () => {
     return (
         <div className={`${styled["button-log-out"]} button-log-out`} onClick={() => HanddleLogOut()}>
             <div className={styled["icon"]}>
-                <LogOutIcon />
+                <BiLogOutCircle />
             </div>
             <p>sair</p>
         </div>

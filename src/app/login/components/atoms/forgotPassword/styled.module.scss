@@ -1,0 +1,12 @@
+.forgot-password{
+    @apply relative;
+    @apply text-subtitle text-xs text-right cursor-pointer; 
+    &:hover p{ 
+        color: rgb(var(--title), 0.875);
+    }
+    
+    p{
+        @apply transition-all duration-300;
+        @apply m-0 -mt-[10px];
+    }
+}

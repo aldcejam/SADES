@@ -1,10 +1,10 @@
-import { StyledForgotPassword } from "./styled"
+import styled from "./styled.module.scss"
 
 const ForgotPassword = () => {
     return(
-        <StyledForgotPassword>
+        <div className={styled["forgot-password"]}>
             <p title="clique caso tenha esquecido sua senha">Esqueceu a senha?</p>
-        </StyledForgotPassword>
+        </div>
     )
 }
 

@@ -1,0 +1,34 @@
+.options-login {
+    @apply mt-[30px];
+
+    .title {
+        @apply relative;
+        @apply text-xl text-center font-semibold text-title;
+
+        &::before,
+        &::after {
+            content: "";
+            @apply absolute top-2/4;  
+            @apply w-[25%] h-0.5;
+            @apply bg-inverted_theme;
+
+            @screen xs {
+                @apply w-[30%];
+            }
+        }
+
+        &::before {
+            @apply left-0;
+        }
+        
+        &::after {
+            @apply right-0; 
+        }
+
+    }
+
+    .account-options {
+        @apply flex flex-nowrap justify-center gap-[10px];
+        @apply font-black;
+    }
+}

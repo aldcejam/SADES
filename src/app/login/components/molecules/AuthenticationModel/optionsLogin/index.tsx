@@ -1,18 +1,18 @@
 import ButtonLoginGoogle from "components/atoms/buttons/login/google"
 import ButtonLoginSuap from "components/atoms/buttons/login/suap"
-import { StyledOptionsLogin } from "./styled"
+import styled from "./styled.module.scss"
 
 const OptionsLogin = () => {
     return (
-        <StyledOptionsLogin>
-            <div className="title">
+        <div className={styled["options-login"]}>
+            <div className={styled["title"]}>
                 <p>Conecte-se com:</p>
             </div>
-            <div className="account-options">
+            <div className={styled["account-options"]}>
                 <ButtonLoginGoogle/>
                 <ButtonLoginSuap/>
             </div>
-        </StyledOptionsLogin>
+        </div>
     )
 }
 

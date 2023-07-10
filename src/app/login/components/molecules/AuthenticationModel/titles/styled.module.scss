@@ -1,0 +1,10 @@
+.titles{
+    @apply text-center; 
+    h1{
+        @apply text-title text-3xl m-0;
+    }
+    h2{
+        color: rgb(var(--subtitle), 0.6); 
+        @apply text-base font-normal m-0 mb-10; 
+    }
+}
