@@ -1,0 +1,37 @@
+.splide {
+  @apply -mt-[100px];
+
+  .splide__list {
+    @apply relative bg-transparent;
+    margin-right: 0px !important;
+
+    .container-illustration {
+      @apply bottom-[30px];
+    }
+
+    .item-slide {
+      @apply flex justify-center;
+      background-color: transparent !important;
+
+      h3 {
+        @apply absolute -bottom-5;
+        @apply text-title font-medium;
+      }
+    }
+  }
+
+  .splide__pagination__page.is-active {
+    background-color: rgb(var(--primary)) !important; 
+  }
+  
+  .splide__pagination__page {
+    background-color: rgb(var(--inverted-theme), 0.63) !important;
+    @apply rounded-full;
+    @apply w-[15px] h-[7px];
+    
+    &:hover {
+      background-color: rgb(var(--primary)) !important; 
+      @apply grayscale-[70%];
+    }
+  }
+}

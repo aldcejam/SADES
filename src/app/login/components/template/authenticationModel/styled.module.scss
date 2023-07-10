@@ -1,0 +1,13 @@
+.authentication-model{
+    @apply flex items-center justify-center basis-[55%];
+    
+    .content{
+        @apply absolute w-full max-w-[400px]; 
+        @apply px-5 mt-[60px];
+
+
+        @screen xs{
+            @apply p-0;
+        }
+    }
+}

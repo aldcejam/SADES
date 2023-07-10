@@ -1,0 +1,18 @@
+.form {
+    @apply flex flex-col gap-5;
+
+    .submit {
+        @apply w-full py-[15px] px-0;
+        @apply bg-primary;
+        @apply rounded-default border border-solid border-inverted_theme;
+        @apply text-text text-base font-semibold tracking-[0.5px];
+        box-shadow: 5px 5px 19px -3px rgb(var(--inverted-theme), 0.18);
+        @apply cursor-pointer transition-all duration-300;
+
+        &:hover {
+            @apply grayscale-[30%];
+            @apply border border-solid border-primary;
+            box-shadow: 5px 5px 19px -3px rgb(var(--inverted-theme), 0.18);
+        }
+    }
+}

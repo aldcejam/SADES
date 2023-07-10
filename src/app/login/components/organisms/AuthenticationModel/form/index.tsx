@@ -1,5 +1,5 @@
 "use client"
-import { StyledForm } from "./styled"
+import styled from "./styled.module.scss"
 import { SubmitHandler, useForm } from "react-hook-form"
 import InputIdentifier from "../../../atoms/Inputs/identifier";
 import InputPassword from "../../../atoms/Inputs/password";
@@ -19,7 +19,7 @@ const Form = () => {
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
     return (
-        <StyledForm onSubmit={handleSubmit(onSubmit)}>
+        <div className={styled["form"]} onSubmit={handleSubmit(onSubmit)}>
             <InputIdentifier
                 label="Identificador"
                 register={register}
@@ -32,9 +32,9 @@ const Form = () => {
 
             />
             <ForgotPassword/>
-            <input className="submit" type="submit" value={"Entrar"} />
+            <input className={styled["submit"]} type="submit" value={"Entrar"} />
 
-        </StyledForm>
+        </div>
     )
 }
 

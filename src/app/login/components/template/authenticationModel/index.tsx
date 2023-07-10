@@ -1,18 +1,18 @@
 import OptionsLogin from "../../molecules/AuthenticationModel/optionsLogin";
 import Titles from "../../molecules/AuthenticationModel/titles";
 import Form from "../../organisms/AuthenticationModel/form";
-import { StyledAuthenticationTemplate } from "./styled";
+import styled from "./styled.module.scss";
 
 
 const AuthenticationModel = () => {
     return (
-        <StyledAuthenticationTemplate>
-            <div className="content">
+        <div className={styled["authentication-model"]}>
+            <div className={styled["content"]}>
                 <Titles />
                 <Form />
                 <OptionsLogin />
             </div>
-        </StyledAuthenticationTemplate>
+        </div>
     )
 }
 

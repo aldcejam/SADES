@@ -1,0 +1,14 @@
+.display-decoration-login {
+    @apply basis-[45%];
+    @apply hidden items-center;
+    background-color: rgb(var(--inverted-theme), 0.635);
+    @apply rounded-se-default rounded-ee-default border-solid;
+
+    @screen md {
+        @apply grid;
+    }
+
+    @screen lg {
+        @apply rounded-default;
+    }
+}

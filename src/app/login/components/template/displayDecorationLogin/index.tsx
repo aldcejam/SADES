@@ -1,12 +1,12 @@
+import styled from './styled.module.scss';
 import Carousel from '../../organisms/DisplayDecorationLogin/carousel';
-import { StyledDisplayDecorationLogin } from './styled';
 
 
 const DisplayDecorationLogin = () => {
     return (
-        <StyledDisplayDecorationLogin>
+        <div className={styled["display-decoration-login"]}>
             <Carousel/>
-        </StyledDisplayDecorationLogin>
+        </div>
     )
 }
 

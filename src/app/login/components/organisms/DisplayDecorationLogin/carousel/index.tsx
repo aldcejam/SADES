@@ -1,11 +1,11 @@
 "use client"
-import { StyledCarousel } from "./styled"
+import "./styled.scss"
 import { Splide, SplideSlide, } from '@splidejs/react-splide';
 import { DateIllustration } from 'public/carousel-illustrations/DateIllustration';
 
 const Carousel = () => {
     return (
-        <StyledCarousel>
+        <div>
             <Splide
                 options={{
                     rewind: false,
@@ -29,7 +29,7 @@ const Carousel = () => {
                     <h3>Datas dos Eventos</h3>
                 </SplideSlide>
             </Splide>
-        </StyledCarousel>
+        </div>
     )
 }
 
