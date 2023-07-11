@@ -1,5 +1,5 @@
 import React from 'react';
-import "./globals.css";
+import "./globals.scss";
 import DefaultBackground from 'public/Default-background';
  
 import { ClientSide } from './ClientSide';

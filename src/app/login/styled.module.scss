@@ -1,0 +1,24 @@
+.container-login {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: min(100vw, 1200px);
+    height: min(100vh, 800px);
+}
+
+.page-login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+    padding: 0 10px;
+    @screen md{
+        @apply justify-start;
+        padding: 0;
+    }
+}

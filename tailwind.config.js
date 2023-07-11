@@ -12,8 +12,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#c43a3a",
-        secondary: "#f07e14",
+        primary: "#D31027",
+        secondary: "#FD9A01",
 
         background: "rgb(var(--background))",
         background_gradient: "rgb(var(--background-gradient))",

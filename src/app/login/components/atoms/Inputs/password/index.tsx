@@ -3,7 +3,7 @@ import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } fr
 import { useState } from "react"
 import { UseFormRegister } from "react-hook-form"
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { DefaultStyledInput } from "../defaultStyledInput"; 
+import { DefaultStyledInput } from "../defaultStyledInput";
 
 
 type InputPasswordProps = {
@@ -20,29 +20,27 @@ const InputPassword = ({ register, label, error }: InputPasswordProps) => {
     }
 
     return (
-        <DefaultStyledInput>
-            <FormControl error={error ? true : false} variant="outlined">
-                <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
-                <OutlinedInput
-                    id="outlined-adornment-password"
-                    {...register("password", { minLength: 6 })}
-                    required
-                    type={showPassword ? 'text' : 'password'}
-                    endAdornment={
-                        <InputAdornment position="end">
-                            <IconButton
-                                aria-label="toggle password visibility"
-                                onClick={HandleShowPassword}
-                                edge="end"
-                            >
-                                {showPassword ? <VisibilityOff /> : <Visibility />}
-                            </IconButton>
-                        </InputAdornment>
-                    }
-                    label="Senha"
-                />
-            </FormControl>
-        </DefaultStyledInput>
+        <FormControl error={error ? true : false} variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
+            <OutlinedInput
+                id="outlined-adornment-password"
+                {...register("password", { minLength: 6 })}
+                required
+                type={showPassword ? 'text' : 'password'}
+                endAdornment={
+                    <InputAdornment position="end">
+                        <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={HandleShowPassword}
+                            edge="end"
+                        >
+                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                    </InputAdornment>
+                }
+                label="Senha"
+            />
+        </FormControl>
     )
 }
 

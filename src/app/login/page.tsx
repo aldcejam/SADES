@@ -1,16 +1,16 @@
 import React from 'react';
 import AuthenticationModel from "./components/template/authenticationModel"
 import LoginPresentation from "./components/template/displayDecorationLogin"
-import { StyledLogin, ContainerLogin } from "./styled"
+import styled from "./styled.module.scss"
 
 
 export default function Page() {
     return (
-        <ContainerLogin>
-            <StyledLogin>
+        <div className={styled["container-login"]}>
+            <div className={styled["page-login"]}>
                 <LoginPresentation />
                 <AuthenticationModel />
-            </StyledLogin>
-        </ContainerLogin>
+            </div>
+        </div>
     )
 }

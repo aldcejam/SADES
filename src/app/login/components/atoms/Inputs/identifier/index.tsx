@@ -12,21 +12,19 @@ type InputIdentifierProps = {
 
 const InputIdentifier = ({ register, label, error }: InputIdentifierProps) => {
     return (
-        <DefaultStyledInput>
-            <FormControl error={error ? true : false} className="dkd" variant="outlined">
-                <InputLabel htmlFor="outlined-adornment-identifier">{label}</InputLabel>
-                <OutlinedInput
-                    id="outlined-adornment-weight"
-                    {...register("identifier", { required: true, minLength: 6 })}
-                    endAdornment={<InputAdornment sx={{marginRight:'-3px'}} position="end"><PersonOutlinedIcon/></InputAdornment>}
-                    aria-describedby="outlined-weight-helper-text"
-                    inputProps={{
-                        'aria-label': 'weight',
-                    }}
-                    label={label}
-                />
-            </FormControl>
-        </DefaultStyledInput>
+        <FormControl error={error ? true : false} className="dkd" variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-identifier">{label}</InputLabel>
+            <OutlinedInput
+                id="outlined-adornment-weight"
+                {...register("identifier", { required: true, minLength: 6 })}
+                endAdornment={<InputAdornment sx={{ marginRight: '-3px' }} position="end"><PersonOutlinedIcon /></InputAdornment>}
+                aria-describedby="outlined-weight-helper-text"
+                inputProps={{
+                    'aria-label': 'weight',
+                }}
+                label={label}
+            />
+        </FormControl>
     )
 }
 export default InputIdentifier
