@@ -1,0 +1,23 @@
+{
+  "id": "apresentation",
+  "type": "SharedSlice",
+  "name": "Apresentation",
+  "description": "Apresentation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "ola": {
+          "type": "Link",
+          "config": { "label": "ola", "select": "document" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,8 +1,7 @@
 import React from 'react';
-import "./globals.scss";
-import DefaultBackground from 'public/Default-background';
- 
-import { ClientSide } from './ClientSide';
+import "./globals.scss"; 
+
+import { ClientSide } from './clientSide';
 import { Rajdhani } from '@next/font/google'
 import { ThemeContextProvider } from 'contexts/ThemeContext';
 import { cookies } from 'next/headers';
@@ -51,7 +50,6 @@ export default function RootLayout({
             <body>
                 <ThemeContextProvider initialTheme={GetInitialTheme()}>
                     <ClientSide>
-                        <DefaultBackground />
                         <div children={<div id="modal-portal" />} />
                         {children}
                     </ClientSide>

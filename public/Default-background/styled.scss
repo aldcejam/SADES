@@ -1,5 +1,5 @@
 .container-background-page {
-    @apply fixed;
+    @apply fixed -z-10;
     @apply w-[100vw] h-[100vh];
 }
 
