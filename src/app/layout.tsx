@@ -1,7 +1,7 @@
 import React from 'react';
 import "./globals.scss"; 
 
-import { ClientSide } from './clientSide';
+import { ClientSide } from './ClientSide';
 import { Rajdhani } from '@next/font/google'
 import { ThemeContextProvider } from 'contexts/ThemeContext';
 import { cookies } from 'next/headers';
