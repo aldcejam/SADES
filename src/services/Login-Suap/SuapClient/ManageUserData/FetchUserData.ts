@@ -1,32 +1,29 @@
-import axios from "axios";
-import { SuapApiSettings } from "../../ConfigApi/SuapApiSettings";
+type GetUserDataProps = {
+    tokenValue: string | undefined;
+}
 
-export type TokenProps = {
-  tokenValue: string | null | undefined;
-};
-export const FetchUserData = ({ tokenValue }: TokenProps) => {
-  type GetDataProps = { SaveUserData: (response: any)=>void };
-  
-  const getData = async ({ SaveUserData }: GetDataProps) => {
-    const urlForGetUserData = SuapApiSettings.URL_FOR_GET_USERDATA;
-    const scope = SuapApiSettings.SCOPE;
+export const GetUserData = async ({ tokenValue }: GetUserDataProps) => {
+    if (!tokenValue) {
+        return;
+    }
 
-    await axios
-      .get(urlForGetUserData, {
-        data: { scope: scope },
+    const urlForGetUserData = process.env.NEXT_PUBLIC_SUAP_URL + "/api/v2/minhas-informacoes/meus-dados/";
+    const scope = process.env.NEXT_PUBLIC_SUAP_SCOPE as string;
+
+    const queryParams = new URLSearchParams({ scope }).toString();
+    const url = `${urlForGetUserData}?${queryParams}`;
+
+    const response = await fetch(url, {
+        method: "GET",
         headers: {
-          Authorization: "Bearer " + tokenValue,
-          Accept: "application/json",
+            Authorization: `Bearer ${tokenValue}`,
+            Accept: "application/json",
         },
-      })
-      .then((response) => {
-        SaveUserData(response);
-      })
-      .catch((response) => {
-        /* alert("Falha na comunicação com o SUAP"); */
-        console.log(response);
-      });
-  };
+    });
 
-  return getData;
+    if (!response.ok) {
+        return null;
+    }
+
+    return await response.json();
 };

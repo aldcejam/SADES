@@ -6,10 +6,8 @@ jest.mock("contexts/ThemeContext", () => {
     return {
         useThemeContext() {
             return {
-                mainColor: "",
-                secondaryColor: "",
-                themeModifier: jest.fn,
-                themeName: "light"
+                theme: "dark",
+                ToggleTheme: jest.fn()
             }
         }
     }

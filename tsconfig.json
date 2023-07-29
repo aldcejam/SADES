@@ -18,7 +18,8 @@
     "paths": {  
       "@redux-config/*": ["../redux.config/*"],
       "@base-project/*": ["../*"],
-      "public/*": ["../public/*"]
+      "public/*": ["../public/*"],
+      "@/components/*": ["/src/components/*"],
     },
     "plugins": [
       {

@@ -1,13 +1,12 @@
 import React from 'react';
-import "./globals.scss"; 
+import "./globals.scss";
 
 import { ClientSide } from './ClientSide';
 import { Rajdhani } from '@next/font/google'
 import { ThemeContextProvider } from 'contexts/ThemeContext';
 import { cookies } from 'next/headers';
-import { gql } from '@apollo/client';
-import { useQuery } from '@apollo/client';
-import { client } from '@base-project/client-graphql';
+import { SuapClient } from 'services/Login-Suap/SuapClient';
+
 
 const rajdhani = Rajdhani({
     subsets: ['latin'],
@@ -30,17 +29,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
 
-    /*  client
-         .query({
-             query: gql`
-             query { 
-                 user(id:"e7825a3f-3eb2-4387-bf8d-f2bbc7e8cf92"){
-                   username
-                 }
-               }
-       `,
-         })
-         .then((result) => console.log(result.data.user.username)); */
+    SuapClient()
 
     return (
         <html lang='pt-br' className={`${rajdhani.className}`}>
@@ -50,7 +39,9 @@ export default function RootLayout({
             <body>
                 <ThemeContextProvider initialTheme={GetInitialTheme()}>
                     <ClientSide>
-                        <div children={<div id="modal-portal" />} />
+                        <div>
+                            <div id="modal-portal" />
+                        </div>
                         {children}
                     </ClientSide>
                 </ThemeContextProvider>

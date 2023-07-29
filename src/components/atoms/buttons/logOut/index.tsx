@@ -1,7 +1,7 @@
 "use client"
 import styled from "./styled.module.scss"
 import { useSession, signOut } from "next-auth/react";
-import { SuapClient } from "services/Login-Suap/SuapClient/SuapClient";
+import { SuapClient } from "services/Login-Suap/SuapClient";
 import { BiLogOutCircle } from "react-icons/bi";
 
 const ButtonLogOut = () => {

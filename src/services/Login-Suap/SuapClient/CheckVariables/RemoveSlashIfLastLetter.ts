@@ -1,6 +1,10 @@
-export const RemoveSlashIfLastLetter = (variable: string) => {
-  if (variable.endsWith("/")) {
-    return variable.slice(0, -1);
-  }
-  return variable;
+export const RemoveSlashIfLastLetter = ({authHost}:{
+    authHost: string
+}) => {
+    const result = authHost.split("/");
+    if (result[result.length - 1] === "") {
+        result.pop();
+        return result.join("/");
+    }
+    return authHost;
 };

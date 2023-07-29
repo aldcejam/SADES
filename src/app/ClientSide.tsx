@@ -2,13 +2,13 @@
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify"
 import { Providers } from './providers';
+import { SuapClient } from 'services/Login-Suap/SuapClient';
 
 interface BodyClientSideProps {
     children?: React.ReactNode
 }
 
-export const ClientSide = ({ children }: BodyClientSideProps) => {
-
+export const ClientSide = ({ children }: BodyClientSideProps) => { 
     return (
         <Providers>
             <ToastContainer

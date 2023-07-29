@@ -1,15 +1,17 @@
 import Cookies from "js-cookie";
 
 type NewSuapTokenIfCookieIsExpiredProps = {
-  tokenValue: any;
-  finishTime: any;
-};
+    finishTime: Date | undefined;
+    tokenValue: string | undefined;
+}
 
-export const NewSuapTokenIfCookieIsExpired = ({
-  finishTime,
-  tokenValue,
-}: NewSuapTokenIfCookieIsExpiredProps) => {
-  if (!Cookies.get("suapToken") && tokenValue && finishTime) {
-    Cookies.set("suapToken", tokenValue, { expires: finishTime });
-  }
+export const NewSuapTokenIfCookieIsExpired = (
+    { 
+        finishTime,
+        tokenValue
+    }: NewSuapTokenIfCookieIsExpiredProps
+) => {
+    if (!Cookies.get("suapToken") && tokenValue && finishTime) {
+        Cookies.set("suapToken", tokenValue, { expires: finishTime });
+    }
 };
