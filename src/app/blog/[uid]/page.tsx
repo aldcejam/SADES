@@ -1,4 +1,3 @@
-"use client"
 import { SliceZone } from '@prismicio/react'
 import { createClient } from '@base-project/prismicio'
 import { components } from "slices";
