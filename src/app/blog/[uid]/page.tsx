@@ -1,5 +1,5 @@
 import { SliceZone } from '@prismicio/react'
-import { createClient } from 'prismicio'
+import { createClient } from '@base-project/prismicio'
 import { components } from "slices";
 
 export default async function Page({ params }:any) {
