@@ -3,9 +3,7 @@ module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx,scss}",
     "./components/**/*.{js,ts,jsx,tsx,mdx,scss}",
-    "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
+    "./src/slices/**/*.{js,ts,jsx,tsx,mdx}", 
     "./src/**/*.{js,ts,jsx,tsx,mdx,scss}",
   ],
   darkMode: 'class',
