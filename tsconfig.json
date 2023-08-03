@@ -16,7 +16,7 @@
     "jsx": "preserve",
     "incremental": true, 
     "paths": {  
-      "@redux-config/*": ["../redux.config/*"],
+      "@redux-config/*": ["../.redux/*"],
       "@base-project/*": ["../*"],
       "public/*": ["../public/*"],
       "@/components/*": ["/src/components/*"],

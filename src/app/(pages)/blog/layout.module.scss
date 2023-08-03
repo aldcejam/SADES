@@ -1,0 +1,57 @@
+.intern-container {
+    @apply w-[90%] h-auto;
+    @apply mx-auto; 
+}
+
+.body {
+    @apply w-screen h-screen;
+    @apply bg-inverted_theme;
+    
+    &::before{
+        @apply absolute top-0 left-0 w-full h-full;
+        content: "";
+        background: linear-gradient(180deg, rgba(var(--absolute-theme), 1) 0%, rgba(var(--absolute-theme), 0.93) 100%);
+    }
+     
+    .container {
+        @apply relative;
+        @apply w-[min(90vw,1200px)] h-[calc(100%-20px)];
+        @apply rounded-es-[10px] rounded-ee-[10px] border-b-4 border-primary;
+        @apply mx-auto;
+        box-shadow: 0px -10px 8px 0px theme("colors.primary" / 32%) inset;
+    }
+    .header-main{
+        @apply flex justify-between align-baseline;
+        @apply py-4;
+
+        nav{ 
+            @apply flex;
+            align-items: flex-end;
+            ul{
+                @apply flex align-baseline;
+                @apply -ml-2;
+
+                li{
+                  a{
+                    @apply relative;
+                    @apply text-base font-bold text-title text-opacity-90;
+                    @apply px-2 py-1;
+                    @apply transition-all duration-300;
+                    
+                    &::before{
+                        content: "";
+                        @apply absolute bottom-0.5 left-0 right-0 mx-auto;
+                        @apply w-[40%] h-0.5;
+                        @apply bg-title bg-opacity-90;
+                        @apply transition-all duration-300;
+                        
+                    }
+                    &:hover{
+                        @apply before:w-full
+                    }
+                  }  
+                }
+            }
+        }
+    }
+}

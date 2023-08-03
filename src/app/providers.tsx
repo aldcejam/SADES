@@ -1,14 +1,14 @@
 import { Store } from "@redux-config/store";
-import { Provider } from "react-redux";
-import { SidebarStateProvider } from "contexts/SidebarStateContext";
-
+import { Provider as ProviderRedux } from "react-redux";
+import { SidebarStateProvider as ProviderSidebar } from "contexts/SidebarStateContext";
+ 
 export const Providers = ({ children }: { children: React.ReactNode }) => {
 
-    return (
-        <Provider store={Store} >
-            <SidebarStateProvider>
+    return ( 
+        <ProviderRedux store={Store} >
+            <ProviderSidebar>
                 {children}
-            </SidebarStateProvider>
-        </Provider>
+            </ProviderSidebar>
+        </ProviderRedux>
     );
 }

@@ -1,26 +1,16 @@
 import React from 'react';
-import "./globals.scss";
+import "./global_styles/globals.scss";
 
 import { ClientSide } from './ClientSide';
 import { Rajdhani } from '@next/font/google'
-import { ThemeContextProvider } from 'contexts/ThemeContext';
-import { cookies } from 'next/headers';
-import { SuapClient } from 'services/Login-Suap/SuapClient';
 
+import { ThemeContextProvider as ProviderTheme } from 'contexts/ThemeContext';
+import { GetInitialTheme } from './global_styles/GetInitialTheme';
 
 const rajdhani = Rajdhani({
     subsets: ['latin'],
     weight: ["300", "400", "500", "600", "700"],
 });
-
-export const GetInitialTheme = (): "light" | "dark" => {
-    const themePrefs = cookies().get('ThemeSemadec');
-    if (themePrefs) {
-        return themePrefs.value as "light" | "dark";
-    }
-
-    return 'light';
-};
 
 
 export default function RootLayout({
@@ -29,22 +19,20 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
 
-    SuapClient()
-
     return (
         <html lang='pt-br' className={`${rajdhani.className}`}>
             <head>
                 <title>SADES</title>
             </head>
             <body>
-                <ThemeContextProvider initialTheme={GetInitialTheme()}>
+                <ProviderTheme initialTheme={GetInitialTheme()}>
                     <ClientSide>
                         <div>
                             <div id="modal-portal" />
                         </div>
                         {children}
                     </ClientSide>
-                </ThemeContextProvider>
+                </ProviderTheme>
             </body>
         </html >
     );

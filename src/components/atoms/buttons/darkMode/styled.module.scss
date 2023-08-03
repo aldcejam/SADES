@@ -1,4 +1,4 @@
-.button-dark-mode {
+/* .button-dark-mode {
     @apply relative z-10;
     @apply w-14 h-7;
     @apply flex bg-background;
@@ -14,17 +14,18 @@
         @apply justify-start;
     }
 
-    @apply p-0.5 cursor-pointer box-content;
+    @apply p-0.5  box-content;
 
-    .handle {
-        @apply flex justify-center items-center;
-        @apply w-7 h-7;
-        background: linear-gradient(135deg, theme("colors.primary") 0%, theme("colors.secondary") 100%);
-        @apply rounded-full border border-solid;
-        border-color: rgb(var(--inverted-theme), 0.4);
+} */
+.handle {
+    @apply flex justify-center items-center cursor-pointer;
+    @apply w-7 h-7;
+    background: linear-gradient(135deg, theme("colors.primary") 0%, theme("colors.secondary") 100%);
+    @apply rounded-full border border-solid;
+    border-color: rgb(var(--inverted-theme), 0.4) !important;
 
-        .icon {
-            @apply text-absolute_theme text-base;
-        }
+    .icon {
+        color: theme("colors.inverted_theme") !important;
+        font-size: theme("fontSize.base") !important;
     }
 }

@@ -1,8 +1,7 @@
 "use client"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify"
-import { Providers } from './providers';
-import { SuapClient } from 'services/Login-Suap/SuapClient';
+import { Providers } from './providers'; 
 
 interface BodyClientSideProps {
     children?: React.ReactNode

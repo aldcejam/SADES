@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const ButtonDarkMode = () => {
 
     const { theme, ToggleTheme } = useThemeContext()
- 
+
     const spring = {
         type: "spring",
         stiffness: 700,
@@ -16,18 +16,17 @@ const ButtonDarkMode = () => {
     };
 
     return (
-        <div
-            className={styled["button-dark-mode"]}
-            data-theme-selected={theme}
-            onClick={() => ToggleTheme()}>
-            <motion.div className={styled["handle"]} layout transition={spring} >
-                {theme == "light" ?
-                    <LightModeIcon className={styled["icon"]} />
-                    :
-                    <DarkModeOutlinedIcon className={styled["icon"]} />
-                }
-            </motion.div>
-        </div>
+        <motion.div
+            onClick={() => ToggleTheme()}
+            className={styled["handle"]}
+            layout
+            transition={spring} >
+            {theme == "light" ?
+                <DarkModeOutlinedIcon className={styled["icon"]} />
+                :
+                <LightModeIcon className={styled["icon"]} />
+            }
+        </motion.div>
     )
 
 }

@@ -2,8 +2,9 @@ import { Routes } from "@base-project/Routes";
 import ButtonRedirectProfile from "components/atoms/sidebar/buttonRedirectProfile";
 import RedirectOptionSidebar from "components/atoms/sidebar/redirectOptionSidebar";
 import { useSidebarStateContext } from "contexts/SidebarStateContext";
-import { AiOutlineHome, AiOutlineLogin } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineLogin, AiOutlineUser } from "react-icons/ai";
 import styled from "./styled.module.scss";
+import DarkModeButton from "components/atoms/buttons/darkMode";
 
 const Navegation = () => {
     const { CloseSidebar, sidebarState } = useSidebarStateContext()
@@ -16,11 +17,21 @@ const Navegation = () => {
                         icon={<AiOutlineHome />}
                         text="Home"
                         title="Ir para a página inicial"
-
+                    />
+                    <RedirectOptionSidebar
+                        href={Routes.profile}
+                        icon={<AiOutlineUser />}
+                        text="Perfil"
+                        title="Ir para seu prefil"
                     />
                 </span>
                 <li onClick={CloseSidebar}>
-                    <ButtonRedirectProfile />
+                    <RedirectOptionSidebar
+                        href={Routes.profile}
+                        icon={<DarkModeButton />}
+                        text="Perfil"
+                        title="Ir para seu prefil"
+                    />
                 </li>
                 <span
                     className={styled["divider"]}

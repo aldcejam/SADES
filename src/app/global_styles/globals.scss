@@ -1,0 +1,43 @@
+@import "@splidejs/react-splide/css";
+@import '@splidejs/react-splide/css/skyblue';
+@import '@splidejs/react-splide/css/sea-green';
+@import '@splidejs/react-splide/css/core';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./theme.scss";
+
+@import "./muiInputs.scss";
+@import "./modal.scss";
+  
+
+* {
+  user-select: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray_600 rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray_900;
+}

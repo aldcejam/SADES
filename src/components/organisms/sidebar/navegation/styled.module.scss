@@ -5,7 +5,8 @@
         @apply w-full p-0; 
 
         .icons-redirects-top {
-            @apply relative -top-[38vh];
+            @apply relative -top-[30vh];
+            @apply flex flex-wrap gap-6;
         }
 
         .outLoginIcon {
@@ -17,8 +18,8 @@
 
             &::before {
                 content: "";
-                @apply absolute top-0 h-full m-auto;
-                @apply transition-all duration-500 delay-100;
+                @apply absolute top-0 h-full m-auto; 
+                @apply transition-all duration-300;
                 @apply bg-primary rounded-full; 
             }
 
@@ -27,11 +28,12 @@
                     @apply w-[30px];
                 }   
             }
+
             &[data-sidebar-state=true]{
                 &::before {
                     @apply w-[calc(100%-20px)];
                 }
-            } 
+            }
         }
     }
 }

@@ -1,21 +1,16 @@
 "use client"
 import styled from "./styled.module.scss"
-import { useSession, signOut } from "next-auth/react";
-import { SuapClient } from "services/Login-Suap/SuapClient";
+import { useSession, signOut } from "next-auth/react"; 
 import { BiLogOutCircle } from "react-icons/bi";
 
 const ButtonLogOut = () => {
 
-    const { data: session, status } = useSession()
-    const NewSuapClient = SuapClient();
+    const { data: session, status } = useSession() 
 
     const HanddleLogOut = () => {
         if (status == "authenticated") {
             signOut()
-        }
-        else if (NewSuapClient.isAuthenticated()) {
-            NewSuapClient.Logout()
-        }
+        } 
     }
 
 

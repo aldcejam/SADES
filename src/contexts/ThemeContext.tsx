@@ -1,5 +1,5 @@
 "use client"
-import { createContext, ReactNode, useContext, useMemo, useRef, useState } from "react";
+import { createContext, ReactNode, useContext, useRef, useState } from "react";
 import Cookies from 'js-cookie';
 
 interface IThemeContext {
@@ -21,16 +21,10 @@ export const ThemeContextProvider = ({ initialTheme, children }: { initialTheme:
 
         const element = root.current
         if (element) {
-            if (theme == 'light') {
-                element.classList.remove('dark')
-                element.classList.add('light')
-            }
-            else {
-                element.classList.add('dark')
-                element.classList.remove('light')
-            }
+            element.classList.toggle('dark', theme !== 'light');
+            element.classList.toggle('light', theme === 'light');
         }
-
+        
     }
     return (
         <ThemeContext.Provider value={{ theme, ToggleTheme }}>
