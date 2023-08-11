@@ -15,7 +15,7 @@ const ModifyUserData = () => {
         <motion.div
             className={styled["modify-user-data"]}
             layout
-            data-isOpen={isOpenComponentPersonaData}
+            data-isopen={isOpenComponentPersonaData}
         >
             <ButtonToTemplateStateToggle
                 title="Modifique suas informações"

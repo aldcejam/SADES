@@ -1,4 +1,4 @@
-import ProfilePic from "components/atoms/profilePic"
+import ProfilePic from "components/atoms/viewProfile/profilePic"
 import Identity from "components/molecules/ViewProfile/identityData"
 import Secondarydata from "components/molecules/ViewProfile/secondarydata"
 import SocialMidias from "components/molecules/ViewProfile/socialMidias"

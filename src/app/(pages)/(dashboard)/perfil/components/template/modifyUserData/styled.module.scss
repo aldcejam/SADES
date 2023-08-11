@@ -8,7 +8,7 @@
     transition: 0.3s;
 
 
-    &[data-isOpen="true"] {
+    &[data-isopen="true"] {
         @apply relative min-w-full max-h-full;
     }
 }

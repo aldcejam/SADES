@@ -1,8 +1,7 @@
-import { memo } from "react"
-import DimontPolygon from "@base-project/public/Polygon/DimontPolygon"
 import Content from "components/organisms/viewProfile/content"
+import { memo } from "react"
 import styled from "./styled.module.scss"
-import "./styled.scss"
+import { BgViewProfile } from "./vectors/bgViewProfile"
 
 type TypesViewProfileComponent = {
     screen: 'profileUser' | 'viewFriend'
@@ -11,7 +10,7 @@ type TypesViewProfileComponent = {
 const ViewProfileComponent = ({ screen }: TypesViewProfileComponent) => {
     return (
         <div className={styled["view-profile"]}>
-            <DimontPolygon />
+            <BgViewProfile />
             <Content />
         </div>
 
