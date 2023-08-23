@@ -1,15 +1,13 @@
 "use client"
-import { PageRegisterStatesConsumers } from "../../../@core/connection/consumers"
-import { PageRegisterStatesModifiers } from "../../../@core/connection/modifiers"
+import { PageDisputaRegistrarConnection } from "../../../@core/connection"
 import CourseCard from "../../molecules/courseCard"
 import styled from "./styled.module.scss"
 
-const AvailableCourses = () => {
+const AvailableCourses = () => { 
 
-    const { dataFetch, coursesSelected } = PageRegisterStatesConsumers()
-    const { courses } = dataFetch
-    const { ManageCourses } = PageRegisterStatesModifiers()
-    const { AddCourse, RemoveCourse } = ManageCourses
+    const { availableCoursesAndSports, sportAndCourseSelected } = PageDisputaRegistrarConnection()
+    const { coursesSelected,AddCourse, RemoveCourse } = sportAndCourseSelected.selectCourse
+    const { availableCourses } = availableCoursesAndSports
 
     const IsCourseSelected = ({ uuid }: { uuid: string }) => {
         const courseAlreadySelected = coursesSelected
@@ -35,7 +33,7 @@ const AvailableCourses = () => {
         <div className={styled["available-teams"]}>
             <h2>Times disponíveis</h2>
             <div className={styled["box-teams"]}>
-                {courses.map((course) => {
+                {availableCourses.map((course) => {
                     return (
                         <span
                             onClick={() => ToggleSelectCourse({ uuid: course.uuid })}

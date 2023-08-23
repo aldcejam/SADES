@@ -1,18 +1,16 @@
 "use client"
-import { PageRegisterStatesModifiers } from "app/(pages)/(dashboard)/disputa/registrar/@core/connection/modifiers"
-import { PageRegisterStatesConsumers } from "app/(pages)/(dashboard)/disputa/registrar/@core/connection/consumers"
 import styled from "./styled.module.scss"
+import { PageDisputaRegistrarConnection } from "app/(pages)/(dashboard)/disputa/registrar/@core/connection"
 
-const Pontuation = () => { 
-    const {ManagePontuationbyPositions} = PageRegisterStatesModifiers()
-    const {pontuationbyPositions} = PageRegisterStatesConsumers()
-     
-    const UpdatePontuationbyPositions = ManagePontuationbyPositions.UpdatePontuationbyPositions
- 
+const Pontuation = () => {
+    const { disputeSettings } = PageDisputaRegistrarConnection()
+    const { pontuationbyPositions } = disputeSettings 
+    const { UpdatePontuationbyPositions } = pontuationbyPositions 
+
     return (
         <div className={styled["pontuation"]}>
             {
-                pontuationbyPositions.map((pontuation, position) => {
+                pontuationbyPositions.value.map((pontuation, position) => {
                     return (
                         <div key={position}>
                             <p>{position + 1}º</p>
@@ -20,7 +18,7 @@ const Pontuation = () => {
                                 type="number"
                                 value={pontuation}
                                 onChange={(e) => {
-                                    const newPontuations = [...pontuationbyPositions];
+                                    const newPontuations = [...pontuationbyPositions.value];
                                     newPontuations[position] = Number(e.target.value);
                                     UpdatePontuationbyPositions(newPontuations);
                                 }

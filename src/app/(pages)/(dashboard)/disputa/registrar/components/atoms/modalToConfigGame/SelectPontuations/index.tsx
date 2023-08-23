@@ -1,13 +1,13 @@
 "use client"
 import styled from "./styled.module.scss"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { PageRegisterStatesModifiers } from "../../../../@core/connection/modifiers";
+import { PageDisputaRegistrarConnection } from "app/(pages)/(dashboard)/disputa/registrar/@core/connection"
 
 const SelectPontuations = () => {
 
-    const { ManagePontuationbyPositions } = PageRegisterStatesModifiers()
-    const UpdatePositionsCount = ManagePontuationbyPositions.UpdatePositionsCount
- 
+    const { disputeSettings } = PageDisputaRegistrarConnection()
+    const { UpdatePositionsCount } = disputeSettings.pontuationbyPositions
+
     return (
         <div className={styled["select-pontuations"]}>
             <h3 className={styled["title"]}>Posições com Pontuação</h3>

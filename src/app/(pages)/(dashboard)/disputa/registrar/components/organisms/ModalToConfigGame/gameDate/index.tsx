@@ -8,15 +8,16 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
 import styled from "./styled.module.scss"
 import "./styled.scss"
-
-import { PageRegisterStatesModifiers } from '../../../../@core/connection/modifiers';
-import { PageRegisterStatesConsumers } from '../../../../@core/connection/consumers';
+ 
 import { DateProps } from '../../../../@core/entities/IDataForRegistrarDisputa';
+import { PageDisputaRegistrarConnection } from '../../../../@core/connection';
 
 const GameDate = () => {
+    const { disputeSettings } = PageDisputaRegistrarConnection()
+    const { date } = disputeSettings
 
-    const { UpdateDate } = PageRegisterStatesModifiers()
-    const { date } = PageRegisterStatesConsumers()
+    const UpdateDate = date.Update
+    const dateSelected = date.value
 
     const handleChange = (newValue: DateProps) => {
         UpdateDate(newValue);
@@ -31,16 +32,15 @@ const GameDate = () => {
                     <Stack spacing={3}>
                         <DesktopDatePicker
                             label="Data"
-                            format='DD/MM/YYYY'
-                            value={date}
+                            format="DD/MM/YYYY"
+                            value={dateSelected}
                             onChange={handleChange}
                             /* renderInput={(params) => <TextField {...params} />} */
                         />
                         <TimePicker
                             label="Horário"
-                            value={date}
+                            value={dateSelected}
                             onChange={handleChange}
-                            
                             /* renderInput={(params) => <TextField {...params} />} */
                         />
                     </Stack>

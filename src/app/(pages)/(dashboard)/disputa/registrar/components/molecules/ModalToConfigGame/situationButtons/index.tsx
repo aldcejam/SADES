@@ -1,8 +1,9 @@
+import { SituationsProps } from "../../../../@core/entities/IDataForRegistrarDisputa"
 import styled from "./styled.module.scss"
 
 type SituationButtonsProps = {
     Submit: () => void
-    value: "pre-cadastrado" | "em andamento"
+    value: SituationsProps
     isSelected: boolean
 }
 const SituationButtons = ({ Submit, value, isSelected }: SituationButtonsProps) => {

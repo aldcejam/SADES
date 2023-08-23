@@ -1,29 +1,30 @@
 "use client"
-import { PageRegisterStatesModifiers } from '../../../../@core/connection/modifiers';
-import { PageRegisterStatesConsumers } from '../../../../@core/connection/consumers';
 import SituationsButton from 'app/(pages)/(dashboard)/disputa/registrar/components/molecules/ModalToConfigGame/situationButtons';
 import styled from "./styled.module.scss"
+import { PageDisputaRegistrarConnection } from '../../../../@core/connection';
 
 const SituationGame = () => {
 
-    const { UpdateSituation } = PageRegisterStatesModifiers()
-    const { situationSelected } = PageRegisterStatesConsumers()
-
-    const situations: ["em andamento", "pre-cadastrado"] = ["em andamento", "pre-cadastrado"]
+    const { disputeSettings } = PageDisputaRegistrarConnection() 
+    const { situation } = disputeSettings
+    const UpdateSituation = situation.Update
+    const situationSelected = situation.value
+    const situationsOptions = situation.options
  
+
     return (
         <div className={styled["situation-game"]}>
             <p className={styled["title"]}>Situação do jogo:</p>
             <span
                 className={styled["buttons"]}
             >
-                {situations.map((situation) => {
+                {situationsOptions.map((situation) => {
                     return (
                         <SituationsButton
                             key={situation}
                             value={situation}
                             Submit={() => UpdateSituation(situation)}
-                            isSelected={situationSelected == situation ? true : false}
+                            isSelected={situationSelected == situation}
                         />
                     )
                 })}

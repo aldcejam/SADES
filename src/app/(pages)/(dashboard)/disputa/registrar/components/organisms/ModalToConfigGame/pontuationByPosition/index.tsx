@@ -1,4 +1,4 @@
-import SelectPontuations from "../../../atoms/modalToConfigGame/SelectPontuations"
+import SelectPontuations from "../../../atoms/modalToConfigGame/SelectPontuations" 
 import Pontuation from "../../../molecules/ModalToConfigGame/pontuation"
  
 const PontuationByPosition = () => {

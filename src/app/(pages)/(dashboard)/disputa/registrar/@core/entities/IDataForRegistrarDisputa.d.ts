@@ -11,7 +11,7 @@ export type SportSelectedProps = {
   genderCategories?: GenderOptionsProps[];
 };
 export type PontuationByPositionsProps = Array<number>;
-export type SituationsProps = "em andamento" | "pre-cadastrado";
+export type SituationsProps = "em_andamento" | "pre_cadastrado";
 export type DateProps = string | null;
 export type CategoriesProps = {
   sportCategory?: string;

@@ -7,14 +7,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import GameDate from "../../organisms/ModalToConfigGame/gameDate";
 import SubmitButton from "components/atoms/submit";
 import ModalTemplate from "components/templates/modals/modalTemplate";
-import { PageRegisterStatesConsumers } from "../../../@core/connection/consumers";
 import { GenderOptionsProps } from "defaultTypes/GendersProps";
-
-
+import { PageDisputaRegistrarConnection } from "../../../@core/connection";
+ 
 type ModalToConfigGameProps = {
     modalIsOpen: boolean,
     ToggleModal: () => void,
 }
+
 const ModalToConfigGame = ({ ToggleModal, modalIsOpen }: ModalToConfigGameProps) => {
 
     const TranslateGenderCategory = (genderCategoryInEnglish: GenderOptionsProps) => {
@@ -24,11 +24,17 @@ const ModalToConfigGame = ({ ToggleModal, modalIsOpen }: ModalToConfigGameProps)
             case "female":
                 return "feminino"
             case "mixed":
-                return "misto" 
+                return "misto"
         }
     }
 
-    const { sportSelected, genderCategory, sportCategory } = PageRegisterStatesConsumers()
+    const { genderAndSportCategorySelected, sportAndCourseSelected } = PageDisputaRegistrarConnection()
+    const sportSelected = sportAndCourseSelected.sportSelected.value
+
+    const { genderCategorySelected, sportCategorySelected } = genderAndSportCategorySelected
+    const genderCategory = genderCategorySelected.value
+    const sportCategory = sportCategorySelected.value
+
     const title = `${sportSelected?.sportName} 
     ${sportCategory ? `- ${sportCategory}` : ""} 
     ${genderCategory ? `- ${TranslateGenderCategory(genderCategory)}` : ""}`
@@ -50,7 +56,7 @@ const ModalToConfigGame = ({ ToggleModal, modalIsOpen }: ModalToConfigGameProps)
                         />
                     </div>
                     <div className={styled["game-date"]}>
-                        <GameDate />
+                        {/* <GameDate /> */}
                     </div>
                     <div className={styled["pontuations"]}>
                         <PontuationByPosition />

@@ -18,7 +18,7 @@ const initialState: IDataForRegistrarDisputa = {
   categories: {} as CategoriesProps,
   date: dayjs('2023-08-18T21:11:54').toString(),
   pontuationbyPositions: [30, 20, 10],
-  situation: "em andamento",
+  situation: "em_andamento",
 };
 
 export const DataForRegistrarDisputaSlice = createSlice({

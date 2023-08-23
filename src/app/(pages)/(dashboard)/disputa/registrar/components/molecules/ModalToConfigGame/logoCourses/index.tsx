@@ -1,12 +1,13 @@
 "use client"
-import { PageRegisterStatesConsumers } from "../../../../@core/connection/consumers"
 import Image from "next/image"
 import styled from "./styled.module.scss"
+import { PageDisputaRegistrarConnection } from "../../../../@core/connection"
 
 
 const LogoCourses = () => {
 
-    const { coursesSelected } = PageRegisterStatesConsumers()
+    const { sportAndCourseSelected } = PageDisputaRegistrarConnection()
+    const { coursesSelected } = sportAndCourseSelected.selectCourse
 
     return (
         <div className={styled["logo-courses"]}>

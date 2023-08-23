@@ -1,30 +1,22 @@
-"use client"
-import { PageRegisterStatesConsumers } from "../../../@core/connection/consumers"
-import { GenderOptionsProps } from "defaultTypes/GendersProps"
+"use client" 
 import SelectSportButton from "../../atoms/selectSportButton"
 
 import styled from "./styled.module.scss"
+import { PageDisputaRegistrarConnection } from "../../../@core/connection"
+ 
+const AvailableSports = () => {
 
-export type UpdateSportsProps = {
-    sportName: string,
-    sportUUID: string,
-    genderCategories?: GenderOptionsProps[]
-    sportCategories?: string[]
-    minNumberOfCourses: number
-    maxNumberOfCourses: number
-}
-type AvailableSportsProps = {
-    UpdateSport: (sport: UpdateSportsProps) => void
-}
-const AvailableSports = ({ UpdateSport }: AvailableSportsProps) => {
+    const { availableCoursesAndSports, sportAndCourseSelected } = PageDisputaRegistrarConnection()
+    const UpdateSport = sportAndCourseSelected.sportSelected.Update
+    const sportSelected = sportAndCourseSelected.sportSelected.value
+    const { availableSports } = availableCoursesAndSports
+  
 
-    const { dataFetch, sportSelected } = PageRegisterStatesConsumers()
-    const { sports } = dataFetch
     return (
         <div>
             <h2 className={styled["title"]}>Escolha o esporte</h2>
             <div className={styled["box-sports"]}>
-                {sports.map((sport) => {
+                {availableSports.map((sport) => {
                     return (
                         <span
                             key={sport.sportName}
@@ -38,7 +30,7 @@ const AvailableSports = ({ UpdateSport }: AvailableSportsProps) => {
                             })}>
                             <SelectSportButton
                                 value={sport.sportName}
-                                isSelected={sport.uuid == sportSelected?.sportUUID ? true : false}
+                                isSelected={sport.uuid == sportSelected?.sportUUID}
                             />
                         </span>
                     )
