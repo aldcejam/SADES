@@ -2,7 +2,7 @@ import "./styled.scss"
 
 const IllustrationFamale = () => { 
   return (
-    <div className="illustration-famele">
+    <div className="illustration-famele"  id="test-illustration_famale">
       <svg className="illustration-famale" viewBox="0 0 349.62 386.09">
         <g id="Camada_2" data-name="Camada 2">
           <g id="Camada_1-2" data-name="Camada 1">
