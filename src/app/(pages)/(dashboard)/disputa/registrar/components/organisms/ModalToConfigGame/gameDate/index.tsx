@@ -31,16 +31,17 @@ const GameDate = () => {
                     <Stack spacing={3}>
                         <DesktopDatePicker
                             label="Data"
-                            inputFormat="DD/MM/YYYY"
+                            format='DD/MM/YYYY'
                             value={date}
                             onChange={handleChange}
-                            renderInput={(params) => <TextField {...params} />}
+                            /* renderInput={(params) => <TextField {...params} />} */
                         />
                         <TimePicker
                             label="Horário"
                             value={date}
                             onChange={handleChange}
-                            renderInput={(params) => <TextField {...params} />}
+                            
+                            /* renderInput={(params) => <TextField {...params} />} */
                         />
                     </Stack>
                 </LocalizationProvider>
