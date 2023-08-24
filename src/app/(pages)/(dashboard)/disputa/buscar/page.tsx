@@ -6,6 +6,7 @@ import PageTitle from 'components/atoms/pageTitle';
 import ListSports from './components/template/listSports';
 import { DisputaBuscar_Logic } from "./page_logic";
 import { ModalSelectCategories } from "components/templates/modals/modalSelectCategories"
+import { LayoutDashboard } from '../../layout.dash';
 
 export default function Page() {
 
@@ -17,50 +18,43 @@ export default function Page() {
     } = DisputaBuscar_Logic()
 
     return (
-        <>
-            <section
-                className={styled["content-page"]}
-                data-boxshadow_in_bg="true"
-            >
-                <PageTitle title='Pesquisar por jogo' />
-                <div className={`page-disputa-buscar box-page`}>
-                    <div className="background" />
-                    <div className='content'>
-                        <ListSports
-                            ToggleModal={ToggleModal}
-                            course={course ? course : "não há equipe selecionado"}
-                            UpdateSportSelected={sportSelected.Update}
-                            listSports={listSport}
+        <LayoutDashboard
+            pageTitle="Pesquisar por jogo"
+        >
+            <div className={`page-disputa-buscar box-page`}>
+                    <ListSports
+                        ToggleModal={ToggleModal}
+                        course={course ?? "não há equipe selecionado"}
+                        UpdateSportSelected={sportSelected.Update}
+                        listSports={listSport}
+                    />
+                    <ModalSelectCategories.Root
+                        ToggleModal={ToggleModal}
+                        isModalOpen={isModalOpen}
+                        sportName={sportSelected.value.sportName}
+                    >
+                        {
+                            sportSelected.value.sportCategories ?
+                                <ModalSelectCategories.SportCategories
+                                    sportCategories={sportSelected.value.sportCategories}
+                                    sportCategorySelected={sportCategorySelected.value}
+                                    updateSportCategorySelected={sportCategorySelected.Update}
+                                /> : null
+                        }
+                        {
+                            sportSelected.value.genderCategories ?
+                                <ModalSelectCategories.GenderOptions
+                                    genderCategorySelected={genderCategorySelected.value}
+                                    updateGenderCategorySelected={genderCategorySelected.Update}
+                                    genderCategories={sportSelected.value.genderCategories}
+                                /> : null
+                        }
+                        <ModalSelectCategories.SubmitButton
+                            value='Prosseguir'
+                            Submit={Submit()}
                         />
-                        <ModalSelectCategories.Root
-                            ToggleModal={ToggleModal}
-                            isModalOpen={isModalOpen}
-                            sportName={sportSelected.value.sportName}
-                        >
-                            {
-                                sportSelected.value.sportCategories ?
-                                    <ModalSelectCategories.SportCategories
-                                        sportCategories={sportSelected.value.sportCategories}
-                                        sportCategorySelected={sportCategorySelected.value}
-                                        updateSportCategorySelected={sportCategorySelected.Update}
-                                    /> : null
-                            }
-                            {
-                                sportSelected.value.genderCategories ?
-                                    <ModalSelectCategories.GenderOptions
-                                        genderCategorySelected={genderCategorySelected.value}
-                                        updateGenderCategorySelected={genderCategorySelected.Update}
-                                        genderCategories={sportSelected.value.genderCategories}
-                                    /> : null
-                            }
-                            <ModalSelectCategories.SubmitButton
-                                value='Prosseguir'
-                                Submit={Submit()}
-                            />
-                        </ModalSelectCategories.Root>
-                    </div>
+                    </ModalSelectCategories.Root>
                 </div>
-            </section>
-        </>
+        </LayoutDashboard>
     )
 }

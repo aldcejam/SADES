@@ -2,17 +2,4 @@
     .content {
         @apply pt-12;
     }
-
-    .background {
-        &::before {
-            content: "";
-            @apply absolute inset-0 m-auto;
-            @apply w-[clamp(220px,25vw,290px)] h-[clamp(220px,25vw,290px)];
-            background-color: theme("colors.secondary" / 78%);
-            box-shadow: 0px 20px 32px 20px theme("colors.secondary" / 20%);
-            @apply rounded-[1000px] overflow-hidden;
-            filter: blur(21px);
-        }
-
-    }
 }
