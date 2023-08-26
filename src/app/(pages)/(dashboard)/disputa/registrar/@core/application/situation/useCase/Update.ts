@@ -1,4 +1,4 @@
-import { useAppDispatch } from "@redux-config/hook";
+import { useAppDispatch } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook";
 import { SetSituation } from "../../../entities/DataForRegistrarDisputa";
 import { SituationsProps } from "../../../entities/IDataForRegistrarDisputa";
 

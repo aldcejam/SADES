@@ -1,12 +1,10 @@
 "use client"
-import './styled.scss';
-import styled from "app/(pages)/(dashboard)/layout.module.scss";
-
-import PageTitle from 'components/atoms/pageTitle';
+import './styled.scss'; 
 import ListSports from './components/template/listSports';
 import { DisputaBuscar_Logic } from "./page_logic";
 import { ModalSelectCategories } from "components/templates/modals/modalSelectCategories"
 import { LayoutDashboard } from '../../layout.dash';
+import { Providers } from './providers';
 
 export default function Page() {
 
@@ -18,10 +16,11 @@ export default function Page() {
     } = DisputaBuscar_Logic()
 
     return (
-        <LayoutDashboard
-            pageTitle="Pesquisar por jogo"
-        >
-            <div className={`page-disputa-buscar box-page`}>
+        <Providers> 
+            <LayoutDashboard
+                pageTitle="Pesquisar por jogo"
+            >
+                <div className={`page-disputa-buscar box-page`}>
                     <ListSports
                         ToggleModal={ToggleModal}
                         course={course ?? "não há equipe selecionado"}
@@ -55,6 +54,7 @@ export default function Page() {
                         />
                     </ModalSelectCategories.Root>
                 </div>
-        </LayoutDashboard>
+            </LayoutDashboard>
+        </Providers>
     )
 }

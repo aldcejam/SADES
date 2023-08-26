@@ -1,25 +1,21 @@
 "use client"
 import { ModalSelectCategories } from "components/templates/modals/modalSelectCategories"
 import { PageDisputaRegistrarConnection } from "app/(pages)/(dashboard)/disputa/registrar/@core/connection"
-  
-type ModalSelectCategoriesInsertedProps = {
-    modalSelectCategories: boolean
-    ToggleModalSelectCategories: () => void
-    ToggleModalToConfigGame: () => void
-}
+import { usePageRegistrarDisputa } from "../../../context"
+   
 
-export const ModalSelectCategoriesInserted = ({ ToggleModalToConfigGame, ToggleModalSelectCategories, modalSelectCategories }: ModalSelectCategoriesInsertedProps) => {
+export const ModalSelectCategoriesInserted = () => {
 
     const { sportAndCourseSelected, genderAndSportCategorySelected } = PageDisputaRegistrarConnection()
-
     const { sportCategorySelected, genderCategorySelected } = genderAndSportCategorySelected
-
     const { sportSelected } = sportAndCourseSelected
+
+    const { modalSelectCategories, modalToConfigGame } = usePageRegistrarDisputa()
  
     return (
         <ModalSelectCategories.Root
-            ToggleModal={ToggleModalSelectCategories}
-            isModalOpen={modalSelectCategories}
+            ToggleModal={modalSelectCategories.ToggleModal}
+            isModalOpen={modalSelectCategories.modalIsOpen}
             sportName={sportSelected.value.sportName}
         >
             {
@@ -40,7 +36,7 @@ export const ModalSelectCategoriesInserted = ({ ToggleModalToConfigGame, ToggleM
             }
             <ModalSelectCategories.SubmitButton
                 value='Prosseguir'
-                Submit={ToggleModalToConfigGame}
+                Submit={modalToConfigGame.ToggleModal}
             />
         </ModalSelectCategories.Root>
     )

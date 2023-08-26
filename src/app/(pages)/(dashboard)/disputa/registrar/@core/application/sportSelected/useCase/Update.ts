@@ -1,6 +1,6 @@
 import { SetSportSelected } from "../../../entities/DataForRegistrarDisputa";
 import { SportSelectedProps } from "../../../entities/IDataForRegistrarDisputa";
-import { useAppDispatch } from "@redux-config/hook";
+import { useAppDispatch } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook";
 import { ManageCategories } from "../../categories/ManageCategories"
 
 const UpdateSportSelected = () => {

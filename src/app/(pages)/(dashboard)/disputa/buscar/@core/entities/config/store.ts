@@ -1,10 +1,8 @@
 import { configureStore,ThunkAction,Action } from '@reduxjs/toolkit' 
 import DataForBuscarDisputa from 'app/(pages)/(dashboard)/disputa/buscar/@core/entities/DataForBuscarDisputa';
-import DataForRegistrarDisputa from 'app/(pages)/(dashboard)/disputa/registrar/@core/entities/DataForRegistrarDisputa';
  
 export const Store = configureStore({
-  reducer: {
-    DataForRegistrarDisputa: DataForRegistrarDisputa, 
+  reducer: { 
     DataForBuscarDisputa: DataForBuscarDisputa,
   },
 });

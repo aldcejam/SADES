@@ -2,7 +2,7 @@ import {
   DataForRegistrarDisputaStates,
   SetCoursesSelected,
 } from "../../../entities/DataForRegistrarDisputa";
-import { useAppSelector, useAppDispatch } from "@redux-config/hook";
+import { useAppSelector, useAppDispatch } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook";
 
 const RemoveCourseSelected = () => {
   const coursesSelected = useAppSelector(DataForRegistrarDisputaStates).coursesSelected;

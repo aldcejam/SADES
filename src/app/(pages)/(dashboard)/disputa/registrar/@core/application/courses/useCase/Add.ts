@@ -1,6 +1,6 @@
 import { GetCourses } from "../../../api/query/GetCourses";
 import { DataForRegistrarDisputaStates, SetCoursesSelected } from "../../../entities/DataForRegistrarDisputa";
-import { useAppDispatch, useAppSelector } from "@redux-config/hook";
+import { useAppDispatch, useAppSelector } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook";
 
 
 const AddCourseSelected = () => {

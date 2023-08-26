@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "@redux-config/hook";
+import { useAppDispatch, useAppSelector } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook";
 import {
   DataForRegistrarDisputaStates,
   SetCategories,

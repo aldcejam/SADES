@@ -1,4 +1,4 @@
-import { useAppDispatch } from "@redux-config/hook";
+import { useAppDispatch } from "app/(pages)/(dashboard)/disputa/buscar/@core/entities/config/hook";
 import { SetCategories } from "../../../entities/DataForBuscarDisputa";
 
 const ResetCatories = () => {

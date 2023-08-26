@@ -1,6 +1,6 @@
 import { ManageCategories } from "../application/categories/ManageCategories"
 import { ManageSportSelected } from "../application/sportSelected/ManageSportSelected"
-import { VerifyIfCategoriesSelected } from "../utils/verifications/VerifyIfCategoriesSelected";
+import { VerifyIfCategoriesSelected } from "../utils/toggleWhenAllCategoriesIsSelected/verification";
 import { ManageCourses } from "../application/courses/ManageCourses"
 import { ManagePontuationbyPositions } from "../application/pontuationByPositions/ManagePontuationbyPositions";
 import { ManageSituation } from "../application/situation/ManageSituation";
@@ -8,6 +8,7 @@ import { ManageDate } from "../application/date/ManageDate";
 import { GetCourses } from "../api/query/GetCourses";
 import { GetSports } from "../api/query/GetSports";
 import { SituationsProps } from "../entities/IDataForRegistrarDisputa";
+import { ToggleWhenSportAndCourseIsSelected } from "../utils/toggleWhenSportAndCourseIsSelected";
 
 export const PageDisputaRegistrarConnection = () => {
     const { sportSelected, UpdateSportSelected, } = ManageSportSelected()
@@ -62,6 +63,8 @@ export const PageDisputaRegistrarConnection = () => {
                 UpdatePositionsCount: UpdatePositionsCount,
             }
         },
-        VerifyIfCategoriesSelected
+        utils:{
+            ToggleWhenSportAndCourseIsSelected
+        }
     }
 }

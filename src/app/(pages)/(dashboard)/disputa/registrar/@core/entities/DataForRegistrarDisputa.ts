@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import dayjs from "dayjs";
-import { RootState } from "@redux-config/store"
+import { RootState } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/store"
 
 import {
   IDataForRegistrarDisputa,

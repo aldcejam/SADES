@@ -1,5 +1,5 @@
 import { SportSelectedProps } from "../../../entities/IDataForBuscarDisputa";
-import { useAppDispatch } from "@redux-config/hook";
+import { useAppDispatch } from "app/(pages)/(dashboard)/disputa/buscar/@core/entities/config/hook";
 import { SetSportSelected } from "../../../entities/DataForBuscarDisputa";
 import { ManageCategories } from "../../categories/ManageCategories";
 

@@ -1,6 +1,6 @@
 import { SetDate } from "../../../entities/DataForRegistrarDisputa";
 import { DateProps } from "../../../entities/IDataForRegistrarDisputa";
-import { useAppDispatch } from "@redux-config/hook";
+import { useAppDispatch } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook";
 
 const UpdateDate = () => {
   const dispatch = useAppDispatch();

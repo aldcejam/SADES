@@ -6,7 +6,7 @@ import styled from "./styled.module.scss"
 const AvailableCourses = () => { 
 
     const { availableCoursesAndSports, sportAndCourseSelected } = PageDisputaRegistrarConnection()
-    const { coursesSelected,AddCourse, RemoveCourse } = sportAndCourseSelected.selectCourse
+    const { coursesSelected, AddCourse, RemoveCourse } = sportAndCourseSelected.selectCourse
     const { availableCourses } = availableCoursesAndSports
 
     const IsCourseSelected = ({ uuid }: { uuid: string }) => {

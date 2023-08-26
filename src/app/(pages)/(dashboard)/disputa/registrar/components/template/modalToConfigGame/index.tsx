@@ -9,13 +9,10 @@ import SubmitButton from "components/atoms/submit";
 import ModalTemplate from "components/templates/modals/modalTemplate";
 import { GenderOptionsProps } from "defaultTypes/GendersProps";
 import { PageDisputaRegistrarConnection } from "../../../@core/connection";
- 
-type ModalToConfigGameProps = {
-    modalIsOpen: boolean,
-    ToggleModal: () => void,
-}
+import { usePageRegistrarDisputa } from "../../../context";
+  
 
-const ModalToConfigGame = ({ ToggleModal, modalIsOpen }: ModalToConfigGameProps) => {
+const ModalToConfigGame = () => {
 
     const TranslateGenderCategory = (genderCategoryInEnglish: GenderOptionsProps) => {
         switch (genderCategoryInEnglish) {
@@ -39,13 +36,14 @@ const ModalToConfigGame = ({ ToggleModal, modalIsOpen }: ModalToConfigGameProps)
     ${sportCategory ? `- ${sportCategory}` : ""} 
     ${genderCategory ? `- ${TranslateGenderCategory(genderCategory)}` : ""}`
 
+    const { modalToConfigGame } = usePageRegistrarDisputa()
 
     return (
         <ModalTemplate
-            modalIsOpen={modalIsOpen}
+            modalIsOpen={modalToConfigGame.modalIsOpen}
         >
             <div className={styled["modal-to-config-game"]}>
-                <CloseIcon onClick={() => ToggleModal()} className={styled['close-icon']} />
+                <CloseIcon onClick={() => modalToConfigGame.ToggleModal()} className={styled['close-icon']} />
                 <h2>{title}</h2>
                 <div className={styled["container"]}>
                     <article className={styled["teams"]}>
