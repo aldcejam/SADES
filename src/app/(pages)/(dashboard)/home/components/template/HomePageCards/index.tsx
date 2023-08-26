@@ -1,14 +1,14 @@
 "use client"
+import { Routes } from "@base-project/Routes"
+import Cookies from "js-cookie"
+import IllustrationCourse from "public/home-illustrations/illustrationCourse"
 import IllustrationEdicoesDaSemadec from "public/home-illustrations/illustrationEdicoesDaSemadec"
 import IllustrationJogosDoSeuCurso from "public/home-illustrations/illustrationJogosDoSeuCurso"
 import IllustrationJogosEsportivos from "public/home-illustrations/illustrationJogosEsportivos"
 import IllustrationPublicacoesSobreSemadec from "public/home-illustrations/illustrationPublicacoesSobreSemadec"
 import IllustrationRecordesDestaEdicao from "public/home-illustrations/illustrationRecordesDeTodosOsAnos"
-import HomePageCard from '../../molecules/HomePageCards';
-import { Routes } from "@base-project/Routes"
-import IllustrationCourse from "public/home-illustrations/illustrationCourse"
+import HomePageCard from '../../molecules/HomePageCards'
 import "./styled.scss"
-import Cookies from "js-cookie"
 
 const HomePageCards = () => {
     

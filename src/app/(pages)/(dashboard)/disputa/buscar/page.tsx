@@ -5,19 +5,19 @@ import ListSports from './components/template/listSports';
 import { ModalSelectCategoriesInserted } from './components/template/modalSelectCategoriesInserted';
 import './styled.scss';
 
-export default function Page() {
+export type ParametersToBuscarDisputaProps = {
+    course: string
+    sport: string
+    genderCategory?: string
+    sportCategory?: string
+} 
 
-    type dataForToSearchProps = {
-        course: string
-        sport: string
-        genderCategory?: string
-        sportCategory?: string
-    } 
+export default function Page() { 
 
     const cookieStore = cookies()
 
     const dataForToSearchSTRING = cookieStore.get('ParametersToBuscarDisputa')?.value as string
-    const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as dataForToSearchProps  
+    const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as ParametersToBuscarDisputaProps  
 
 
     return (

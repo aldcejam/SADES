@@ -1,42 +1,53 @@
-import { useRouter } from "next/navigation";
-import { ManageCategories } from "../../application/categories/ManageCategories";
-import { VerifyIfCategoriesSelected } from "./verification";
+"use client"
 import { Routes } from "@base-project/Routes";
-import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected";
-import { toast } from "react-toastify";
 import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import { ParametersToBuscarDisputaProps } from "../../../page";
+import { ManageCategories } from "../../application/categories/ManageCategories";
+import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected";
+import { VerifyIfCategoriesSelected } from "./verification";
 
 const Submit = () => {
   const { categories, UpdateGenderCategory, UpdateSportCategory } = ManageCategories();
   const { sportSelected, UpdateSportSelected } = ManageSportSelected();
 
+  const dataForToSearchSTRING = Cookies.get('ParametersToBuscarDisputa') as string
+  const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as ParametersToBuscarDisputaProps
+
+  let searchData: ParametersToBuscarDisputaProps = {
+    course: dataForToSearchJSON.course,
+    sport: sportSelected.sportName,
+  }
+
+  categories.sportCategory ?
+    searchData = {
+      ...searchData,
+      sportCategory: categories.sportCategory
+    }
+    : null
+
+  categories.genderCategory ?
+    searchData = {
+      ...searchData,
+      genderCategory: categories.genderCategory
+    }
+    : null
+
   const router = useRouter();
-/*   Cookies.set('name', 'value') */
   const HandleSubmit = () => {
-    let queryParams = ``;
-    queryParams += `sportSelected=${encodeURIComponent(
-      sportSelected.sportName
-    )}&`;
-
-    if (categories.sportCategory) {
-      queryParams += `sportCategory=${encodeURIComponent(
-        categories.sportCategory
-      )}&`;
-    }
-
-    if (categories.genderCategory) {
-      queryParams += `genderCategory=${encodeURIComponent(
-        categories.genderCategory
-      )}`;
-    }
-
-    const url = `${Routes.gameList}?${queryParams}`;
-    router.push(url);
+    console.log(searchData)
+    Cookies.set('ParametersToBuscarDisputa', JSON.stringify(searchData))
+    router.push(Routes.listarDisputa);
   };
 
   return () => {
     try {
       VerifyIfCategoriesSelected({
+        sportSelected: {
+          value: sportSelected,
+          Update: UpdateSportSelected
+        },
         sportCategorySelected: {
           value: categories.sportCategory,
           Update: UpdateSportCategory
@@ -44,10 +55,6 @@ const Submit = () => {
         genderCategorySelected: {
           value: categories.genderCategory,
           Update: UpdateGenderCategory
-        },
-        sportSelected: {
-          value: sportSelected,
-          Update: UpdateSportSelected
         }
       });
       HandleSubmit();
@@ -55,6 +62,7 @@ const Submit = () => {
       toast.error(error.message.toString());
     }
   }
+
 };
 
 export { Submit };
