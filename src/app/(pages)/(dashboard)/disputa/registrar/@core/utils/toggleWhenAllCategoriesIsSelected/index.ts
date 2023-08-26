@@ -1,10 +1,11 @@
 import { toast } from "react-toastify";
 import { VerifyIfCategoriesSelected } from "./verification";
-import { PageDisputaRegistrarConnection } from "../../connection";
+import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected";
+import { ManageCategories } from "../../application/categories/ManageCategories";
 
 interface ToggleWhenAllCategoriesIsSelectedProps {
     state: boolean
-    setState: (state: boolean) => void 
+    setState: (state: boolean) => void
 }
 
 const ToggleWhenAllCategoriesIsSelected = ({
@@ -12,23 +13,31 @@ const ToggleWhenAllCategoriesIsSelected = ({
     setState
 }: ToggleWhenAllCategoriesIsSelectedProps) => {
 
-    const { sportAndCourseSelected, genderAndSportCategorySelected } = PageDisputaRegistrarConnection()
-    const { sportCategorySelected, genderCategorySelected } = genderAndSportCategorySelected
-    const { sportSelected } = sportAndCourseSelected
+    const { sportSelected, UpdateSportSelected } = ManageSportSelected()
+    const { categories, UpdateGenderCategory, UpdateSportCategory } = ManageCategories()
 
     return () => {
-        if(state){
+        if (state) {
             setState(false)
         }
-        else{
+        else {
             try {
                 VerifyIfCategoriesSelected({
-                    genderCategorySelected,
-                    sportCategorySelected,
-                    sportSelected
+                    genderCategorySelected: {
+                        value: categories.genderCategory,
+                        Update: UpdateGenderCategory
+                    },
+                    sportCategorySelected: {
+                        value: categories.sportCategory,
+                        Update: UpdateSportCategory
+                    },
+                    sportSelected: {
+                        value: sportSelected,
+                        Update: UpdateSportSelected
+                    }
                 });
-            setState(true)
-            } catch(error: any) {
+                setState(true)
+            } catch (error: any) {
                 toast.error(error.message.toString());
             }
         }

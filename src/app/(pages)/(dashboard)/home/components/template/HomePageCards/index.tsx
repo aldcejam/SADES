@@ -1,3 +1,4 @@
+"use client"
 import IllustrationEdicoesDaSemadec from "public/home-illustrations/illustrationEdicoesDaSemadec"
 import IllustrationJogosDoSeuCurso from "public/home-illustrations/illustrationJogosDoSeuCurso"
 import IllustrationJogosEsportivos from "public/home-illustrations/illustrationJogosEsportivos"
@@ -7,14 +8,23 @@ import HomePageCard from '../../molecules/HomePageCards';
 import { Routes } from "@base-project/Routes"
 import IllustrationCourse from "public/home-illustrations/illustrationCourse"
 import "./styled.scss"
+import Cookies from "js-cookie"
 
 const HomePageCards = () => {
+    
     return (
         <div className={"home-page-cards"}>
             <div className={"home-page-cards__grid-top"}>
                 <HomePageCard link='/' title='equipes por curso' illustration={<IllustrationCourse />} />
                 <HomePageCard link='/' title='jogos esportivos' illustration={<IllustrationJogosEsportivos />} />
-                <HomePageCard link={`${Routes.findGame}?curso=informatica`} title='jogos do seu curso' illustration={<IllustrationJogosDoSeuCurso />} />
+                <HomePageCard
+                    link={Routes.buscarDisputa}
+                    onClick={() => {
+                        Cookies.set('ParametersToBuscarDisputa', `${JSON.stringify({ course: "Eletrônica"})}`)
+                    }
+                    }
+                    title='jogos do seu curso'
+                    illustration={<IllustrationJogosDoSeuCurso />} />
             </div>
             <div className={"home-page-cards__grid-left"}>
                 <HomePageCard link='/' title='recordes desta edição' illustration={<IllustrationEdicoesDaSemadec />} />

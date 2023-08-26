@@ -1,60 +1,37 @@
-"use client"
-import './styled.scss'; 
-import ListSports from './components/template/listSports';
-import { DisputaBuscar_Logic } from "./page_logic";
-import { ModalSelectCategories } from "components/templates/modals/modalSelectCategories"
+import { cookies } from 'next/headers';
 import { LayoutDashboard } from '../../layout.dash';
-import { Providers } from './providers';
+import { Client } from './client';
+import ListSports from './components/template/listSports';
+import { ModalSelectCategoriesInserted } from './components/template/modalSelectCategoriesInserted';
+import './styled.scss';
 
 export default function Page() {
 
-    const {
-        ToggleModal, isModalOpen, course,
-        listSport, genderCategorySelected, sportCategorySelected,
-        sportSelected, Submit
+    type dataForToSearchProps = {
+        course: string
+        sport: string
+        genderCategory?: string
+        sportCategory?: string
+    } 
 
-    } = DisputaBuscar_Logic()
+    const cookieStore = cookies()
+
+    const dataForToSearchSTRING = cookieStore.get('ParametersToBuscarDisputa')?.value as string
+    const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as dataForToSearchProps  
+
 
     return (
-        <Providers> 
+        <Client>
             <LayoutDashboard
                 pageTitle="Pesquisar por jogo"
             >
                 <div className={`page-disputa-buscar box-page`}>
                     <ListSports
-                        ToggleModal={ToggleModal}
-                        course={course ?? "não há equipe selecionado"}
-                        UpdateSportSelected={sportSelected.Update}
-                        listSports={listSport}
+                        course={dataForToSearchJSON.course}
                     />
-                    <ModalSelectCategories.Root
-                        ToggleModal={ToggleModal}
-                        isModalOpen={isModalOpen}
-                        sportName={sportSelected.value.sportName}
-                    >
-                        {
-                            sportSelected.value.sportCategories ?
-                                <ModalSelectCategories.SportCategories
-                                    sportCategories={sportSelected.value.sportCategories}
-                                    sportCategorySelected={sportCategorySelected.value}
-                                    updateSportCategorySelected={sportCategorySelected.Update}
-                                /> : null
-                        }
-                        {
-                            sportSelected.value.genderCategories ?
-                                <ModalSelectCategories.GenderOptions
-                                    genderCategorySelected={genderCategorySelected.value}
-                                    updateGenderCategorySelected={genderCategorySelected.Update}
-                                    genderCategories={sportSelected.value.genderCategories}
-                                /> : null
-                        }
-                        <ModalSelectCategories.SubmitButton
-                            value='Prosseguir'
-                            Submit={Submit()}
-                        />
-                    </ModalSelectCategories.Root>
+                    <ModalSelectCategoriesInserted />
                 </div>
             </LayoutDashboard>
-        </Providers>
+        </Client>
     )
 }

@@ -1,25 +1,29 @@
+"use client"
 import Title from "../../atoms/title";
 import SelectDataBySport from "components/organisms/selectDataBySport";
-import { SportSelectedProps } from "app/(pages)/(dashboard)/disputa/buscar/@core/entities/IDataForBuscarDisputa"
 import { memo } from "react";
 import styled from "./styled.module.scss";
+import { PageDisputaBuscarConnection } from "../../../@core/connection";
+import { usePageBuscarDisputa } from "../../../context";
 
-type ListSportsProps = {
-    course: any,
-    ToggleModal: () => void,
-    UpdateSportSelected: ({ genderCategories, sportCategories, sportName, sportUUID }: SportSelectedProps) => void,
-    listSports: Array<{ sportName: string }>
+interface ListSportsProps {
+    course: string
 }
+const ListSports = ({ course }: ListSportsProps) => {
+ 
+    const {
+        listSport, sportSelected
+    } = PageDisputaBuscarConnection()
 
-const ListSports = ({ course, ToggleModal, UpdateSportSelected, listSports }: ListSportsProps) => {
+    const { modalSelectCategories } = usePageBuscarDisputa()
 
     return (
         <div className={styled["list-sports"]}>
-            <Title title={course ? course : "nenhum curso selecionado"} />
+            <Title title={course} />
             <SelectDataBySport
-                ToggleModal={ToggleModal}
-                UpdateSportSelected={UpdateSportSelected}
-                listSports={listSports}
+                ToggleModal={modalSelectCategories.ToggleModal}
+                UpdateSportSelected={sportSelected.Update}
+                listSports={listSport}
             />
         </div>
     )
