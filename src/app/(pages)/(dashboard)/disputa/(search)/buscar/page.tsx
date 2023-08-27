@@ -7,11 +7,11 @@ import './styled.scss';
 import { SearchParametersForDisputesProps } from '../SearchParametersForDisputes';
  
 
-export default function Page() { 
+export default async function Page() { 
 
     const cookieStore = cookies()
 
-    const dataForToSearchSTRING = cookieStore.get('SearchParametersForDisputes')?.value as string
+    const dataForToSearchSTRING = await cookieStore.get('SearchParametersForDisputes')?.value as string
     if(!dataForToSearchSTRING){
         return <div>Erro ao carregar a página</div>
     }
