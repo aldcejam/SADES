@@ -7,13 +7,11 @@ interface PageContextProps {
         ToggleModal: () => void
     } 
 }
-
-
+ 
 const PageContext = createContext<PageContextProps>({} as PageContextProps);
 
 export const PageContextProvider = ({ children }: { children: ReactNode }) => {
-
-
+ 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const ToggleModalSelectCategories = () => {
         setIsModalOpen(!isModalOpen)

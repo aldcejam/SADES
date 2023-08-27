@@ -3,7 +3,7 @@ import { Routes } from "@base-project/Routes";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import { ParametersToBuscarDisputaProps } from "../../../page";
+import { SearchParametersForDisputesProps } from "../../../../SearchParametersForDisputes";
 import { ManageCategories } from "../../application/categories/ManageCategories";
 import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected";
 import { VerifyIfCategoriesSelected } from "./verification";
@@ -12,10 +12,10 @@ const Submit = () => {
   const { categories, UpdateGenderCategory, UpdateSportCategory } = ManageCategories();
   const { sportSelected, UpdateSportSelected } = ManageSportSelected();
 
-  const dataForToSearchSTRING = Cookies.get('ParametersToBuscarDisputa') as string
-  const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as ParametersToBuscarDisputaProps
+  const dataForToSearchSTRING = Cookies.get('SearchParametersForDisputes') as string
+  const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as SearchParametersForDisputesProps
 
-  let searchData: ParametersToBuscarDisputaProps = {
+  let searchData: SearchParametersForDisputesProps = {
     course: dataForToSearchJSON.course,
     sport: sportSelected.sportName,
   }
@@ -35,9 +35,8 @@ const Submit = () => {
     : null
 
   const router = useRouter();
-  const HandleSubmit = () => {
-    console.log(searchData)
-    Cookies.set('ParametersToBuscarDisputa', JSON.stringify(searchData))
+  const HandleSubmit = () => { 
+    Cookies.set('SearchParametersForDisputesProps', JSON.stringify(searchData))
     router.push(Routes.listarDisputa);
   };
 

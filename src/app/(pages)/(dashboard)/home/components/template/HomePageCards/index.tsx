@@ -9,6 +9,7 @@ import IllustrationPublicacoesSobreSemadec from "public/home-illustrations/illus
 import IllustrationRecordesDestaEdicao from "public/home-illustrations/illustrationRecordesDeTodosOsAnos"
 import HomePageCard from '../../molecules/HomePageCards'
 import "./styled.scss"
+import { SearchParametersForDisputesProps } from "app/(pages)/(dashboard)/disputa/(search)/SearchParametersForDisputes"
 
 const HomePageCards = () => {
     
@@ -20,7 +21,7 @@ const HomePageCards = () => {
                 <HomePageCard
                     link={Routes.buscarDisputa}
                     onClick={() => {
-                        Cookies.set('ParametersToBuscarDisputa', `${JSON.stringify({ course: "Eletrônica"})}`)
+                        Cookies.set('SearchParametersForDisputes', `${JSON.stringify({ course: "Eletrônica"} as SearchParametersForDisputesProps)}`)
                     }
                     }
                     title='jogos do seu curso'
