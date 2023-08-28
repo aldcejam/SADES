@@ -1,25 +1,31 @@
+"use client"
 import GameList from "./components/template/gameList";
-import { LayoutDashboard } from "../../../layout.dash";
-import { cookies } from "next/headers";
-import { SearchParametersForDisputesProps } from "../SearchParametersForDisputes";
+import { LayoutDashboard } from "../../../layout.dash"; 
+import { useSearchParams } from "next/navigation"
+import { ListarDisputaProps } from "@base-project/Routes";
 
 export default function Page() {
   const ListWeekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  const cookieStore = cookies()
-
-  const dataForToSearchSTRING = cookieStore.get('ParametersToBuscarDisputa')?.value as string
-  const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as SearchParametersForDisputesProps
-
-  const { sport, genderCategory, sportCategory } = dataForToSearchJSON
+  const searchParams  = useSearchParams();
+  const params: ListarDisputaProps = {
+    esporte: searchParams.get("esporte") as string,
+    curso: searchParams.get("curso") as string,
+    categoria_esportiva: searchParams.get("categoria_esportiva") as string,
+    categoria_genero: searchParams.get("categoria_genero") as string,
+  }  
+  if(params.curso === null || params.esporte === null){
+    return <h1>Erro</h1>
+  } 
+   
   return (
     <LayoutDashboard
       pageTitle={`
-        ${sport || "esporte não definido"}
-        ${sportCategory ? ` - ${sportCategory}` : ""}
+        ${params.esporte || "esporte não definido"}
+        ${params.categoria_esportiva ? ` - ${params.categoria_esportiva}` : ""}
     `}
     >
-      <h2>{genderCategory}</h2>
+      <h2>{params.categoria_genero}</h2>
       {ListWeekday.map((day) => (
         <GameList key={day} day={day} />
       ))}

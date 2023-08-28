@@ -5,21 +5,25 @@ import { memo } from "react";
 import styled from "./styled.module.scss";
 import { PageDisputaBuscarConnection } from "../../../@core/connection";
 import { usePageBuscarDisputa } from "../../../context";
+import { useSearchParams } from "next/navigation"
 
-interface ListSportsProps {
-    course: string
-}
-const ListSports = ({ course }: ListSportsProps) => {
+const ListSports = () => {
+    
+    const searchParams = useSearchParams()
+    const curso = searchParams.get('curso')
+    if(!curso) return <p>curso não selecionado</p>
  
     const {
-        listSport, sportSelected
+        listSport, sportSelected,courseSelected
     } = PageDisputaBuscarConnection()
+
+    courseSelected.Update(curso)
 
     const { modalSelectCategories } = usePageBuscarDisputa()
 
     return (
         <div className={styled["list-sports"]}>
-            <Title title={course} />
+            <Title title={curso || "curso não selecionado"} />
             <SelectDataBySport
                 ToggleModal={modalSelectCategories.ToggleModal}
                 UpdateSportSelected={sportSelected.Update}

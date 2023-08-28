@@ -1,43 +1,28 @@
 "use client"
-import { Routes } from "@base-project/Routes";
-import Cookies from "js-cookie";
+import { Routes } from "@base-project/Routes"; 
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import { SearchParametersForDisputesProps } from "../../../../SearchParametersForDisputes";
 import { ManageCategories } from "../../application/categories/ManageCategories";
 import { ManageSportSelected } from "../../application/sportSelected/ManageSportSelected";
 import { VerifyIfCategoriesSelected } from "./verification";
+import { ManageCourseSelected } from "../../application/courseSelected/ManageCourseSelected";
 
 const Submit = () => {
   const { categories, UpdateGenderCategory, UpdateSportCategory } = ManageCategories();
   const { sportSelected, UpdateSportSelected } = ManageSportSelected();
+  const { courseSelected, UpdateCourseSelected } = ManageCourseSelected();
 
-  const dataForToSearchSTRING = Cookies.get('SearchParametersForDisputes') as string
-  const dataForToSearchJSON = JSON.parse(dataForToSearchSTRING) as SearchParametersForDisputesProps
-
-  let searchData: SearchParametersForDisputesProps = {
-    course: dataForToSearchJSON.course,
-    sport: sportSelected.sportName,
-  }
-
-  categories.sportCategory ?
-    searchData = {
-      ...searchData,
-      sportCategory: categories.sportCategory
-    }
-    : null
-
-  categories.genderCategory ?
-    searchData = {
-      ...searchData,
-      genderCategory: categories.genderCategory
-    }
-    : null
 
   const router = useRouter();
+  const applicationRoutes = Routes();
+
   const HandleSubmit = () => { 
-    Cookies.set('SearchParametersForDisputesProps', JSON.stringify(searchData))
-    router.push(Routes.listarDisputa);
+    router.push(applicationRoutes.listarDisputa({
+      curso:courseSelected,
+      esporte: sportSelected.sportName,
+      categoria_esportiva: categories.sportCategory,
+      categoria_genero: categories.genderCategory
+    }));
   };
 
   return () => {

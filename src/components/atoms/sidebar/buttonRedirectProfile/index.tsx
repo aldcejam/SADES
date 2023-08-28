@@ -5,7 +5,7 @@ import styled from "./styled.module.scss"
 
 const ButtonRedirectProfile = () => {
     return (
-        <Link href={Routes.profile} >
+        <Link href={Routes().profile} >
             <div className={styled["button-redirect-profile"]}>
                 <ButtonRedirectPerfil />
                 <p>Perfil</p>

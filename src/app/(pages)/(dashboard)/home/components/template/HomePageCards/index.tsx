@@ -8,22 +8,20 @@ import IllustrationJogosEsportivos from "public/home-illustrations/illustrationJ
 import IllustrationPublicacoesSobreSemadec from "public/home-illustrations/illustrationPublicacoesSobreSemadec"
 import IllustrationRecordesDestaEdicao from "public/home-illustrations/illustrationRecordesDeTodosOsAnos"
 import HomePageCard from '../../molecules/HomePageCards'
-import "./styled.scss"
-import { SearchParametersForDisputesProps } from "app/(pages)/(dashboard)/disputa/(search)/SearchParametersForDisputes"
+import "./styled.scss" 
+
 
 const HomePageCards = () => {
-    
+
+    const routes = Routes()
+
     return (
         <div className={"home-page-cards"}>
             <div className={"home-page-cards__grid-top"}>
                 <HomePageCard link='/' title='equipes por curso' illustration={<IllustrationCourse />} />
                 <HomePageCard link='/' title='jogos esportivos' illustration={<IllustrationJogosEsportivos />} />
                 <HomePageCard
-                    link={Routes.buscarDisputa}
-                    onClick={() => {
-                        Cookies.set('SearchParametersForDisputes', `${JSON.stringify({ course: "Eletrônica"} as SearchParametersForDisputesProps)}`)
-                    }
-                    }
+                    link={routes.buscarDisputa({curso: "informática"})}
                     title='jogos do seu curso'
                     illustration={<IllustrationJogosDoSeuCurso />} />
             </div>

@@ -1,5 +1,5 @@
 {
-  "private": true,  
+  "private": true, 
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +10,7 @@
     "slicemachine": "start-slicemachine",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "create-comp": "plop createComponent" 
+    "create-comp": "plop createComponent"
   },
   "prettier": {
     "arrowParens": "always",
@@ -25,17 +25,17 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
     "@mui/x-date-pickers": "^6.11.2",
-    "@next/font": "13.4.5",
+    "@next/font": "13.4.19",
     "@prismicio/client": "^7.1.0",
     "@prismicio/next": "^1.3.3",
     "@prismicio/react": "^2.7.1",
     "@reduxjs/toolkit": "^1.9.2",
     "@splidejs/react-splide": "^0.7.12",
     "dayjs": "^1.11.7",
-    "framer-motion": "10.12.4",
+    "framer-motion": "10.16.1",
     "graphql": "^16.6.0",
     "js-cookie": "^3.0.1",
-    "next": "13.4.5",
+    "next": "13.4.19",
     "next-auth": "^4.18.7",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
@@ -46,8 +46,7 @@
     "react-redux": "^8.0.5",
     "react-toastify": "^9.1.3",
     "redux": "^4.2.1",
-    "sass": "^1.63.6",
-    "ts-node": "^10.9.1"
+    "sass": "^1.63.6"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -61,28 +60,29 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^7.1.1",
     "@storybook/testing-library": "^0.2.0",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.2",
     "@types/js-cookie": "^3.0.2",
-    "@types/node": "18.0.3",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
+    "@types/node": "20.5.7",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
     "@types/react-redux": "^7.1.25",
     "autoprefixer": "^10.4.14",
-    "babel-loader": "^8.3.0",
-    "eslint-config-next": "latest",
+    "babel-loader": "^9.1.3",
+    "eslint-config-next": "^13.4.19",
     "eslint-plugin-storybook": "^0.6.13",
     "identity-obj-proxy": "^3.0.0",
+    "inquirer": "^9.2.10",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-scss-transform": "^1.0.3",
     "plop": "^3.1.2",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
-    "prettier": "^2.7.1",
+    "prettier": "^3.0.2",
     "slice-machine-ui": "^1.5.0",
     "tailwindcss": "^3.3.2",
-    "typescript": "4.7.4"
+    "typescript": "5.2.2"
   }
 }
