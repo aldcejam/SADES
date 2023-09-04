@@ -28,11 +28,8 @@ export const Routes = (): RoutesProps => {
             { curso, esporte, categoria_genero, categoria_esportiva }:
                 ListarDisputaProps
         ) => {
-            return "/disputa/listar" +
-                `?curso=${curso}` +
-                `&esporte=${esporte}` +
-                `${categoria_genero ? `&categoria_genero=${categoria_genero}` : ""}` +
-                `${categoria_esportiva ? `&categoria_esportiva=${categoria_esportiva}` : ""}`
+            return `/disputa/listar/${curso}/${esporte}/${categoria_genero}`+
+                `${categoria_esportiva ? `/${categoria_esportiva}` : ""}`
         },
         registrarDisputa: "/disputa/registrar",
         profile: "/perfil"

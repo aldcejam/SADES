@@ -1,0 +1,101 @@
+#xadrez-illustration {
+    @apply absolute;
+    .cls-1 {
+        fill: #263238;
+    }
+
+    .cls-10,
+    .cls-11,
+    .cls-12,
+    .cls-15,
+    .cls-16,
+    .cls-17,
+    .cls-18,
+    .cls-2,
+    .cls-4 {
+        fill: #fff;
+    }
+
+    .cls-2,
+    .cls-8 {
+        opacity: 0.1;
+    }
+
+    .cls-10,
+    .cls-11,
+    .cls-12,
+    .cls-15,
+    .cls-16,
+    .cls-17,
+    .cls-18,
+    .cls-2,
+    .cls-22,
+    .cls-23,
+    .cls-6,
+    .cls-8 {
+        isolation: isolate;
+    }
+
+    .cls-16,
+    .cls-3 {
+        opacity: 0.5;
+    }
+
+    .cls-18,
+    .cls-22,
+    .cls-5,
+    .cls-6 {
+        opacity: 0.2;
+    }
+
+    .cls-7 {
+        fill: #ce7a63;
+    }
+
+    .cls-9 {
+        fill: #c43a3a;
+    }
+
+    .cls-10,
+    .cls-14,
+    .cls-23 {
+        opacity: 0.3;
+    }
+
+    .cls-11 {
+        opacity: 0.6;
+    }
+
+    .cls-12 {
+        opacity: 0.7;
+    }
+
+    .cls-13 {
+        fill: #ba4d3c;
+    }
+
+    .cls-15 {
+        opacity: 0.8;
+    }
+
+    .cls-17 {
+        opacity: 0.4;
+    }
+
+    .cls-19 {
+        fill: #ffc3bd;
+    }
+
+    .cls-20 {
+        fill: #ed893e;
+    }
+
+    .cls-21,
+    .cls-22 {
+        fill: #1a2e35;
+    }
+
+    .cls-24 {
+        fill: #ff8b7b;
+    }
+}

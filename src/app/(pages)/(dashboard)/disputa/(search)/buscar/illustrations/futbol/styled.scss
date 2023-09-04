@@ -1,0 +1,74 @@
+#soccer-illustration {
+    .cls-1,
+    .cls-5,
+    .cls-6 {
+        fill: #fff;
+    }
+
+    .cls-2 {
+        fill: #ababab;
+    }
+
+    .cls-11,
+    .cls-15,
+    .cls-3,
+    .cls-4 {
+        fill: none;
+    }
+
+    .cls-11,
+    .cls-15,
+    .cls-3,
+    .cls-5,
+    .cls-6,
+    .cls-7,
+    .cls-8 {
+        stroke: #263238;
+    }
+
+    .cls-15,
+    .cls-3,
+    .cls-6,
+    .cls-7,
+    .cls-8 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .cls-4 {
+        stroke: #ccc;
+    }
+
+    .cls-11,
+    .cls-4,
+    .cls-5 {
+        stroke-miterlimit: 10;
+    }
+
+    .cls-12,
+    .cls-7 {
+        fill: #c43a3a;
+    }
+
+    .cls-8,
+    .cls-9 {
+        fill: #263238;
+    }
+
+    .cls-10 {
+        mask: url(#mask);
+    }
+
+    .cls-13 {
+        mask: url(#mask-2);
+    }
+
+    .cls-14 {
+        opacity: 0.3;
+        isolation: isolate;
+    }
+
+    .cls-15 {
+        stroke-width: 3px;
+    }
+}

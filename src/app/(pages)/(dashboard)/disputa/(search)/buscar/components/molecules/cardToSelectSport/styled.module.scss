@@ -1,6 +1,5 @@
-.home-page-cards {
-    @apply relative;
-    @apply w-full h-full;
+#button{
+    @apply w-full h-full absolute;
     @apply rounded-default;
     @apply overflow-hidden cursor-pointer;
     @apply capitalize;
@@ -9,24 +8,4 @@
     box-shadow: 3px 3px 8px theme("colors.secondary" / 20%),
     inset 5px 5px 23px theme("colors.primary"/ 10%); 
     @apply border-solid border-[1px] border-opacity-70 border-t-primary border-l-primary border-b-secondary border-r-secondary;
-  
-    &:hover { 
-        transform: scale(0.98);
-        filter: saturate(1.2);
-    }
-
-    .title {
-        @apply absolute z-10;
-        @apply m-5; 
-
-        h2 {
-            @apply m-0;
-            @apply text-title text-xl font-semibold;
-        }
-
-        h3 {
-            @apply m-0;
-            @apply text-subtitle text-xs; 
-        }
-    }
 }

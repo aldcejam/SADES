@@ -1,0 +1,57 @@
+.list-sports {
+    position: relative;
+    z-index: 20;
+
+    @apply grid gap-4 grid-cols-3;
+    grid:
+        "outros futbol basquete" 180px
+        "natacao natacao basquete" 180px 
+        "xadrez ping_pong ." 180px;
+
+    .card-outros {
+        grid-area: outros;
+
+        &__illustration {
+            @apply inset-0 m-auto w-[clamp(120px,100%,160px)];
+        }
+    }
+
+    .card-futbol {
+        grid-area: futbol;
+
+        &__illustration {
+            @apply inset-0 m-auto w-[clamp(120px,100%,180px)];
+        }
+    }
+
+    .card-basquete {
+        grid-area: basquete;
+
+        &__illustration {
+            @apply -top-[3%] -left-[7%] w-[clamp(200px,100%,230px)]
+        }
+    }
+
+    .card-natacao {
+        grid-area: natacao;
+
+        &__illustration {
+            @apply bottom-0 inset-x-0 m-auto w-[clamp(100px,100%,350px)]
+        }
+    }
+
+    .card-xadrez {
+        grid-area: xadrez;
+        &__illustration {
+            @apply bottom-0 inset-x-0 m-auto w-[clamp(110px,100%,170px)];
+        }
+    }
+
+    .card-ping_pong {
+        grid-area: ping_pong;
+
+        &__illustration {
+            @apply bottom-0 inset-x-0 m-auto w-[clamp(100px,100%,200px)]
+        }
+    }
+}
