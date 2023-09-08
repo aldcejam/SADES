@@ -1,6 +1,6 @@
 #outros-illustration {
     .cls-1 {
-        fill: #ffa8a7;
+        fill: #ffa8a7; 
     }
 
     .cls-2 {
@@ -8,7 +8,7 @@
     }
 
     .cls-3 {
-        fill: #37474f;
+        fill: #37474f; 
     }
 
     .cls-4 {
@@ -21,14 +21,16 @@
 
     .cls-6 {
         fill: #ebebeb;
+    
     }
 
     .cls-7 {
         fill: #f28f8f;
+        
     }
 
     .cls-8 {
-        fill: #c43a3a;
+        @apply fill-primary;  
     }
 
     .cls-9 {

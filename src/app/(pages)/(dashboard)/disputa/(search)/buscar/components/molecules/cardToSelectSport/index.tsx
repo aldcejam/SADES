@@ -10,7 +10,12 @@ const CardToSelectSport = ({ illustration, sport, ...props }: CardToSelectSportP
         <button
             {...props}
             id={styled["button"]}>
-                {illustration}
+            {illustration}
+            <div className={styled["footer"]}> 
+                <p>
+                    {sport}
+                </p> 
+            </div>
         </button>
     )
 }

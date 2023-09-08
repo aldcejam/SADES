@@ -1,7 +1,11 @@
 #natacao-illustration {
     .cls-1 {
-        fill: #d31027;
         opacity: 0.25;
+    }
+
+    .cls-1,
+    .cls-8 {
+        @apply fill-primary
     }
 
     .cls-1,
@@ -37,8 +41,38 @@
         fill: none;
     }
 
-    .cls-8 {
-        fill: #c43a3a;
+    &:hover {
+        #freepik--Character--inject-197-container {
+            @keyframes slideRight {
+                0% {
+                    transform: translate(100px, -10px);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+            animation: slideRight 1s ease-in-out;
+
+            #freepik--Character--inject-197 {
+                @keyframes swim {
+                    0% {
+                        transform: translate(0, 0);
+                    }
+
+                    50% {
+                        transform: translate(0, 10px);
+                    }
+
+                    100% {
+                        transform: translate(0, 0);
+                    }
+                }
+                animation: swim 1s ease-in-out infinite;
+            }
+
+
+        }
     }
 
 }

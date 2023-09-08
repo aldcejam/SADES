@@ -12,7 +12,7 @@
         grid-area: outros;
 
         &__illustration {
-            @apply inset-0 m-auto w-[clamp(120px,100%,160px)];
+            @apply inset-0 m-auto w-[clamp(120px,100%,150px)];
         }
     }
 
@@ -36,7 +36,7 @@
         grid-area: natacao;
 
         &__illustration {
-            @apply bottom-0 inset-x-0 m-auto w-[clamp(100px,100%,350px)]
+            @apply   inset-x-0 m-auto w-[clamp(100px,100%,350px)]
         }
     }
 

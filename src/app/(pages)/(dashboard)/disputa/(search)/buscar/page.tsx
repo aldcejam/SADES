@@ -1,36 +1,29 @@
 "use client"
-import { useSearchParams } from 'next/navigation';
 import { LayoutDashboard } from '../../../layout.dash';
-import { PageDisputaBuscarConnection } from './@core/connection';
 import { ListSports } from './components/template/listSports';
 import { ModalSelectCategoriesInserted } from './components/template/modalSelectCategoriesInserted';
 import './styled.scss';
-import { useEffect } from 'react';
+import { Provider as ProviderRedux } from "react-redux";
+import { Store } from "./@core/entities/config/store"
+import { PageContextProvider } from "./context";
+import { useSearchParams } from 'next/navigation';
+import { PageDisputaBuscarConnection } from './@core/connection';
+import { Client } from './client';
 
 export default function Page() {
 
-    const { courseSelected,
-    } = PageDisputaBuscarConnection()
-    
-    const searchParams = useSearchParams()
-    const curso = searchParams.get('curso')
-
-    if (!curso) return <p>curso não selecionado</p>
-
-    function RemoveAccents(str: string) {
-        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-    }
-
-    useEffect(() => {
-        courseSelected.Update(RemoveAccents(curso))
-    }, [])
-
     return (
-        <LayoutDashboard>
-            <div className={`page-disputa-buscar box-page`}>
-                <ListSports />
-                <ModalSelectCategoriesInserted />
-            </div>
-        </LayoutDashboard>
+        <ProviderRedux store={Store}>
+            <PageContextProvider>
+                <Client>
+                    <LayoutDashboard>
+                        <div className={`page-disputa-buscar box-page`}>
+                            <ListSports />
+                            <ModalSelectCategoriesInserted />
+                        </div>
+                    </LayoutDashboard>
+                </Client>
+            </PageContextProvider>
+        </ProviderRedux>
     )
 }

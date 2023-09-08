@@ -1,14 +1,14 @@
-#pingpong-illustration { 
+#pingpong-illustration {
     .cls-1 {
-        fill: #e0e0e0;
+        @apply fill-absolute_theme;
     }
 
     .cls-2 {
-        fill: #ebebeb;
+        @apply fill-inverted_theme;
     }
 
     .cls-3 {
-        fill: #fafafa;
+        @apply fill-inverted_theme;
     }
 
     .cls-18,
@@ -39,7 +39,7 @@
     }
 
     .cls-8 {
-        fill: #c43a3a;
+        @apply fill-primary;
     }
 
     .cls-9 {
@@ -84,5 +84,33 @@
 
     .cls-20 {
         opacity: 0.25;
+    }
+
+    #freepik--Ball--inject-434 {
+        @keyframes game {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            12% {
+                transform: translate(100px, 0);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        animation: game 2s liner;
+
+        #freepik--tennis-ball-shadow--inject-434 {
+            animation: game 2s liner;
+
+        }
+
+        #freepik--tennis-ball--inject-434 {
+            animation: game 2s liner;
+
+        }
     }
 }

@@ -1,17 +1,18 @@
- import { PageDisputaBuscarConnection } from "../../../@core/connection";
+import { PageDisputaBuscarConnection } from "../../../@core/connection";
 import { usePageBuscarDisputa } from "../../../context";
 import { CardToSelectSport } from "../../molecules/cardToSelectSport";
 import "./styled.scss";
 import { GetIllustration, availableSportsIllustrationProps } from "./getIllustration";
 import { OutrosIllustration } from "../../../illustrations/outros";
 import { SportSelectedProps } from "../../../@core/entities/IDataForBuscarDisputa";
+import { ModalSelectOtherSports } from "../modalSelectOtherSports";
 
 const ListSports = () => {
 
-    const { modalSelectCategories } = usePageBuscarDisputa();
+    const { modalSelectCategories, modalSelectOtherSports } = usePageBuscarDisputa();
     const {
         listSport, sportSelected
-    } = PageDisputaBuscarConnection() 
+    } = PageDisputaBuscarConnection()
 
     const handleSelectSport = (sport: SportSelectedProps) => {
         sportSelected.Update(sport)
@@ -22,14 +23,6 @@ const ListSports = () => {
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, "_");
     }
 
-    const listSportUpdated = listSport.map(sport => {
-        return {
-            ...sport,
-            sportName: RemoveAccentsAndReplaceSpace(sport.sportName),
-            sportIllustration: GetIllustration(RemoveAccentsAndReplaceSpace(sport.sportName) as availableSportsIllustrationProps) as JSX.Element
-        }
-    })
-
     const availableSportsIllustration: availableSportsIllustrationProps[] = [
         "basquete",
         "futbol",
@@ -38,20 +31,31 @@ const ListSports = () => {
         "xadrez",
     ]
 
+    const sportsWithIllustration = listSport.filter(sport => availableSportsIllustration.includes(RemoveAccentsAndReplaceSpace(sport.sportName) as availableSportsIllustrationProps));
+    const sportListWhenItemHasIllustration = sportsWithIllustration.map(sport => {
+        return {
+            ...sport,
+            sportName: RemoveAccentsAndReplaceSpace(sport.sportName),
+            sportIllustration: GetIllustration(RemoveAccentsAndReplaceSpace(sport.sportName) as availableSportsIllustrationProps) as JSX.Element
+        }
+    })
 
-    const sportsWithIllustration = listSportUpdated.filter(sport => availableSportsIllustration.includes(sport.sportName as availableSportsIllustrationProps));
-    const sportsWithoutIllustration = listSportUpdated.filter(sport => !availableSportsIllustration.includes(sport.sportName as availableSportsIllustrationProps));
+    const sportsWithoutIllustration = listSport.filter(sport => !availableSportsIllustration.includes(RemoveAccentsAndReplaceSpace(sport.sportName) as availableSportsIllustrationProps));
 
     return (
         <div className="list-sports">
             <CardToSelectSport
                 sport={"outros"}
                 className={`card-outros`}
-                onClick={() => { }}
+                onClick={() => modalSelectOtherSports.ToggleModal()}
                 illustration={<OutrosIllustration className="card-outros__illustration" />}
             />
+            <ModalSelectOtherSports
+                handleSelectSport={handleSelectSport}
+                otherSports={sportsWithoutIllustration}
+            />
             {
-                sportsWithIllustration.map((sport, index) => {
+                sportListWhenItemHasIllustration.map((sport, index) => {
                     return (
                         <CardToSelectSport
                             sport={sport.sportName}

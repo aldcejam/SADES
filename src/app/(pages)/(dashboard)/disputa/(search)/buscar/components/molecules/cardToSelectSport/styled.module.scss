@@ -1,11 +1,27 @@
-#button{
+#button {
     @apply w-full h-full absolute;
     @apply rounded-default;
     @apply overflow-hidden cursor-pointer;
     @apply capitalize;
-    @apply transition-all duration-300 ease-in-out; 
-    @apply bg-background;  
+    @apply transition-all duration-300 ease-in-out;
+    @apply bg-background;
     box-shadow: 3px 3px 8px theme("colors.secondary" / 20%),
-    inset 5px 5px 23px theme("colors.primary"/ 10%); 
+        inset 5px 5px 23px theme("colors.primary" / 10%);
     @apply border-solid border-[1px] border-opacity-70 border-t-primary border-l-primary border-b-secondary border-r-secondary;
+    @apply hover:scale-95;
+
+    .footer {
+        @apply absolute bottom-0 z-10;
+        @apply w-full py-[5px] px-4;
+        background-image: linear-gradient(
+            to left,
+            rgba(var(--absolute-theme), 0.8),
+            rgba(var(--absolute-theme), 0.2)
+        );
+        backdrop-filter: blur(3px);
+        p{
+            @apply text-title text-right font-bold text-base tracking-wider;
+        }
+    }
+
 }
