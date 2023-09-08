@@ -28,7 +28,7 @@ export const Routes = (): RoutesProps => {
             { curso, esporte, categoria_genero, categoria_esportiva }:
                 ListarDisputaProps
         ) => {
-            return `/disputa/listar/${curso}/${esporte}/${categoria_genero}`+
+            return `/disputa/listar/${curso}/${categoria_genero}/${esporte}`+
                 `${categoria_esportiva ? `/${categoria_esportiva}` : ""}`
         },
         registrarDisputa: "/disputa/registrar",
