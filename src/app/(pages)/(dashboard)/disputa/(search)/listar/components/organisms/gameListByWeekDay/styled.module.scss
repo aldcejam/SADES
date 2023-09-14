@@ -1,5 +1,5 @@
 .game-list-by-week-day { 
-    @apply relative grid grid-cols-1 auto-rows-[140px] gap-5;
+    @apply relative flex gap-5 overflow-x-auto;
 
     @screen sm {
         @apply grid-cols-2;

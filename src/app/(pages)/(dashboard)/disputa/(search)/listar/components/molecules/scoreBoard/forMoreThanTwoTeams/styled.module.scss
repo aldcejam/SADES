@@ -21,13 +21,12 @@
         
         &__logo {
             @apply relative top-[6px];
-            @apply w-[46px] h-[46px]; 
+            @apply w-[60px] h-[60px]; 
         }
     }
 
     .icon-versus {
-        @apply relative -bottom-1;
-        @apply w-5 h-5;
-        @apply text-inverted_theme; 
+        @apply relative -bottom-1; 
+        @apply text-inverted_theme font-bold; 
     }
 }

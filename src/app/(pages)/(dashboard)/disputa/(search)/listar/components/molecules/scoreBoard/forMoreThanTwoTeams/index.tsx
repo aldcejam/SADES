@@ -8,7 +8,7 @@ const ForMoreThanTwoTeams = ({ placar }: ScoreboardGameProps) => {
     const applyIconVersus = (currentTeam: number, lastTeamWithoutIcon: number) => {
         if (currentTeam < lastTeamWithoutIcon) {
             return (
-                <CloseIcon className={styled["icon-versus"]} />
+                <span className={styled["icon-versus"]}>vs</span>
             )
 
         } else {

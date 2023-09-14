@@ -11,6 +11,7 @@ import { PageDisputaBuscarConnection } from './@core/connection';
 import { Client } from './client';
 
 export default function Page() {
+ 
 
     return (
         <ProviderRedux store={Store}>

@@ -1,39 +1,20 @@
 .game-specification {
     @apply grid;
-    @apply absolute right-[10px] bottom-0 py-[10px] px-[15px]; 
-    @apply text-title uppercase text-right; 
+    @apply absolute bottom-0 inset-x-0 m-auto py-[10px] px-[15px]; 
+    @apply text-title uppercase text-center; 
 
     .teams-competing {
-        @apply flex gap-1 items-center justify-end;
+        @apply flex gap-1 items-center justify-center;
         @apply font-bold;
 
         &__confront {
             @apply flex gap-1 items-baseline; 
 
             p  {
-                @apply text-xs m-0; 
+                @apply text-base m-0; 
             }
-
-            .confront--icon-versus {
-                @apply relative;
-                @apply w-2 h-2;
-
-                &::before,
-                &::after {
-                    content: "";
-                    @apply absolute inset-x-0 m-auto; 
-                    @apply w-[1px] h-full;  
-                    @apply bg-secondary;
-                    @apply rounded-full; 
-                }
-
-                &::after {
-                    transform: rotate(45deg);
-                }
-
-                &::before {
-                    transform: rotate(-45deg);
-                }
+            span{
+                @apply text-xs font-normal;
             }
         }
     }

@@ -12,29 +12,16 @@ const GameSpecification = ({ game }: GameSpecificationProps) => {
         ${(game.specification.date).getFullYear()}
     `
 
-    const applyIconVersus = (currentTeam: number, lastTeamWithoutIcon: number) => {
-        if (currentTeam < lastTeamWithoutIcon) {
-            return (
-                <div className="confront--icon-versus" />
-            )
-
-        } else {
-            return null
-        }
-    }
-
     return (
         <div className={styled["game-specification"]}>
             <div className={styled["teams-competing"]}>
-                {game.placar.map((team, index, array) => {
+                {game.placar.map((team,index) => {
                     return (
                         <div key={team.course} className={styled["teams-competing__confront"]}>
                             <p className={styled["confront--team"]}>
                                 {team.course}
                             </p>
-                            {
-                                applyIconVersus(index, array.length - 1)
-                            }
+                            {index !== game.placar.length - 1 && <span>vs</span>}
                         </div>
                     )
                 })}

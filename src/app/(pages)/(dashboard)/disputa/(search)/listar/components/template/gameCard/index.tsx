@@ -1,17 +1,20 @@
-import CurverBorderButton from "@base-project/public/Polygon/CurverBorder"
+import CurverBorderButton from "app/(pages)/(dashboard)/disputa/(search)/listar/illustrations/CurverBorder"
 import GameSpecification from "../../molecules/gameSpecification"
 import TeamVersus from "../../organisms/teamVersus"
-import styled from "./styled.module.scss"
-import "./styled.scss"
+import styled from "./styled.module.scss" 
 import { GameProps } from "../../../@core/api/query/GameProps"
+import { ComponentProps } from "react"
 
-type GameCardProps = {
+interface GameCardProps extends ComponentProps<"div"> {
     game: GameProps
 }
-const GameCard = ({ game }: GameCardProps) => { 
+const GameCard = ({ game, ...props }: GameCardProps) => {
     return (
-        <div className={styled["game-card"]}>
-            <CurverBorderButton />
+        <div 
+        {...props}
+        id={styled["game-card"]}>
+            <CurverBorderButton className="scale-x-[-1] " />
+            <CurverBorderButton className="right-0"/>
             <div className={styled["game-score"]}>
                 <span className={styled["team-versus"]}>
                     <TeamVersus placar={game.placar} />
