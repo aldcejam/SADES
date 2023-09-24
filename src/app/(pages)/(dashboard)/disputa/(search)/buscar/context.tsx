@@ -6,12 +6,12 @@ import { toast } from "react-toastify";
 
 interface PageContextProps {
     modalSelectCategories: {
-        modalIsOpen: boolean
-        ToggleModal: () => void
+        value: boolean
+        Toggle: () => void
     }
     modalSelectOtherSports: {
-        modalIsOpen: boolean
-        ToggleModal: () => void
+        value: boolean
+        Toggle: () => void
     }
 }
 
@@ -41,12 +41,12 @@ export const PageContextProvider = ({ children }: { children: ReactNode }) => {
     return (
         <PageContext.Provider value={{
             modalSelectCategories: {
-                modalIsOpen: modalSelectCategories,
-                ToggleModal: ToggleModalSelectCategories
+                value: modalSelectCategories,
+                Toggle: ToggleModalSelectCategories
             },
             modalSelectOtherSports:{
-                modalIsOpen: modalSelectOtherSports,
-                ToggleModal: ToggleModalSelectOtherSports
+                value: modalSelectOtherSports,
+                Toggle: ToggleModalSelectOtherSports
             }
         }}>
             {children}

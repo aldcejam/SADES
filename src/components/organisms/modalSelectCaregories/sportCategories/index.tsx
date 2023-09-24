@@ -17,6 +17,7 @@ const SportCategories = ({ sportCategories, sportCategorySelected, updateSportCa
                         category={category}
                         sportCategorySelected={sportCategorySelected}
                         updateSportCategorySelected={updateSportCategorySelected}
+                        className={styled["button-select-sport"]}
                     />
                 )
             })}

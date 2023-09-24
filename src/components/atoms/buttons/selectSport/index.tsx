@@ -1,15 +1,17 @@
-import { memo } from 'react';
+import { ComponentProps, memo } from 'react';
 import styled from './styled.module.scss';
 
 
-type ButtonSelectSportProps = {
+type ButtonSelectSportProps = ComponentProps<'div'> & {
     category: string
     updateSportCategorySelected: (category: string) => void
     sportCategorySelected: string | undefined
 }
-const ButtonSelectSport = ({ category, sportCategorySelected, updateSportCategorySelected }: ButtonSelectSportProps) => {
+const ButtonSelectSport = ({ category, sportCategorySelected, updateSportCategorySelected, ...props }: ButtonSelectSportProps) => {
     return (
-        <div className={styled["button-select-sport"]}
+        <div
+            {...props}
+            id={styled["button-select-sport"]}
             data-is-selected={category == sportCategorySelected}
             onClick={() => { updateSportCategorySelected(category) }}
         >

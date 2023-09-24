@@ -1,3 +1,8 @@
-.sport-categories{
-    @apply flex justify-center flex-wrap gap-[10px];
+.sport-categories {
+    @apply grid grid-cols-2 gap-4;
+
+    .button-select-sport:last-child {
+        grid-column: span 2;
+    }
+
 }

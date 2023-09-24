@@ -1,9 +1,10 @@
 "use client"
 import { motion } from "framer-motion";
 import { Rajdhani } from '@next/font/google';
-import { useEffect, useRef, useState } from "react";
-import ReactDOM from 'react-dom';
-
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from 'react-dom';
+import styled from './styled.module.scss';
+import CloseIcon from '@mui/icons-material/Close';
 
 const rajdhani = Rajdhani({
     subsets: ['latin'],
@@ -23,12 +24,14 @@ const hide = {
 };
 
 type ModalTemplateProps = {
-    modalIsOpen: boolean,
+    modal: {
+        state: boolean,
+        Toggle: () => void
+    }
     children: React.ReactNode
-
 }
 
-const ModalTemplate = ({ modalIsOpen, children }: ModalTemplateProps) => {
+const ModalTemplate = ({ modal, children }: ModalTemplateProps) => {
 
     const ref = useRef<Element | null>(null)
     const [mounted, setMounted] = useState(false)
@@ -38,15 +41,24 @@ const ModalTemplate = ({ modalIsOpen, children }: ModalTemplateProps) => {
         setMounted(true)
     }, [])
 
-
+    const closeModal = useCallback(() => {
+        modal.Toggle()
+    }, [modal])
+    const stopPropagation = (e: React.MouseEvent) => {
+        e.stopPropagation();
+    };
     return (
-        (mounted && ref.current) ? ReactDOM.createPortal(
+        (mounted && ref.current) ? createPortal(
             <motion.div
                 id="modal"
                 className={rajdhani.className}
-                animate={modalIsOpen ? show : hide}
+                animate={modal.state ? show : hide}
+                onClick={closeModal}
             >
-                {children}
+                <div id={styled["wrapper"]} onClick={stopPropagation}>
+                    <CloseIcon onClick={() => modal.Toggle()} className={styled['close-icon']} />
+                    {children}
+                </div>
             </motion.div>
             ,
             ref.current)

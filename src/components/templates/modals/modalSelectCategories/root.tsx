@@ -1,25 +1,22 @@
 "use client"
-import styled from './styled.module.scss';
-
-import CloseIcon from '@mui/icons-material/Close';
-
+import styled from './styled.module.scss'; 
 import ModalTemplate from '../modalTemplate'; 
-import { ReactNode, memo } from 'react';
-
+import { ReactNode, memo } from 'react'; 
 type ModalSelectCategoriesRootProps = {
-    isModalOpen: boolean,
-    ToggleModal: () => void
+    modal:{
+        state: boolean,
+        Toggle: () => void
+    }
     sportName: string
     children: ReactNode
 }
 
-const ModalSelectCategoriesRoot = ({ isModalOpen, ToggleModal, children, sportName }: ModalSelectCategoriesRootProps) => {
+const ModalSelectCategoriesRoot = ({ modal, children, sportName }: ModalSelectCategoriesRootProps) => {
     return ( 
         <ModalTemplate
-            modalIsOpen={isModalOpen}
+            modal={modal} 
         >
-            <div className={styled["modal-select-categories"]}>
-                <CloseIcon onClick={() => ToggleModal()} className={styled['close-icon']} />
+            <div className={styled["modal-select-categories"]}> 
                 <div className={styled["titles"]}>
                     <h4>Esporte: {sportName}</h4>
                     <h5>Selecione as categorias</h5>

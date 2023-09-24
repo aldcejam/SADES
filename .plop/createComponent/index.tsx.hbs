@@ -1,12 +1,10 @@
 import styled from './{{name}}.module.scss';
 
-type {{name}}Props = {}
+interface {{pascalCase name}}Props {}
 
-const {{name}} = ({}: {{name}}Props)=>{
+export const {{pascalCase name}} = ({}: {{pascalCase name}}Props)=>{
   return (
-    <>
-    </>
+    <div id={styled["{{name}}"]}>
+    </div>
   );
-}
-
-export { {{name}} };
+} 

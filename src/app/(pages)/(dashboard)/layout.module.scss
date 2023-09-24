@@ -18,7 +18,7 @@
 }
 
 .content-page {
-    @apply relative w-full h-full;
+    @apply relative z-0 w-full h-full;
     @apply overflow-y-auto overflow-x-hidden;
     @apply rounded-default;
 

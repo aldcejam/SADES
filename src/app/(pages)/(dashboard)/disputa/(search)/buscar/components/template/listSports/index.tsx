@@ -16,7 +16,7 @@ const ListSports = () => {
 
     const handleSelectSport = (sport: SportSelectedProps) => {
         sportSelected.Update(sport)
-        modalSelectCategories.ToggleModal()
+        modalSelectCategories.Toggle()
     }
 
     function RemoveAccentsAndReplaceSpace(str: string) {
@@ -47,7 +47,7 @@ const ListSports = () => {
             <CardToSelectSport
                 sport={"outros"}
                 className={`card-outros`}
-                onClick={() => modalSelectOtherSports.ToggleModal()}
+                onClick={() => modalSelectOtherSports.Toggle()}
                 illustration={<OutrosIllustration className="card-outros__illustration" />}
             />
             <ModalSelectOtherSports

@@ -1,13 +1,18 @@
-import SelectPontuations from "../../../atoms/modalToConfigGame/SelectPontuations" 
+import { ComponentProps } from "react"
+import SelectPontuations from "../../../atoms/modalToConfigGame/SelectPontuations"
 import Pontuation from "../../../molecules/ModalToConfigGame/pontuation"
- 
-const PontuationByPosition = () => {
+
+interface PontuationByPositionProps extends ComponentProps<"div"> { }
+
+const PontuationByPosition = ({ ...props }: PontuationByPositionProps) => {
 
     return (
-        <section>
+        <div
+            {...props}
+        >
             <SelectPontuations />
             <Pontuation />
-        </section>
+        </div>
     )
 }
 

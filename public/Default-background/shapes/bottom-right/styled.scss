@@ -1,6 +1,6 @@
 .bottom-right {
     @apply absolute -bottom-[220px] -right-[120px] z-20;
-    @apply w-[clamp(700px,70vw,800px)];
+    @apply w-[clamp(700px,70vw,800px)]; 
 
     .cls-1 {
         fill: theme("colors.primary" / 63%);

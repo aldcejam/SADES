@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": true, 
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,8 +9,8 @@
     "format": "prettier --write \"**/*.{js,ts,tsx,md}\"",
     "slicemachine": "start-slicemachine",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "create-comp": "plop createComponent"
+    "build-storybook": "build-storybook", 
+    "c-cp": "plop createComponent"
   },
   "prettier": {
     "arrowParens": "always",
@@ -78,7 +78,7 @@
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-scss-transform": "^1.0.3",
-    "plop": "^3.1.2",
+    "plop": "^4.0.0",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.2",

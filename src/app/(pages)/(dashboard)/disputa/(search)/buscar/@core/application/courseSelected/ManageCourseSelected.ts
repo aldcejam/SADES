@@ -1,4 +1,4 @@
-import { ReadCourseSelected, UpdateCourseSelected } from "./useCase/";
+import { ReadCourseSelected, UpdateCourseSelected } from "./useCase";
 
 const ManageCourseSelected = () => {
   return {

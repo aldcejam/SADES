@@ -1,11 +1,5 @@
 .modal-select-other-sports {
-    @apply fixed z-[1000] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
-    @apply flex flex-col gap-3; 
-    @apply w-[clamp(200px,90%,400px)] max-h-[95vh]; 
-    @apply p-[35px];
-    @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary; 
-    @apply overflow-x-hidden backdrop:blur-[1000px];
-    background-color: rgb(var(--background), 0.886);   
+    @apply flex flex-col gap-3;  
 
     .close-icon{
         @apply absolute top-[10px] right-[10px];

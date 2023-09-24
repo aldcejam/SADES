@@ -15,10 +15,13 @@ const ModalSelectOtherSports = ({ otherSports, handleSelectSport }: ModalSelectO
 
     return (
         <ModalTemplate
-            modalIsOpen={modalSelectOtherSports.modalIsOpen}
+            modal={{
+                state: modalSelectOtherSports.value,
+                Toggle: modalSelectOtherSports.Toggle
+            }}
         >
             <div className={styled["modal-select-other-sports"]}>
-                <CloseIcon onClick={() => modalSelectOtherSports.ToggleModal()} className={styled['close-icon']} />
+                <CloseIcon onClick={() => modalSelectOtherSports.Toggle()} className={styled['close-icon']} />
                 {otherSports.map((sport) => {
                     return (
                         <button key={sport.sportName} onClick={() => handleSelectSport(sport)}>

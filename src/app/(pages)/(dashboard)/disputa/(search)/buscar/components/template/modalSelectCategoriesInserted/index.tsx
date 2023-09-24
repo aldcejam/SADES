@@ -17,8 +17,10 @@ const ModalSelectCategoriesInserted = () => {
 
     return (
         <ModalSelectCategories.Root
-            ToggleModal={modalSelectCategories.ToggleModal}
-            isModalOpen={modalSelectCategories.modalIsOpen}
+            modal={{
+                state: modalSelectCategories.value,
+                Toggle: modalSelectCategories.Toggle
+            }}
             sportName={sportSelected.value.sportName}
         >
             {

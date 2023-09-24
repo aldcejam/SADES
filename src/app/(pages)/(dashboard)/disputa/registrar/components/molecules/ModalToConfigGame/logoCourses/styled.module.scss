@@ -1,7 +1,6 @@
-.logo-courses {
+#logo-courses {
     @apply relative w-full;
-    @apply flex justify-center gap-5;
-    grid-area: cards;
+    @apply flex justify-center gap-5; 
 
     .card {
         @apply cursor-help;

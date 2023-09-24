@@ -3,14 +3,13 @@ import PontuationByPosition from "../../organisms/ModalToConfigGame/pontuationBy
 import styled from "./styled.module.scss"
 import LogoCourses from "../../molecules/ModalToConfigGame/logoCourses";
 import SituationGame from "../../organisms/ModalToConfigGame/situationGame";
-import CloseIcon from '@mui/icons-material/Close';
 import GameDate from "../../organisms/ModalToConfigGame/gameDate";
 import SubmitButton from "components/atoms/submit";
 import ModalTemplate from "components/templates/modals/modalTemplate";
 import { GenderOptionsProps } from "defaultTypes/GendersProps";
 import { PageDisputaRegistrarConnection } from "../../../@core/connection";
 import { usePageRegistrarDisputa } from "../../../context";
-  
+
 
 const ModalToConfigGame = () => {
 
@@ -40,30 +39,19 @@ const ModalToConfigGame = () => {
 
     return (
         <ModalTemplate
-            modalIsOpen={modalToConfigGame.modalIsOpen}
+            modal={modalToConfigGame}
         >
             <div className={styled["modal-to-config-game"]}>
-                <CloseIcon onClick={() => modalToConfigGame.ToggleModal()} className={styled['close-icon']} />
                 <h2>{title}</h2>
                 <div className={styled["container"]}>
-                    <article className={styled["teams"]}>
-                        <LogoCourses />
-                    </article>
-                    <div className={styled["situation"]}>
-                        <SituationGame
-                        />
-                    </div>
-                    <div className={styled["game-date"]}>
-                        {/* <GameDate /> */}
-                    </div>
-                    <div className={styled["pontuations"]}>
-                        <PontuationByPosition />
-                    </div>
-                    <div className={styled["create-game-button"]}>
-                        <SubmitButton
-                            Submit={function ala() { }}
-                            value="Cria Disputa" />
-                    </div>
+                    <LogoCourses className={styled["teams"]} />
+                    <SituationGame className={styled["situation"]} />
+                    {/* <GameDate className={styled["game-date"]} /> */}
+                    <PontuationByPosition className={styled["pontuations"]} />
+                    <SubmitButton
+                        className={styled["create-game-button"]}
+                        Submit={function ala() { }}
+                        value="Cria Disputa" />
                 </div>
             </div>
         </ModalTemplate>

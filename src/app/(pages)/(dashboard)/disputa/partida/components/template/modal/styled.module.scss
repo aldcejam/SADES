@@ -1,0 +1,24 @@
+.overlay {
+    @apply fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto;
+    @apply cursor-pointer;
+    background-color: rgba(var(--absolute-theme), 0.6);
+    backdrop-filter: blur(10px);
+
+
+    .wrapper {
+        @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+        @apply py-12 px-14;
+        @apply cursor-default;
+        @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary; 
+        @apply overflow-x-hidden backdrop:blur-[1000px] cursor-auto;
+        background-color: rgb(var(--background), 0.886);  
+        .close-icon {
+            @apply absolute top-[10px] right-[10px];
+            @apply cursor-pointer text-title text-3xl transition-all duration-200;
+
+            &:hover {
+                @apply text-subtitle;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
 import { ModalSelectCategories } from "components/templates/modals/modalSelectCategories"
 import { PageDisputaRegistrarConnection } from "app/(pages)/(dashboard)/disputa/registrar/@core/connection"
 import { usePageRegistrarDisputa } from "../../../context"
-   
+
 
 export const ModalSelectCategoriesInserted = () => {
 
@@ -11,11 +11,10 @@ export const ModalSelectCategoriesInserted = () => {
     const { sportSelected } = sportAndCourseSelected
 
     const { modalSelectCategories, modalToConfigGame } = usePageRegistrarDisputa()
- 
+
     return (
         <ModalSelectCategories.Root
-            ToggleModal={modalSelectCategories.ToggleModal}
-            isModalOpen={modalSelectCategories.modalIsOpen}
+            modal={modalSelectCategories}
             sportName={sportSelected.value.sportName}
         >
             {
@@ -36,7 +35,7 @@ export const ModalSelectCategoriesInserted = () => {
             }
             <ModalSelectCategories.SubmitButton
                 value='Prosseguir'
-                Submit={modalToConfigGame.ToggleModal}
+                Submit={modalToConfigGame.Toggle}
             />
         </ModalSelectCategories.Root>
     )

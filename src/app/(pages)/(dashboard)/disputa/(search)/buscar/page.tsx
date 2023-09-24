@@ -6,9 +6,7 @@ import './styled.scss';
 import { Provider as ProviderRedux } from "react-redux";
 import { Store } from "./@core/entities/config/store"
 import { PageContextProvider } from "./context";
-import { useSearchParams } from 'next/navigation';
-import { PageDisputaBuscarConnection } from './@core/connection';
-import { Client } from './client';
+ import { Client } from './client';
 
 export default function Page() {
  

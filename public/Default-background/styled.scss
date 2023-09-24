@@ -8,11 +8,14 @@
     @apply w-[100vw] h-[100vh];
     @apply bg-background;
 
+    .top-right,.top-left,.bottom-left,.bottom-right{
+        @apply opacity-30;
+    }
+
     &::before {
         content: '';
         @apply absolute z-50;
-        @apply w-full h-full;
-        backdrop-filter: blur(3px);
+        @apply w-full h-full; 
     }
 
     &[data-page="/login"] {

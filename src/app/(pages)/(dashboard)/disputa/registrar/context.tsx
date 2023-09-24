@@ -5,12 +5,12 @@ import { ToggleWhenAllCategoriesIsSelected } from "./@core/utils/toggleWhenAllCa
 
 interface PageContextProps {
     modalSelectCategories: {
-        modalIsOpen: boolean
-        ToggleModal: () => void
+        state: boolean
+        Toggle: () => void
     }
     modalToConfigGame: {
-        modalIsOpen: boolean
-        ToggleModal: () => void
+        state: boolean
+        Toggle: () => void
     }
 }
 
@@ -39,12 +39,12 @@ export const PageContextProvider = ({ children }: { children: ReactNode }) => {
     return (
         <PageContext.Provider value={{
             modalSelectCategories: {
-                modalIsOpen: modalSelectCategories,
-                ToggleModal: ToggleModalSelectCategories
+                state: modalSelectCategories,
+                Toggle: ToggleModalSelectCategories
             },
             modalToConfigGame: {
-                modalIsOpen: modalToConfigGame,
-                ToggleModal: ToggleModalToConfigGame
+                state: modalToConfigGame,
+                Toggle: ToggleModalToConfigGame
             }
         }}>
             {children}

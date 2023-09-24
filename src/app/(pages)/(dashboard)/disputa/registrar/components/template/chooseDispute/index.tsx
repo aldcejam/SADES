@@ -14,7 +14,7 @@ const ChooseDispute = () => {
             <AvailableCourses />
             <AvailableSports />
             <SubmitButton
-                Submit={modalSelectCategories.ToggleModal}
+                Submit={modalSelectCategories.Toggle}
                 value="Selecionar categorias" />
         </div>
     )
