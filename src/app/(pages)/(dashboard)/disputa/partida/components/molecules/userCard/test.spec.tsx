@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ShowTwoTeams } from './';
+import { UserCard } from './';
  
 test('render component correctly', () => {
-  render(<ShowTwoTeams />);
+  render(<UserCard />);
 });

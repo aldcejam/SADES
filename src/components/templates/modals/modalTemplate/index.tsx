@@ -47,6 +47,7 @@ const ModalTemplate = ({ modal, children }: ModalTemplateProps) => {
     const stopPropagation = (e: React.MouseEvent) => {
         e.stopPropagation();
     };
+    
     return (
         (mounted && ref.current) ? createPortal(
             <motion.div

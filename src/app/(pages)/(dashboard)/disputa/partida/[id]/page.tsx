@@ -1,7 +1,13 @@
+import { LayoutDashboard } from "app/(pages)/(dashboard)/layout.dash";
+import { PartidaContent } from "../components/template/partidaContent";
 import styled from "./styled.module.scss"
 
 export default function Page({ params }: any) {
     return (
-        <div className="w-10 h-10 absolute inset-0 m-auto bg-black">ollll</div>
+        <LayoutDashboard innerBoxShadow>
+            <div className={styled["container"]}>
+                <PartidaContent />
+            </div>
+        </LayoutDashboard>
     );
 };

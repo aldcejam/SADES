@@ -1,0 +1,25 @@
+.apresentationTwoTeams {
+    @apply w-52;
+    @apply flex items-baseline justify-center;
+
+    .image-container {
+        @apply relative w-20 h-20 -mb-4;
+    }
+
+    .score-container {
+        @apply flex mx-2 -mt-0;
+        align-items: flex-end;
+
+        div {}
+
+        @apply text-3xl;
+        &,
+        .icon-versus {
+            @apply text-title font-bold;
+        }
+        .icon-versus {
+            @apply text-2xl;
+            @apply mb-1;
+        }
+    }
+}

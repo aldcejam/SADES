@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ShowMoreThanTwoTeams } from './';
+import { ApresentationTeams } from '.';
  
 test('render component correctly', () => {
-  render(<ShowMoreThanTwoTeams />);
+  render(<ApresentationTeams teams={[]}/>);
 });

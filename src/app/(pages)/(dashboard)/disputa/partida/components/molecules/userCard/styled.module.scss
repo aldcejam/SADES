@@ -1,0 +1,61 @@
+#userCard {
+    list-style: none;
+    @apply w-full;
+    
+    button {
+        @apply flex justify-between items-center;
+        @apply w-full;
+        @apply px-3 py-2;
+        @apply rounded-default;
+        background: rgba(var(--absolute-theme), 0.01);
+        box-shadow: 0px 0px 2px 0px rgba(var(--inverted-theme), 0.53) inset, 4px 4px 4px 0px rgba(var(--absolute-theme), 0.25);
+
+        .container {
+            @apply flex justify-between items-center gap-2;
+
+            .avatar {
+                @apply relative w-8 h-8 overflow-hidden;
+                @apply border border-inverted_theme rounded-full;
+            }
+
+            .number {
+                @apply text-base;
+            }
+
+            .name {
+                @apply capitalize text-base font-medium;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.4);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        &:hover {
+            @apply transition-all duration-300;
+            .icon-expand {
+                @apply text-secondary;
+                animation: 0.8s scaleUp infinite;
+            }
+
+            box-shadow: 0px 0px 2px 0px theme("colors.secondary" /53%) inset,
+            4px 4px 4px 0px rgba(var(--absolute-theme), 0.25);
+        }
+
+        .icon-expand,
+        .name,
+        .number {
+            @apply text-subtitle font-medium;
+        }
+    }
+}

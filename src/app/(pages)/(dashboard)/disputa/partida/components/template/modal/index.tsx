@@ -3,6 +3,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useRef } from "react";
 import styled from "./styled.module.scss";
+import { motion } from "framer-motion";
 
 interface ModalProps {
     children: React.ReactNode;
@@ -41,12 +42,23 @@ export default function Modal({ children }: ModalProps) {
     const stopPropagation = (e: React.MouseEvent) => {
         e.stopPropagation();
     };
+    const show = {
+        opacity: 1,
+        display: "block"
+    };
 
+    const hide = {
+        opacity: 0,
+        transitionEnd: {
+            display: "none"
+        }
+    };
     return (
-        <div
+        <motion.div
             ref={overlay}
             className={styled["overlay"]}
             onClick={onClick}
+            animate={show}
         >
             <div
                 ref={wrapper}
@@ -56,6 +68,6 @@ export default function Modal({ children }: ModalProps) {
                 <CloseIcon onClick={() => onDismiss()} className={styled['close-icon']} />
                 {children}
             </div>
-        </div>
+        </motion.div>
     );
 }

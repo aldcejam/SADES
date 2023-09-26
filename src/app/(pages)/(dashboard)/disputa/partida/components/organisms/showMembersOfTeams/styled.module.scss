@@ -1,0 +1,17 @@
+.showMembersOfTeams{
+    @apply mt-10;
+
+    .title{ 
+            background-color: rgba(var(--absolute-theme),0.4);
+            @apply py-[2px] mb-3 rounded-default;
+            @apply text-2xl font-bold text-title text-center;
+    }
+
+    .membersTeam{ 
+        @apply grid grid-cols-1 gap-4;
+
+        @screen sm{
+            @apply grid-cols-2;
+        }
+    }
+}

@@ -24,20 +24,22 @@ body {
   overflow: hidden;
 
   a {
-    color: inherit;
+    color: none;
     text-decoration: none;
+    transition: none !important;
   }
 }
 
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 12px;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-gray_600 rounded-lg;
+*::-webkit-scrollbar-thumb {
+  @apply rounded-sm;
+  background-color: rgb(var(--inverted-theme),0.2) !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray_900;
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--inverted-theme),0.5) !important;
 }
