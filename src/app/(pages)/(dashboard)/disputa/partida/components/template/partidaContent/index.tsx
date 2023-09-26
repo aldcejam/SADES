@@ -73,6 +73,130 @@ const simulation = {
           number: 8
         }
       ]
+    },
+    {
+      teamName: "eletrotécnica",
+      placar: 3,
+      logo: "/testes/time2.png",
+      members: [
+        {
+          id: 5,
+          name: "pedro",
+          avatar: "/profile-image.jpg",
+          number: 10
+        },
+        {
+          id: 6,
+          name: "julia",
+          avatar: "/profile-image.jpg",
+          number: 1
+        },
+        {
+          id: 7,
+          name: "marcos",
+          avatar: "/profile-image.jpg",
+          number: 5
+        },
+        {
+          id: 8,
+          name: "josefa",
+          avatar: "/profile-image.jpg",
+          number: 8
+        }
+      ]
+    },
+    {
+      teamName: "eletrotécnica",
+      placar: 3,
+      logo: "/testes/time2.png",
+      members: [
+        {
+          id: 5,
+          name: "pedro",
+          avatar: "/profile-image.jpg",
+          number: 10
+        },
+        {
+          id: 6,
+          name: "julia",
+          avatar: "/profile-image.jpg",
+          number: 1
+        },
+        {
+          id: 7,
+          name: "marcos",
+          avatar: "/profile-image.jpg",
+          number: 5
+        },
+        {
+          id: 8,
+          name: "josefa",
+          avatar: "/profile-image.jpg",
+          number: 8
+        }
+      ]
+    },
+    {
+      teamName: "eletrotécnica",
+      placar: 3,
+      logo: "/testes/time2.png",
+      members: [
+        {
+          id: 5,
+          name: "pedro",
+          avatar: "/profile-image.jpg",
+          number: 10
+        },
+        {
+          id: 6,
+          name: "julia",
+          avatar: "/profile-image.jpg",
+          number: 1
+        },
+        {
+          id: 7,
+          name: "marcos",
+          avatar: "/profile-image.jpg",
+          number: 5
+        },
+        {
+          id: 8,
+          name: "josefa",
+          avatar: "/profile-image.jpg",
+          number: 8
+        }
+      ]
+    },
+    {
+      teamName: "eletrotécnica",
+      placar: 3,
+      logo: "/testes/time2.png",
+      members: [
+        {
+          id: 5,
+          name: "pedro",
+          avatar: "/profile-image.jpg",
+          number: 10
+        },
+        {
+          id: 6,
+          name: "julia",
+          avatar: "/profile-image.jpg",
+          number: 1
+        },
+        {
+          id: 7,
+          name: "marcos",
+          avatar: "/profile-image.jpg",
+          number: 5
+        },
+        {
+          id: 8,
+          name: "josefa",
+          avatar: "/profile-image.jpg",
+          number: 8
+        }
+      ]
     }
   ],
 }
@@ -87,7 +211,7 @@ export const PartidaContent = ({ }: PartidaContentProps) => {
         {simulation.teams.map(team => {
           return (
             <ShowMembersOfTeams.showMembersOfTeam
-              key={team.teamName}            
+              key={team.teamName}
               teamName={team.teamName}
               logo={team.logo}
               members={team.members}
