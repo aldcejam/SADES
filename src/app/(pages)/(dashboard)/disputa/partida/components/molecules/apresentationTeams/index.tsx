@@ -15,17 +15,15 @@ export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
   return (
     teams.length == 2 ?
       <div className={styled["apresentationTwoTeams"]}>
-        <Link href={`#${teams[0].teamName}`}>
-          <div
-            className={styled["image-container"]}>
-            <Image
-              alt={`logo do time ${teams[0].teamName}`}
-              src={teams[0].logo}
-              sizes='50px'
-              fill
-              style={{ objectFit: "contain" }} />
-          </div>
-        </Link>
+        <div
+          className={styled["image-container"]}>
+          <Image
+            alt={`logo do time ${teams[0].teamName}`}
+            src={teams[0].logo}
+            sizes='50px'
+            fill
+            style={{ objectFit: "contain" }} />
+        </div>
         <div
           className={styled["score-container"]}
         >
@@ -49,7 +47,7 @@ export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
         {
           teams.map((team, index) => {
             return (
-              <Link href={`#${team.teamName}`}>
+              <div key={team.teamName}>
                 <div
                   key={index}
                   className={styled["image-container"]}>
@@ -63,7 +61,8 @@ export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
                   </div>
                 </div>
                 {index < teams.length - 1 ? <CloseIcon className={styled["icon-versus"]} /> : null}
-              </Link>
+              </div>
+
             )
           })
         }
