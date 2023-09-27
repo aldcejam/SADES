@@ -15,7 +15,7 @@ interface ShowMembersOfTeamProps {
 
 export const ShowMembersOfTeam = ({ members, logo, teamName }: ShowMembersOfTeamProps) => {
   return (
-    <div id={styled["showMembersOfTeam"]}>
+    <div id={teamName} className={`${styled["showMembersOfTeam"]}`}>
       <div className={styled["title"]}>
         <h2>{teamName}</h2>
         <div className={styled["logo"]}>
