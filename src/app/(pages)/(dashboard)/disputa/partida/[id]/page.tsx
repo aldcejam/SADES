@@ -6,7 +6,7 @@ export default function Page({ params }: any) {
     return (
         <LayoutDashboard innerBoxShadow>
             <div className={styled["container"]}>
-                <PartidaContent />
+                <PartidaContent display="page"/>
             </div>
         </LayoutDashboard>
     );

@@ -1,13 +1,37 @@
-.game-situation {
+#game-situation {
     @apply flex items-baseline justify-center gap-[6px];
 
-    p {
-        @apply text-xs m-0 font-medium;
+    p{
+        @apply font-medium capitalize m-0 text-subtitle;
     }
-
     .circle {
-        @apply w-[11px] h-[11px];
         @apply rounded-full border border-solid border-white;
         @apply bg-success;
     }
+
+    &[data-size="small"] {
+        p {
+            @apply text-xs;
+        }
+        .circle {
+            @apply w-[11px] h-[11px];
+        }
+    }
+    &[data-size="medium"] {
+        p {
+            @apply text-sm ;
+        }
+        .circle {
+            @apply w-[14px] h-[14px];
+        }
+    }
+    &[data-size="large"] {
+        p {
+            @apply text-base;
+        }
+        .circle {
+            @apply w-[17px] h-[17px];
+        }
+    }
+
 }

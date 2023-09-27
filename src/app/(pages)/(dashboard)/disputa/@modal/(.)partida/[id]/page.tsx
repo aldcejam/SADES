@@ -7,7 +7,7 @@ export default function Page({ params }: any) {
 
     return (
         <Modal> 
-            <PartidaContent/>
+            <PartidaContent display="modal"/>
         </Modal>
     );
 };

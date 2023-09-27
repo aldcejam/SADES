@@ -2,8 +2,11 @@ import React from 'react';
 import styled from './styled.module.scss';
 import { ApresentationTeams } from '../../molecules/apresentationTeams';
 import { ShowMembersOfTeams } from '../../organisms/showMembersOfTeams';
+import { Specifications } from '../../molecules/specifications';
+import GameSituation from 'components/atoms/gameSituation';
 
 interface PartidaContentProps {
+  display: "page" | "modal";
 }
 
 const simulation = {
@@ -201,9 +204,9 @@ const simulation = {
   ],
 }
 
-export const PartidaContent = ({ }: PartidaContentProps) => {
+export const PartidaContent = ({ display }: PartidaContentProps) => {
   return (
-    <>
+    <div id={styled["partidaContent"]}>
       <ApresentationTeams
         teams={simulation.teams}
       />
@@ -218,8 +221,12 @@ export const PartidaContent = ({ }: PartidaContentProps) => {
             />
           )
         })}
-
       </ShowMembersOfTeams.root>
-    </>
+      <GameSituation
+        className={styled['game-situation']}
+        situation='andamento'
+        size={display == "page"? "large":"medium"}
+      />
+    </div>
   );
 } 
