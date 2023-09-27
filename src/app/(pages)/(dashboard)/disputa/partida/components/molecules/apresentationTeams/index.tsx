@@ -47,7 +47,7 @@ export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
         {
           teams.map((team, index) => {
             return (
-              <div key={team.teamName}>
+              <Link href={`#${team.teamName}`} key={team.teamName}>
                 <div
                   key={index}
                   className={styled["image-container"]}>
@@ -61,7 +61,7 @@ export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
                   </div>
                 </div>
                 {index < teams.length - 1 ? <CloseIcon className={styled["icon-versus"]} /> : null}
-              </div>
+              </Link>
 
             )
           })
