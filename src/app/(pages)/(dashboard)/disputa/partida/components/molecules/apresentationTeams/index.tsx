@@ -47,7 +47,9 @@ export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
         {
           teams.map((team, index) => {
             return (
-              <Link href={`#${team.teamName}`} key={team.teamName}>
+              <Link href={`#${team.teamName}`} 
+              className={styled['container']}
+              key={team.teamName}>
                 <div
                   key={index}
                   className={styled["image-container"]}>

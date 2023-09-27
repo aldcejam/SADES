@@ -30,26 +30,29 @@
     @apply flex items-baseline;
     @apply overflow-x-scroll overflow-y-hidden pb-5;
     @apply max-w-full;
+    
+    .container { 
+        @apply flex items-baseline min-w-fit;
+        .image-container {
+            @apply relative min-w-[80px] min-h-[80px] -mb-4;
 
-    .image-container {
-        @apply relative min-w-[80px] min-h-[80px] -mb-4;
+            .score {
+                @apply absolute -bottom-4 inset-x-0 m-auto;
+                @apply w-fit px-2;
+                background-color: rgba(var(--absolute-theme), 0.2);
+                backdrop-filter: blur(10px);
+                @apply text-lg text-title font-semibold text-center leading-7;
+                @apply border rounded-sm;
+                border-color: rgba(var(--inverted-theme), 0.3);
 
-        .score {
-            @apply absolute -bottom-4 inset-x-0 m-auto;
-            @apply w-fit px-2;
-            background-color: rgba(var(--absolute-theme), 0.2);
-            backdrop-filter: blur(10px);
-            @apply text-lg text-title font-semibold text-center leading-7;
-            @apply border rounded-sm;
-            border-color: rgba(var(--inverted-theme), 0.3);
-
-            p {
-                @apply m-0
+                p {
+                    @apply m-0
+                }
             }
         }
-    }
 
-    .icon-versus {
-        @apply text-2xl text-inverted_theme;
+        .icon-versus {
+            @apply text-2xl text-inverted_theme;
+        }
     }
 }
