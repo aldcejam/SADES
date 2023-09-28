@@ -1,4 +1,5 @@
 #partidaContent{
+    @apply max-w-full overflow-hidden;
     .game-situation{
         @apply absolute top-5 left-5;
     }

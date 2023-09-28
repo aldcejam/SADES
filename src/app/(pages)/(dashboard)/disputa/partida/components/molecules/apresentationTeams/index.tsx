@@ -14,42 +14,41 @@ interface ApresentationTeamsProps {
 export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
   return (
     teams.length == 2 ?
-      <div className={styled["apresentationTwoTeams"]}>
-        <div
-          className={styled["image-container"]}>
-          <Image
-            alt={`logo do time ${teams[0].teamName}`}
-            src={teams[0].logo}
-            sizes='50px'
-            fill
-            style={{ objectFit: "contain" }} />
-        </div>
-        <div
-          className={styled["score-container"]}
-        >
-          <div>{teams[0].placar}</div>
-          <CloseIcon className={styled["icon-versus"]} />
-          <div>{teams[1].placar}</div>
-        </div>
-        <Link href={`#${teams[0].teamName}`}>
-          <div
-            className={styled["image-container"]}>
-            <Image
-              alt={`logo do time ${teams[1].teamName}`}
-              src={teams[1].logo}
-              sizes='50px'
-              fill />
-          </div>
-        </Link>
-      </div>
-      :
-      <div className={styled["apresentationMoreThanTwoTeams"]}>
+      <div id={styled["apresentationTwoTeams"]}>
         {
           teams.map((team, index) => {
             return (
-              <Link href={`#${team.teamName}`} 
-              className={styled['container']}
-              key={team.teamName}>
+              <div
+                className={styled['container']}
+                key={team.teamName}>
+                <div className={styled["team"]}>
+                  <a href={`#${team.teamName}`}>
+                    <Image
+                      alt={`logo do time ${team.teamName}`}
+                      src={team.logo}
+                      sizes='80px'
+                      width={80}
+                      height={80}
+                      title={`${team.teamName}`}
+                      className='object-contain -mb-4 mx-2'
+                      />
+                  </a>
+                  <div className={styled["placar"]}>{team.placar}</div>
+                  {index < teams.length - 1 ? <CloseIcon className={styled["icon-versus"]} /> : null}
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+      :
+      <div id={styled["apresentationMoreThanTwoTeams"]}>
+        {
+          teams.map((team, index) => {
+            return (
+              <a href={`#${team.teamName}`}
+                className={styled['container']}
+                key={team.teamName}>
                 <div
                   key={index}
                   className={styled["image-container"]}>
@@ -63,7 +62,7 @@ export const ApresentationTeams = ({ teams }: ApresentationTeamsProps) => {
                   </div>
                 </div>
                 {index < teams.length - 1 ? <CloseIcon className={styled["icon-versus"]} /> : null}
-              </Link>
+              </a>
 
             )
           })

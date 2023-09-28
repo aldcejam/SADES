@@ -1,9 +1,13 @@
 .showMembersOfTeam {
-    @apply w-[250px];
+    @apply w-full min-w-[220px];
     @apply flex flex-col items-center flex-1 self-stretch gap-3;
     @apply p-5 rounded-default;
     background: rgba(var(--absolute-theme), 0.01);
     box-shadow: 0px -2px 12px 0px rgba(var(--inverted-theme), 0.05) inset, 0px 4px 8px 0px rgba(var(--absolute-theme), 0.25);
+
+    @screen md{
+        @apply min-w-[270px];
+    }
 
     .title {
         @apply w-full relative flex gap-2 justify-center items-center;

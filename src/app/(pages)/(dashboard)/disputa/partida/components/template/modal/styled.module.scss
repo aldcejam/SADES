@@ -10,9 +10,10 @@
         @apply py-12 px-14;
         @apply cursor-default;
         @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary;
-        @apply overflow-x-hidden backdrop:blur-[1000px] cursor-auto;
+        @apply overflow-x-hidden scroll-smooth backdrop:blur-[1000px] cursor-auto;
         @apply w-full max-w-max max-h-[90vh] grid justify-items-center;
         background-color: rgb(var(--background));
+        
 
         .close-icon {
             @apply absolute top-[10px] right-[10px];

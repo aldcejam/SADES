@@ -1,38 +1,34 @@
-.apresentationTwoTeams {
-    @apply w-52;
+#apresentationTwoTeams {
+    @apply w-full;
     @apply flex items-baseline justify-center;
 
-    .image-container {
-        @apply relative w-20 h-20 -mb-4;
-    }
+    .container { 
+        .team {
+            @apply flex items-baseline;
+            @apply text-3xl text-inverted_theme;
 
-    .score-container {
-        @apply flex mx-2 -mt-0;
-        align-items: flex-end;
-
-        div {}
-
-        @apply text-3xl;
-
-        &,
-        .icon-versus {
-            @apply text-title font-bold;
+            .placar{
+                @apply text-3xl text-title font-semibold;
+            }
+            .icon-versus {
+                @apply mb-2 text-2xl;
+            }
         }
 
-        .icon-versus {
-            @apply text-2xl;
-            @apply mb-1;
+        &:last-child .team {
+            @apply flex-row-reverse;
         }
     }
 }
 
-.apresentationMoreThanTwoTeams {
+#apresentationMoreThanTwoTeams {
     @apply flex items-baseline;
     @apply overflow-x-scroll overflow-y-hidden pb-5;
     @apply max-w-full;
-    
-    .container { 
+
+    .container {
         @apply flex items-baseline min-w-fit;
+
         .image-container {
             @apply relative min-w-[80px] min-h-[80px] -mb-4;
 

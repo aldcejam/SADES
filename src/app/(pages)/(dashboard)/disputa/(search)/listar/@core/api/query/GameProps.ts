@@ -1,3 +1,5 @@
+import { GameSituationProps } from "components/atoms/gameSituation";
+
 export type ScoreboardGameProps = {
   placar: Array<{
     course: string;
@@ -5,9 +7,8 @@ export type ScoreboardGameProps = {
     score: number;
   }>;
 };
-export type SpecificationGameProps = {
-  date: Date;
-  situation: string;
+export type SpecificationGameProps = GameSituationProps & {
+  date: Date; 
 };
 
 export type GameProps = {

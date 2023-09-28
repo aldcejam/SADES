@@ -1,7 +1,7 @@
 import styled from './styled.module.scss';
 
 interface ShowMembersOfTeamsProps {
-    children: React.ReactNode; 
+    children: React.ReactNode;  
 }
 
 export const ShowMembersOfTeamsRoot = ({ children }: ShowMembersOfTeamsProps) => {

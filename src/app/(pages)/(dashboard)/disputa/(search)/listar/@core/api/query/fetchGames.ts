@@ -1,6 +1,7 @@
 import { GameProps } from "./GameProps" 
 
 type typegames = GameProps[]
+
 export const games:typegames = [
     {
         id: 0,
@@ -18,7 +19,7 @@ export const games:typegames = [
         ],
         specification: {
             date: new Date(2022, 9, 1),
-            situation: "pré-cadastrado"
+            situation: "pre-cadastrada"
 
         }
     },
@@ -53,7 +54,7 @@ export const games:typegames = [
         ],
         specification: {
             date: new Date(2022, 16, 2),
-            situation: "terminado"
+            situation: "finalizada"
         }
     },
     {
