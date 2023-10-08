@@ -2,17 +2,43 @@
     position: relative;
     z-index: 20;
 
-    @apply grid gap-4 grid-cols-3;
+    @apply grid gap-4 grid-cols-2;
     grid:
-        "outros futbol basquete" 180px
-        "natacao natacao basquete" 180px 
-        "xadrez ping_pong ." 180px;
+    "basquete outros" 170px
+    "basquete futbol" 170px 
+    "natacao natacao" 170px
+    "xadrez ping_pong" 170px
+    / 1.1fr 1.1fr; 
+    
+    @screen sm{
+        @apply grid gap-4 grid-cols-3;
+        grid:
+            "outros futbol basquete " 180px
+            "natacao natacao basquete" 180px 
+            "xadrez ping_pong ." 180px
+            / 1.1fr 1.1fr 1fr;
+    }
+
+    @screen ms{
+        grid:
+            "outros futbol basquete " 180px
+            "natacao natacao basquete" 180px 
+            "xadrez ping_pong ." 180px
+            / 1fr 1fr 1fr;
+
+    } 
+    @screen md{
+        grid:
+            "outros futbol basquete" 180px
+            "natacao natacao basquete" 180px 
+            "xadrez ping_pong ." 180px;
+    }
 
     .card-outros {
         grid-area: outros;
 
         &__illustration {
-            @apply inset-0 m-auto w-[clamp(120px,100%,150px)];
+            @apply inset-0 m-auto w-[clamp(110px,100%,150px)];
         }
     }
 
@@ -20,7 +46,7 @@
         grid-area: futbol;
 
         &__illustration {
-            @apply inset-0 m-auto w-[clamp(120px,100%,180px)];
+            @apply inset-0 m-auto w-[clamp(110px,100%,180px)];
         }
     }
 
@@ -28,7 +54,7 @@
         grid-area: basquete;
 
         &__illustration {
-            @apply -top-[3%] -left-[7%] w-[clamp(200px,100%,230px)]
+            @apply -top-[3%] -left-[7%] w-[clamp(190px,100%,230px)]
         }
     }
 
@@ -36,14 +62,14 @@
         grid-area: natacao;
 
         &__illustration {
-            @apply   inset-x-0 m-auto w-[clamp(100px,100%,350px)]
+            @apply   inset-x-0 m-auto w-[clamp(90px,100%,350px)]
         }
     }
 
     .card-xadrez {
         grid-area: xadrez;
         &__illustration {
-            @apply bottom-0 inset-x-0 m-auto w-[clamp(110px,100%,170px)];
+            @apply bottom-0 inset-x-0 m-auto w-[clamp(100px,100%,170px)];
         }
     }
 
@@ -51,7 +77,7 @@
         grid-area: ping_pong;
 
         &__illustration {
-            @apply bottom-0 inset-x-0 m-auto w-[clamp(100px,100%,200px)]
+            @apply bottom-0 inset-x-0 m-auto w-[clamp(90px,100%,200px)]
         }
     }
 }
