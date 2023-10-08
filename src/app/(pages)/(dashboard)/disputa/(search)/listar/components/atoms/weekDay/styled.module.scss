@@ -1,5 +1,5 @@
 .week-day {
-    @apply text-title text-right text-xl;
+    @apply text-title text-lg font-semibold;
     @apply border-b-[1px] border-solid border-primary font-normal;
-    @apply pb-[7px] mb-5;
+    @apply pb-[5px] mb-3;
 }

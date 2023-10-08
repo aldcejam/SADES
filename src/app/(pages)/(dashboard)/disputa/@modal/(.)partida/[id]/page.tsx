@@ -3,11 +3,11 @@ import { PartidaContent } from "../../../partida/components/template/partidaCont
 import styled from "./styled.module.scss"
 
 export default function Page({ params }: any) {
- 
+
 
     return (
-        <Modal> 
-            <PartidaContent display="modal"/>
+        <Modal>
+            <PartidaContent display="modal" />
         </Modal>
     );
 };
