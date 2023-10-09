@@ -7,7 +7,7 @@
   --warning: 255, 30, 0;
 }
 
-div#theme.light {
+body#theme.light {
   --title: 14, 14, 14;
   --subtitle: 21, 21, 21;
   --text: 22, 22, 22;
@@ -31,7 +31,7 @@ div#theme.light {
   --gray-900: 242, 242, 242;
 }
 
-div#theme.dark {
+body#theme.dark {
   --title: 251, 251, 251;
   --subtitle: 215, 215, 215;
   --text: 240, 240, 240;

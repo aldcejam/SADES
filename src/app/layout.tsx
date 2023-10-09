@@ -18,22 +18,16 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
-
     return (
         <html lang='pt-br' className={`${rajdhani.className}`}>
             <head>
                 <title>SADES</title>
             </head>
-            <body>
-                <ProviderTheme initialTheme={GetInitialTheme()}>
-                    <ClientSide>
-                        <div>
-                            <div id="modal-portal" />
-                        </div>
-                        {children}
-                    </ClientSide>
-                </ProviderTheme>
-            </body>
+            <ProviderTheme initialTheme={GetInitialTheme()}>
+                <ClientSide>
+                    {children}
+                </ClientSide>
+            </ProviderTheme>
         </html >
     );
 }

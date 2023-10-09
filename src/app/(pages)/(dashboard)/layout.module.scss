@@ -10,7 +10,7 @@
 .container-page {
     @apply w-[min(94vw,1000px)] h-[calc(100vh-10vh)];
     @apply absolute left-0 right-0 m-auto pl-[0px] top-[70px];
-    @apply pt-1;
+    @apply pt-1 -z-[1];   
     @screen sm {
         @apply w-[min(90vw,1000px)];
         @apply pl-[70px] top-0;

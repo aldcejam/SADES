@@ -1,3 +1,4 @@
+@import "./theme.scss";
 @import "@splidejs/react-splide/css";
 @import '@splidejs/react-splide/css/skyblue';
 @import '@splidejs/react-splide/css/sea-green';
@@ -6,10 +7,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./theme.scss";
 
-@import "./muiInputs.scss";
-@import "./modal.scss";
+@import "./muiInputs.scss"; 
   
 
 * {
@@ -42,4 +41,16 @@ body {
 
 *::-webkit-scrollbar-thumb:hover {
   background-color: rgb(var(--inverted-theme),0.5) !important;
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
 }

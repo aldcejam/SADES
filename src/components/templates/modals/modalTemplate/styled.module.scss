@@ -1,20 +1,29 @@
-#wrapper{ 
-    @apply fixed z-[1000] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2; 
+@import "/src/app/global_styles/theme.scss";
+
+.overlay {
+    @apply fixed z-50 top-0 left-0 right-0 bottom-0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.wrapper {
+    @apply fixed z-[1000] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
     @apply w-full h-full;
     @apply py-12 px-14;
-    @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary; 
+    @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary;
     @apply overflow-x-hidden backdrop:blur-[1000px] cursor-auto;
-    background-color: rgb(var(--background), 0.886);  
-    
-    @screen xs{
-        @apply w-auto h-auto max-w-[100vw] min-w-max max-h-[95vh]; 
+    background-color: rgb(var(--background), 0.886);
+    color: rgb(var(--title));
+
+    @screen xs {
+        @apply w-auto h-auto max-w-[100vw] min-w-max max-h-[95vh];
     }
-    
-    .close-icon{
+
+    .close-icon {
         @apply absolute top-[10px] right-[10px];
         @apply cursor-pointer text-title text-3xl transition-all duration-200;
 
-        &:hover{
+        &:hover {
             @apply text-subtitle;
         }
     }

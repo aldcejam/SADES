@@ -1,6 +1,6 @@
 .sidebar {
     @apply h-[100vh] w-[150px];
-    @apply fixed z-10 overflow-x-hidden;
+    @apply fixed overflow-x-hidden;
     @apply flex bg-background;
     @apply transition-all duration-500;
     @apply -left-[150px];

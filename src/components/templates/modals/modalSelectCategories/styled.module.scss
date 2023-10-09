@@ -2,7 +2,7 @@
     @apply flex flex-col gap-6; 
     
     .titles {
-        @apply text-center;
+        @apply text-center text-title;
 
         h4 {
             @apply m-0;
