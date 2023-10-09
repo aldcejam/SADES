@@ -5,9 +5,12 @@ import { useSidebarStateContext } from "contexts/SidebarStateContext";
 import { AiOutlineHome, AiOutlineLogin, AiOutlineUser } from "react-icons/ai";
 import styled from "./styled.module.scss";
 import DarkModeButton from "components/atoms/buttons/darkMode";
+import { useThemeContext } from "contexts/ThemeContext";
 
 const Navegation = () => {
     const { CloseSidebar, sidebarState } = useSidebarStateContext()
+    const { ToggleTheme } = useThemeContext()
+
     return (
         <div className={styled["navegation"]}>
             <ul className={styled["container"]}>
@@ -26,7 +29,8 @@ const Navegation = () => {
                     />
                 </span>
                 <li onClick={CloseSidebar}>
-                    <OptionSidebar 
+                    <OptionSidebar
+                        onclick={() => ToggleTheme()}
                         icon={<DarkModeButton />}
                         text="Tema"
                         title="Ir para seu prefil"
