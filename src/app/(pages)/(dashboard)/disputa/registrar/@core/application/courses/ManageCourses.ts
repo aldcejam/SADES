@@ -1,12 +1,15 @@
-import { ReadCoursesSelected, AddCourseSelected, RemoveCourseSelected } from "./useCase"
+import {
+  ReadCoursesSelected,
+  AddCourseSelected,
+  RemoveCourseSelected,
+} from './useCase';
 
-const ManageCourses = () => { 
+const ManageCourses = () => {
   return {
     coursesSelected: ReadCoursesSelected(),
     AddCourse: AddCourseSelected(),
-    RemoveCourse: RemoveCourseSelected()
+    RemoveCourse: RemoveCourseSelected(),
   };
 };
 
 export { ManageCourses };
- 

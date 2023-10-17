@@ -1,4 +1,4 @@
-import type { Config } from 'jest'
+import type { Config } from 'jest';
 
 const config: Config = {
   collectCoverage: false,
@@ -19,7 +19,7 @@ const config: Config = {
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@redux-config/(.*)$': '<rootDir>/.redux/$1',
     '^@base-project/(.*)$': '<rootDir>/$1',
-    '^public/(.*)$': '<rootDir>/public/$1'
+    '^public/(.*)$': '<rootDir>/public/$1',
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   testEnvironment: 'jsdom',

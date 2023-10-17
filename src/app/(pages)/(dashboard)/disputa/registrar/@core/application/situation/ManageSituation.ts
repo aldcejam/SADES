@@ -1,7 +1,6 @@
-import { UpdateSituation, ReadSituation} from "./useCase";
+import { UpdateSituation, ReadSituation } from './useCase';
 
-const ManageSituation = () => { 
-
+const ManageSituation = () => {
   return {
     situationSelected: ReadSituation(),
     UpdateSituation: UpdateSituation(),

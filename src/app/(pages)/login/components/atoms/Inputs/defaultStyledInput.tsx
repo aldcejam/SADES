@@ -1,6 +1,4 @@
-"use client"
-import { styled } from "@mui/material";
+'use client';
+import { styled } from '@mui/material';
 
-export const DefaultStyledInput = styled("span")`
-
-`;
+export const DefaultStyledInput = styled('span')``;

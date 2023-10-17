@@ -1,15 +1,14 @@
 import DefaultBackground from 'public/Default-background';
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-
-    return (
-        <>
-            <DefaultBackground />
-            {children}
-        </>
-    );
+  return (
+    <>
+      <DefaultBackground />
+      {children}
+    </>
+  );
 }

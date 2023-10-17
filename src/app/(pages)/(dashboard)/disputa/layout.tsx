@@ -1,8 +1,8 @@
 export default function RootLayout(props: any) {
-    return (
-        <>
-            {props.children}
-            {props.modal}
-        </>
-    );
+  return (
+    <>
+      {props.children}
+      {props.modal}
+    </>
+  );
 }

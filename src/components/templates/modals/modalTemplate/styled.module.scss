@@ -13,7 +13,7 @@
     @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary;
     @apply overflow-x-hidden backdrop:blur-[1000px] cursor-auto;
     background-color: rgb(var(--background), 0.886);
-    color: rgb(var(--title));
+    color: rgb(var(--title)); 
 
     @screen xs {
         @apply w-auto h-auto max-w-[100vw] min-w-max max-h-[95vh];

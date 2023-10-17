@@ -1,4 +1,4 @@
-import "./styled.scss";
+import './styled.scss';
 
 const ContainerProfilePic = () => {
   return (
@@ -13,8 +13,8 @@ const ContainerProfilePic = () => {
             y2="436.09"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" style={{ stopColor: "var(--primary)" }} />
-            <stop offset="1" style={{ stopColor: "var(--secondary)" }} />
+            <stop offset="0" style={{ stopColor: 'var(--primary)' }} />
+            <stop offset="1" style={{ stopColor: 'var(--secondary)' }} />
           </linearGradient>
         </defs>
         <g id="Camada_2" data-name="Camada 2">

@@ -1,10 +1,10 @@
-import { ReadDate, UpdateDate } from "./useCase"
+import { ReadDate, UpdateDate } from './useCase';
 
 const ManageDate = () => {
-    return {
-        date: ReadDate(),
-        UpdateDate: UpdateDate()
-    }
-}
+  return {
+    date: ReadDate(),
+    UpdateDate: UpdateDate(),
+  };
+};
 
-export { ManageDate }
+export { ManageDate };

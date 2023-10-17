@@ -1,17 +1,22 @@
-import { Dayjs } from "dayjs";
-import { GenderOptionsProps } from "defaultTypes/GendersProps";
+import { Dayjs } from 'dayjs';
+import { GenderOptionsProps } from 'defaultTypes/GendersProps';
 
-export type CoursesSelectedProps = { uuid: string; name: string, shortName: string, logo: string };
+export type CoursesSelectedProps = {
+  uuid: string;
+  name: string;
+  shortName: string;
+  logo: string;
+};
 export type SportSelectedProps = {
   sportUUID: string;
-  sportName: string
+  sportName: string;
   minNumberOfCourses: number;
   maxNumberOfCourses: number;
   sportCategories?: string[];
   genderCategories?: GenderOptionsProps[];
 };
 export type PontuationByPositionsProps = Array<number>;
-export type SituationsProps = "em_andamento" | "pre_cadastrado";
+export type SituationsProps = 'em_andamento' | 'pre_cadastrado';
 export type DateProps = string | null;
 export type CategoriesProps = {
   sportCategory?: string;
@@ -28,4 +33,3 @@ type IDataForRegistrarDisputa = {
 };
 
 export { IDataForRegistrarDisputa };
-

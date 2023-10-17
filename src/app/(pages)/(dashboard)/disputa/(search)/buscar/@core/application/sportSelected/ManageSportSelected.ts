@@ -1,4 +1,4 @@
-import { ReadSportSelected, UpdateSportSelected } from "./useCase";
+import { ReadSportSelected, UpdateSportSelected } from './useCase';
 
 const ManageSportSelected = () => {
   return {

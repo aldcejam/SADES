@@ -1,6 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import dayjs from "dayjs";
-import { RootState } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/store"
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import dayjs from 'dayjs';
+import { RootState } from 'app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/store';
 
 import {
   IDataForRegistrarDisputa,
@@ -10,7 +10,7 @@ import {
   SituationsProps,
   CoursesSelectedProps,
   SportSelectedProps,
-} from "./IDataForRegistrarDisputa";
+} from './IDataForRegistrarDisputa';
 
 const initialState: IDataForRegistrarDisputa = {
   coursesSelected: [] as CoursesSelectedProps[],
@@ -18,14 +18,17 @@ const initialState: IDataForRegistrarDisputa = {
   categories: {} as CategoriesProps,
   date: dayjs('2023-08-18T21:11:54').toString(),
   pontuationbyPositions: [30, 20, 10],
-  situation: "em_andamento",
+  situation: 'em_andamento',
 };
 
 export const DataForRegistrarDisputaSlice = createSlice({
-  name: "DataForRegistrarDisputaSlice",
+  name: 'DataForRegistrarDisputaSlice',
   initialState,
   reducers: {
-    SetCoursesSelected: (state, action: PayloadAction<Array<CoursesSelectedProps>>) => {
+    SetCoursesSelected: (
+      state,
+      action: PayloadAction<Array<CoursesSelectedProps>>,
+    ) => {
       state.coursesSelected = action.payload;
     },
     SetSportSelected: (state, action: PayloadAction<SportSelectedProps>) => {
@@ -39,7 +42,7 @@ export const DataForRegistrarDisputaSlice = createSlice({
     },
     SetPontuationByPositions: (
       state,
-      action: PayloadAction<PontuationByPositionsProps>
+      action: PayloadAction<PontuationByPositionsProps>,
     ) => {
       state.pontuationbyPositions = action.payload;
     },
@@ -58,7 +61,7 @@ export const {
   SetSituation,
 } = DataForRegistrarDisputaSlice.actions;
 
-export const DataForRegistrarDisputaStates = (state: RootState) => state.DataForRegistrarDisputa;
-
+export const DataForRegistrarDisputaStates = (state: RootState) =>
+  state.DataForRegistrarDisputa;
 
 export default DataForRegistrarDisputaSlice.reducer;

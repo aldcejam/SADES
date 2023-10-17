@@ -1,6 +1,6 @@
-import { Content } from "@prismicio/client";
-import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { Content } from '@prismicio/client';
+import { SliceComponentProps, PrismicRichText } from '@prismicio/react';
+import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 
 /**
  * Props for `Hero`.
@@ -53,4 +53,4 @@ export default function Hero({ slice }: HeroProps): JSX.Element {
       </div>
     </section>
   );
-};
+}

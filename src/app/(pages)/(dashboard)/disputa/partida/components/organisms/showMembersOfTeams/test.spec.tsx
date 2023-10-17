@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ShowMembersOfTeams } from './';
- 
+import { ShowMembersOfTeamsRoot } from './root';
+
 test('render component correctly', () => {
-  render(<ShowMembersOfTeams />);
+  render(<ShowMembersOfTeamsRoot children/>);
 });

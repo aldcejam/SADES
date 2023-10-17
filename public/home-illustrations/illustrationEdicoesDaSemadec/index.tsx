@@ -1,4 +1,4 @@
-import "./styled.scss"
+import './styled.scss';
 
 const IllustrationEdicoesDaSemadec = () => {
   return (

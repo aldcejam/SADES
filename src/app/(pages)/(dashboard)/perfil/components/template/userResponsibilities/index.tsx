@@ -1,11 +1,7 @@
-import { StyledUserResponsibilities } from "./styled"
+import { StyledUserResponsibilities } from './styled';
 
-const UserResponsibilities = ()=>{
-    return(
-       <StyledUserResponsibilities>
-        
-       </StyledUserResponsibilities> 
-    )
-}
+const UserResponsibilities = () => {
+  return <StyledUserResponsibilities></StyledUserResponsibilities>;
+};
 
-export default UserResponsibilities
+export default UserResponsibilities;

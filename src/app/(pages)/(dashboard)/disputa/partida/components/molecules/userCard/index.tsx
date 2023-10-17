@@ -10,19 +10,24 @@ interface UserCardProps {
 
 export const UserCard = ({ avatar, name, number }: UserCardProps) => {
   return (
-    <li id={styled["userCard"]}> 
+    <li id={styled['userCard']}>
       <button>
-        <div className={styled["container"]}>
-          <div className={styled["avatar"]}>
-            <Image src={avatar} alt={`avatar de ${name}`} fill style={{ objectFit: "cover" }} />
+        <div className={styled['container']}>
+          <div className={styled['avatar']}>
+            <Image
+              src={avatar}
+              alt={`avatar de ${name}`}
+              fill
+              style={{ objectFit: 'cover' }}
+            />
           </div>
-          <p className={styled["number"]}>{number}</p>
-          <p className={styled["name"]}>{name}</p>
+          <p className={styled['number']}>{number}</p>
+          <p className={styled['name']}>{name}</p>
         </div>
-        <div className={styled["icon-expand"]}>
+        <div className={styled['icon-expand']}>
           <AiOutlineExpandAlt />
         </div>
       </button>
     </li>
   );
-} 
+};

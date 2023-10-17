@@ -1,11 +1,12 @@
-import { SportSelectedProps } from "../entities/IDataForBuscarDisputa";
+import { SportSelectedProps } from '../entities/IDataForBuscarDisputa';
 
 interface VerifyIfSportIsSelectedProps {
-    sportSelected: SportSelectedProps;
+  sportSelected: SportSelectedProps;
 }
-export const VerifyIfSportIsSelected = ({ sportSelected }: VerifyIfSportIsSelectedProps) => {
-    
-    if (Object.keys(sportSelected).length === 0) {
-        return new Error("Esporte não selecionado");
-    }
-}
+export const VerifyIfSportIsSelected = ({
+  sportSelected,
+}: VerifyIfSportIsSelectedProps) => {
+  if (Object.keys(sportSelected).length === 0) {
+    return new Error('Esporte não selecionado');
+  }
+};

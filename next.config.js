@@ -7,12 +7,12 @@ const nextConfig = {
         source: '/',
         destination: '/home',
       },
-    ]
+    ];
   },
   experimental: {
     // Required:
     appDir: true,
-  }, 
+  },
 };
 
 module.exports = nextConfig;

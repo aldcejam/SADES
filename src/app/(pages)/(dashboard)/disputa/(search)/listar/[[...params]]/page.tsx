@@ -1,9 +1,9 @@
-import GameList from "../components/template/gameList";
-import styled from "./styled.module.scss";
-import { LayoutDashboard } from "../../../../layout.dash";
+import GameList from '../components/template/gameList';
+import styled from './styled.module.scss';
+import { LayoutDashboard } from '../../../../layout.dash';
 
 export default function Page({ params }: any) {
-  const ListWeekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const ListWeekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   const getCourse = params?.params?.[0];
   const getSport = params?.params?.[1];
@@ -14,11 +14,11 @@ export default function Page({ params }: any) {
       innerBoxShadow
       pageTitle={`Disputas de ${getCourse} | ${getGenderCategory} - ${getSport}`}
     >
-      <div className={styled["page-disputa-listar"]}>
+      <div className={styled['page-disputa-listar']}>
         {ListWeekday.map((day) => (
           <GameList key={day} day={day} />
         ))}
       </div>
     </LayoutDashboard>
   );
-};
+}

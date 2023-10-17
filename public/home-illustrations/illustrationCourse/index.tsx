@@ -1,6 +1,6 @@
-import "./styled.scss"
+import './styled.scss';
 
-const IllustrationCourse = () => { 
+const IllustrationCourse = () => {
   return (
     <div className="illustration-course">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.55 282.35">

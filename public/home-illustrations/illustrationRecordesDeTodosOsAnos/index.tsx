@@ -1,7 +1,6 @@
-import "./styled.scss";
+import './styled.scss';
 
 const IllustrationRecordesDestaEdicao = () => {
-
   return (
     <div className="illustration-recordes-desta-edicao">
       <svg viewBox="0 0 287.23 354.52">

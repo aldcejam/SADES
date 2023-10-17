@@ -1,16 +1,18 @@
-import styled from "./styled.module.scss"
+import styled from './styled.module.scss';
 
 type SelectSportButtonProps = {
-    value: string
-    isSelected: boolean
-}
-const SelectSportButton = ({value,isSelected}: SelectSportButtonProps)=>{
-    return(
-        <div className={styled["select-sport-button"]}
-        data-is-button-selected={isSelected}>
-            {value}
-        </div>
-    )
-}
+  value: string;
+  isSelected: boolean;
+};
+const SelectSportButton = ({ value, isSelected }: SelectSportButtonProps) => {
+  return (
+    <div
+      className={styled['select-sport-button']}
+      data-is-button-selected={isSelected}
+    >
+      {value}
+    </div>
+  );
+};
 
-export default SelectSportButton
+export default SelectSportButton;

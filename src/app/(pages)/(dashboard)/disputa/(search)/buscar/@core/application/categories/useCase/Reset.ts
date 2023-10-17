@@ -1,5 +1,5 @@
-import { useAppDispatch } from "app/(pages)/(dashboard)/disputa/(search)/buscar/@core/entities/config/hook";
-import { SetCategories } from "../../../entities/DataForBuscarDisputa";
+import { useAppDispatch } from 'app/(pages)/(dashboard)/disputa/(search)/buscar/@core/entities/config/hook';
+import { SetCategories } from '../../../entities/DataForBuscarDisputa';
 
 const ResetCatories = () => {
   const dispatch = useAppDispatch();
@@ -9,4 +9,3 @@ const ResetCatories = () => {
 };
 
 export { ResetCatories };
- 

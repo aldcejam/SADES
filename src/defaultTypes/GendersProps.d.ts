@@ -1,1 +1,1 @@
-export type GenderOptionsProps = "female" | "male" | "mixed";
+export type GenderOptionsProps = 'female' | 'male' | 'mixed';

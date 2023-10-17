@@ -1,20 +1,20 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./config/store";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from './config/store';
 
 import {
   IDataForBuscarDisputa,
   CategoriesProps,
-  SportSelectedProps
-} from "./IDataForBuscarDisputa";
+  SportSelectedProps,
+} from './IDataForBuscarDisputa';
 
 const initialState: IDataForBuscarDisputa = {
-  courseSelected: "",
+  courseSelected: '',
   categories: {} as CategoriesProps,
-  sportSelected: {} as SportSelectedProps
-}
+  sportSelected: {} as SportSelectedProps,
+};
 
 export const DataForBuscarDisputaSlice = createSlice({
-  name: "DataForBuscarDisputaSlice",
+  name: 'DataForBuscarDisputaSlice',
   initialState,
   reducers: {
     SetCourseSelected: (state, action: PayloadAction<string>) => {
@@ -25,11 +25,12 @@ export const DataForBuscarDisputaSlice = createSlice({
     },
     SetSportSelected: (state, action: PayloadAction<SportSelectedProps>) => {
       state.sportSelected = action.payload;
-    }
-  }
+    },
+  },
 });
 
-export const { SetCategories, SetSportSelected,SetCourseSelected } = DataForBuscarDisputaSlice.actions;
+export const { SetCategories, SetSportSelected, SetCourseSelected } =
+  DataForBuscarDisputaSlice.actions;
 
 export const DataForBuscarDisputaStates = (state: RootState) =>
   state.DataForBuscarDisputa;

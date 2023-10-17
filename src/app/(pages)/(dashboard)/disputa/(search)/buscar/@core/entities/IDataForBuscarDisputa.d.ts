@@ -1,6 +1,6 @@
-import { GenderOptionsProps } from "defaultTypes/GendersProps";
+import { GenderOptionsProps } from 'defaultTypes/GendersProps';
 
-type CourseSelectedProps = string
+type CourseSelectedProps = string;
 
 type CategoriesProps = {
   sportCategory?: string;
@@ -12,13 +12,17 @@ type SportSelectedProps = {
   sportName: string;
   sportCategories?: string[];
   genderCategories?: GenderOptionsProps[];
-}
-
+};
 
 interface IDataForBuscarDisputa {
   courseSelected: CourseSelectedProps;
-  sportSelected: SportSelectedProps
+  sportSelected: SportSelectedProps;
   categories: CategoriesProps;
 }
 
-export { IDataForBuscarDisputa, CategoriesProps, SportSelectedProps, CourseSelectedProps };
+export {
+  IDataForBuscarDisputa,
+  CategoriesProps,
+  SportSelectedProps,
+  CourseSelectedProps,
+};

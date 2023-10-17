@@ -1,22 +1,22 @@
-import { useAppDispatch, useAppSelector } from "app/(pages)/(dashboard)/disputa/(search)/buscar/@core/entities/config/hook";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'app/(pages)/(dashboard)/disputa/(search)/buscar/@core/entities/config/hook';
 import {
   DataForBuscarDisputaStates,
   SetCategories,
-} from "../../../../entities/DataForBuscarDisputa"; 
+} from '../../../../entities/DataForBuscarDisputa';
 
 const UpdateSportCategory = () => {
   const dispatch = useAppDispatch();
-  const categories = useAppSelector(
-    DataForBuscarDisputaStates
-  ).categories; 
+  const categories = useAppSelector(DataForBuscarDisputaStates).categories;
 
   return (sportCategory: string) => {
- 
     dispatch(
       SetCategories({
         ...categories,
         sportCategory: sportCategory,
-      })
+      }),
     );
   };
 };

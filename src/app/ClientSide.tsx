@@ -1,28 +1,28 @@
-"use client"
+'use client';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from "react-toastify"
-import { Providers } from './providers'; 
+import { ToastContainer } from 'react-toastify';
+import { Providers } from './providers';
 
 interface BodyClientSideProps {
-    children?: React.ReactNode
+  children?: React.ReactNode;
 }
 
-export const ClientSide = ({ children }: BodyClientSideProps) => { 
-    return (
-        <Providers>
-            <ToastContainer
-                position="top-right"
-                autoClose={2000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-            />
-            {children}
-        </Providers>
-    )
-}
+export const ClientSide = ({ children }: BodyClientSideProps) => {
+  return (
+    <Providers>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+      {children}
+    </Providers>
+  );
+};

@@ -1,14 +1,10 @@
-import "./styled.scss" 
+import './styled.scss';
 
 type CardIllustrationProps = {
-    illustration: any
-}
+  illustration: any;
+};
 const CardIllustration = ({ illustration }: CardIllustrationProps) => {
-    return (
-        <div>
-            {illustration}
-        </div>
-    )
-}
+  return <div>{illustration}</div>;
+};
 
-export default CardIllustration
+export default CardIllustration;

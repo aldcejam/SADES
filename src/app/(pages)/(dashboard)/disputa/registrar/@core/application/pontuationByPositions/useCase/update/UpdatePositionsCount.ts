@@ -1,27 +1,33 @@
 import {
   DataForRegistrarDisputaStates,
   SetPontuationByPositions,
-} from "../../../../entities/DataForRegistrarDisputa";
-import { useAppDispatch, useAppSelector } from "app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook";
+} from '../../../../entities/DataForRegistrarDisputa';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from 'app/(pages)/(dashboard)/disputa/registrar/@core/entities/config/hook';
 
 const UpdatePositionsCount = () => {
   const dispatch = useAppDispatch();
-  const pontuationByPositions = useAppSelector(DataForRegistrarDisputaStates).pontuationbyPositions;
+  const pontuationByPositions = useAppSelector(
+    DataForRegistrarDisputaStates,
+  ).pontuationbyPositions;
   const numberOfCurrentPositions = pontuationByPositions?.length;
 
   return (newPositionCount: number) => {
-    const newNumberOfPositionsEqualToCurrent = newPositionCount === numberOfCurrentPositions
+    const newNumberOfPositionsEqualToCurrent =
+      newPositionCount === numberOfCurrentPositions;
     if (newNumberOfPositionsEqualToCurrent) return;
 
     const AddPositionsInPontuationByPositions = () => {
       if (newPositionCount > numberOfCurrentPositions) {
         const remainingElementsFilledWith0 = new Array(
-          newPositionCount - numberOfCurrentPositions
+          newPositionCount - numberOfCurrentPositions,
         ).fill(0);
 
         const pontuationByPositionsCopy = pontuationByPositions.slice();
         const positionsAndValuesUpdated = pontuationByPositionsCopy.concat(
-          remainingElementsFilledWith0
+          remainingElementsFilledWith0,
         );
 
         dispatch(SetPontuationByPositions(positionsAndValuesUpdated));
@@ -31,7 +37,10 @@ const UpdatePositionsCount = () => {
     const RemovePositionsInPontuationByPositions = () => {
       if (newPositionCount < numberOfCurrentPositions) {
         const pontuationByPositionsCopy = pontuationByPositions.slice();
-        const positionsAndValuesUpdated = pontuationByPositionsCopy.splice(0, newPositionCount)
+        const positionsAndValuesUpdated = pontuationByPositionsCopy.splice(
+          0,
+          newPositionCount,
+        );
 
         dispatch(SetPontuationByPositions(positionsAndValuesUpdated));
       }

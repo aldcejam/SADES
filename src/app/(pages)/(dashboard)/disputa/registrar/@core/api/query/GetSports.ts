@@ -1,4 +1,4 @@
-import { GenderOptionsProps } from "defaultTypes/GendersProps";
+import { GenderOptionsProps } from 'defaultTypes/GendersProps';
 
 type SportsProps = {
   uuid: string;
@@ -7,75 +7,73 @@ type SportsProps = {
   genderCategories: GenderOptionsProps[];
   minNumberOfCourses: number;
   maxNumberOfCourses: number;
-}
+};
 
 const GetSports: Array<SportsProps> = [
   {
-    uuid: "0",
-    sportName: "futsal",
+    uuid: '0',
+    sportName: 'futsal',
     sportCategories: undefined,
-    genderCategories: ["female", "male"],
+    genderCategories: ['female', 'male'],
     minNumberOfCourses: 2,
     maxNumberOfCourses: 2,
   },
   {
-    uuid: "1",
-    sportName: "vôlei",
-    sportCategories: ["areia", "quadra"],
-    genderCategories: ["female", "male", "mixed"],
+    uuid: '1',
+    sportName: 'vôlei',
+    sportCategories: ['areia', 'quadra'],
+    genderCategories: ['female', 'male', 'mixed'],
     minNumberOfCourses: 2,
     maxNumberOfCourses: 2,
   },
   {
-    uuid: "2",
-    sportName: "Natação",
-    sportCategories: ["25m", "50m", "revezamento"],
-    genderCategories: ["female", "male", "mixed"],
+    uuid: '2',
+    sportName: 'Natação',
+    sportCategories: ['25m', '50m', 'revezamento'],
+    genderCategories: ['female', 'male', 'mixed'],
     minNumberOfCourses: 3,
     maxNumberOfCourses: 99,
   },
   {
-    uuid: "3",
-    sportName: "basquete",
+    uuid: '3',
+    sportName: 'basquete',
     sportCategories: undefined,
-    genderCategories: ["female", "male"],
+    genderCategories: ['female', 'male'],
     minNumberOfCourses: 2,
     maxNumberOfCourses: 99,
   },
   {
-    uuid: "4",
-    sportName: "xadrex",
+    uuid: '4',
+    sportName: 'xadrex',
     sportCategories: undefined,
-    genderCategories: ["mixed"],
+    genderCategories: ['mixed'],
     minNumberOfCourses: 2,
     maxNumberOfCourses: 2,
   },
   {
-    uuid: "5",
-    sportName: "Handball",
+    uuid: '5',
+    sportName: 'Handball',
     sportCategories: undefined,
-    genderCategories: ["female", "male"],
+    genderCategories: ['female', 'male'],
     minNumberOfCourses: 2,
     maxNumberOfCourses: 2,
   },
   {
-    uuid: "6",
-    sportName: "ping pong",
+    uuid: '6',
+    sportName: 'ping pong',
     sportCategories: undefined,
-    genderCategories: ["mixed"],
+    genderCategories: ['mixed'],
     minNumberOfCourses: 2,
     maxNumberOfCourses: 2,
   },
   {
-    uuid: "7",
-    sportName: "cabo de guerra",
+    uuid: '7',
+    sportName: 'cabo de guerra',
     sportCategories: undefined,
-    genderCategories: ["mixed"],
+    genderCategories: ['mixed'],
     minNumberOfCourses: 2,
     maxNumberOfCourses: 2,
   },
-
 ];
 
-
-export { type SportsProps, GetSports}
+export { type SportsProps, GetSports };
