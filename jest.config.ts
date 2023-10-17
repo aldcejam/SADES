@@ -1,25 +1,18 @@
 import type { Config } from 'jest';
 
 const config: Config = {
-  collectCoverage: false,
+  collectCoverage: true,
   // on node 14.x coverage provider v8 offers good speed and more or less good report
   coverageProvider: 'v8',
-  collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-    '!<rootDir>/out/**',
-    '!<rootDir>/.next/**',
-    '!<rootDir>/*.config.js',
-  ],
+  collectCoverageFrom: ["./src/**/*.tsx"],
   moduleNameMapper: {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
     '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
-    '^@redux-config/(.*)$': '<rootDir>/.redux/$1',
+/*     '^@redux-config/(.*)$': '<rootDir>/.redux/$1',
     '^@base-project/(.*)$': '<rootDir>/$1',
-    '^public/(.*)$': '<rootDir>/public/$1',
+    '^public/(.*)$': '<rootDir>/public/$1', */
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   testEnvironment: 'jsdom',

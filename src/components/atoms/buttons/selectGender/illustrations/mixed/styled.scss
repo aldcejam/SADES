@@ -1,40 +1,132 @@
-.illustration-mixed{
-    @apply absolute z-10 bottom-0 w-full;
-    @apply flex items-center justify-center;
+.illustration-mixed {
+  @apply absolute z-10 -bottom-7 w-full;
+  @apply flex items-center justify-center;
+
+  .assign-color{
+    fill: #d31027;
+  }
+  .cls-1,
+  .cls-28,
+  .cls-30 {
+    fill: #fff;
+  }
+
+  .cls-2 {
+    fill: #ce7a63;
+  }
+
+  .cls-3 {
+    fill: none;
+    stroke: #f2f2f2;
+    stroke-opacity: 0.15;
+  }
 
 
-    .assign-color {
-        @apply fill-primary;
-    }
+  .cls-5 {
+    opacity: 0.6;
+  }
 
-    .cls-1 {
-      fill: #263238;
-    }
-    .cls-3 {
-      fill: #ffbe9d;
-    }
-    .cls-4 {
-      fill: #eb996e;
-    }
-    .cls-5 {
-      opacity: 0.3;
-    }
-    .cls-6 {
-      fill: #fafafa;
-    }
-    .cls-7 {
-      fill: #455a64;
-    }
-    .cls-8 {
-      fill: #b78876;
-    }
-    .cls-9 {
-      fill: #7c5142;
-    }
-    .cls-10 {
-      opacity: 0.6;
-    }
-    .cls-11 {
-      fill: #fff;
-    }
+  .cls-6 {
+    fill: #cf7a64;
+  }
+
+  .cls-7 {
+    fill: #263238;
+  }
+
+  .cls-8 {
+    mask: url(#mask);
+  }
+
+  .cls-9 {
+    fill: #f2f2f2;
+    fill-opacity: 0.15;
+  }
+
+  .cls-10 {
+    mask: url(#mask-2);
+  }
+
+  .cls-11,
+  .cls-29 {
+    opacity: 0.2;
+  }
+
+  .cls-12 {
+    mask: url(#mask-3);
+  }
+
+  .cls-13 {
+    fill: #ba4d3c;
+  }
+
+  .cls-14 {
+    mask: url(#mask-4);
+  }
+
+  .cls-15 {
+    opacity: 0.5;
+  }
+
+  .cls-16 {
+    mask: url(#mask-5);
+  }
+
+  .cls-17 {
+    mask: url(#mask-6);
+  }
+
+  .cls-18 {
+    mask: url(#mask-7);
+  }
+
+  .cls-19 {
+    fill: #ffb573;
+  }
+
+  .cls-20 {
+    mask: url(#mask-8);
+  }
+
+  .cls-21 {
+    mask: url(#mask-9);
+  }
+
+  .cls-22 {
+    mask: url(#mask-10);
+  }
+
+  .cls-23 {
+    fill: #ed893e;
+  }
+
+  .cls-24 {
+    mask: url(#mask-11);
+  }
+
+  .cls-25 {
+    mask: url(#mask-12);
+  }
+
+  .cls-26 {
+    mask: url(#mask-13);
+  }
+
+  .cls-27 {
+    mask: url(#mask-14);
+  }
+
+  .cls-28 {
+    opacity: 0.8;
+  }
+
+  .cls-28,
+  .cls-29,
+  .cls-30 {
+    isolation: isolate;
+  }
+
+  .cls-30 {
+    opacity: 0.9;
+  }
 }

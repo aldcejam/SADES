@@ -3,6 +3,7 @@ import ButtonDarkMode from '.';
 import { jest } from '@jest/globals';
 import { useThemeContext } from 'contexts/ThemeContext';
 
+
 jest.mock('contexts/ThemeContext');
 
 describe('Atom Component: ButtonDarkMode', () => {
@@ -27,5 +28,5 @@ describe('Atom Component: ButtonDarkMode', () => {
 
     const lightIcon = screen.queryByTestId('DarkModeIcon');
     expect(lightIcon).toBeInTheDocument;
-  });
+  })
 });

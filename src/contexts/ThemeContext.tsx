@@ -1,8 +1,6 @@
 'use client';
 import { createContext, ReactNode, useContext, useRef, useState } from 'react';
-import Cookies from 'js-cookie';
-import '../app/global_styles/theme.scss';
-import '../app/global_styles/globals.scss';
+import Cookies from 'js-cookie'; 
 
 interface IThemeContext {
   theme: 'dark' | 'light';

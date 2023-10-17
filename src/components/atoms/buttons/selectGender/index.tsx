@@ -5,13 +5,13 @@ import styled from './styled.module.scss';
 
 type ButtonSelectGenderProps = {
   gender: GenderOptionsProps;
-  genderCategorySelected: string | undefined;
+  isSelect?: boolean;
   updateGenderCategorySelected: (genderCategory: any) => void;
 };
 const ButtonSelectGender = ({
   gender,
-  genderCategorySelected,
   updateGenderCategorySelected,
+  isSelect = false,
 }: ButtonSelectGenderProps) => {
   function TranslateGenderToPortuguese(gender: string) {
     switch (gender) {
@@ -27,7 +27,7 @@ const ButtonSelectGender = ({
   return (
     <div
       className={styled['button-select-gender']}
-      data-is-selected={gender == genderCategorySelected}
+      data-is-selected={isSelect}
       onClick={() => updateGenderCategorySelected(gender)}
     >
       <div className={styled['illustration']}>

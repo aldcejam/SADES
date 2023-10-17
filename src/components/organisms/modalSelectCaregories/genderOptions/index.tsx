@@ -18,10 +18,10 @@ const GenderOptions = ({
       {genderCategories?.map((gender: GenderOptionsInterface) => {
         return (
           <ButtonSelectGender
-            genderCategorySelected={genderCategorySelected}
-            updateGenderCategorySelected={updateGenderCategorySelected}
             key={gender}
             gender={gender}
+            isSelect={gender == genderCategorySelected}
+            updateGenderCategorySelected={updateGenderCategorySelected}
           />
         );
       })}

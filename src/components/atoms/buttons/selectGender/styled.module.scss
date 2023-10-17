@@ -24,7 +24,8 @@
 
     .illustration {
         @apply relative;
-        @apply w-[100px] h-[100px] xs:w-[90px] xs:h-[90px];
+        @apply w-[100%] min-w-[100px] max-w-[160px] h-[100px] inset-0 m-auto;
+        
     }
 
     p {

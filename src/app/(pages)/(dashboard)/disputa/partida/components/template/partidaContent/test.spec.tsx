@@ -3,5 +3,5 @@ import { render } from '@testing-library/react';
 import { PartidaContent } from './';
 
 test('render component correctly', () => {
-  render(<PartidaContent />);
+  render(<PartidaContent display='modal'/>);
 });
