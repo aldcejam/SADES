@@ -2,7 +2,7 @@
     @apply grid grid-cols-2 justify-center flex-wrap gap-5;
     @apply m-auto;
 
-    &>div:nth-child(3) {
+    &>button:nth-child(3) {
         @apply col-span-2;
     }
 
