@@ -1,6 +1,6 @@
 import GameList from '../components/template/gameList';
 import styled from './styled.module.scss';
-import { LayoutDashboard } from '../../../../layout.dash';
+import { LayoutDashboard } from '../../../layout.dash';
 
 export default function Page({ params }: any) {
   const ListWeekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

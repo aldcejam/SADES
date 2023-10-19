@@ -1,24 +1,25 @@
+import { GenderOptionsProps } from 'defaultTypes/GendersProps';
 import {
   useAppDispatch,
   useAppSelector,
-} from 'app/(pages)/(dashboard)/disputa/(search)/buscar/@core/entities/config/hook';
+} from 'app/(pages)/(dashboard)/disputa/buscar/@core/entities/config/hook';
 import {
   DataForBuscarDisputaStates,
   SetCategories,
 } from '../../../../entities/DataForBuscarDisputa';
 
-const UpdateSportCategory = () => {
+const UpdateGenderCategory = () => {
   const dispatch = useAppDispatch();
   const categories = useAppSelector(DataForBuscarDisputaStates).categories;
 
-  return (sportCategory: string) => {
+  return (genderCategory: GenderOptionsProps) => {
     dispatch(
       SetCategories({
         ...categories,
-        sportCategory: sportCategory,
+        genderCategory: genderCategory,
       }),
     );
   };
 };
 
-export { UpdateSportCategory };
+export { UpdateGenderCategory };

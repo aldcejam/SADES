@@ -4,18 +4,21 @@ import styled from './styled.module.scss';
 type SubmitButtonProps = ComponentProps<'div'> & {
   value: string;
   Submit?: () => void;
-  type?: 'submit';
+  type?: 'submit' | "button";
+  width?: "full" | "cover";
 };
 
-const SubmitButton = ({ value, Submit, type, ...props }: SubmitButtonProps) => {
+const SubmitButton = ({ value, Submit, type="button", width = "full" }: SubmitButtonProps) => {
   return (
-    <div {...props} id={styled['submit-button']}>
-      <div>
-        <button type={type} onClick={() => (Submit ? Submit() : '')}>
-          {value}
-        </button>
-      </div>
-    </div>
+    <button
+      id={styled['submit-button']}
+      data-width={width}
+      type={type}
+      onClick={() => (Submit ? Submit() : '')}>
+      <span>
+        {value}
+      </span>
+    </button>
   );
 };
 

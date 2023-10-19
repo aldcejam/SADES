@@ -6,13 +6,13 @@ const MenuBurguer = () => {
   const { sidebarState, ToggleStateSidebar } = useSidebarStateContext();
 
   return (
-    <div
+    <button
       className={styled['menu-burguer']}
       data-menu-state={sidebarState.toString()}
       onClick={() => ToggleStateSidebar()}
     >
       <div className={styled['line']}></div>
-    </div>
+    </button>
   );
 };
 

@@ -1,5 +1,5 @@
 'use client';
-import { LayoutDashboard } from '../../../layout.dash';
+import { LayoutDashboard } from '../../layout.dash';
 import { ListSports } from './components/template/listSports';
 import { ModalSelectCategoriesInserted } from './components/template/modalSelectCategoriesInserted';
 import './styled.scss';

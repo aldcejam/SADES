@@ -1,4 +1,4 @@
-import CurverBorderButton from 'app/(pages)/(dashboard)/disputa/(search)/listar/illustrations/CurverBorder';
+import CurverBorderButton from 'app/(pages)/(dashboard)/disputa/listar/illustrations/CurverBorder';
 import GameSpecification from '../../molecules/gameSpecification';
 import TeamVersus from '../../organisms/teamVersus';
 import styled from './styled.module.scss';

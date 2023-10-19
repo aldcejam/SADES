@@ -1,6 +1,6 @@
 import styled from './styled.module.scss';
 import HoverSportButton from 'components/atoms/hoverSportButton';
-import { SportSelectedProps } from 'app/(pages)/(dashboard)/disputa/(search)/buscar/@core/entities/IDataForBuscarDisputa';
+import { SportSelectedProps } from 'app/(pages)/(dashboard)/disputa/buscar/@core/entities/IDataForBuscarDisputa';
 import { GenderOptionsProps } from 'defaultTypes/GendersProps';
 
 type SelectDataBySportProps = {

@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import DataForBuscarDisputa from 'app/(pages)/(dashboard)/disputa/(search)/buscar/@core/entities/DataForBuscarDisputa';
+import DataForBuscarDisputa from 'app/(pages)/(dashboard)/disputa/buscar/@core/entities/DataForBuscarDisputa';
 
 export const Store = configureStore({
   reducer: {

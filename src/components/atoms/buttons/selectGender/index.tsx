@@ -25,16 +25,17 @@ const ButtonSelectGender = ({
   }
 
   return (
-    <div
+    <button
       className={styled['button-select-gender']}
       data-is-selected={isSelect}
       onClick={() => updateGenderCategorySelected(gender)}
+      aria-label={`Selecionar categoria de gênero ${gender}`}
     >
       <div className={styled['illustration']}>
         <IllustrationByGender gender={gender} />
       </div>
       <p>{TranslateGenderToPortuguese(gender)}</p>
-    </div>
+    </button>
   );
 };
 export default memo(ButtonSelectGender);

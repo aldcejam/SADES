@@ -4,12 +4,12 @@
     @apply cursor-pointer transition-all duration-300;
 
     @screen sm {
-        @apply absolute left-[10px] top-4;
+        @apply absolute   top-4;
     }
 
     .line {
         @apply absolute inset-y-0 m-auto;
-        @apply w-[30px] h-[3px] rounded-full;
+        @apply w-[30px] h-[3px] rounded-full ;
         @apply bg-primary transition-all duration-500;
 
         &::before,
@@ -17,7 +17,7 @@
             content: "";
             @apply bg-primary transition-all duration-500;
             @apply absolute;
-            @apply w-full h-[3px] rounded-full;
+            @apply w-full h-[3px] rounded-full left-0;
         }
 
         &::before {
