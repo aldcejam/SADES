@@ -8,7 +8,7 @@
     }
 
     .membersTeam{ 
-        @apply flex gap-4 overflow-scroll scroll-smooth;
+        @apply flex gap-4 overflow-auto scroll-smooth;
 
         @screen sm{
             @apply grid gap-4 grid-cols-2;

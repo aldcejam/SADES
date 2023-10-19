@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useRef } from 'react';
 import styled from './styled.module.scss';
 import { motion } from 'framer-motion';
+import ReactModal from 'react-modal';
 
 interface ModalProps {
   children: React.ReactNode;
@@ -38,39 +39,21 @@ export default function Modal({ children }: ModalProps) {
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [onKeyDown]);
-
-  const stopPropagation = (e: React.MouseEvent) => {
-    e.stopPropagation();
-  };
-  const show = {
-    opacity: 1,
-    display: 'block',
-  };
-
-  const hide = {
-    opacity: 0,
-    transitionEnd: {
-      display: 'none',
-    },
-  };
+ 
   return (
-    <motion.div
-      ref={overlay}
-      className={styled['overlay']}
-      onClick={onClick}
-      animate={show}
-    >
-      <div
-        ref={wrapper}
-        className={styled['wrapper']}
-        onClick={stopPropagation}
-      >
+    <ReactModal
+      isOpen={true} 
+      shouldCloseOnOverlayClick
+      onRequestClose={() => onClick}
+      overlayClassName={styled['overlay']}
+      className={styled['wrapper']}
+      shouldCloseOnEsc={true}
+    > 
         <CloseIcon
           onClick={() => onDismiss()}
           className={styled['close-icon']}
         />
-        {children}
-      </div>
-    </motion.div>
+        {children} 
+    </ReactModal>
   );
 }

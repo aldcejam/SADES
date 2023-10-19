@@ -1,32 +1,23 @@
 .container-global {
-    @apply w-[min(100vw,1000px)];
+    @apply w-screen overflow-hidden;
     @apply absolute right-0 left-0 m-auto;
 
     @screen sm {
-        @apply w-[min(90vw,1000px)];
+        @apply w-[min(90vw,1000px)] h-[90vh];
         @apply top-[5vh];
     }
-}
-.container-page {
-    @apply w-[min(94vw,1000px)] h-[calc(100vh-10vh)];
-    @apply absolute left-0 right-0 m-auto pl-[0px] top-[70px];
-    @apply pt-1 -z-[1];   
-    @screen sm {
-        @apply w-[min(90vw,1000px)];
-        @apply pl-[70px] top-0;
-    }
-}
+} 
 
-.content-page {
-    @apply relative z-0 w-full h-full;
-    @apply overflow-y-auto overflow-x-hidden;
+.container-page {
+    @apply relative z-0; 
+    @apply w-[calc(100%-1rem)] left-4 h-[calc(100vh-1.5rem)] top-16;  
+    @apply overflow-y-auto pb-[4.2rem];
     @apply rounded-default;
 
-    &[data-boxshadow_in_bg='true'] {
-        box-shadow: inset 20px 20px 81px theme('colors.primary' / 3.6%),
-            inset -20px -20px 81px theme('colors.secondary' / 3.6%);
-            h1{
-                @apply ml-3;
-            }
-    } 
+
+    @screen sm {
+        @apply w-[calc(100%-4rem)] h-full; 
+        @apply left-16 top-0 pb-0;
+    }
+ 
 }

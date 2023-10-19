@@ -4,7 +4,7 @@ import styled from './styled.module.scss';
 
 export default function Page({ params }: any) {
   return (
-    <LayoutDashboard innerBoxShadow>
+    <LayoutDashboard>
       <div className={styled['container']}>
         <PartidaContent display="page" />
       </div>

@@ -13,7 +13,11 @@ export default function RootLayout({
       <DefaultBackground />
       <div className={styled['container-global']}>
         <Sidebar />
-        <div className={styled['container-page']}>{children}</div>
+        <section
+          className={styled['container-page']}
+        >
+          {children}
+        </section> 
       </div>
     </>
   );

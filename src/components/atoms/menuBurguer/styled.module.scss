@@ -4,7 +4,7 @@
     @apply cursor-pointer transition-all duration-300;
 
     @screen sm {
-        @apply absolute   top-4;
+        @apply absolute left-[10px] top-4;
     }
 
     .line {

@@ -1,6 +1,5 @@
 .overlay {
-    @apply fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto;
-    @apply cursor-pointer;
+    @apply fixed z-20 left-0 right-0 top-0 bottom-0 mx-auto;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
 
@@ -11,7 +10,7 @@
         @apply cursor-default;
         @apply rounded-default border-2 border-solid border-b-secondary border-r-secondary border-t-primary border-l-primary;
         @apply overflow-x-hidden scroll-smooth backdrop:blur-[1000px] cursor-auto;
-        @apply w-full max-w-max max-h-[90vh] grid justify-items-center;
+        @apply w-[90%] max-w-max max-h-[90vh] grid justify-items-center;
         background-color: rgb(var(--background));
         
 
