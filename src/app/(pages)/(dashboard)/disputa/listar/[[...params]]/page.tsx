@@ -10,8 +10,7 @@ export default function Page({ params }: any) {
   const getGenderCategory = params?.params?.[2];
 
   return (
-    <LayoutDashboard
-      innerBoxShadow
+    <LayoutDashboard 
       pageTitle={`Disputas de ${getCourse} | ${getGenderCategory} - ${getSport}`}
     >
       <div className={styled['page-disputa-listar']}>
