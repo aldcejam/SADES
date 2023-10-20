@@ -15,18 +15,20 @@ const ButtonDarkMode = () => {
   };
 
   return (
-    <motion.div
+    <motion.button
       onClick={() => ToggleTheme()}
       className={styled['handle']}
+      aria-label={`clique para mudar o tema para ${theme == "light"? "dark" : "light"}`} 
       layout
       transition={spring}
+      
     >
       {theme == 'light' ? (
         <DarkModeOutlinedIcon className={styled['icon']} />
       ) : (
         <LightModeIcon className={styled['icon']} />
       )}
-    </motion.div>
+    </motion.button>
   );
 };
 export default ButtonDarkMode;

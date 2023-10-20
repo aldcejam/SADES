@@ -2,9 +2,11 @@ import type { Config } from 'jest';
 
 const config: Config = {
   collectCoverage: true,
-  // on node 14.x coverage provider v8 offers good speed and more or less good report
   coverageProvider: 'v8',
-  collectCoverageFrom: ["./src/**/*.tsx"],
+  collectCoverageFrom: [
+    "./src/**/*.tsx",
+    "!**/*.stories.tsx" // Este padrão exclui arquivos que terminam com ".stories.tsx"
+  ],
   moduleNameMapper: {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
