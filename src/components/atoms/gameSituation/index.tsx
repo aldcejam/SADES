@@ -12,7 +12,7 @@ const GameSituation = ({
 }: GameSituationProps) => {
   return (
     <div {...props} data-size={size} id={styled['game-situation']}>
-      <div className={styled['circle']} />
+      <div className={styled['circle']} /> 
       <p>{situation}</p>
     </div>
   );

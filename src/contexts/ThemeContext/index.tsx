@@ -14,12 +14,10 @@ export const ThemeContextProvider = ({
   children,
 }: {
   initialTheme: 'dark' | 'light';
-  children: ReactNode;
+  children?: ReactNode;
 }) => {
   const [theme, setTheme] = useState<'dark' | 'light'>(initialTheme);
-
-  const root = useRef<HTMLDivElement>(null);
-
+  
   const ToggleTheme = () => {
     setTheme(theme == 'light' ? 'dark' : 'light');
     Cookies.set('ThemeSemadec', theme == 'light' ? 'dark' : 'light');
