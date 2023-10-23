@@ -4,13 +4,16 @@ const config: Config = {
   collectCoverage: true,
   coverageProvider: 'v8',
   collectCoverageFrom: [
-    "./src/**/*.tsx",
-    "!**/*.stories.tsx" // Este padrão exclui arquivos que terminam com ".stories.tsx"
+    "./src/app/**/*.tsx",
+    "./src/components/**/*.tsx",
+    "./src/slices/**/*.tsx",
+    "./src/contexts/**/*.tsx",
+    "!**/*.stories.tsx", 
+    "!**/*.illustration.tsx"
   ],
   moduleNameMapper: {
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-    '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
-    '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
+    '\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$': '<rootDir>/__mocks__/fileMock.js',
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
 /*     '^@redux-config/(.*)$': '<rootDir>/.redux/$1',
     '^@base-project/(.*)$': '<rootDir>/$1',

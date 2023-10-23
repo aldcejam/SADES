@@ -2,13 +2,17 @@ import Image from 'next/image';
 import ContainerProfilePic from '@base-project/public/Polygon/ContainerProfilePic';
 import styled from './styled.module.scss';
 
-const ButtonRedirectPerfil = () => {
+interface ButtonRedirectPerfilPros {
+  image: string
+}
+
+const ButtonRedirectPerfil = ({ image }: ButtonRedirectPerfilPros) => {
   return (
     <div className={styled['button-redirect-perfil']}>
       <div className={styled['image']}>
         <Image
           alt="imagem do perfil"
-          src={'/profile-image.jpg'}
+          src={image}
           fill
           sizes="40px"
         />

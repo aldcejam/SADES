@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { GenderOptionsProps } from 'defaultTypes/GendersProps';
-import IllustrationByGender from './illustrationByGender';
+import { IllustrationByGender } from './illustrations/getIllustration';
 import styled from './styled.module.scss';
 
 type ButtonSelectGenderProps = {

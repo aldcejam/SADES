@@ -1,4 +1,4 @@
-import { screen, render, fireEvent, waitFor } from '@testing-library/react';
+import { screen, render, fireEvent } from '@testing-library/react';
 import ButtonDarkMode from '.';
 import { jest } from '@jest/globals';
 import { useThemeContext } from 'contexts/ThemeContext';
