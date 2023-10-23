@@ -7,7 +7,7 @@ const ButtonRedirectProfile = () => {
   return (
     <Link href={Routes().profile}>
       <div className={styled['button-redirect-profile']}>
-        <ButtonRedirectPerfil />
+        <ButtonRedirectPerfil image='/profile-image.jpg'/>
         <p>Perfil</p>
       </div>
     </Link>
