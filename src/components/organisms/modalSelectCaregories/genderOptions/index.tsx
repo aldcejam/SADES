@@ -5,7 +5,7 @@ import { GenderOptionsProps as GenderOptionsInterface } from 'defaultTypes/Gende
 type GenderOptionsProps = {
   genderCategories: GenderOptionsInterface[];
   genderCategorySelected: string | undefined;
-  updateGenderCategorySelected: (genderCategory: any) => void;
+  updateGenderCategorySelected: (genderCategory: GenderOptionsInterface) => void;
 };
 
 const GenderOptions = ({
