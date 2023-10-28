@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from './styled.module.scss';
 import { ApresentationTeams } from '../../molecules/apresentationTeams';
 import { ShowMembersOfTeams } from '../../organisms/showMembersOfTeams';
