@@ -1,6 +1,6 @@
 .bg-view-profile {
     @apply absolute -top-[4%] right-0;
-    @apply w-[100%] min-w-[300px] max-h-full opacity-90;
+    @apply w-[100%] min-w-[300px] max-h-full;
     
     @screen sm{
         @apply top-[0]

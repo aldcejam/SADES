@@ -1,11 +1,8 @@
 .content {
     @apply relative z-20;
     @apply inline justify-items-center;
-    @apply w-[70%] py-10 px-0;
-
-    .content__profile-pic {
-        @apply flex justify-center mb-5;
-    }
+    @apply w-[70%] pt-10 pb-28 px-0;
+ 
 
     .content--divider-line {
         @apply w-full h-[1px];

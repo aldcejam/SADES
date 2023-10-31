@@ -6,7 +6,9 @@ export default function Page({ params }: any) {
   return (
     <LayoutDashboard>
       <div className={styled['container']}>
-        <PartidaContent display="page" />
+        <div className={styled['content']}>
+          <PartidaContent display="page" />
+        </div>
       </div>
     </LayoutDashboard>
   );

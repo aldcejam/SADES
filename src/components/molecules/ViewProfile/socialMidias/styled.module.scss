@@ -1,17 +1,59 @@
-.social-midias {
-    @apply flex justify-between flex-wrap gap-5;
-    @apply w-full mt-[25px];
+.social-midias { 
+    @apply absolute right-0 top-10;
+    @apply py-2;
+    @apply border rounded-md;
+    border-color: rgba(var(--inverted-theme),.4);
+    background-color: rgba(var(--absolute-theme),.1);
+    backdrop-filter: blur(10px);
 
-    .social-midias--twitter,
-    .social-midias--instagram {
-        @apply flex items-baseline gap-[10px];
-    }
+    ul{
+        @apply grid gap-4;
+        li{
+            @apply relative px-1;
+            a{
+                @apply px-1 block;
+                svg{
+                    @apply text-2xl cursor-pointer transition-all duration-300; 
+                    color: rgba(var(--inverted-theme),.9);
+                    
+                    &:hover{
+                        color: rgba(var(--inverted-theme),1);
+                    }
+                } 
+            }
 
-    .icon {
-        @apply text-3xl text-text stroke-primary stroke-2;
-    }
+            .show-more{
+                @apply absolute hidden opacity-0 top-0 right-8;
+                @apply gap-2;
+                @apply py-1 px-3;
+                @apply text-title cursor-text;   
 
-    p {
-        @apply text-text text-lg -m-1;
+                &[data-copied="true"]{
+                    &, svg, &::before{
+                        @apply text-success border-success ease-in-out;   
+                    }
+                }
+
+                p{
+                    @apply relative right-4;
+                }
+                &::before{
+                    @apply absolute -z-10 top-0 right-4;
+                    @apply w-full h-full;
+                    @apply bg-background rounded-md border border-r-0 rounded-tr-none;
+                    content: '';
+                }
+                svg{
+                    @apply relative right-4 top-1;
+                }
+            }
+
+            &:hover .show-more{ 
+                @apply transition-all duration-300;
+                @apply flex opacity-100;
+            }
+
+        }
+        
     }
 }

@@ -1,4 +1,3 @@
-"use client"
 import Modal from '../../../partida/components/template/modal';
 import { PartidaContent } from '../../../partida/components/template/partidaContent';
 

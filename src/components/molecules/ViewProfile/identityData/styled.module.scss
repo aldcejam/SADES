@@ -1,19 +1,29 @@
 .identity {
-    @apply text-center;
+    @apply text-left mt-14;
 
     h2 {
-        @apply text-title font-bold text-xl capitalize my-[10px];
+        @apply relative text-title font-bold text-3xl capitalize my-[10px];
+        &::after {
+            @apply absolute w-[100%] h-[3px] bg-inverted_theme bottom-[-5px] left-0;
+            content: '';
+        }
     }
 
-    h3 {
-        @apply text-subtitle text-base font-semibold mt-[10px] opacity-90; 
-    }
-
-    h4 {
-        @apply text-subtitle text-base font-medium capitalize my-[2px] opacity-90;
+    .informations{
+        @apply text-subtitle font-semibold capitalize;
+        @apply flex items-baseline gap-1;
     }
     
     p {
-        @apply text-text opacity-80;  
+        @apply relative mt-10 text-text;  
+
+        &:before{
+            @apply absolute -top-2 w-full h-[1px] bg-text;
+            content: '';
+        }
+        &:after{
+            @apply absolute -bottom-2 left-0 w-full h-[1px] bg-text;
+            content: '';
+        }
     }
 }

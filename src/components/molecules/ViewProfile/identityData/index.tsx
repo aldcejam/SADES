@@ -9,9 +9,11 @@ type IdentityProps = {
 const Identity = ({ bio, course, matriculation, name }: IdentityProps) => {
   return (
     <div className={styled['identity']}>
-      <h2>{name}</h2>
-      <h3>{matriculation}</h3>
-      <h4>{course}</h4>
+      <h2>{name.split(' ')[0]}</h2>
+      <div className={styled["informations"]}>
+        <h3>{matriculation}</h3> - 
+        <h4>{course}</h4>
+      </div>
       <p>
         <i>{bio}</i>
       </p>
