@@ -40,7 +40,7 @@ const SocialMidias = ({ instagram, twitter,academicEmail,personalcEmail }: Socia
         {
           itens.map((socialMidia) => {
             return (
-              <li>
+              <li key={socialMidia.midia}>
                 <a target='_blank' href={socialMidia.link}>
                   {socialMidia.icon}
                 </a>
