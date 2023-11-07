@@ -3,11 +3,11 @@ import { memo } from 'react';
 import styled from './styled.module.scss';
 import { BgViewProfile } from './vectors/bgViewProfile';
 
-type TypesViewProfileComponent = {
-  screen: 'profileUser' | 'viewFriend';
+export type UserType = {
+  screen: 'user' | 'viewer';
 };
 
-const ViewProfileComponent = ({ screen }: TypesViewProfileComponent) => {
+const ViewProfileComponent = ({ screen }: UserType) => {
   return (
     <div className={styled['view-profile']}>
       <BgViewProfile />

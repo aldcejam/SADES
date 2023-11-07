@@ -2,8 +2,9 @@ import ProfilePic from 'components/atoms/viewProfile/profilePic';
 import Identity from 'components/molecules/ViewProfile/identityData'; 
 import SocialMidias from 'components/molecules/ViewProfile/socialMidias';
 import styled from './styled.module.scss'; 
+import { UserType } from 'components/templates/viewProfile';
 
-const Content = () => {
+const Content = ({}:{}) => {
   const userDataBase = {
     name: 'aldcejam Paulino Morais Junior',
     matriculation: 20191064010004,
